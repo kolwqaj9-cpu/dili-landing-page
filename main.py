@@ -8,8 +8,8 @@ app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], all
 
 # ================= 配置区域 =================
 # Supabase 数据库地址和密钥
-S_URL = "https://vlrdiajxxnangawfcgvk.supabase.co"
-S_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZscmRpYWp4eG5hbmdhd2ZjZ3ZrIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2OTkxNzYyNiwiZXhwIjoyMDg1NDkzNjI2fQ.WJGxW0o_NFa9lgu_tJ1otsxjxI8-3O6RPIkjLMFRYEg"
+S_URL = "https://bmwfnuekfgolwutnffmf.supabase.co"
+S_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJtd2ZudWVrZmdvbHd1dG5mZm1mIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MDM1MjIxMywiZXhwIjoyMDg1OTI4MjEzfQ.lYmpk8t9MNiHAqmul6vnT6x_oqCrxcbXN9xgyTKTFPA"
 # ===========================================
 
 def run_pipeline(email: str):
