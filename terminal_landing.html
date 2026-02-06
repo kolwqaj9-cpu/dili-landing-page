@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PropKit API | Developer Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #f7f9fc; color: #374151; font-family: 'Inter', sans-serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .code-window { background: #ffffff; border: 1px solid #e5e7eb; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-6 relative">
+    <div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center flex-1">
+        <div>
+            <div class="inline-flex items-center px-3 py-1 bg-white border border-gray-200 rounded-full text-xs font-semibold text-gray-600 mb-8 shadow-sm">
+                <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span> v3.0 API Operational
+            </div>
+            <h1 class="text-5xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">Predictive Analytics <br><span class="text-indigo-600">Infrastructure.</span></h1>
+            <p class="text-lg text-gray-600 mb-8 leading-relaxed">Integrate high-frequency probabilities directly into your application.</p>
+            <div class="flex flex-col sm:flex-row gap-4 max-w-md">
+                <input type="email" id="dev-email" placeholder="developer@company.com" class="flex-1 bg-white border border-gray-300 px-4 py-3 rounded-lg shadow-sm outline-none text-sm">
+                <button onclick="showPricing()" id="activate-btn" class="bg-gray-900 text-white font-semibold px-6 py-3 rounded-lg hover:bg-gray-800 transition shadow-lg">Get API Keys</button>
+            </div>
+            <p id="status-msg" class="mt-4 text-sm text-gray-500 min-h-[20px]"></p>
+        </div>
+        <div class="code-window rounded-xl overflow-hidden">
+            <div class="bg-gray-50 border-b border-gray-200 px-4 py-3 flex items-center gap-2">
+                <div class="ml-4 text-xs font-mono text-gray-400">cURL Request</div>
+            </div>
+            <div class="p-6 overflow-x-auto bg-white">
+                <pre class="font-mono text-sm leading-relaxed text-gray-800"><span class="text-blue-600">curl</span> -X POST https://api.propkit.ai/v1/predict</pre>
+            </div>
+        </div>
+    </div>
+    <footer class="w-full py-6 text-center text-[10px] text-gray-400 border-t border-gray-200 mt-10">
+        <div class="space-x-4 mb-2">
+            <a href="privacy.html" class="hover:text-gray-600 underline">Privacy Policy</a>
+            <a href="terms.html" class="hover:text-gray-600 underline">Terms of Service</a>
+        </div>
+        <p>© 2026 PropKit Analytics LLC. <span class="text-gray-300">v5.0</span></p>
+    </footer>
+    <script>
+        const API_WEBHOOK = 'https://api.propkitai.tech/api/webhook';
+        
+        async function showPricing() {
+            const email = document.getElementById('dev-email').value;
+            const btn = document.getElementById('activate-btn');
+            const msg = document.getElementById('status-msg');
+            
+            if(!email.includes('@')) {
+                msg.innerText = "Please enter a valid developer email.";
+                msg.style.color = "red";
+                return;
+            }
+            
+            if(typeof fbq !== 'undefined') fbq('track', 'Lead');
+            
+            // UI状态：正在连接
+            btn.disabled = true;
+            btn.innerText = "CONNECTING...";
+            msg.innerText = "Handshaking with RTX 3090 Cluster...";
+            msg.style.color = "orange";
+            
+            try {
+                // 发送真实请求给Python后端
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 5000);
+                
+                const response = await fetch(API_WEBHOOK, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        email: email,
+                        source: "Terminal_Landing_Page",
+                        timestamp: new Date().toISOString()
+                    }),
+                    signal: controller.signal
+                });
+                
+                clearTimeout(timeoutId);
+                
+                if (response.ok) {
+                    msg.innerHTML = "✅ <b>TASK QUEUED</b>";
+                    msg.style.color = "#22c55e";
+                    btn.innerText = "REDIRECTING...";
+                    
+                    setTimeout(() => {
+                        window.location.href = `terminal_dashboard.html?id=${encodeURIComponent(email)}`;
+                    }, 1500);
+                } else {
+                    throw new Error('Server error');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                msg.innerText = "⚠️ NETWORK LAG (Jumping to Dashboard...)";
+                msg.style.color = "orange";
+                
+                setTimeout(() => {
+                    window.location.href = `terminal_dashboard.html?id=${encodeURIComponent(email)}`;
+                }, 2000);
+            }
+        }
+    </script>
+</body>
+</html>
