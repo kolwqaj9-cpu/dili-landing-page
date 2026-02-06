@@ -41,17 +41,17 @@
                 
                 if (response.ok && result.status === 'success') {
                     console.log("🎉 订单已同步到云端数据库！", result);
-                    // 成功跳转到看板页面（显示数字 1）
-                    window.location.href = `signals_dashboard.html?id=${encodeURIComponent(email)}`;
+                    // 成功跳转到统计页面（显示数字 1 的看板）
+                    window.location.href = `purchase_stats.html`;
                 } else {
                     console.error("订单同步失败:", result);
                     // 即使失败也跳转，保证用户体验
-                    window.location.href = `signals_dashboard.html?id=${encodeURIComponent(email)}`;
+                    window.location.href = `purchase_stats.html`;
                 }
             } catch (error) {
                 console.error("请求失败:", error);
                 // 网络错误时也跳转
-                window.location.href = `signals_dashboard.html?id=${encodeURIComponent(email)}`;
+                window.location.href = `purchase_stats.html`;
             }
         }
 
