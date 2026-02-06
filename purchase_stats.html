@@ -77,10 +77,12 @@
     </div>
 
     <script>
-        // API 配置：根据环境自动选择
+        // API 配置：使用 Render 云端后端
+        // ⚠️ 部署到 Render 后，请将下面的 YOUR_RENDER_URL 替换为你的实际 Render 地址
+        // 例如：https://propkit-backend-xxxx.onrender.com
         const API_BASE = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') 
             ? 'http://localhost:8000' 
-            : 'https://api.propkitai.tech';
+            : 'https://YOUR_RENDER_URL.onrender.com';
 
         async function loadStats() {
             try {
