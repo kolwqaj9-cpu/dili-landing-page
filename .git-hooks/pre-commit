@@ -1,0 +1,31 @@
+#!/bin/sh
+# Git pre-commit hook: 检查 .gitignore 规则
+# 防止将应该忽略的文件添加到暂存区
+
+echo "🔍 检查 .gitignore 规则..."
+
+# 获取暂存区的文件列表
+staged_files=$(git diff --cached --name-only)
+
+# 读取 .gitignore 规则
+if [ -f .gitignore ]; then
+    while IFS= read -r line; do
+        # 跳过空行和注释
+        if [ -z "$line" ] || [ "${line#\#}" != "$line" ]; then
+            continue
+        fi
+        
+        # 检查每个暂存文件是否匹配 .gitignore 规则
+        for file in $staged_files; do
+            # 使用 git check-ignore 检查文件是否应该被忽略
+            if git check-ignore -q "$file"; then
+                echo "❌ 错误: 文件 '$file' 匹配 .gitignore 规则，不应被提交！"
+                echo "   规则: $line"
+                exit 1
+            fi
+        done
+    done < .gitignore
+fi
+
+echo "✅ .gitignore 检查通过"
+exit 0

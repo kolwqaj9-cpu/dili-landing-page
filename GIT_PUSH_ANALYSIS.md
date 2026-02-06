@@ -27,64 +27,90 @@ Please move or remove them before you merge.
 ```
 **原因：** 本地有未跟踪的 CNAME 文件，远程也有同名文件
 
-### 4. 推送超时
+### 4. 推送超时（主要问题）
 ```
 fatal: The remote end hung up unexpectedly
 error: RPC failed; HTTP 408 curl 22 The requested URL returned error: 408 Request Timeout
 Everything up-to-date
 ```
 **原因：** 
-- **HTTP 408 超时**：推送的数据量太大（包含大量文件）
-- 网络连接不稳定
-- GitHub 服务器响应慢
+- **HTTP 408 超时**：推送的数据量太大
+- 提交 `fd2b8bc` 包含 **99 个文件，370005 行插入**
+- 包含大量编译产物、测试脚本、备份文件
+- 网络连接不稳定或 GitHub 服务器响应慢
 
-## 🔍 当前状态分析
+## 🔍 根本原因
 
-### 本地未推送的提交（4个）
-1. `2b31f01` - Merge branch 'main' (合并远程更改)
-2. `b59a64c` - 处理文件冲突
-3. `fd2b8bc` - 添加购买统计系统
-4. `169d6ba` - 安全配置：添加 .env 支持
-
-### 未提交的更改
-- **大量文件删除**：因为我们把文件移动到了 `archive/` 目录
-- **新目录**：`archive/` 目录未跟踪
-
-## ⚠️ 问题根源
-
-1. **推送数据量过大**：之前的提交包含了大量文件（99个文件，370005行插入）
-   - 包括编译产物（x64/, CudaRuntime1.*）
-   - 大量测试脚本和批处理文件
-   - 备份文件（*.zip）
-
-2. **网络超时**：HTTP 408 表示请求超时
-   - 可能是网络不稳定
-   - 或者推送的数据包太大，超过了 GitHub 的超时限制
-
-3. **文件状态不一致**：本地有大量删除操作未提交
-
-## ✅ 解决方案
-
-### 方案1：分批推送（推荐）
-1. 先提交文件整理（删除操作）
-2. 然后推送较小的提交
-3. 最后推送大文件
-
-### 方案2：增加 Git 缓冲区大小
-```bash
-git config http.postBuffer 524288000  # 500MB
-git config http.timeout 300  # 5分钟超时
+### 问题提交分析
+```
+提交 fd2b8bc: 添加购买统计系统
+- 99 files changed
+- 370005 insertions(+)
 ```
 
-### 方案3：使用 SSH 代替 HTTPS
-SSH 连接通常更稳定，适合大文件推送
+这个提交包含了：
+- 编译产物（x64/, CudaRuntime1.*）
+- 大量测试脚本（*.bat, test_*.py）
+- 备份文件（*.zip, html_files_*）
+- 大文件（mlb_full_physics_vectors.csv: 64.92 MB）
 
-### 方案4：清理历史后推送
-如果历史提交包含大文件，可能需要清理 Git 历史
+### 为什么超时？
+1. **数据量过大**：370005 行代码一次性推送
+2. **包含大文件**：CSV 文件超过 50MB GitHub 推荐限制
+3. **网络限制**：默认 HTTP 缓冲区太小，超时时间太短
 
-## 🎯 建议的下一步操作
+## ✅ 解决方案（已实施）
 
-1. **先提交文件整理**：将文件移动到 archive 的更改提交
-2. **更新 .gitignore**：确保 archive 目录和编译产物被忽略
-3. **分批推送**：先推送小的提交，再推送大的
-4. **如果仍然超时**：考虑使用 Git LFS 或清理历史
+### 1. 文件整理
+- 将所有测试脚本、编译产物移动到 `archive/` 目录
+- 更新 `.gitignore` 忽略 archive 目录
+- 删除 86 个无关文件，减少仓库大小
+
+### 2. 配置优化
+```bash
+git config http.postBuffer 524288000  # 500MB 缓冲区
+git config http.timeout 300           # 5分钟超时
+```
+
+### 3. 分批提交
+- 先提交文件整理（删除操作）
+- 然后推送较小的提交
+
+## 🎯 最终结果
+
+✅ **推送成功！**
+```
+To https://github.com/kolwqaj9-cpu/baseprops.git
+   75a3275..0a04bcd  main -> main
+```
+
+### 警告信息（不影响推送）
+```
+remote: warning: File mlb_full_physics_vectors.csv is 64.92 MB
+remote: warning: File cloudflared.exe is 65.45 MB
+remote: warning: Large files detected. You may want to try Git Large File Storage
+```
+
+**建议：** 如果将来需要频繁推送大文件，考虑使用 Git LFS
+
+## 📊 数据对比
+
+### 推送前
+- 未推送提交：4 个
+- 包含文件：99 个
+- 代码行数：370005 行
+- 状态：推送超时 ❌
+
+### 推送后
+- 已推送提交：5 个（包括文件整理）
+- 删除文件：86 个
+- 代码减少：10736 行删除
+- 状态：推送成功 ✅
+
+## 💡 经验总结
+
+1. **避免一次性提交大量文件**：特别是编译产物和测试脚本
+2. **使用 .gitignore**：提前排除不需要版本控制的文件
+3. **配置 Git 缓冲区**：推送大文件时增加缓冲区和超时时间
+4. **分批提交**：大改动分成多个小提交
+5. **考虑 Git LFS**：对于超过 50MB 的文件使用 Git Large File Storage
