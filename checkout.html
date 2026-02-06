@@ -18,16 +18,29 @@
     </div>
 
     <script>
+        const API_BASE = 'https://baseprops.vercel.app';
+        
         const params = new URLSearchParams(window.location.search);
         const email = params.get('email') || 'guest@example.com';
         document.getElementById('user-email').innerText = email;
 
-        function pay() {
+        async function pay() {
             const btn = document.getElementById('btn');
             btn.disabled = true;
             btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
 
-            // 核心：在本地浏览器存一个计数（用于幻觉统计）
+            // 先尝试发送到 API（真实记录）
+            try {
+                await fetch(`${API_BASE}/api/webhook`, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ email: email, source: 'Web_Direct' })
+                });
+            } catch (e) {
+                console.log('API 调用失败，使用本地记录:', e);
+            }
+
+            // 无论 API 是否成功，都在本地记录（后备方案）
             let count = parseInt(localStorage.getItem('fake_buy_count') || '28');
             localStorage.setItem('fake_buy_count', count + 1);
             
@@ -41,7 +54,7 @@
             if (purchaseHistory.length > 20) purchaseHistory.pop();
             localStorage.setItem('purchase_history', JSON.stringify(purchaseHistory));
 
-            // 瞬间跳转，无需等待网络
+            // 跳转到 Dashboard
             setTimeout(() => {
                 window.location.href = `signals_dashboard.html?id=${encodeURIComponent(email)}`;
             }, 800);

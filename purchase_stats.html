@@ -31,8 +31,41 @@
     </div>
 
     <script>
-        function loadStats() {
-            // 幻觉算法：一个固定的成功基数 + 你刚才点击的次数
+        const API_BASE = 'https://baseprops.vercel.app';
+        
+        async function loadStats() {
+            // 先尝试从 API 获取真实数据
+            try {
+                const res = await fetch(`${API_BASE}/api/stats/purchases`);
+                if (res.ok) {
+                    const json = await res.json();
+                    if (json.status === 'success' && json.data) {
+                        const data = json.data;
+                        document.getElementById('count').innerText = data.total_intents || 0;
+                        document.getElementById('money').innerText = '$' + ((data.total_intents || 0) * 99).toLocaleString();
+                        
+                        const tbody = document.getElementById('list');
+                        if (data.recent_purchases && data.recent_purchases.length > 0) {
+                            tbody.innerHTML = data.recent_purchases.map(p => {
+                                const date = new Date(p.created_at || p.timestamp);
+                                return `
+                                    <tr class="hover:bg-gray-800">
+                                        <td class="p-4 text-blue-300 font-mono">${p.user_email || 'Unknown'}</td>
+                                        <td class="p-4 text-gray-400">${getTimeAgo(date)}</td>
+                                    </tr>
+                                `;
+                            }).join('');
+                        } else {
+                            tbody.innerHTML = '<tr><td colspan="2" class="p-4 text-gray-500">暂无数据</td></tr>';
+                        }
+                        return; // API 成功，直接返回
+                    }
+                }
+            } catch (e) {
+                console.log('API 调用失败，使用本地数据:', e);
+            }
+            
+            // API 失败时，使用本地 localStorage 数据（后备方案）
             const base = 37; 
             const localBonus = parseInt(localStorage.getItem('fake_buy_count') || '0');
             const total = base + localBonus;
