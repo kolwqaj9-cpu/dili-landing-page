@@ -94,7 +94,35 @@ async def hook(req: Request, bt: BackgroundTasks):
     try:
         body = await req.json()
         email = body.get('email')
+        source = body.get('source', 'Unknown')
+        
         if email: 
+            # 记录购买意图到统计系统
+            try:
+                purchase_record = {
+                    "user_email": email,
+                    "source": source,
+                    "amount": 99.00,
+                    "status": "intent_captured",  # intent_captured, completed, cancelled
+                    "timestamp": datetime.now(timezone.utc).isoformat()
+                }
+                # 记录到 purchases 表（如果表不存在，会在 Supabase 中自动创建或需要手动创建）
+                purchase_url = f"{S_URL}/rest/v1/purchases"
+                requests.post(
+                    purchase_url,
+                    json=purchase_record,
+                    headers={
+                        "apikey": S_KEY,
+                        "Authorization": f"Bearer {S_KEY}",
+                        "Content-Type": "application/json",
+                        "Prefer": "return=minimal"
+                    },
+                    timeout=5
+                )
+                print(f"📊 [STATS] Purchase intent recorded: {email} from {source}")
+            except Exception as e:
+                print(f"⚠️ [WARNING] Failed to record purchase intent: {e}")
+            
             # 将耗时任务放入后台，立刻给前端返回 200 OK，避免前端超时
             bt.add_task(run_pipeline, email)
             return {"status": "queued", "msg": "Calculation started"}
@@ -148,6 +176,76 @@ async def get_data(email: str = None):
             else:
                 return {"status": "error", "msg": f"Database query failed: {retry_response.status_code}"}
                 
+    except Exception as e:
+        return {"status": "error", "msg": str(e)}
+
+@app.get("/api/stats/purchases")
+async def get_purchase_stats():
+    """
+    购买统计接口 - 返回购买统计数据
+    """
+    try:
+        supabase_url = os.getenv("SUPABASE_URL", S_URL)
+        supabase_key = os.getenv("SUPABASE_SERVICE_ROLE_KEY", S_KEY)
+        
+        # 查询总购买意图数
+        total_url = f"{supabase_url}/rest/v1/purchases?select=count"
+        total_response = requests.get(
+            total_url,
+            headers={
+                "apikey": supabase_key,
+                "Authorization": f"Bearer {supabase_key}",
+                "Prefer": "count=exact"
+            },
+            timeout=10
+        )
+        
+        # 查询今日购买意图数
+        today = datetime.now(timezone.utc).date().isoformat()
+        today_url = f"{supabase_url}/rest/v1/purchases?timestamp=gte.{today}&select=count"
+        today_response = requests.get(
+            today_url,
+            headers={
+                "apikey": supabase_key,
+                "Authorization": f"Bearer {supabase_key}",
+                "Prefer": "count=exact"
+            },
+            timeout=10
+        )
+        
+        # 查询最近购买记录（最多10条）
+        recent_url = f"{supabase_url}/rest/v1/purchases?select=*&order=timestamp.desc&limit=10"
+        recent_response = requests.get(
+            recent_url,
+            headers={
+                "apikey": supabase_key,
+                "Authorization": f"Bearer {supabase_key}"
+            },
+            timeout=10
+        )
+        
+        stats = {
+            "total_intents": 0,
+            "today_intents": 0,
+            "recent_purchases": []
+        }
+        
+        if total_response.status_code == 200:
+            # 从响应头获取总数
+            count_header = total_response.headers.get('content-range', '0')
+            if '/' in count_header:
+                stats["total_intents"] = int(count_header.split('/')[-1])
+        
+        if today_response.status_code == 200:
+            count_header = today_response.headers.get('content-range', '0')
+            if '/' in count_header:
+                stats["today_intents"] = int(count_header.split('/')[-1])
+        
+        if recent_response.status_code == 200:
+            stats["recent_purchases"] = recent_response.json()
+        
+        return {"status": "success", "data": stats}
+        
     except Exception as e:
         return {"status": "error", "msg": str(e)}
 
