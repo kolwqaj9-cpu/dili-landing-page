@@ -84,8 +84,15 @@
 
         async function loadStats() {
             try {
+                console.log('[Purchase Stats] Fetching from:', `${API_BASE}/api/stats/purchases`);
                 const response = await fetch(`${API_BASE}/api/stats/purchases`);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
                 const result = await response.json();
+                console.log('[Purchase Stats] Response:', result);
                 
                 if (result.status === 'success' && result.data) {
                     const stats = result.data;
@@ -100,7 +107,7 @@
                     const tbody = document.getElementById('purchases-table');
                     if (stats.recent_purchases && stats.recent_purchases.length > 0) {
                         tbody.innerHTML = stats.recent_purchases.map(purchase => {
-                            const date = new Date(purchase.timestamp);
+                            const date = new Date(purchase.timestamp || purchase.created_at);
                             return `
                                 <tr class="border-b border-gray-700 hover:bg-gray-800">
                                     <td class="py-3 px-4">${purchase.user_email || 'N/A'}</td>
@@ -119,14 +126,16 @@
                         tbody.innerHTML = '<tr><td colspan="5" class="text-center py-8 text-gray-400">No purchase intents yet</td></tr>';
                     }
                 } else {
-                    console.error('Failed to load stats:', result.msg);
+                    console.error('Failed to load stats:', result.msg || result);
+                    const errorMsg = result.msg || 'Unknown error';
                     document.getElementById('purchases-table').innerHTML = 
-                        '<tr><td colspan="5" class="text-center py-8 text-red-400">Failed to load statistics</td></tr>';
+                        `<tr><td colspan="5" class="text-center py-8 text-red-400">Failed to load: ${errorMsg}</td></tr>`;
                 }
             } catch (error) {
                 console.error('Error loading stats:', error);
+                const errorMsg = error.message || 'Network error';
                 document.getElementById('purchases-table').innerHTML = 
-                    '<tr><td colspan="5" class="text-center py-8 text-red-400">Error loading statistics</td></tr>';
+                    `<tr><td colspan="5" class="text-center py-8 text-red-400">Error: ${errorMsg}<br><small>API: ${API_BASE}</small></td></tr>`;
             }
         }
 

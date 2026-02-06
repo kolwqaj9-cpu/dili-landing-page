@@ -257,8 +257,12 @@ async def get_purchase_stats():
         supabase_url = os.getenv("SUPABASE_URL", S_URL)
         supabase_key = os.getenv("SUPABASE_SERVICE_ROLE_KEY", S_KEY)
         
-        # 查询总购买意图数
-        total_url = f"{supabase_url}/rest/v1/purchases?select=count"
+        if not supabase_key:
+            print("⚠️ [STATS] Supabase key not configured")
+            return {"status": "error", "msg": "Supabase key not configured"}
+        
+        # 查询总购买意图数 - 使用更可靠的查询方式
+        total_url = f"{supabase_url}/rest/v1/purchases?select=id"
         total_response = requests.get(
             total_url,
             headers={
@@ -271,7 +275,7 @@ async def get_purchase_stats():
         
         # 查询今日购买意图数
         today = datetime.now(timezone.utc).date().isoformat()
-        today_url = f"{supabase_url}/rest/v1/purchases?timestamp=gte.{today}&select=count"
+        today_url = f"{supabase_url}/rest/v1/purchases?timestamp=gte.{today}&select=id"
         today_response = requests.get(
             today_url,
             headers={
@@ -299,23 +303,49 @@ async def get_purchase_stats():
             "recent_purchases": []
         }
         
+        # 从响应头获取总数
         if total_response.status_code == 200:
-            # 从响应头获取总数
-            count_header = total_response.headers.get('content-range', '0')
-            if '/' in count_header:
-                stats["total_intents"] = int(count_header.split('/')[-1])
+            count_header = total_response.headers.get('content-range', '')
+            if count_header and '/' in count_header:
+                try:
+                    stats["total_intents"] = int(count_header.split('/')[-1])
+                except:
+                    # 如果解析失败，尝试从返回的数据长度获取
+                    data = total_response.json()
+                    stats["total_intents"] = len(data) if isinstance(data, list) else 0
+            else:
+                # 如果没有 content-range，尝试从数据长度获取
+                data = total_response.json()
+                stats["total_intents"] = len(data) if isinstance(data, list) else 0
+        else:
+            print(f"⚠️ [STATS] Total count query failed: {total_response.status_code} - {total_response.text[:200]}")
         
         if today_response.status_code == 200:
-            count_header = today_response.headers.get('content-range', '0')
-            if '/' in count_header:
-                stats["today_intents"] = int(count_header.split('/')[-1])
+            count_header = today_response.headers.get('content-range', '')
+            if count_header and '/' in count_header:
+                try:
+                    stats["today_intents"] = int(count_header.split('/')[-1])
+                except:
+                    data = today_response.json()
+                    stats["today_intents"] = len(data) if isinstance(data, list) else 0
+            else:
+                data = today_response.json()
+                stats["today_intents"] = len(data) if isinstance(data, list) else 0
+        else:
+            print(f"⚠️ [STATS] Today count query failed: {today_response.status_code} - {today_response.text[:200]}")
         
         if recent_response.status_code == 200:
             stats["recent_purchases"] = recent_response.json()
+        else:
+            print(f"⚠️ [STATS] Recent purchases query failed: {recent_response.status_code} - {recent_response.text[:200]}")
         
+        print(f"📊 [STATS] Returning stats: total={stats['total_intents']}, today={stats['today_intents']}, recent={len(stats['recent_purchases'])}")
         return {"status": "success", "data": stats}
         
     except Exception as e:
+        print(f"❌ [STATS] Error in get_purchase_stats: {e}")
+        import traceback
+        traceback.print_exc()
         return {"status": "error", "msg": str(e)}
 
 if __name__ == "__main__":
