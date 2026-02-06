@@ -82,15 +82,28 @@ def main():
             except:
                 pass
             
-            context = p.chromium.launch_persistent_context(
-                user_data_dir=user_data_dir,
-                headless=False,
-                slow_mo=500,  # 慢速操作，便于观察
-                channel="chrome",  # 使用系统安装的 Chrome
-                args=[
-                    '--disable-blink-features=AutomationControlled',  # 隐藏自动化特征
-                ]
-            )
+            # 尝试使用普通启动方式（如果 persistent_context 失败）
+            print("[INFO] 尝试启动浏览器...")
+            try:
+                context = p.chromium.launch_persistent_context(
+                    user_data_dir=user_data_dir,
+                    headless=False,
+                    slow_mo=500,
+                    channel="chrome",
+                    timeout=60000,  # 60秒超时
+                    args=[
+                        '--disable-blink-features=AutomationControlled',
+                        '--remote-debugging-port=9222',  # 添加调试端口
+                    ]
+                )
+            except Exception as e:
+                print(f"[WARN] 使用用户数据目录失败: {str(e)[:100]}")
+                print("[INFO] 改用普通启动方式（需要手动登录）...")
+                browser = p.chromium.launch(headless=False, slow_mo=500, channel="chrome")
+                context = browser.new_context()
+                print("[INFO] 浏览器已启动，请手动登录 Vercel（如果需要）")
+                print("[INFO] 等待 10 秒...")
+                time.sleep(10)
             page = context.new_page()
             
             # 步骤 1: 直接导航到环境变量设置页面（跳过登录）
@@ -373,7 +386,13 @@ def main():
             print("浏览器将保持打开 10 秒，然后自动关闭...")
             page.wait_for_timeout(10000)
             
-            context.close()
+            try:
+                context.close()
+            except:
+                try:
+                    browser.close()
+                except:
+                    pass
             
         except Exception as e:
             error_msg = str(e).encode('ascii', 'ignore').decode('ascii')  # 移除非ASCII字符
