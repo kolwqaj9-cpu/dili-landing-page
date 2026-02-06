@@ -117,7 +117,10 @@
     </div>
 
     <script>
-        const API_WEBHOOK = 'https://api.propkitai.tech/api/webhook';
+        // API 配置：根据环境自动选择
+        const API_WEBHOOK = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') 
+            ? 'http://localhost:8000/api/webhook' 
+            : 'https://api.propkitai.tech/api/webhook';
         let userEmail = '';
 
         window.onload = function() {

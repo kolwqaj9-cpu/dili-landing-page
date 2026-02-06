@@ -77,7 +77,10 @@
     </div>
 
     <script>
-        const API_BASE = 'https://api.propkitai.tech';
+        // API 配置：根据环境自动选择
+        const API_BASE = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') 
+            ? 'http://localhost:8000' 
+            : 'https://api.propkitai.tech';
 
         async function loadStats() {
             try {
