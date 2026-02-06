@@ -18,34 +18,33 @@
     </div>
 
     <script>
-        // 👇👇👇👇👇👇👇👇👇👇👇👇
-        // 【一定要把这个换成你的 RENDER 地址！】
-        const API_BASE = 'https://你的项目名.onrender.com'; 
-        // 👆👆👆👆👆👆👆👆👆👆👆👆
-
         const params = new URLSearchParams(window.location.search);
         const email = params.get('email') || 'guest@example.com';
         document.getElementById('user-email').innerText = email;
 
-        async function pay() {
+        function pay() {
             const btn = document.getElementById('btn');
             btn.disabled = true;
             btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
 
-            try {
-                // 发送给 Render，由 Render 写入数据库
-                await fetch(`${API_BASE}/api/webhook`, {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({ email: email, source: 'Web_Direct' })
-                });
-                
-                // 只要请求发出去，不管结果如何，直接让用户通过
+            // 核心：在本地浏览器存一个计数（用于幻觉统计）
+            let count = parseInt(localStorage.getItem('fake_buy_count') || '28');
+            localStorage.setItem('fake_buy_count', count + 1);
+            
+            // 记录这次购买的时间戳
+            const purchaseHistory = JSON.parse(localStorage.getItem('purchase_history') || '[]');
+            purchaseHistory.unshift({
+                email: email,
+                timestamp: new Date().toISOString()
+            });
+            // 只保留最近 20 条
+            if (purchaseHistory.length > 20) purchaseHistory.pop();
+            localStorage.setItem('purchase_history', JSON.stringify(purchaseHistory));
+
+            // 瞬间跳转，无需等待网络
+            setTimeout(() => {
                 window.location.href = `signals_dashboard.html?id=${encodeURIComponent(email)}`;
-            } catch (err) {
-                // 网络若还是不通，也放行，保体验
-                window.location.href = `signals_dashboard.html?id=${encodeURIComponent(email)}`;
-            }
+            }, 800);
         }
     </script>
 </body>
