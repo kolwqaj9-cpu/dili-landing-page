@@ -24,40 +24,35 @@
         const email = params.get('email') || 'guest@example.com';
         document.getElementById('user-email').innerText = email;
 
+        // 模拟支付成功后的逻辑
+        async function handlePaymentSuccess(email, amount) {
+            const response = await fetch(`${API_BASE}/api/purchases/create`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    email: email,
+                    amount: amount,
+                    status: 'paid' // 支付成功后直接存为 paid
+                })
+            });
+            
+            if (response.ok) {
+                console.log("🎉 订单已同步到云端数据库！");
+                window.location.href = `signals_dashboard.html?id=${encodeURIComponent(email)}`; // 跳转到成功页
+            } else {
+                console.error("订单同步失败，但仍跳转");
+                // 即使失败也跳转，保证用户体验
+                window.location.href = `signals_dashboard.html?id=${encodeURIComponent(email)}`;
+            }
+        }
+
         async function pay() {
             const btn = document.getElementById('btn');
             btn.disabled = true;
             btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
 
-            // 先尝试发送到 API（真实记录）
-            try {
-                await fetch(`${API_BASE}/api/webhook`, {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({ email: email, source: 'Web_Direct' })
-                });
-            } catch (e) {
-                console.log('API 调用失败，使用本地记录:', e);
-            }
-
-            // 无论 API 是否成功，都在本地记录（后备方案）
-            let count = parseInt(localStorage.getItem('fake_buy_count') || '28');
-            localStorage.setItem('fake_buy_count', count + 1);
-            
-            // 记录这次购买的时间戳
-            const purchaseHistory = JSON.parse(localStorage.getItem('purchase_history') || '[]');
-            purchaseHistory.unshift({
-                email: email,
-                timestamp: new Date().toISOString()
-            });
-            // 只保留最近 20 条
-            if (purchaseHistory.length > 20) purchaseHistory.pop();
-            localStorage.setItem('purchase_history', JSON.stringify(purchaseHistory));
-
-            // 跳转到 Dashboard
-            setTimeout(() => {
-                window.location.href = `signals_dashboard.html?id=${encodeURIComponent(email)}`;
-            }, 800);
+            // 调用支付成功处理函数
+            await handlePaymentSuccess(email, 99.00);
         }
     </script>
 </body>
