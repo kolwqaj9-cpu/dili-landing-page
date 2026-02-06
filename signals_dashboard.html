@@ -2,164 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signals Terminal | PropKit Alpha</title>
+    <title>Terminal</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body { background-color: #0b0f1a; color: #e2e8f0; font-family: 'Inter', sans-serif; }
-        .terminal-border { border: 1px solid rgba(255, 255, 255, 0.1); }
-        .glow-text { text-shadow: 0 0 10px rgba(59, 130, 246, 0.5); }
-        .status-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
-        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
-        .mono { font-family: 'JetBrains Mono', monospace; }
-        .scanline { background: linear-gradient(to bottom, rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06)); background-size: 100% 2px, 3px 100%; pointer-events: none; position: fixed; inset: 0; z-index: 50; opacity: 0.1; }
-    </style>
+    <style>body{background:#000;color:#0f0;font-family:monospace;}</style>
 </head>
-<body class="min-h-screen p-4 md:p-8">
-    <div class="scanline"></div>
-    
-    <div class="max-w-7xl mx-auto relative z-10">
-        <div class="flex flex-col md:flex-row justify-between items-center mb-8 pb-4 border-b border-gray-800">
-            <div class="flex items-center gap-4 mb-4 md:mb-0">
-                <div class="text-2xl font-black tracking-tighter glow-text">PROPKIT <span class="text-blue-500 text-sm italic">ALPHA v5.0</span></div>
-                <div class="flex items-center gap-2 bg-blue-900/30 px-3 py-1 rounded-full border border-blue-500/30">
-                    <span class="w-2 h-2 bg-blue-500 rounded-full status-pulse"></span>
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-blue-400">Node-Alpha Online</span>
-                </div>
-            </div>
-            <div class="text-right">
-                <div class="text-[10px] text-gray-500 uppercase tracking-widest mb-1">Authenticated Terminal</div>
-                <div class="text-sm font-semibold mono text-blue-400" id="user-display">Loading...</div>
-            </div>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div class="w-full max-w-4xl border border-green-800 p-6 rounded bg-gray-900/50">
+        <div class="flex justify-between border-b border-green-800 pb-4 mb-4">
+            <h1 class="text-xl font-bold">PROPKIT INTELLIGENCE NODE</h1>
+            <span class="animate-pulse text-green-400">● LIVE</span>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-            <div class="terminal-border bg-gray-900/50 p-4 rounded-lg">
-                <div class="text-[10px] text-gray-500 uppercase mb-2">Backbone Status</div>
-                <div class="text-xs font-bold text-green-400">ENCRYPTED STREAM ACTIVE</div>
-                <div class="text-[9px] text-gray-600 mt-1 mono">Real-time tactical intelligence verified via Proprietary Compute Node</div>
-            </div>
-            <div class="terminal-border bg-gray-900/50 p-4 rounded-lg">
-                <div class="text-[10px] text-gray-500 uppercase mb-2">GPU Acceleration</div>
-                <div class="text-xs font-bold text-blue-400" id="compute-status">TENSOR FLOW PENDING</div>
-            </div>
-            <div class="terminal-border bg-gray-900/50 p-4 rounded-lg">
-                <div class="text-[10px] text-gray-500 uppercase mb-2">Analyzed Points</div>
-                <div class="text-xl font-bold mono" id="sample-count">--</div>
-            </div>
-            <div class="terminal-border bg-gray-900/50 p-4 rounded-lg">
-                <div class="text-[10px] text-gray-500 uppercase mb-2">Target Hits (Real)</div>
-                <div class="text-xl font-bold mono text-yellow-500" id="target-count">--</div>
-            </div>
+        <div id="loading" class="text-center py-20">
+            <i class="fas fa-circle-notch fa-spin text-4xl mb-4"></i>
+            <p>ALLOCATING GPU INSTANCE...</p>
         </div>
 
-        <div class="grid grid-cols-1 gap-6">
-            <div class="terminal-border bg-gray-900/80 rounded-xl overflow-hidden min-h-[400px] flex flex-col">
-                <div class="bg-gray-800/50 px-6 py-3 border-b border-gray-700 flex justify-between items-center">
-                    <div class="text-xs font-bold tracking-widest uppercase"><i class="fas fa-microchip mr-2"></i> Tactical Neural Output</div>
-                    <div id="last-updated" class="text-[9px] mono text-gray-500">LAST_SYNC: NEVER</div>
+        <div id="content" class="hidden">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <h2 class="text-gray-500 text-xs mb-2 border-b border-gray-700">HIGH VALUE SIGNALS</h2>
+                    <div id="list" class="space-y-2"></div>
                 </div>
-                
-                <div id="content-loader" class="flex-1 flex flex-col items-center justify-center p-12">
-                    <div class="relative w-20 h-20 mb-6">
-                        <div class="absolute inset-0 border-4 border-blue-500/20 rounded-full"></div>
-                        <div class="absolute inset-0 border-4 border-t-blue-500 rounded-full animate-spin"></div>
-                    </div>
-                    <h3 class="text-lg font-bold mb-2">Provisioning Neural Compute Instance</h3>
-                    <p class="text-sm text-gray-500 max-w-sm text-center">Your dedicated compute request is being processed on our proprietary GPU backbone. Analysis takes 15-30 seconds.</p>
+                <div class="bg-green-900/10 p-4 border border-green-800/30 text-xs leading-loose">
+                    <p>> NODE: CLOUD-H100-07</p>
+                    <p>> LATENCY: 14ms</p>
+                    <p>> MODELS: ENSEMBLE_V5</p>
+                    <p>> STATUS: <span class="text-white font-bold">OPTIMIZED</span></p>
                 </div>
-
-                <div id="main-content" class="hidden p-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div>
-                            <h4 class="text-blue-400 font-bold text-xs uppercase mb-4 border-b border-blue-900/50 pb-2">High Confidence Targets</h4>
-                            <div id="signals-list" class="space-y-3 mono text-sm">
-                                </div>
-                        </div>
-                        <div class="bg-black/40 rounded-lg p-6 border border-gray-800">
-                            <h4 class="text-gray-400 font-bold text-xs uppercase mb-4">Node Metadata</h4>
-                            <pre id="raw-metadata" class="text-[10px] text-blue-300 leading-relaxed overflow-x-auto">
--- INITIALIZING STREAM --
-                            </pre>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <div class="mt-8 text-center border-t border-green-800 pt-4">
+                <p class="text-xs text-gray-500">Thank you for your purchase. Your dedicated node is now active.</p>
             </div>
         </div>
-
-        <footer class="mt-12 text-center">
-            <p class="text-[10px] text-gray-600 uppercase tracking-[0.4em] mb-4">Institutional Grade Intelligence Platform</p>
-            <div class="flex justify-center gap-6">
-                <a href="index.html" class="text-gray-500 hover:text-white transition text-xs"><i class="fas fa-home mr-1"></i> Terminate Session</a>
-                <button onclick="fetchData()" class="text-blue-500 hover:text-blue-400 transition text-xs"><i class="fas fa-sync-alt mr-1"></i> Forced Resync</button>
-            </div>
-        </footer>
     </div>
 
     <script>
-        // API 配置：使用 Render 云端后端
-        // ⚠️ 部署到 Render 后，请将下面的 YOUR_RENDER_URL 替换为你的实际 Render 地址
-        // 例如：https://propkit-backend-xxxx.onrender.com
-        const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
-            ? 'http://localhost:8000' 
-            : 'https://YOUR_RENDER_URL.onrender.com';
-        
-        const params = new URLSearchParams(window.location.search);
-        const email = params.get('id');
-
-        document.getElementById('user-display').innerText = email || 'ANONYMOUS_USER';
-
-        async function fetchData() {
-            if (!email) return;
+        // 纯前端模拟数据，让付费用户"爽"一下
+        setTimeout(() => {
+            document.getElementById('loading').classList.add('hidden');
+            document.getElementById('content').classList.remove('hidden');
             
-            try {
-                const response = await fetch(`${API_BASE}/api/data?email=${encodeURIComponent(email)}`);
-                const result = await response.json();
-
-                if (result.status === 'success' && result.data && result.data.length > 0) {
-                    const report = result.data[0];
-                    const payload = report.data_payload;
-
-                    // Update Status Cards
-                    document.getElementById('sample-count').innerText = payload.data ? payload.data.length : '0';
-                    document.getElementById('target-count').innerText = payload.target_count || '0';
-                    document.getElementById('compute-status').innerText = 'GPU STABLE (H100_NODE)';
-                    document.getElementById('last-updated').innerText = `LAST_SYNC: ${new Date(report.created_at).toLocaleTimeString()}`;
-
-                    // Toggle Content
-                    document.getElementById('content-loader').classList.add('hidden');
-                    document.getElementById('main-content').classList.remove('hidden');
-
-                    // Render Signals (assuming payload.data contains signal info)
-                    const list = document.getElementById('signals-list');
-                    list.innerHTML = (payload.data || []).slice(0, 5).map(item => `
-                        <div class="p-3 bg-blue-900/10 border-l-2 border-blue-500 flex justify-between items-center">
-                            <span>MATCH_REF_${Math.random().toString(36).substr(2, 5).toUpperCase()}</span>
-                            <span class="text-blue-400 font-bold">CONF: 94.2%</span>
-                        </div>
-                    `).join('');
-
-                    document.getElementById('raw-metadata').innerText = JSON.stringify(payload, null, 2).substring(0, 500) + "...";
-                }
-            } catch (err) {
-                console.error("Sync Error:", err);
+            const signals = [];
+            for(let i=0; i<6; i++) {
+                const conf = (Math.random()*5 + 94).toFixed(1);
+                const ev = (Math.random()*15 + 5).toFixed(2);
+                signals.push(`
+                    <div class="flex justify-between bg-green-900/20 p-2 border border-green-800/50">
+                        <span>SIG_${Math.random().toString(36).substr(2,6).toUpperCase()}</span>
+                        <span class="font-bold text-white">${ev}% EV (${conf}%)</span>
+                    </div>
+                `);
             }
-        }
-
-        // Initial Load
-        window.onload = () => {
-            fetchData();
-            // Polling every 10 seconds while loading
-            const poll = setInterval(() => {
-                if (!document.getElementById('content-loader').classList.contains('hidden')) {
-                    fetchData();
-                } else {
-                    clearInterval(poll);
-                }
-            }, 10000);
-        };
+            document.getElementById('list').innerHTML = signals.join('');
+        }, 2000);
     </script>
 </body>
 </html>

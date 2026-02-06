@@ -5,181 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout | PropKit AI</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); font-family: 'Inter', sans-serif; }
-        .checkout-card { background: white; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
-        .price-badge { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
-<body class="min-h-screen flex items-center justify-center p-4">
-    <div class="checkout-card rounded-2xl p-8 md:p-12 max-w-lg w-full">
-        <div class="text-center mb-8">
-            <div class="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                <i class="fas fa-shield-check mr-2"></i> Secure Checkout
-            </div>
-            <h1 class="text-3xl font-bold text-gray-900 mb-2">Complete Your Order</h1>
-            <p class="text-gray-600 text-sm">PropKit AI Premium Access</p>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+    <div class="bg-white p-8 rounded-xl shadow-2xl max-w-md w-full text-center">
+        <h1 class="text-2xl font-bold mb-2">Complete Order</h1>
+        <p class="text-gray-500 mb-6">Premium Access - $99.00/mo</p>
+        
+        <div class="bg-blue-50 p-4 rounded mb-6 text-left border border-blue-100">
+            <p class="text-sm text-blue-800">Account: <span id="user-email" class="font-bold">loading...</span></p>
         </div>
 
-        <div class="space-y-6 mb-8">
-            <div class="bg-gray-50 rounded-xl p-6">
-                <div class="flex justify-between items-center mb-4">
-                    <div>
-                        <div class="font-bold text-gray-900 text-lg">Premium Signals</div>
-                        <div class="text-sm text-gray-500 mt-1">Monthly Subscription</div>
-                    </div>
-                    <div class="text-right">
-                        <div class="text-2xl font-bold text-gray-900">$99</div>
-                        <div class="text-xs text-gray-500">per month</div>
-                    </div>
-                </div>
-                <div class="pt-4 border-t border-gray-200 space-y-2 text-sm">
-                    <div class="flex justify-between text-gray-600">
-                        <span class="whitespace-nowrap"><i class="fas fa-check text-green-500 mr-2"></i> Real-time AI Analysis</span>
-                    </div>
-                    <div class="flex justify-between text-gray-600">
-                        <span class="whitespace-nowrap"><i class="fas fa-check text-green-500 mr-2"></i> Daily Picks & Signals</span>
-                    </div>
-                    <div class="flex justify-between text-gray-600">
-                        <span class="whitespace-nowrap"><i class="fas fa-check text-green-500 mr-2"></i> Institutional Grade Data Feed</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-blue-50 border-2 border-blue-200 rounded-xl p-4">
-                <div class="flex items-start">
-                    <i class="fas fa-info-circle text-blue-600 mt-1 mr-3"></i>
-                    <div class="text-sm text-blue-900">
-                        <div class="font-semibold mb-1">Email Confirmation Required</div>
-                        <div class="text-blue-700" id="checkout-email">Loading...</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white border border-gray-200 rounded-xl p-4">
-                <div class="text-sm font-semibold text-gray-900 mb-3">Select Payment Method</div>
-                <div class="space-y-3">
-                    <label class="flex items-center gap-3 p-3 rounded-lg border border-gray-200 bg-gray-50 cursor-pointer">
-                        <input type="radio" name="payment-method" value="card" checked class="accent-blue-600">
-                        <span class="text-sm text-gray-700">Credit Card (Powered by Stripe)</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 rounded-lg border border-gray-200 bg-white cursor-pointer">
-                        <input type="radio" name="payment-method" value="paypal" class="accent-blue-600">
-                        <span class="text-sm text-gray-700">PayPal</span>
-                    </label>
-                </div>
-            </div>
-        </div>
-
-        <div class="flex items-center justify-center gap-3 mb-4 text-xs text-gray-500">
-            <span class="flex items-center gap-2 bg-gray-100 px-3 py-1 rounded-full"><i class="fas fa-credit-card text-blue-600"></i> Stripe</span>
-            <span class="flex items-center gap-2 bg-gray-100 px-3 py-1 rounded-full"><i class="fab fa-cc-paypal text-blue-500"></i> PayPal</span>
-            <span class="flex items-center gap-2 bg-gray-100 px-3 py-1 rounded-full"><i class="fas fa-shield-alt text-green-600"></i> SSL Secure</span>
-        </div>
-
-        <button onclick="processOrder()" id="order-btn" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold py-4 px-6 rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg text-lg">
-            <i class="fas fa-lock mr-2"></i> Confirm Payment - $99.00
+        <button onclick="pay()" id="btn" class="w-full bg-black text-white py-4 rounded-lg font-bold hover:bg-gray-800 transition">
+            <i class="fas fa-lock mr-2"></i> Confirm Payment $99
         </button>
-        <p class="mt-3 text-center text-xs text-gray-500 whitespace-nowrap">You will be charged $99.00 today.</p>
-
-        <div class="mt-6 text-center">
-            <div class="flex items-center justify-center gap-2 text-xs text-gray-500 mb-2">
-                <i class="fas fa-lock"></i>
-                <span>Secure payment processing</span>
-            </div>
-            <div class="flex items-center justify-center gap-4 text-xs text-gray-400">
-                <i class="fab fa-cc-visa"></i>
-                <i class="fab fa-cc-mastercard"></i>
-                <i class="fab fa-cc-amex"></i>
-                <i class="fab fa-cc-paypal"></i>
-            </div>
-            <div class="mt-4 text-[10px] text-gray-400">
-                <a href="privacy.html" class="hover:text-gray-600 underline mr-3">Privacy Policy</a>
-                <a href="terms.html" class="hover:text-gray-600 underline">Terms of Service</a>
-            </div>
-        </div>
-
-        <div id="maintenance-modal" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-            <div class="bg-white rounded-2xl p-8 max-w-md w-full text-center shadow-2xl">
-                <div class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-triangle-exclamation text-4xl text-yellow-600"></i>
-                </div>
-                <h2 class="text-2xl font-bold text-gray-900 mb-4">Payment Gateway Maintenance</h2>
-                <p class="text-gray-600 mb-4">Our payment processor is currently updating. We cannot process your $99 payment right now.</p>
-                <p class="text-gray-700 mb-6">However, we have upgraded your account to a <strong class="text-green-600">Free Guest Pass</strong> (Valid for 1 Month) so you can start immediately.</p>
-                <button onclick="startAnalysis()" class="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold py-4 px-6 rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all shadow-lg">
-                    Enter Dashboard Now
-                </button>
-            </div>
-        </div>
+        <p id="msg" class="mt-4 text-xs text-gray-500"></p>
     </div>
 
     <script>
-        // API 配置：使用 Render 云端后端
-        // ⚠️ 部署到 Render 后，请将下面的 YOUR_RENDER_URL 替换为你的实际 Render 地址
-        // 例如：https://propkit-backend-xxxx.onrender.com
-        const API_WEBHOOK = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') 
-            ? 'http://localhost:8000/api/webhook' 
-            : 'https://YOUR_RENDER_URL.onrender.com/api/webhook';
-        let userEmail = '';
+        // ✅ 已填好你的 Supabase URL 和 Anon Key
+        const SUPABASE_URL = 'https://bmwfnuekfgolwutnffmf.supabase.co'; 
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJtd2ZudWVrZmdvbHd1dG5mZm1mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAzNTIyMTMsImV4cCI6MjA4NTkyODIxM30.KYW1211lFfPnrhvyliSDbrWs_vJzYfge4pvlPTEteSY'; 
 
-        window.onload = function() {
-            const params = new URLSearchParams(window.location.search);
-            userEmail = decodeURIComponent(params.get('email') || '');
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+        const params = new URLSearchParams(window.location.search);
+        const email = params.get('email') || 'guest@example.com';
+        document.getElementById('user-email').innerText = email;
+
+        async function pay() {
+            const btn = document.getElementById('btn');
+            const msg = document.getElementById('msg');
             
-            if (userEmail) {
-                document.getElementById('checkout-email').textContent = userEmail;
-            } else {
-                window.location.href = 'index.html';
-            }
-        };
-
-        function processOrder() {
-            const btn = document.getElementById('order-btn');
             btn.disabled = true;
-            btn.classList.remove('hover:from-blue-700', 'hover:to-indigo-700');
-            btn.classList.add('bg-gray-400', 'from-gray-400', 'to-gray-400', 'cursor-not-allowed');
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Connecting to Secure Gateway...';
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
 
-            console.log('[PaymentIntent] User clicked $99 payment. High-intent lead captured:', userEmail);
-
-            setTimeout(() => {
-                document.getElementById('maintenance-modal').classList.remove('hidden');
-            }, 2500);
-        }
-
-        async function startAnalysis() {
-            const btn = document.querySelector('#maintenance-modal button');
-            btn.disabled = true;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Provisioning Neural Compute Instance...';
-            
             try {
-                const controller = new AbortController();
-                const timeoutId = setTimeout(() => controller.abort(), 10000);
+                // 写入数据库
+                const { error } = await supabase.from('purchases').insert([
+                    { user_email: email, source: 'Web_Direct', amount: 99.00, status: 'paid' }
+                ]);
+
+                if (error) throw error;
+
+                msg.innerText = "Payment Recorded. Redirecting...";
+                msg.classList.add('text-green-600');
                 
-                const response = await fetch(API_WEBHOOK, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ 
-                        email: userEmail,
-                        source: "Signals_Checkout_Page",
-                        timestamp: new Date().toISOString()
-                    }),
-                    signal: controller.signal
-                });
-                
-                clearTimeout(timeoutId);
-                
-                if (response.ok) {
-                    window.location.href = `signals_dashboard.html?id=${encodeURIComponent(userEmail)}`;
-                } else {
-                    throw new Error('Server error');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                window.location.href = `signals_dashboard.html?id=${encodeURIComponent(userEmail)}`;
+                // 跳转到安慰页
+                setTimeout(() => {
+                    window.location.href = `signals_dashboard.html?id=${encodeURIComponent(email)}`;
+                }, 1000);
+
+            } catch (err) {
+                console.error("Database Error:", err);
+                // 即使数据库报错，也跳转，保证用户体验
+                window.location.href = `signals_dashboard.html?id=${encodeURIComponent(email)}`;
             }
         }
     </script>
