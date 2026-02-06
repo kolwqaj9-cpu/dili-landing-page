@@ -1,4 +1,4 @@
-import uvicorn, os, subprocess, requests, json
+import uvicorn, os, subprocess, requests, json, asyncio, random, hashlib
 from datetime import datetime, timezone
 from fastapi import FastAPI, Request, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
@@ -22,6 +22,87 @@ if not S_KEY:
     print("⚠️ [WARNING] SUPABASE_SERVICE_ROLE_KEY not found in environment variables!")
     print("   Please create a .env file with your Supabase credentials.")
     print("   See README_SECURITY.md for instructions.")
+
+# ================= 演示模式：高保真模拟数据生成器 =================
+def get_simulated_intelligence(email: str):
+    """
+    生成极度逼真的棒球分析数据（演示模式）
+    返回机构级术语和复杂数据，模拟真实 GPU 计算输出
+    """
+    # 生成 5-8 条信号数据
+    num_signals = random.randint(5, 8)
+    signals = []
+    
+    for i in range(num_signals):
+        # 生成看起来像哈希值的 match_id
+        match_hash = hashlib.md5(f"{email}_{i}_{datetime.now().isoformat()}".encode()).hexdigest()[:12].upper()
+        match_id = f"MATCH_{match_hash}"
+        
+        # 生成逼真的置信度分数（85-98%）
+        confidence = round(random.uniform(85.0, 98.5), 1)
+        
+        # 生成 EV 值（预期价值，-15% 到 +25%）
+        ev_value = round(random.uniform(-15.0, 25.0), 2)
+        ev_display = f"+{ev_value}%" if ev_value >= 0 else f"{ev_value}%"
+        
+        # 生成市场偏差（0.5% 到 8.5%）
+        market_discrepancy = round(random.uniform(0.5, 8.5), 2)
+        
+        # 生成推荐入场点（价格范围）
+        entry_price = round(random.uniform(1.85, 2.15), 2)
+        
+        # 机构级术语标签
+        alpha_tags = [
+            "Alpha Decay Detected",
+            "Sharp Money Divergence", 
+            "Market Inefficiency Identified",
+            "Institutional Flow Anomaly",
+            "Volume-Weighted Price Dislocation",
+            "Cross-Market Arbitrage Signal",
+            "Regime Shift Indicator",
+            "Liquidity Premium Extraction"
+        ]
+        tag = random.choice(alpha_tags)
+        
+        signals.append({
+            "match_id": match_id,
+            "confidence_score": confidence,
+            "ev_value": ev_display,
+            "market_discrepancy": f"{market_discrepancy}%",
+            "recommended_entry": entry_price,
+            "alpha_tag": tag,
+            "timestamp": datetime.now(timezone.utc).isoformat()
+        })
+    
+    # 生成图表数据点（模拟战术数据）
+    chart_data = []
+    for i in range(random.randint(150, 250)):
+        chart_data.append([
+            round(random.uniform(-2.5, 2.5), 3),  # plate_x
+            round(random.uniform(0.5, 4.5), 3),   # plate_z
+            round(random.uniform(60.0, 100.0), 1), # score
+            random.randint(1, 4)                  # reason
+        ])
+    
+    # 构建完整的响应数据包
+    simulated_data = {
+        "total_analyzed": random.randint(280000, 295000),
+        "target_count": random.randint(25000, 28000),
+        "sample_count": len(chart_data),
+        "top_reason": random.randint(1, 4),
+        "data": chart_data,
+        "signals": signals,
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "compute_metadata": {
+            "node_id": "H100-NODE-ALPHA-07",
+            "gpu_utilization": round(random.uniform(85.0, 98.0), 1),
+            "processing_time_ms": random.randint(12450, 18750),
+            "tensor_ops": f"{random.randint(450, 680)}M"
+        }
+    }
+    
+    return simulated_data
+# ================================================================
 
 def run_pipeline(email: str):
     print(f"\n⚡ [INFRA] New compute request assigned to Node-Alpha: {email}")
@@ -91,22 +172,25 @@ def run_pipeline(email: str):
 
 @app.post("/api/webhook")
 async def hook(req: Request, bt: BackgroundTasks):
+    """
+    演示模式：虚假算力响应
+    不启动真实 CUDA 任务，直接返回成功响应
+    """
     try:
         body = await req.json()
         email = body.get('email')
         source = body.get('source', 'Unknown')
         
         if email: 
-            # 记录购买意图到统计系统
+            # 记录购买意图到统计系统（保留真实记录功能）
             try:
                 purchase_record = {
                     "user_email": email,
                     "source": source,
                     "amount": 99.00,
-                    "status": "intent_captured",  # intent_captured, completed, cancelled
+                    "status": "intent_captured",
                     "timestamp": datetime.now(timezone.utc).isoformat()
                 }
-                # 记录到 purchases 表（如果表不存在，会在 Supabase 中自动创建或需要手动创建）
                 purchase_url = f"{S_URL}/rest/v1/purchases"
                 requests.post(
                     purchase_url,
@@ -123,9 +207,9 @@ async def hook(req: Request, bt: BackgroundTasks):
             except Exception as e:
                 print(f"⚠️ [WARNING] Failed to record purchase intent: {e}")
             
-            # 将耗时任务放入后台，立刻给前端返回 200 OK，避免前端超时
-            bt.add_task(run_pipeline, email)
-            return {"status": "queued", "msg": "Calculation started"}
+            # 🎭 演示模式：不启动真实 GPU 任务，直接返回
+            print(f"⚡ [SIMULATION] Fake compute instance provisioned for user: {email}")
+            return {"status": "queued", "msg": "Instance allocated"}
         else:
             return {"status": "error", "msg": "No email provided"}
     except Exception as e:
@@ -134,47 +218,32 @@ async def hook(req: Request, bt: BackgroundTasks):
 @app.get("/api/data")
 async def get_data(email: str = None):
     """
-    安全的数据查询接口 - 前端通过此接口获取数据，而不是直接访问 Supabase
-    这样 API Key 就不会暴露在前端代码中
+    演示模式：高保真模拟数据接口
+    不查询数据库，直接返回模拟数据，模拟 1.5 秒查询延迟
     """
     if not email:
         return {"status": "error", "msg": "Email parameter required"}
     
     try:
-        # ✅ 安全改进：从环境变量读取 Supabase 配置
-        supabase_url = os.getenv("SUPABASE_URL", S_URL)
-        supabase_key = os.getenv("SUPABASE_SERVICE_ROLE_KEY", S_KEY)
+        # 🎭 演示模式：模拟数据库查询延迟（1.5秒）
+        await asyncio.sleep(1.5)
         
-        # 查询数据库，按时间倒序取最新一条
-        url = f"{supabase_url}/rest/v1/reports?user_email=eq.{email}&select=*&order=created_at.desc&limit=1"
-        response = requests.get(
-            url,
-            headers={
-                "apikey": supabase_key,
-                "Authorization": f"Bearer {supabase_key}"
-            },
-            timeout=10
-        )
+        # 生成模拟数据
+        simulated_payload = get_simulated_intelligence(email)
         
-        if response.status_code == 200:
-            data = response.json()
-            return {"status": "success", "data": data}
-        else:
-            # 如果因为排序报错，尝试不排序直接取
-            retry_url = f"{supabase_url}/rest/v1/reports?user_email=eq.{email}&select=*"
-            retry_response = requests.get(
-                retry_url,
-                headers={
-                    "apikey": supabase_key,
-                    "Authorization": f"Bearer {supabase_key}"
-                },
-                timeout=10
-            )
-            if retry_response.status_code == 200:
-                data = retry_response.json()
-                return {"status": "success", "data": data}
-            else:
-                return {"status": "error", "msg": f"Database query failed: {retry_response.status_code}"}
+        # 构建符合前端期望的响应格式
+        now_iso = datetime.now(timezone.utc).isoformat()
+        mock_report = {
+            "id": random.randint(1000, 9999),
+            "user_email": email,
+            "data_payload": simulated_payload,
+            "created_at": now_iso
+        }
+        
+        print(f"🎭 [SIMULATION] Returning simulated intelligence data for: {email}")
+        print(f"   Signals: {len(simulated_payload.get('signals', []))}, Data points: {len(simulated_payload.get('data', []))}")
+        
+        return {"status": "success", "data": [mock_report]}
                 
     except Exception as e:
         return {"status": "error", "msg": str(e)}
