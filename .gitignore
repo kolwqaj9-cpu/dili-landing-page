@@ -3,6 +3,9 @@
 .env.local
 config.local.py
 
+# Archive 目录（包含测试脚本和临时文件）
+archive/
+
 # Python
 __pycache__/
 *.py[cod]

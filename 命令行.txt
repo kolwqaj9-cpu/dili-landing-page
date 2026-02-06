@@ -1,6 +1,0 @@
-cd C:\Users\Administrator\Desktop\baseball\netlify_deploy\netlify_deploy1
-cloudflared tunnel --config config.yml run 3090-Home
-
-
-C:\Users\Administrator\Desktop\baseball\netlify_deploy\netlify_deploy1
-python main.py
