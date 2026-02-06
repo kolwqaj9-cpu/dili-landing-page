@@ -55,9 +55,17 @@ async def root():
     """根路径返回 index.html"""
     return FileResponse("index.html")
 
+@app.get("/checkout.html")
+async def read_checkout():
+    """显式处理 checkout.html 路由"""
+    file_path = "checkout.html"  # 如果文件在根目录
+    if os.path.exists(file_path):
+        return FileResponse(file_path)
+    return {"error": "File not found locally"}
+
 @app.get("/{filename}")
 async def serve_html(filename: str):
-    """为 HTML 文件提供路由"""
+    """为其他 HTML 文件提供路由"""
     if filename.endswith('.html'):
         if os.path.exists(filename):
             return FileResponse(filename)
