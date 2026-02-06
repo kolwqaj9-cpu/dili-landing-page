@@ -18,7 +18,8 @@
     </div>
 
     <script>
-        const API_BASE = 'https://baseprops-dgoa.vercel.app';
+        // 使用相对路径，自动适配当前域名
+        const API_BASE = '';  // 相对路径，自动使用当前域名
         
         const params = new URLSearchParams(window.location.search);
         const email = params.get('email') || 'guest@example.com';

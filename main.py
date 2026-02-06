@@ -1,6 +1,8 @@
 import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from supabase import create_client, Client
 
 app = FastAPI()
@@ -20,6 +22,8 @@ supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 from fastapi import Request
 from api.create_purchase import create_purchase_endpoint
+
+# ==================== API 路由（必须在静态文件之前定义）====================
 
 @app.post("/api/create_purchase")
 async def create_purchase(request: Request):
@@ -44,6 +48,23 @@ async def get_stats():
     except Exception as e:
         return {"status": "error", "message": str(e)}
 
+# ==================== 静态文件路由 ====================
+
 @app.get("/")
 async def root():
-    return {"message": "PropKit Backend is Live"}
+    """根路径返回 index.html"""
+    return FileResponse("index.html")
+
+@app.get("/{filename}")
+async def serve_html(filename: str):
+    """为 HTML 文件提供路由"""
+    if filename.endswith('.html'):
+        if os.path.exists(filename):
+            return FileResponse(filename)
+    # 如果不是 HTML 文件或文件不存在，返回 404
+    from fastapi import HTTPException
+    raise HTTPException(status_code=404, detail="File not found")
+
+# 挂载 static 目录（用于 CSS、JS 等静态资源）
+if os.path.exists("static"):
+    app.mount("/static", StaticFiles(directory="static"), name="static")
