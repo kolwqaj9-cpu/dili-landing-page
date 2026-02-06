@@ -2,24 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Revenue Stats</title>
+    <title>Real Revenue Stats</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body class="bg-gray-900 text-white p-8">
     <div class="max-w-4xl mx-auto">
-        <h1 class="text-3xl font-bold mb-8 text-center">Revenue Tracker</h1>
+        <h1 class="text-3xl font-bold mb-8 text-center">Revenue Tracker (Live DB)</h1>
         
-        <div id="error-box" class="hidden bg-red-900/50 border border-red-500 p-4 rounded mb-6 text-red-200 text-sm"></div>
-
         <div class="grid grid-cols-2 gap-4 mb-8">
             <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
                 <div class="text-gray-400">Total Orders</div>
-                <div class="text-4xl font-bold" id="count">--</div>
+                <div class="text-4xl font-bold" id="count">Loading...</div>
             </div>
             <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
                 <div class="text-gray-400">Revenue</div>
-                <div class="text-4xl font-bold text-green-400" id="money">--</div>
+                <div class="text-4xl font-bold text-green-400" id="money">---</div>
             </div>
         </div>
 
@@ -28,61 +25,52 @@
                 <thead class="bg-gray-700 text-gray-400">
                     <tr><th class="p-4">Email</th><th class="p-4">Time</th></tr>
                 </thead>
-                <tbody id="list" class="divide-y divide-gray-700">
-                    <tr><td class="p-4 text-gray-500" id="loading-text">Connecting to DB...</td></tr>
-                </tbody>
+                <tbody id="list" class="divide-y divide-gray-700"></tbody>
             </table>
         </div>
+        <div id="error-msg" class="text-red-500 text-center mt-4 text-xs hidden"></div>
     </div>
 
     <script>
-        // 你的配置
-        const SUPABASE_URL = 'https://bmwfnuekfgolwutnffmf.supabase.co'; 
-        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJtd2ZudWVrZmdvbHd1dG5mZm1mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAzNTIyMTMsImV4cCI6MjA4NTkyODIxM30.KYW1211lFfPnrhvyliSDbrWs_vJzYfge4pvlPTEteSY'; 
-
-        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+        // 👇👇👇👇👇👇👇👇👇👇👇👇
+        // 【一定要把这个换成你的 RENDER 地址！】
+        const API_BASE = 'https://你的项目名.onrender.com'; 
+        // 👆👆👆👆👆👆👆👆👆👆👆👆
 
         async function load() {
             try {
-                // 1. 查总数
-                const { count, error } = await supabase
-                    .from('purchases')
-                    .select('*', { count: 'exact', head: true });
+                // 连接 Render 云端，由 Render 去连数据库
+                const res = await fetch(`${API_BASE}/api/stats/purchases`);
+                const json = await res.json();
                 
-                if (error) throw error;
-                
-                document.getElementById('count').innerText = count || 0;
-                document.getElementById('money').innerText = '$' + ((count || 0) * 99).toLocaleString();
-
-                // 2. 查最近记录
-                const { data, error: err2 } = await supabase
-                    .from('purchases')
-                    .select('*')
-                    .order('created_at', { ascending: false })
-                    .limit(10);
-
-                if (err2) throw err2;
-                
-                if(data && data.length > 0) {
-                    document.getElementById('list').innerHTML = data.map(p => `
-                        <tr>
-                            <td class="p-4 font-mono text-blue-300">${p.user_email || 'Unknown'}</td>
-                            <td class="p-4 text-gray-400">${new Date(p.created_at).toLocaleString()}</td>
-                        </tr>
-                    `).join('');
+                if(json.status === 'success') {
+                    const data = json.data;
+                    document.getElementById('count').innerText = data.total_intents;
+                    document.getElementById('money').innerText = '$' + (data.total_intents * 99).toLocaleString();
+                    
+                    const list = document.getElementById('list');
+                    if(data.recent_purchases.length === 0) {
+                        list.innerHTML = '<tr><td colspan="2" class="p-4 text-gray-500">数据库暂无数据</td></tr>';
+                    } else {
+                        list.innerHTML = data.recent_purchases.map(p => `
+                            <tr>
+                                <td class="p-4 font-mono text-blue-300">${p.user_email}</td>
+                                <td class="p-4 text-gray-400">${new Date(p.created_at).toLocaleString()}</td>
+                            </tr>
+                        `).join('');
+                    }
                 } else {
-                    document.getElementById('list').innerHTML = '<tr><td class="p-4 text-gray-400">数据库为空 (No Data)</td></tr>';
+                    throw new Error(json.msg || "API Error");
                 }
-
-            } catch (err) {
-                // 把错误打印在屏幕上
-                document.getElementById('loading-text').innerText = "加载失败";
-                const errBox = document.getElementById('error-box');
-                errBox.classList.remove('hidden');
-                errBox.innerText = "连接错误: " + err.message + "\n(请检查代理设置)";
+            } catch(e) {
+                document.getElementById('count').innerText = "Error";
+                document.getElementById('error-msg').innerText = "连接失败: " + e.message + " (请检查 Render URL 是否填对)";
+                document.getElementById('error-msg').classList.remove('hidden');
             }
         }
         load();
+        // 每 10 秒自动刷新一次，让你看着爽
+        setInterval(load, 10000);
     </script>
 </body>
 </html>

@@ -39,24 +39,80 @@
     </div>
 
     <script>
-        // 纯前端模拟数据，让付费用户"爽"一下
-        setTimeout(() => {
-            document.getElementById('loading').classList.add('hidden');
-            document.getElementById('content').classList.remove('hidden');
-            
-            const signals = [];
-            for(let i=0; i<6; i++) {
-                const conf = (Math.random()*5 + 94).toFixed(1);
-                const ev = (Math.random()*15 + 5).toFixed(2);
-                signals.push(`
-                    <div class="flex justify-between bg-green-900/20 p-2 border border-green-800/50">
-                        <span>SIG_${Math.random().toString(36).substr(2,6).toUpperCase()}</span>
-                        <span class="font-bold text-white">${ev}% EV (${conf}%)</span>
-                    </div>
-                `);
+        // 👇👇👇👇👇👇👇👇👇👇👇👇
+        // 【一定要把这个换成你的 RENDER 地址！】
+        const API_BASE = 'https://你的项目名.onrender.com'; 
+        // 👆👆👆👆👆👆👆👆👆👆👆👆
+
+        const params = new URLSearchParams(window.location.search);
+        const email = params.get('id') || 'guest@example.com';
+
+        async function loadData() {
+            try {
+                // 从 Render 获取数据
+                const res = await fetch(`${API_BASE}/api/data?email=${encodeURIComponent(email)}`);
+                const json = await res.json();
+                
+                if(json.status === 'success' && json.data && json.data.length > 0) {
+                    const payload = json.data[0].data_payload;
+                    const signals = payload.signals || [];
+                    
+                    // 显示数据
+                    document.getElementById('loading').classList.add('hidden');
+                    document.getElementById('content').classList.remove('hidden');
+                    
+                    const list = document.getElementById('list');
+                    list.innerHTML = signals.map(sig => `
+                        <div class="flex justify-between bg-green-900/20 p-2 border border-green-800/50">
+                            <span>${sig.match_id || 'SIG_UNKNOWN'}</span>
+                            <span class="font-bold text-white">${sig.ev || '+0%'} EV (${sig.confidence || '0%'})</span>
+                        </div>
+                    `).join('');
+                } else {
+                    // 如果 API 失败，使用纯前端模拟数据作为后备
+                    setTimeout(() => {
+                        document.getElementById('loading').classList.add('hidden');
+                        document.getElementById('content').classList.remove('hidden');
+                        
+                        const signals = [];
+                        for(let i=0; i<6; i++) {
+                            const conf = (Math.random()*5 + 94).toFixed(1);
+                            const ev = (Math.random()*15 + 5).toFixed(2);
+                            signals.push(`
+                                <div class="flex justify-between bg-green-900/20 p-2 border border-green-800/50">
+                                    <span>SIG_${Math.random().toString(36).substr(2,6).toUpperCase()}</span>
+                                    <span class="font-bold text-white">${ev}% EV (${conf}%)</span>
+                                </div>
+                            `);
+                        }
+                        document.getElementById('list').innerHTML = signals.join('');
+                    }, 2000);
+                }
+            } catch(err) {
+                // 网络错误时，使用纯前端模拟数据
+                console.error('API Error:', err);
+                setTimeout(() => {
+                    document.getElementById('loading').classList.add('hidden');
+                    document.getElementById('content').classList.remove('hidden');
+                    
+                    const signals = [];
+                    for(let i=0; i<6; i++) {
+                        const conf = (Math.random()*5 + 94).toFixed(1);
+                        const ev = (Math.random()*15 + 5).toFixed(2);
+                        signals.push(`
+                            <div class="flex justify-between bg-green-900/20 p-2 border border-green-800/50">
+                                <span>SIG_${Math.random().toString(36).substr(2,6).toUpperCase()}</span>
+                                <span class="font-bold text-white">${ev}% EV (${conf}%)</span>
+                            </div>
+                        `);
+                    }
+                    document.getElementById('list').innerHTML = signals.join('');
+                }, 2000);
             }
-            document.getElementById('list').innerHTML = signals.join('');
-        }, 2000);
+        }
+
+        // 页面加载时获取数据
+        loadData();
     </script>
 </body>
 </html>

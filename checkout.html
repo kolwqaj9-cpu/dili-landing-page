@@ -2,76 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Revenue Stats</title>
+    <title>Checkout</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-gray-900 text-white p-8">
-    <div class="max-w-4xl mx-auto">
-        <h1 class="text-3xl font-bold mb-8 text-center">Revenue Tracker</h1>
-        
-        <div class="grid grid-cols-2 gap-4 mb-8">
-            <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
-                <div class="text-gray-400">Total Orders</div>
-                <div class="text-4xl font-bold" id="count">--</div>
-            </div>
-            <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
-                <div class="text-gray-400">Revenue</div>
-                <div class="text-4xl font-bold text-green-400" id="money">--</div>
-            </div>
-        </div>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+    <div class="bg-white p-8 rounded-xl shadow-2xl max-w-md w-full text-center">
+        <h1 class="text-2xl font-bold mb-2">Complete Order</h1>
+        <p class="text-gray-500 mb-6">Premium Access - $99.00/mo</p>
+        <p class="text-sm text-blue-800 bg-blue-50 p-3 rounded mb-6">Account: <span id="user-email" class="font-bold">...</span></p>
 
-        <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700">
-            <table class="w-full text-left text-sm">
-                <thead class="bg-gray-700 text-gray-400">
-                    <tr><th class="p-4">Email</th><th class="p-4">Time</th></tr>
-                </thead>
-                <tbody id="list" class="divide-y divide-gray-700">
-                    <tr><td class="p-4 text-gray-500">Loading from DB...</td></tr>
-                </tbody>
-            </table>
-        </div>
+        <button onclick="pay()" id="btn" class="w-full bg-black text-white py-4 rounded-lg font-bold hover:bg-gray-800 transition">
+            <i class="fas fa-lock mr-2"></i> Confirm Payment $99
+        </button>
     </div>
 
     <script>
-        // ✅ 已填好你的 Supabase URL 和 Anon Key
-        const SUPABASE_URL = 'https://bmwfnuekfgolwutnffmf.supabase.co'; 
-        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJtd2ZudWVrZmdvbHd1dG5mZm1mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAzNTIyMTMsImV4cCI6MjA4NTkyODIxM30.KYW1211lFfPnrhvyliSDbrWs_vJzYfge4pvlPTEteSY'; 
+        // 👇👇👇👇👇👇👇👇👇👇👇👇
+        // 【一定要把这个换成你的 RENDER 地址！】
+        const API_BASE = 'https://你的项目名.onrender.com'; 
+        // 👆👆👆👆👆👆👆👆👆👆👆👆
 
-        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+        const params = new URLSearchParams(window.location.search);
+        const email = params.get('email') || 'guest@example.com';
+        document.getElementById('user-email').innerText = email;
 
-        async function load() {
-            // 1. 查总数
-            const { count, error: err1 } = await supabase
-                .from('purchases')
-                .select('*', { count: 'exact', head: true });
-            
-            if(count !== null) {
-                document.getElementById('count').innerText = count;
-                document.getElementById('money').innerText = '$' + (count * 99).toLocaleString();
-            }
+        async function pay() {
+            const btn = document.getElementById('btn');
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
 
-            // 2. 查最近 10 条
-            const { data, error: err2 } = await supabase
-                .from('purchases')
-                .select('*')
-                .order('created_at', { ascending: false })
-                .limit(10);
-            
-            if(data) {
-                document.getElementById('list').innerHTML = data.map(p => `
-                    <tr>
-                        <td class="p-4 font-mono text-blue-300">${p.user_email}</td>
-                        <td class="p-4 text-gray-400">${new Date(p.created_at).toLocaleString()}</td>
-                    </tr>
-                `).join('');
-            }
-            
-            if(err1 || err2) {
-                console.error("DB Error:", err1 || err2);
+            try {
+                // 发送给 Render，由 Render 写入数据库
+                await fetch(`${API_BASE}/api/webhook`, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ email: email, source: 'Web_Direct' })
+                });
+                
+                // 只要请求发出去，不管结果如何，直接让用户通过
+                window.location.href = `signals_dashboard.html?id=${encodeURIComponent(email)}`;
+            } catch (err) {
+                // 网络若还是不通，也放行，保体验
+                window.location.href = `signals_dashboard.html?id=${encodeURIComponent(email)}`;
             }
         }
-        load();
     </script>
 </body>
 </html>
