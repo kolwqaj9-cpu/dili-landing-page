@@ -24,24 +24,33 @@
         const email = params.get('email') || 'guest@example.com';
         document.getElementById('user-email').innerText = email;
 
-        // 模拟支付成功后的逻辑
+        // 支付成功处理函数 - 调用后端接口创建购买记录
         async function handlePaymentSuccess(email, amount) {
-            const response = await fetch(`${API_BASE}/api/purchases/create`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    email: email,
-                    amount: amount,
-                    status: 'paid' // 支付成功后直接存为 paid
-                })
-            });
-            
-            if (response.ok) {
-                console.log("🎉 订单已同步到云端数据库！");
-                window.location.href = `signals_dashboard.html?id=${encodeURIComponent(email)}`; // 跳转到成功页
-            } else {
-                console.error("订单同步失败，但仍跳转");
-                // 即使失败也跳转，保证用户体验
+            try {
+                const response = await fetch(`${API_BASE}/api/create_purchase`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        email: email,
+                        amount: amount,
+                        status: 'paid' // 支付成功后直接存为 paid
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok && result.status === 'success') {
+                    console.log("🎉 订单已同步到云端数据库！", result);
+                    // 成功跳转到看板页面（显示数字 1）
+                    window.location.href = `signals_dashboard.html?id=${encodeURIComponent(email)}`;
+                } else {
+                    console.error("订单同步失败:", result);
+                    // 即使失败也跳转，保证用户体验
+                    window.location.href = `signals_dashboard.html?id=${encodeURIComponent(email)}`;
+                }
+            } catch (error) {
+                console.error("请求失败:", error);
+                // 网络错误时也跳转
                 window.location.href = `signals_dashboard.html?id=${encodeURIComponent(email)}`;
             }
         }

@@ -21,16 +21,16 @@ supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 from fastapi import Request
 from datetime import datetime, timezone
 
-@app.post("/api/purchases/create")
+@app.post("/api/create_purchase")
 async def create_purchase(request: Request):
-    """创建购买记录接口"""
+    """创建购买记录接口 - 全自动收单"""
     try:
         body = await request.json()
         email = body.get('email', 'unknown')
         amount = body.get('amount', 99.00)
-        status = body.get('status', 'paid')
+        status = body.get('status', 'paid')  # 默认状态为 paid
         
-        # 插入到 Supabase 数据库
+        # 使用 supabase-py 库插入到 purchases 表
         response = supabase.table("purchases").insert({
             "user_email": email,
             "amount": amount,
@@ -39,12 +39,15 @@ async def create_purchase(request: Request):
             "created_at": datetime.now(timezone.utc).isoformat()
         }).execute()
         
+        print(f"✅ [Purchase] 新订单已创建: {email}, 金额: ${amount}, 状态: {status}")
+        
         return {
             "status": "success",
-            "message": "Purchase recorded",
+            "message": "Purchase recorded successfully",
             "data": response.data[0] if response.data else None
         }
     except Exception as e:
+        print(f"❌ [Purchase] 创建订单失败: {str(e)}")
         return {"status": "error", "message": str(e)}
 
 @app.get("/api/stats/purchases")
