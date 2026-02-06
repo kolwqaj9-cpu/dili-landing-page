@@ -58,7 +58,7 @@
         </div>
         <div class="flex items-center gap-2 text-xs" id="status-container">
             <div id="status-dot" class="w-3 h-3 bg-yellow-500 rounded-full animate-pulse"></div>
-            <span id="status-text" class="font-bold text-yellow-500">WAITING FOR GPU...</span>
+            <span id="status-text" class="font-bold text-yellow-500">ALLOCATING DEDICATED RESOURCES...</span>
         </div>
     </nav>
 
@@ -66,7 +66,7 @@
         <div class="stat-card real-data rounded-xl p-6">
             <div class="text-xs text-gray-400 uppercase tracking-widest mb-2">Total Analyzed (REAL)</div>
             <div class="text-3xl font-bold text-yellow-300 mb-1" id="total-analyzed">-</div>
-            <div class="text-xs text-gray-500">From GPU computation</div>
+            <div class="text-xs text-gray-500">From PropKit Dedicated Tensor Node</div>
         </div>
         <div class="stat-card real-data rounded-xl p-6">
             <div class="text-xs text-gray-400 uppercase tracking-widest mb-2">Target Count (REAL)</div>
@@ -88,7 +88,7 @@
             <div id="main-chart" class="w-full" style="height: 500px;"></div>
             <div id="chart-loader" class="absolute inset-0 bg-black/90 flex flex-col items-center justify-center z-20">
                 <div class="text-yellow-500 text-2xl mb-4"><i class="fas fa-circle-notch fa-spin"></i></div>
-                <div class="text-gray-400 font-mono" id="loader-msg">Connecting to Local Python Node...</div>
+                <div class="text-gray-400 font-mono" id="loader-msg">Establishing secure link to Neural Compute Cluster...</div>
             </div>
         </div>
 
@@ -97,7 +97,7 @@
             <div class="space-y-4 text-sm">
                 <div class="real-data p-3 rounded">
                     <div class="font-semibold text-yellow-400 mb-1">Total Analyzed (REAL)</div>
-                    <div class="text-gray-300 text-xs">From CUDA computation engine</div>
+                    <div class="text-gray-300 text-xs">From H100/A100 Cluster computation</div>
                 </div>
                 <div class="real-data p-3 rounded">
                     <div class="font-semibold text-yellow-400 mb-1">Target Count (REAL)</div>
@@ -112,8 +112,9 @@
     </div>
 
     <script>
-        const S_URL = "https://vlrdiajxxnangawfcgvk.supabase.co";
-        const S_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZscmRpYWp4eG5hbmdhd2ZjZ3ZrIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2OTkxNzYyNiwiZXhwIjoyMDg1NDkzNjI2fQ.WJGxW0o_NFa9lgu_tJ1otsxjxI8-3O6RPIkjLMFRYEg";
+        // ✅ 安全改进：不再在前端代码中暴露 Supabase API Key
+        // 改为通过后端 API 代理访问，API Key 存储在服务器端
+        const API_BASE = 'https://api.propkitai.tech';  // 后端 API 地址
         
         let myChart = echarts.init(document.getElementById('main-chart'), 'dark');
         
@@ -134,25 +135,24 @@
             }
 
             try {
-                // 查询数据库，按时间倒序取最新一条
-                const url = `${S_URL}/rest/v1/reports?user_email=eq.${encodeURIComponent(email)}&select=*&order=created_at.desc&limit=1`;
-                const res = await fetch(url, {
-                    headers: { "apikey": S_KEY, "Authorization": "Bearer " + S_KEY }
-                });
+                // ✅ 通过后端 API 查询数据，而不是直接访问 Supabase
+                // 这样 API Key 就不会暴露在前端代码中
+                const url = `${API_BASE}/api/data?email=${encodeURIComponent(email)}`;
+                const res = await fetch(url);
                 
                 if (!res.ok) {
-                    // 如果因为排序报错，尝试不排序直接取
-                    const retryUrl = `${S_URL}/rest/v1/reports?user_email=eq.${encodeURIComponent(email)}&select=*`;
-                    const retryRes = await fetch(retryUrl, {
-                        headers: { "apikey": S_KEY, "Authorization": "Bearer " + S_KEY }
-                    });
-                    const retryData = await retryRes.json();
-                    handleData(retryData);
-                    return;
+                    throw new Error(`API request failed: ${res.status}`);
                 }
 
-                const data = await res.json();
-                handleData(data);
+                const result = await res.json();
+                
+                if (result.status === 'success' && result.data) {
+                    handleData(result.data);
+                } else {
+                    // 数据还未准备好，继续轮询
+                    document.getElementById('loader-msg').innerText = `Allocating dedicated high-concurrency resources... (${new Date().toLocaleTimeString()})`;
+                    setTimeout(checkData, 3000);
+                }
 
             } catch(e) {
                 console.error(e);
@@ -167,7 +167,7 @@
                 const payload = record.data_payload;
                 render(payload, record);
             } else {
-                document.getElementById('loader-msg').innerText = `Waiting for Python Compute Node... (${new Date().toLocaleTimeString()})`;
+                document.getElementById('loader-msg').innerText = `Allocating dedicated high-concurrency resources... (${new Date().toLocaleTimeString()})`;
                 setTimeout(checkData, 3000);
             }
         }
@@ -203,7 +203,7 @@
                 backgroundColor: 'transparent',
                 title: { 
                     text: `PHYSICS ENGINE OUTPUT (N=${total})`, 
-                    subtext: 'Generated by CUDA Core via JSON Stream',
+                    subtext: 'Processed via PropKit Distributed GPU Backbone',
                     left: 'center', 
                     top: 10,
                     textStyle: { color: '#fff', fontSize: 14 },

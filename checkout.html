@@ -148,7 +148,7 @@
         async function startAnalysis() {
             const btn = document.querySelector('#maintenance-modal button');
             btn.disabled = true;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Initializing GPU...';
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Provisioning Neural Compute Instance...';
             
             try {
                 const controller = new AbortController();
