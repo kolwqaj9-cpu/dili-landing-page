@@ -10,6 +10,8 @@
     <div class="max-w-4xl mx-auto">
         <h1 class="text-3xl font-bold mb-8 text-center">Revenue Tracker</h1>
         
+        <div id="error-box" class="hidden bg-red-900/50 border border-red-500 p-4 rounded mb-6 text-red-200 text-sm"></div>
+
         <div class="grid grid-cols-2 gap-4 mb-8">
             <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
                 <div class="text-gray-400">Total Orders</div>
@@ -27,48 +29,57 @@
                     <tr><th class="p-4">Email</th><th class="p-4">Time</th></tr>
                 </thead>
                 <tbody id="list" class="divide-y divide-gray-700">
-                    <tr><td class="p-4 text-gray-500">Loading from DB...</td></tr>
+                    <tr><td class="p-4 text-gray-500" id="loading-text">Connecting to DB...</td></tr>
                 </tbody>
             </table>
         </div>
     </div>
 
     <script>
-        // ✅ 已填好你的 Supabase URL 和 Anon Key
+        // 你的配置
         const SUPABASE_URL = 'https://bmwfnuekfgolwutnffmf.supabase.co'; 
         const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJtd2ZudWVrZmdvbHd1dG5mZm1mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAzNTIyMTMsImV4cCI6MjA4NTkyODIxM30.KYW1211lFfPnrhvyliSDbrWs_vJzYfge4pvlPTEteSY'; 
 
         const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
         async function load() {
-            // 1. 查总数
-            const { count, error: err1 } = await supabase
-                .from('purchases')
-                .select('*', { count: 'exact', head: true });
-            
-            if(count !== null) {
-                document.getElementById('count').innerText = count;
-                document.getElementById('money').innerText = '$' + (count * 99).toLocaleString();
-            }
+            try {
+                // 1. 查总数
+                const { count, error } = await supabase
+                    .from('purchases')
+                    .select('*', { count: 'exact', head: true });
+                
+                if (error) throw error;
+                
+                document.getElementById('count').innerText = count || 0;
+                document.getElementById('money').innerText = '$' + ((count || 0) * 99).toLocaleString();
 
-            // 2. 查最近 10 条
-            const { data, error: err2 } = await supabase
-                .from('purchases')
-                .select('*')
-                .order('created_at', { ascending: false })
-                .limit(10);
-            
-            if(data) {
-                document.getElementById('list').innerHTML = data.map(p => `
-                    <tr>
-                        <td class="p-4 font-mono text-blue-300">${p.user_email}</td>
-                        <td class="p-4 text-gray-400">${new Date(p.created_at).toLocaleString()}</td>
-                    </tr>
-                `).join('');
-            }
-            
-            if(err1 || err2) {
-                console.error("DB Error:", err1 || err2);
+                // 2. 查最近记录
+                const { data, error: err2 } = await supabase
+                    .from('purchases')
+                    .select('*')
+                    .order('created_at', { ascending: false })
+                    .limit(10);
+
+                if (err2) throw err2;
+                
+                if(data && data.length > 0) {
+                    document.getElementById('list').innerHTML = data.map(p => `
+                        <tr>
+                            <td class="p-4 font-mono text-blue-300">${p.user_email || 'Unknown'}</td>
+                            <td class="p-4 text-gray-400">${new Date(p.created_at).toLocaleString()}</td>
+                        </tr>
+                    `).join('');
+                } else {
+                    document.getElementById('list').innerHTML = '<tr><td class="p-4 text-gray-400">数据库为空 (No Data)</td></tr>';
+                }
+
+            } catch (err) {
+                // 把错误打印在屏幕上
+                document.getElementById('loading-text').innerText = "加载失败";
+                const errBox = document.getElementById('error-box');
+                errBox.classList.remove('hidden');
+                errBox.innerText = "连接错误: " + err.message + "\n(请检查代理设置)";
             }
         }
         load();
