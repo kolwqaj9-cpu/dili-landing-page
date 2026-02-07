@@ -30,14 +30,26 @@
         document.getElementById('user-email').innerText = email;
 
         function handlePayment() {
-            posthog.capture('purchase_intent_confirmed', { price: 99 });
-            alert('Thank you! We have received your intent and will contact you soon.');
+            const btn = document.getElementById('btn'); // 确保 ID 对应
+            
+            // 1. UI 视觉反馈
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-circle-notch fa-spin mr-2"></i> Processing...';
+            
+            // 2. 发送核心意向信号给 PostHog
+            posthog.capture('purchase_intent_confirmed', { 
+                amount: 99,
+                currency: 'USD',
+                product: '2026 Season Alpha'
+            });
+            
+            // 3. 模拟"入账"延迟，然后跳转至模拟看板
+            setTimeout(() => {
+                window.location.href = 'signals_dashboard.html?status=success';
+            }, 2000);
         }
 
         function pay() {
-            const btn = document.getElementById('btn');
-            btn.disabled = true;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
             handlePayment();
         }
     </script>
