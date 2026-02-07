@@ -1,6 +1,7 @@
 import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 from supabase import create_client, Client
 
 app = FastAPI()
@@ -20,6 +21,16 @@ supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 from fastapi import Request
 from api.create_purchase import create_purchase_endpoint
+
+# ==================== 根目录路由 =====================
+
+@app.get("/")
+async def read_root():
+    """尝试读取项目根目录下的 index.html 或 public/index.html"""
+    for path in ["public/index.html", "index.html"]:
+        if os.path.exists(path):
+            return FileResponse(path)
+    return {"error": "Index file not found in any known location"}
 
 # ==================== API 路由 =====================
 
