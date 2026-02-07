@@ -5,6 +5,9 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from supabase import create_client, Client
 
+# 定义根目录（使用绝对路径，兼容 Vercel Serverless 环境）
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 app = FastAPI()
 
 # 允许跨域
@@ -48,47 +51,71 @@ async def get_stats():
     except Exception as e:
         return {"status": "error", "message": str(e)}
 
-# ==================== 静态文件路由（显式路由，不使用通配符）====================
+# ==================== 静态文件路由（使用绝对路径，兼容 Vercel Serverless）====================
 
 @app.get("/")
 async def root():
     """根路径返回 index.html"""
-    return FileResponse("index.html")
+    path = os.path.join(BASE_DIR, "index.html")
+    if not os.path.exists(path):
+        return {"error": f"File not found at {path}"}
+    return FileResponse(path)
 
 @app.get("/checkout.html")
 async def serve_checkout():
     """显式处理 checkout.html 路由"""
-    return FileResponse("checkout.html")
+    path = os.path.join(BASE_DIR, "checkout.html")
+    if not os.path.exists(path):
+        return {"error": f"File not found at {path}"}
+    return FileResponse(path)
 
 @app.get("/purchase_stats.html")
 async def serve_stats_page():
     """显式处理 purchase_stats.html 路由"""
-    return FileResponse("purchase_stats.html")
+    path = os.path.join(BASE_DIR, "purchase_stats.html")
+    if not os.path.exists(path):
+        return {"error": f"File not found at {path}"}
+    return FileResponse(path)
 
 @app.get("/signals_dashboard.html")
 async def serve_signals_dashboard():
     """显式处理 signals_dashboard.html 路由"""
-    return FileResponse("signals_dashboard.html")
+    path = os.path.join(BASE_DIR, "signals_dashboard.html")
+    if not os.path.exists(path):
+        return {"error": f"File not found at {path}"}
+    return FileResponse(path)
 
 @app.get("/landing.html")
 async def serve_landing():
     """显式处理 landing.html 路由"""
-    return FileResponse("landing.html")
+    path = os.path.join(BASE_DIR, "landing.html")
+    if not os.path.exists(path):
+        return {"error": f"File not found at {path}"}
+    return FileResponse(path)
 
 @app.get("/terms.html")
 async def serve_terms():
     """显式处理 terms.html 路由"""
-    return FileResponse("terms.html")
+    path = os.path.join(BASE_DIR, "terms.html")
+    if not os.path.exists(path):
+        return {"error": f"File not found at {path}"}
+    return FileResponse(path)
 
 @app.get("/privacy.html")
 async def serve_privacy():
     """显式处理 privacy.html 路由"""
-    return FileResponse("privacy.html")
+    path = os.path.join(BASE_DIR, "privacy.html")
+    if not os.path.exists(path):
+        return {"error": f"File not found at {path}"}
+    return FileResponse(path)
 
 @app.get("/index.html")
 async def serve_index():
     """显式处理 index.html 路由"""
-    return FileResponse("index.html")
+    path = os.path.join(BASE_DIR, "index.html")
+    if not os.path.exists(path):
+        return {"error": f"File not found at {path}"}
+    return FileResponse(path)
 
 # 挂载 static 目录（用于 CSS、JS 等静态资源）
 if os.path.exists("static"):
