@@ -1,6 +1,7 @@
 import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from supabase import create_client, Client
 
@@ -46,3 +47,6 @@ async def get_stats():
         }
     except Exception as e:
         return {"status": "error", "message": str(e)}
+
+# 必须放在所有 @app.get/post 路由之后！
+app.mount("/", StaticFiles(directory=".", html=True), name="static")
