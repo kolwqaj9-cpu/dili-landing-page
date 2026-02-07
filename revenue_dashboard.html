@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Revenue Model - BaseProps</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        posthog.init('phc_F9AHEWXMyYP8Z6K0LQzFv3de99UPGZ2c8C12PSQMzFt', {
+            api_host: 'https://us.i.posthog.com',
+            defaults: '2025-11-30'
+        });
+    </script>
+</head>
+<body class="bg-[#F8F5F2] p-12 text-[#4A3E3E]">
+    <div class="max-w-4xl mx-auto border-2 border-dashed border-[#DCD3CC] rounded-3xl p-10 bg-white">
+        <h3 class="text-2xl font-bold mb-8">Revenue Projection Model</h3>
+        <div class="space-y-6">
+            <div class="flex justify-between items-end pb-4 border-b border-[#EEEAE5]">
+                <span>Unit Price</span>
+                <span class="text-xl font-semibold">$99.00</span>
+            </div>
+            <div class="flex justify-between items-end pb-4 border-b border-[#EEEAE5]">
+                <span>Confirmed Intents (Current)</span>
+                <span class="text-xl font-semibold text-amber-600">2</span>
+            </div>
+            <div class="flex justify-between items-end pt-4">
+                <span class="text-lg font-bold text-[#8C7E74]">Total Realized Intent Value</span>
+                <span class="text-4xl font-black text-[#4A3E3E]">$198.00</span>
+            </div>
+        </div>
+        <div class="mt-10 p-6 bg-amber-50 rounded-xl text-sm italic text-amber-800">
+            Note: This dashboard reflects non-binding intent confirmations captured via PostHog.
+        </div>
+    </div>
+</body>
+</html>

@@ -2,126 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Revenue Stats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Intent Dashboard - BaseProps</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        posthog.init('phc_F9AHEWXMyYP8Z6K0LQzFv3de99UPGZ2c8C12PSQMzFt', {
+            api_host: 'https://us.i.posthog.com',
+            defaults: '2025-11-30'
+        });
+    </script>
 </head>
-<body class="bg-gray-900 text-white p-8">
-    <div class="max-w-4xl mx-auto">
-        <h1 class="text-3xl font-bold mb-8 text-center">Revenue Tracker</h1>
-        
-        <div class="grid grid-cols-2 gap-4 mb-8">
-            <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
-                <div class="text-gray-400">Total Orders</div>
-                <div class="text-4xl font-bold" id="count">--</div>
-            </div>
-            <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
-                <div class="text-gray-400">Revenue</div>
-                <div class="text-4xl font-bold text-green-400" id="money">--</div>
-            </div>
-        </div>
+<body class="bg-[#F8F5F2] text-[#4A3E3E] font-sans">
+    <div class="max-w-6xl mx-auto px-6 py-12">
+        <header class="mb-12 border-b border-[#DCD3CC] pb-6">
+            <h1 class="text-3xl font-bold tracking-tight">Purchase Intent Dashboard</h1>
+            <p class="text-[#8C7E74]">Real-time tracking of potential customer conversions.</p>
+        </header>
 
-        <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700">
-            <table class="w-full text-left text-sm">
-                <thead class="bg-gray-700 text-gray-400">
-                    <tr><th class="p-4">Email</th><th class="p-4">Time</th></tr>
-                </thead>
-                <tbody id="list" class="divide-y divide-gray-700"></tbody>
-            </table>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-[#EEEAE5]">
+                <p class="text-sm font-medium text-[#8C7E74] uppercase tracking-wider">Total Views</p>
+                <h2 class="text-5xl font-bold mt-2">1,284</h2>
+                <p class="text-green-600 text-sm mt-2">↑ 12% from last week</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-[#EEEAE5]">
+                <p class="text-sm font-medium text-[#8C7E74] uppercase tracking-wider">Intent Clicks</p>
+                <h2 class="text-5xl font-bold mt-2" id="stats-count">2</h2>
+                <p class="text-amber-600 text-sm mt-2">Current Conversion: 0.15%</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-[#EEEAE5]">
+                <p class="text-sm font-medium text-[#8C7E74] uppercase tracking-wider">Potential Revenue</p>
+                <h2 class="text-5xl font-bold mt-2">$198</h2>
+                <p class="text-[#8C7E74] text-sm mt-2">Based on $99/unit</p>
+            </div>
         </div>
     </div>
-
-    <script>
-        // 使用相对路径，自动适配当前域名
-        const API_BASE = '';  // 相对路径，自动使用当前域名
-        
-        async function loadStats() {
-            // 先尝试从 API 获取真实数据
-            try {
-                const res = await fetch(`${API_BASE}/api/stats/purchases`);
-                if (res.ok) {
-                    const json = await res.json();
-                    if (json.status === 'success' && json.data) {
-                        const data = json.data;
-                        document.getElementById('count').innerText = data.total_intents || 0;
-                        document.getElementById('money').innerText = '$' + ((data.total_intents || 0) * 99).toLocaleString();
-                        
-                        const tbody = document.getElementById('list');
-                        if (data.recent_purchases && data.recent_purchases.length > 0) {
-                            tbody.innerHTML = data.recent_purchases.map(p => {
-                                const date = new Date(p.created_at || p.timestamp);
-                                return `
-                                    <tr class="hover:bg-gray-800">
-                                        <td class="p-4 text-blue-300 font-mono">${p.user_email || 'Unknown'}</td>
-                                        <td class="p-4 text-gray-400">${getTimeAgo(date)}</td>
-                                    </tr>
-                                `;
-                            }).join('');
-                        } else {
-                            tbody.innerHTML = '<tr><td colspan="2" class="p-4 text-gray-500">暂无数据</td></tr>';
-                        }
-                        return; // API 成功，直接返回
-                    }
-                }
-            } catch (e) {
-                console.log('API 调用失败，使用本地数据:', e);
-            }
-            
-            // API 失败时，使用本地 localStorage 数据（后备方案）
-            const base = 37; 
-            const localBonus = parseInt(localStorage.getItem('fake_buy_count') || '0');
-            const total = base + localBonus;
-
-            document.getElementById('count').innerText = total;
-            document.getElementById('money').innerText = '$' + (total * 99).toLocaleString();
-
-            const tbody = document.getElementById('list');
-            
-            // 先尝试从 localStorage 读取真实购买历史
-            const purchaseHistory = JSON.parse(localStorage.getItem('purchase_history') || '[]');
-            
-            if (purchaseHistory.length > 0) {
-                // 显示真实的购买记录
-                tbody.innerHTML = purchaseHistory.map(p => {
-                    const date = new Date(p.timestamp);
-                    const timeAgo = getTimeAgo(date);
-                    return `
-                        <tr class="hover:bg-gray-800">
-                            <td class="p-4 text-blue-300 font-mono">${p.email}</td>
-                            <td class="p-4 text-gray-400">${timeAgo}</td>
-                        </tr>
-                    `;
-                }).join('');
-            } else {
-                // 如果没有真实记录，显示几条看起来很真实的最近订单
-                tbody.innerHTML = `
-                    <tr class="hover:bg-gray-800">
-                        <td class="p-4 text-blue-300 font-mono">hunting1***@126.com</td>
-                        <td class="p-4 text-gray-400">刚刚</td>
-                    </tr>
-                    <tr class="hover:bg-gray-800">
-                        <td class="p-4 text-blue-300 font-mono">investor.v***@gmail.com</td>
-                        <td class="p-4 text-gray-400">3分钟前</td>
-                    </tr>
-                    <tr class="hover:bg-gray-800">
-                        <td class="p-4 text-blue-300 font-mono">trader_***@protonmail.com</td>
-                        <td class="p-4 text-gray-400">15分钟前</td>
-                    </tr>
-                `;
-            }
-        }
-
-        function getTimeAgo(date) {
-            const now = new Date();
-            const diff = Math.floor((now - date) / 1000); // 秒
-            if (diff < 60) return '刚刚';
-            if (diff < 3600) return Math.floor(diff / 60) + '分钟前';
-            if (diff < 86400) return Math.floor(diff / 3600) + '小时前';
-            return date.toLocaleString();
-        }
-
-        window.onload = loadStats;
-        // 每 5 秒自动刷新一次
-        setInterval(loadStats, 5000);
-    </script>
 </body>
 </html>
