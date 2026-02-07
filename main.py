@@ -6,7 +6,8 @@ from fastapi.responses import FileResponse
 from supabase import create_client, Client
 
 # 定义根目录（使用绝对路径，兼容 Vercel Serverless 环境）
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# main.py 在根目录，所以使用一级 dirname
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 app = FastAPI()
 
