@@ -26,11 +26,22 @@ from api.create_purchase import create_purchase_endpoint
 
 @app.get("/")
 async def read_root():
-    """尝试读取项目根目录下的 index.html 或 public/index.html"""
-    for path in ["public/index.html", "index.html"]:
+    """获取 main.py 所在的 api 目录的上一级（项目根目录）"""
+    # 获取 main.py 所在的 api 目录的上一级（项目根目录）
+    base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    
+    # 拼接绝对路径
+    potential_paths = [
+        os.path.join(base_path, "public", "index.html"),
+        os.path.join(base_path, "index.html")
+    ]
+    
+    for path in potential_paths:
         if os.path.exists(path):
             return FileResponse(path)
-    return {"error": "Index file not found in any known location"}
+            
+    # 如果还是找不到，把尝试过的路径吐出来，我们抓出那个鬼
+    return {"error": "Files not found", "tried": potential_paths}
 
 # ==================== API 路由 =====================
 
