@@ -1,7 +1,11 @@
 import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 from supabase import create_client, Client
+
+# 定义根目录（用于定位 public 文件夹）
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 app = FastAPI()
 
@@ -21,7 +25,14 @@ supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 from fastapi import Request
 from api.create_purchase import create_purchase_endpoint
 
-# ==================== API 路由（必须在静态文件之前定义）====================
+# ==================== 根目录路由 =====================
+
+@app.get("/")
+async def read_root():
+    """根路径直接返回 public/index.html"""
+    return FileResponse(os.path.join(BASE_DIR, "public", "index.html"))
+
+# ==================== API 路由 =====================
 
 @app.post("/api/create_purchase")
 async def create_purchase(request: Request):
