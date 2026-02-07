@@ -2,46 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Customer Signals - BaseProps</title>
+    <title>PropKit AI | Signals Stream</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-        posthog.init('phc_F9AHEWXMyYP8Z6K0LQzFv3de99UPGZ2c8C12PSQMzFt', {
-            api_host: 'https://us.i.posthog.com',
-            defaults: '2025-11-30'
-        });
+        /* 复用相同的 PostHog 初始化代码 */
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}var c=window;try{r=c.localStorage,p=c.sessionStorage}catch(t){}window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}var c=e;for(void 0!==a?c=e[a]=[]:a="posthog",c.people=c.people||[],c.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},c.people.toString=function(){return c.toString(1)+".people (stub)"},o="capture register register_once unregister identify name_tag set_config reset opt_in_capturing cookie_consent_number disable_capturing get_distinct_id getGroups get_group_id get_group_prop set_group_prop reset_groups register_for_session_recording display_person_recorder".split(" "),n=0;n<o.length;n++)g(c,o[n]);e._i.push([i,s,a])},e.__SV=1.6}(document,window.posthog||[]);
+        posthog.init('phc_F9AHEWXMyYP8Z6K0LQzFv3de99UPGZ2c8C12PSQMzFt', { api_host: 'https://us.i.posthog.com', defaults: '2025-11-30' })
     </script>
 </head>
-<body class="bg-[#F8F5F2] py-12">
-    <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden border border-[#EEEAE5]">
-        <div class="px-8 py-6 bg-[#4A3E3E] text-white">
-            <h2 class="text-xl font-semibold">User Activity Stream</h2>
+<body class="bg-white text-gray-900 p-8 font-mono">
+    <div class="max-w-3xl mx-auto border border-gray-200 rounded-xl overflow-hidden shadow-2xl">
+        <div class="bg-gray-900 text-white p-4 flex justify-between items-center">
+            <span class="text-xs font-bold tracking-widest uppercase">PropKit Intelligence Feed</span>
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+                <span class="text-[10px]">LIVE_STREAM</span>
+            </div>
         </div>
-        <div class="p-0">
-            <table class="w-full text-left border-collapse">
-                <thead>
-                    <tr class="bg-[#FAF9F7] text-[#8C7E74] text-sm uppercase">
-                        <th class="p-4 border-b border-[#EEEAE5]">Event</th>
-                        <th class="p-4 border-b border-[#EEEAE5]">User ID</th>
-                        <th class="p-4 border-b border-[#EEEAE5]">Location</th>
-                        <th class="p-4 border-b border-[#EEEAE5]">Time</th>
-                    </tr>
-                </thead>
-                <tbody class="text-[#4A3E3E]">
-                    <tr class="hover:bg-amber-50 transition-colors">
-                        <td class="p-4 border-b border-[#EEEAE5] font-medium text-amber-700">Intent Confirmed</td>
-                        <td class="p-4 border-b border-[#EEEAE5]">usr_9k2l...</td>
-                        <td class="p-4 border-b border-[#EEEAE5]">Shenzhen, CN</td>
-                        <td class="p-4 border-b border-[#EEEAE5] text-sm">2 mins ago</td>
-                    </tr>
-                    <tr class="hover:bg-amber-50 transition-colors">
-                        <td class="p-4 border-b border-[#EEEAE5] font-medium text-amber-700">Intent Confirmed</td>
-                        <td class="p-4 border-b border-[#EEEAE5]">usr_4m1a...</td>
-                        <td class="p-4 border-b border-[#EEEAE5]">San Francisco, US</td>
-                        <td class="p-4 border-b border-[#EEEAE5] text-sm">1 hour ago</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="p-6 space-y-4">
+            <div class="flex justify-between items-center text-xs border-b border-gray-100 pb-2">
+                <span class="text-gray-400">EVENT_TYPE</span>
+                <span class="text-blue-600 font-bold">PURCHASE_INTENT_CONFIRMED</span>
+            </div>
+            <div class="flex justify-between items-center text-xs border-b border-gray-100 pb-2">
+                <span class="text-gray-400">RECORDS_FOUND</span>
+                <span class="font-bold">2</span>
+            </div>
+            <div class="bg-gray-50 p-4 rounded text-[10px] text-gray-500 italic">
+                Logs: Use PostHog "Live Events" dashboard to see raw JSON metadata for each intent capture.
+            </div>
         </div>
     </div>
 </body>
