@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/checkout.html", "destination": "/checkout.html" },
+    { "source": "/purchase_stats.html", "destination": "/purchase_stats.html" },
+    { "source": "/api/(.*)", "destination": "/api/main.py" }
+  ]
+}
