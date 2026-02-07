@@ -26,24 +26,22 @@ from api.create_purchase import create_purchase_endpoint
 
 @app.get("/")
 async def read_root():
-    """强制定位到 Vercel 运行环境的根目录"""
+    """Vercel 生产环境的物理死路径"""
     import os
-    # 强制定位到 Vercel 运行环境的根目录
-    root_dir = os.getcwd() 
-    
-    # 终极尝试列表：绝对路径
+    # Vercel 生产环境的物理死路径
     potential_paths = [
-        os.path.join(root_dir, "public", "index.html"),
-        os.path.join(root_dir, "index.html"),
-        "/var/task/public/index.html", # Vercel 的物理死路径
-        "/var/task/index.html"
+        "/var/task/public/index.html",
+        "/var/task/index.html",
+        os.path.join(os.getcwd(), "public", "index.html")
     ]
     
     for path in potential_paths:
         if os.path.exists(path):
             return FileResponse(path)
             
-    return {"error": "Absolute failure", "current_work_dir": root_dir, "tried": potential_paths}
+    # 最后的自救：如果还是找不到，列出 /var/task 下的所有文件，让我们彻底看清目录
+    files_in_task = os.listdir("/var/task") if os.path.exists("/var/task") else "task_dir_missing"
+    return {"error": "Final Path Failure", "tried": potential_paths, "files": files_in_task}
 
 # ==================== API 路由 =====================
 
