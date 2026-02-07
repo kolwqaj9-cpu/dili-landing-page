@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PropKit AI | Command Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://gs.jurieo.com/gemini/fonts-googleapis/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <script>
+        /* PostHog 初始化 */
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}var c=window;try{r=c.localStorage,p=c.sessionStorage}catch(t){}window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}var c=e;for(void 0!==a?c=e[a]=[]:a="posthog",c.people=c.people||[],c.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},c.people.toString=function(){return c.toString(1)+".people (stub)"},o="capture register register_once unregister identify name_tag set_config reset opt_in_capturing cookie_consent_number disable_capturing get_distinct_id getGroups get_group_id get_group_prop set_group_prop reset_groups register_for_session_recording display_person_recorder".split(" "),n=0;n<o.length;n++)g(c,o[n]);e._i.push([i,s,a])},e.__SV=1.6}(document,window.posthog||[]);
+        posthog.init('phc_F9AHEWXMyYP8Z6K0LQzFv3de99UPGZ2c8C12PSQMzFt', { api_host: 'https://us.i.posthog.com', defaults: '2025-11-30' })
+        posthog.capture('buyer_access_dashboard');
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0b1215; color: #e2e8f0; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .glimmer { animation: glimmer 2s infinite; }
+        @keyframes glimmer { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+        .signal-card { background: rgba(30, 41, 59, 0.5); border-left: 4px solid #3b82f6; }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="max-w-4xl mx-auto">
+        <header class="flex justify-between items-center mb-8 border-b border-gray-800 pb-6">
+            <div class="flex items-center gap-4">
+                <div class="font-black text-xl tracking-tighter uppercase">PropKit <span class="text-blue-500">AI</span></div>
+                <div class="bg-blue-900/30 text-blue-400 text-[10px] px-2 py-1 rounded border border-blue-800 font-bold mono uppercase">
+                    Compute Node: RTX-3090-Cluster-A
+                </div>
+            </div>
+            <div class="flex items-center gap-2 text-green-500 text-[10px] font-bold mono">
+                <span class="w-2 h-2 bg-green-500 rounded-full glimmer"></span> LIVE_DATA_STREAM
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            <div class="md:col-span-2 bg-gradient-to-br from-blue-900/20 to-transparent p-8 rounded-3xl border border-blue-500/20 relative overflow-hidden">
+                <p class="text-xs font-bold text-blue-400 uppercase tracking-widest mb-2">Model Confidence Index</p>
+                <div class="flex items-baseline gap-2">
+                    <span id="win-rate" class="text-7xl font-black text-white tracking-tighter">94.8</span>
+                    <span class="text-blue-400 font-bold">%</span>
+                </div>
+                <p class="text-gray-500 text-xs mt-4 mono">Analyzing 14,200+ neural data points per second...</p>
+            </div>
+            <div class="bg-gray-900 p-8 rounded-3xl border border-gray-800 flex flex-col justify-center">
+                <p class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Active Signals</p>
+                <h3 id="active-count" class="text-4xl font-black">12</h3>
+                <div class="w-full bg-gray-800 h-1 mt-4 rounded-full overflow-hidden">
+                    <div class="bg-blue-600 h-full w-2/3 animate-pulse"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-4">
+            <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest ml-1">Real-time Analysis Feed</h4>
+            <div id="feed-container" class="space-y-4">
+                <div class="signal-card p-6 rounded-2xl transition-all duration-500">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-xs font-bold text-blue-400 mono">MLB • NYY @ BOS</span>
+                        <span class="text-[10px] bg-gray-800 px-2 py-1 rounded">2m ago</span>
+                    </div>
+                    <p class="font-bold text-lg">Predictive Edge: +4.2% on Over 8.5 Runs</p>
+                    <p class="text-xs text-gray-500 mt-2 mono">Volatility Index: 0.22 (Low)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 1. 让百分比随机小幅跳动
+        setInterval(() => {
+            const base = 94.2;
+            const diff = (Math.random() * 1.5).toFixed(1);
+            document.getElementById('win-rate').innerText = (parseFloat(base) + parseFloat(diff)).toFixed(1);
+        }, 3000);
+
+        // 2. 自动生成伪造的信号流
+        const matches = ["LAL @ GS", "MCI vs ARS", "NYY @ BOS", "PHI vs MIA", "DAL @ PHX"];
+        const bets = ["Over 220.5 Points", "Moneyline Home", "Asian Handicap -1.5", "Player Under 24.5 Pts"];
+        
+        function addSignal() {
+            const container = document.getElementById('feed-container');
+            const match = matches[Math.floor(Math.random() * matches.length)];
+            const bet = bets[Math.floor(Math.random() * bets.length)];
+            const edge = (Math.random() * 5 + 2).toFixed(1);
+
+            const html = `
+                <div class="signal-card p-6 rounded-2xl opacity-0 translate-y-4 transition-all duration-700">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-xs font-bold text-blue-400 mono">${match}</span>
+                        <span class="text-[10px] bg-gray-800 px-2 py-1 rounded">Just Now</span>
+                    </div>
+                    <p class="font-bold text-lg">Predictive Edge: +${edge}% on ${bet}</p>
+                    <p class="text-xs text-gray-500 mt-2 mono">Neural Pattern matched: Type-Alpha-09</p>
+                </div>
+            `;
+            
+            const div = document.createElement('div');
+            div.innerHTML = html;
+            const element = div.firstElementChild;
+            container.prepend(element);
+            
+            // 动画进入
+            setTimeout(() => {
+                element.classList.remove('opacity-0', 'translate-y-4');
+            }, 100);
+
+            // 保持列表不要太长
+            if(container.children.length > 5) container.lastElementChild.remove();
+        }
+
+        setInterval(addSignal, 5000);
+    </script>
+</body>
+</html>
