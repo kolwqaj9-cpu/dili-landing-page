@@ -1,7 +1,7 @@
 import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, RedirectResponse
 from supabase import create_client, Client
 
 app = FastAPI()
@@ -26,22 +26,9 @@ from api.create_purchase import create_purchase_endpoint
 
 @app.get("/")
 async def read_root():
-    """Vercel 生产环境的物理死路径"""
-    import os
-    # Vercel 生产环境的物理死路径
-    potential_paths = [
-        "/var/task/public/index.html",
-        "/var/task/index.html",
-        os.path.join(os.getcwd(), "public", "index.html")
-    ]
-    
-    for path in potential_paths:
-        if os.path.exists(path):
-            return FileResponse(path)
-            
-    # 最后的自救：如果还是找不到，列出 /var/task 下的所有文件，让我们彻底看清目录
-    files_in_task = os.listdir("/var/task") if os.path.exists("/var/task") else "task_dir_missing"
-    return {"error": "Final Path Failure", "tried": potential_paths, "files": files_in_task}
+    """暴力跳转：既然 / 报错，我们就让用户直接去访问 /index.html"""
+    # 这个路径会被 Vercel CDN 自动识别并提供网页
+    return RedirectResponse(url="/index.html")
 
 # ==================== API 路由 =====================
 
