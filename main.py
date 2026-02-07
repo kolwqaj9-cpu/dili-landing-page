@@ -1,7 +1,7 @@
 import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse, RedirectResponse
+from fastapi.responses import FileResponse
 from supabase import create_client, Client
 
 app = FastAPI()
@@ -21,14 +21,6 @@ supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 from fastapi import Request
 from api.create_purchase import create_purchase_endpoint
-
-# ==================== 根目录路由 =====================
-
-@app.get("/")
-async def read_root():
-    """暴力跳转：既然 / 报错，我们就让用户直接去访问 /index.html"""
-    # 这个路径会被 Vercel CDN 自动识别并提供网页
-    return RedirectResponse(url="/index.html")
 
 # ==================== API 路由 =====================
 
