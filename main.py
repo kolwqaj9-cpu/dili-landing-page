@@ -48,7 +48,7 @@ async def get_stats():
     except Exception as e:
         return {"status": "error", "message": str(e)}
 
-# ==================== 静态文件路由 ====================
+# ==================== 静态文件路由（显式路由，不使用通配符）====================
 
 @app.get("/")
 async def root():
@@ -56,22 +56,39 @@ async def root():
     return FileResponse("index.html")
 
 @app.get("/checkout.html")
-async def read_checkout():
+async def serve_checkout():
     """显式处理 checkout.html 路由"""
-    file_path = "checkout.html"  # 如果文件在根目录
-    if os.path.exists(file_path):
-        return FileResponse(file_path)
-    return {"error": "File not found locally"}
+    return FileResponse("checkout.html")
 
-@app.get("/{filename}")
-async def serve_html(filename: str):
-    """为其他 HTML 文件提供路由"""
-    if filename.endswith('.html'):
-        if os.path.exists(filename):
-            return FileResponse(filename)
-    # 如果不是 HTML 文件或文件不存在，返回 404
-    from fastapi import HTTPException
-    raise HTTPException(status_code=404, detail="File not found")
+@app.get("/purchase_stats.html")
+async def serve_stats_page():
+    """显式处理 purchase_stats.html 路由"""
+    return FileResponse("purchase_stats.html")
+
+@app.get("/signals_dashboard.html")
+async def serve_signals_dashboard():
+    """显式处理 signals_dashboard.html 路由"""
+    return FileResponse("signals_dashboard.html")
+
+@app.get("/landing.html")
+async def serve_landing():
+    """显式处理 landing.html 路由"""
+    return FileResponse("landing.html")
+
+@app.get("/terms.html")
+async def serve_terms():
+    """显式处理 terms.html 路由"""
+    return FileResponse("terms.html")
+
+@app.get("/privacy.html")
+async def serve_privacy():
+    """显式处理 privacy.html 路由"""
+    return FileResponse("privacy.html")
+
+@app.get("/index.html")
+async def serve_index():
+    """显式处理 index.html 路由"""
+    return FileResponse("index.html")
 
 # 挂载 static 目录（用于 CSS、JS 等静态资源）
 if os.path.exists("static"):
