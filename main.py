@@ -26,22 +26,24 @@ from api.create_purchase import create_purchase_endpoint
 
 @app.get("/")
 async def read_root():
-    """获取 main.py 所在的 api 目录的上一级（项目根目录）"""
-    # 获取 main.py 所在的 api 目录的上一级（项目根目录）
-    base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    """强制定位到 Vercel 运行环境的根目录"""
+    import os
+    # 强制定位到 Vercel 运行环境的根目录
+    root_dir = os.getcwd() 
     
-    # 拼接绝对路径
+    # 终极尝试列表：绝对路径
     potential_paths = [
-        os.path.join(base_path, "public", "index.html"),
-        os.path.join(base_path, "index.html")
+        os.path.join(root_dir, "public", "index.html"),
+        os.path.join(root_dir, "index.html"),
+        "/var/task/public/index.html", # Vercel 的物理死路径
+        "/var/task/index.html"
     ]
     
     for path in potential_paths:
         if os.path.exists(path):
             return FileResponse(path)
             
-    # 如果还是找不到，把尝试过的路径吐出来，我们抓出那个鬼
-    return {"error": "Files not found", "tried": potential_paths}
+    return {"error": "Absolute failure", "current_work_dir": root_dir, "tried": potential_paths}
 
 # ==================== API 路由 =====================
 
