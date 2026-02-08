@@ -2,34 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PropKit AI | Signals Stream</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PropKit AI - Signals Stream | Real-time Intelligence Feed</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <script>
-        /* 复用相同的 PostHog 初始化代码 */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        signalBlue: '#2563EB',
+                        signalDark: '#1E293B',
+                    },
+                    animation: {
+                        'pulse-glow': 'pulseGlow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        pulseGlow: {
+                            '0%, 100%': { boxShadow: '0 0 10px rgba(37, 99, 235, 0.5)' },
+                            '50%': { boxShadow: '0 0 25px rgba(37, 99, 235, 0.9)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    </style>
+    <script>
         !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}var c=window;try{r=c.localStorage,p=c.sessionStorage}catch(t){}window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}var c=e;for(void 0!==a?c=e[a]=[]:a="posthog",c.people=c.people||[],c.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},c.people.toString=function(){return c.toString(1)+".people (stub)"},o="capture register register_once unregister identify name_tag set_config reset opt_in_capturing cookie_consent_number disable_capturing get_distinct_id getGroups get_group_id get_group_prop set_group_prop reset_groups register_for_session_recording display_person_recorder".split(" "),n=0;n<o.length;n++)g(c,o[n]);e._i.push([i,s,a])},e.__SV=1.6}(document,window.posthog||[]);
         posthog.init('phc_F9AHEWXMyYP8Z6K0LQzFv3de99UPGZ2c8C12PSQMzFt', { api_host: 'https://us.i.posthog.com', defaults: '2025-11-30' })
     </script>
 </head>
-<body class="bg-white text-gray-900 p-8 font-mono">
-    <div class="max-w-3xl mx-auto border border-gray-200 rounded-xl overflow-hidden shadow-2xl">
-        <div class="bg-gray-900 text-white p-4 flex justify-between items-center">
-            <span class="text-xs font-bold tracking-widest uppercase">PropKit Intelligence Feed</span>
-            <div class="flex items-center gap-2">
-                <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
-                <span class="text-[10px]">LIVE_STREAM</span>
+<body class="bg-gray-50 text-slate-900 antialiased min-h-screen p-8">
+    <div class="max-w-4xl mx-auto fade-in-up">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+            <div class="bg-gradient-to-r from-slate-900 to-signalDark text-white p-6 flex justify-between items-center">
+                <span class="text-xs font-bold tracking-widest uppercase">PropKit Intelligence Feed</span>
+                <div class="flex items-center gap-2">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                    </span>
+                    <span class="text-[10px] font-semibold">LIVE_STREAM</span>
+                </div>
             </div>
-        </div>
-        <div class="p-6 space-y-4">
-            <div class="flex justify-between items-center text-xs border-b border-gray-100 pb-2">
-                <span class="text-gray-400">EVENT_TYPE</span>
-                <span class="text-blue-600 font-bold">PURCHASE_INTENT_CONFIRMED</span>
-            </div>
-            <div class="flex justify-between items-center text-xs border-b border-gray-100 pb-2">
-                <span class="text-gray-400">RECORDS_FOUND</span>
-                <span class="font-bold">2</span>
-            </div>
-            <div class="bg-gray-50 p-4 rounded text-[10px] text-gray-500 italic">
-                Logs: Use PostHog "Live Events" dashboard to see raw JSON metadata for each intent capture.
+            <div class="p-8 space-y-6">
+                <div class="flex justify-between items-center pb-4 border-b border-gray-100">
+                    <span class="text-sm text-slate-500 font-medium">EVENT_TYPE</span>
+                    <span class="text-blue-600 font-bold text-sm">PURCHASE_INTENT_CONFIRMED</span>
+                </div>
+                <div class="flex justify-between items-center pb-4 border-b border-gray-100">
+                    <span class="text-sm text-slate-500 font-medium">RECORDS_FOUND</span>
+                    <span class="text-slate-900 font-bold text-lg">2</span>
+                </div>
+                <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl">
+                    <p class="text-xs text-blue-700 italic leading-relaxed">
+                        Logs: Use PostHog "Live Events" dashboard to see raw JSON metadata for each intent capture.
+                    </p>
+                </div>
             </div>
         </div>
     </div>

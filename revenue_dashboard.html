@@ -2,32 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PropKit AI | Revenue Model</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PropKit AI - Revenue Model | Financial Forecast</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <script>
-        /* 复用相同的 PostHog 初始化代码 */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        signalBlue: '#2563EB',
+                        signalDark: '#1E293B',
+                    },
+                    animation: {
+                        'pulse-glow': 'pulseGlow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        pulseGlow: {
+                            '0%, 100%': { boxShadow: '0 0 10px rgba(37, 99, 235, 0.5)' },
+                            '50%': { boxShadow: '0 0 25px rgba(37, 99, 235, 0.9)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    </style>
+    <script>
         !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}var c=window;try{r=c.localStorage,p=c.sessionStorage}catch(t){}window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}var c=e;for(void 0!==a?c=e[a]=[]:a="posthog",c.people=c.people||[],c.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},c.people.toString=function(){return c.toString(1)+".people (stub)"},o="capture register register_once unregister identify name_tag set_config reset opt_in_capturing cookie_consent_number disable_capturing get_distinct_id getGroups get_group_id get_group_prop set_group_prop reset_groups register_for_session_recording display_person_recorder".split(" "),n=0;n<o.length;n++)g(c,o[n]);e._i.push([i,s,a])},e.__SV=1.6}(document,window.posthog||[]);
         posthog.init('phc_F9AHEWXMyYP8Z6K0LQzFv3de99UPGZ2c8C12PSQMzFt', { api_host: 'https://us.i.posthog.com', defaults: '2025-11-30' })
     </script>
 </head>
-<body class="bg-gray-50 flex items-center justify-center min-h-screen p-6">
-    <div class="bg-white w-full max-w-md p-10 rounded-3xl shadow-xl border border-gray-100">
+<body class="bg-gray-50 text-slate-900 antialiased min-h-screen flex items-center justify-center p-6">
+    <div class="bg-white w-full max-w-md p-10 rounded-2xl shadow-xl border border-gray-100 fade-in-up">
         <div class="mb-8">
-            <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest">Revenue Forecast</h3>
-            <div class="h-1 w-12 bg-blue-600 mt-2"></div>
+            <div class="inline-flex items-center gap-2 bg-blue-50 text-blue-700 border border-blue-100 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-4">
+                Revenue Forecast
+            </div>
+            <div class="h-1 w-16 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full"></div>
         </div>
         <div class="space-y-6">
             <div class="flex justify-between items-end border-b border-gray-100 pb-4">
-                <span class="text-gray-500 text-sm">Unit MSRP</span>
-                <span class="text-lg font-bold">$99.00</span>
+                <span class="text-slate-500 text-sm font-medium">Unit MSRP</span>
+                <span class="text-xl font-bold text-slate-900">$99.00</span>
             </div>
             <div class="flex justify-between items-end border-b border-gray-100 pb-4">
-                <span class="text-gray-500 text-sm">Valid Intents</span>
-                <span class="text-lg font-bold text-blue-600">2</span>
+                <span class="text-slate-500 text-sm font-medium">Valid Intents</span>
+                <span class="text-xl font-bold text-blue-600">2</span>
             </div>
             <div class="pt-4 flex justify-between items-center">
-                <span class="text-sm font-bold text-gray-900 uppercase">Gross Pipeline</span>
-                <span class="text-4xl font-black text-gray-900">$198.00</span>
+                <span class="text-sm font-bold text-slate-700 uppercase tracking-wide">Gross Pipeline</span>
+                <span class="text-4xl font-black text-slate-900">$198.00</span>
             </div>
         </div>
     </div>

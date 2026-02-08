@@ -3,31 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PropKit Alpha | Institutional Research</title>
+    <title>PropKit AI - Alpha | Institutional Research</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        signalBlue: '#2563EB',
+                        signalDark: '#1E293B',
+                    },
+                    animation: {
+                        'pulse-glow': 'pulseGlow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        pulseGlow: {
+                            '0%, 100%': { boxShadow: '0 0 10px rgba(37, 99, 235, 0.5)' },
+                            '50%': { boxShadow: '0 0 25px rgba(37, 99, 235, 0.9)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        body { background-color: #ffffff; color: #111; font-family: 'Lato', sans-serif; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        
         .marble-bg { background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); }
     </style>
 </head>
-<body class="min-h-screen flex flex-col marble-bg">
-    <header class="py-8 px-10 flex justify-between items-center">
-        <div class="text-lg tracking-widest uppercase font-bold text-gray-800 border-b-2 border-black pb-1">PropKit Alpha</div>
+<body class="min-h-screen flex flex-col marble-bg text-slate-900 antialiased">
+    <header class="py-8 px-10 flex justify-between items-center fade-in-up">
+        <div class="text-lg tracking-wide uppercase font-bold text-slate-800 border-b-2 border-slate-900 pb-1">PropKit Alpha</div>
     </header>
     <main class="flex-1 flex flex-col items-center justify-center px-6 text-center">
-        <div class="mb-4 text-xs font-bold tracking-[0.3em] text-gray-400 uppercase">Quantified Edge</div>
-        <h1 class="text-5xl md:text-7xl mb-8 text-gray-900 leading-tight">The Science of <br> <span class="italic text-gray-600">Certainty.</span></h1>
-        <p class="max-w-2xl text-gray-600 mb-12 font-light text-lg leading-relaxed">Liquidity mapping and volatility surface modeling.</p>
-        <button onclick="openConsultation()" class="bg-black text-white text-sm tracking-widest uppercase py-4 px-8 hover:bg-gray-800 transition shadow-xl">Request Access</button>
+        <div class="mb-4 text-xs font-bold tracking-widest text-slate-400 uppercase fade-in-up">Quantified Edge</div>
+        <h1 class="text-5xl md:text-7xl mb-8 text-slate-900 leading-tight font-extrabold fade-in-up" style="animation-delay: 0.1s;">The Science of <br> <span class="italic text-slate-700">Certainty.</span></h1>
+        <p class="max-w-2xl text-slate-600 mb-12 font-medium text-lg leading-relaxed fade-in-up" style="animation-delay: 0.2s;">Liquidity mapping and volatility surface modeling.</p>
+        <button onclick="openConsultation()" class="bg-gradient-to-r from-slate-900 to-signalDark text-white text-sm tracking-widest uppercase py-4 px-8 hover:from-slate-800 hover:to-slate-700 transition transform hover:-translate-y-0.5 shadow-xl rounded-xl font-bold fade-in-up" style="animation-delay: 0.3s;">Request Access</button>
     </main>
-    <footer class="py-8 text-center text-[10px] text-gray-400">
+    <footer class="py-8 text-center text-xs text-slate-400 fade-in-up" style="animation-delay: 0.4s;">
         <div class="space-x-6 mb-2">
-            <a href="privacy.html" class="hover:text-black transition underline">Privacy Policy</a>
-            <a href="terms.html" class="hover:text-black transition underline">Terms of Service</a>
+            <a href="privacy.html" class="hover:text-slate-900 transition underline">Privacy Policy</a>
+            <a href="terms.html" class="hover:text-slate-900 transition underline">Terms of Service</a>
         </div>
-        <p>© 2026 PropKit Analytics LLC. Institutional Use Only. <span class="text-gray-300">v5.0</span></p>
+        <p>© 2026 PropKit Analytics LLC. Institutional Use Only. <span class="text-slate-300">v5.0</span></p>
     </footer>
     <script>
         // 使用相对路径，自动适配当前域名
@@ -40,7 +77,7 @@
                     <h3 style="margin-bottom:20px;font-size:18px;font-weight:bold;">🎉 Special Offer: 1 Month Free Trial</h3>
                     <p style="color:#666;font-size:14px;margin-bottom:20px;">Enter your email to activate your free trial access</p>
                     <input type="email" id="user-email" placeholder="your@email.com" style="width:100%;padding:12px;border:1px solid #ddd;margin-bottom:15px;font-size:14px;">
-                    <button onclick="activateTrial()" id="activate-btn" style="background:black;color:white;padding:15px 30px;letter-spacing:2px;font-size:12px;width:100%;cursor:pointer;">ACTIVATE FREE TRIAL</button>
+                    <button onclick="activateTrial()" id="activate-btn" style="background:linear-gradient(to right, #1e293b, #2563eb);color:white;padding:15px 30px;letter-spacing:2px;font-size:12px;width:100%;cursor:pointer;border-radius:0.75rem;font-weight:bold;">ACTIVATE FREE TRIAL</button>
                     <br><br>
                     <small style="cursor:pointer;color:#999;" onclick="document.getElementById('p-modal').remove()">CLOSE</small>
                     <p id="status-msg" style="margin-top:10px;font-size:12px;color:#666;min-height:20px;"></p>
