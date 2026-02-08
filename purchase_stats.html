@@ -74,22 +74,106 @@
             <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
                 <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Confirmed Intents</p>
                 <div class="flex items-baseline gap-2">
-                    <span class="text-6xl font-black text-blue-600">2</span> 
+                    <span class="text-6xl font-black text-blue-600" id="purchase-count">--</span> 
                     <span class="text-slate-400 text-sm font-medium">Unique Leads</span>
                 </div>
             </div>
             <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
                 <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Market Potential</p>
                 <div class="flex items-baseline gap-2">
-                    <span class="text-6xl font-black text-slate-900">$198</span>
+                    <span class="text-6xl font-black text-slate-900" id="purchase-revenue">--</span>
                     <span class="text-slate-400 text-sm font-medium">@ $99/unit</span>
                 </div>
             </div>
         </div>
         
+        <div class="mt-6 text-center fade-in-up" style="animation-delay: 0.15s;">
+            <p class="text-xs text-slate-400" id="data-source">加载中...</p>
+        </div>
+        
         <footer class="mt-12 pt-6 border-t border-gray-100 text-xs text-slate-400 text-center fade-in-up" style="animation-delay: 0.2s;">
             © 2026 PropKit Analytics. Data piped via PostHog Cloud.
         </footer>
+    
+    <script>
+        // ============================================
+        // 购买统计 JavaScript 代码
+        // ============================================
+        const UNIT_PRICE = 99.00;
+        const EVENT_NAME = 'purchase_intent_confirmed';
+        
+        // 从 localStorage 读取统计数据
+        function loadStatsFromLocalStorage() {
+            try {
+                const storedCount = localStorage.getItem('purchase_intent_count');
+                const count = storedCount ? parseInt(storedCount, 10) : 0;
+                const revenue = count * UNIT_PRICE;
+                
+                return {
+                    count: count,
+                    revenue: revenue,
+                    source: 'localStorage'
+                };
+            } catch (error) {
+                console.error('读取 localStorage 失败:', error);
+                return {
+                    count: 0,
+                    revenue: 0,
+                    source: 'localStorage',
+                    error: error.message
+                };
+            }
+        }
+        
+        // 更新页面显示
+        function updateStatsDisplay(stats) {
+            if (!stats) {
+                console.error('统计数据为空');
+                return;
+            }
+            
+            // 更新购买数量
+            const countElement = document.getElementById('purchase-count');
+            if (countElement) {
+                countElement.textContent = stats.count || 0;
+            }
+            
+            // 更新营收
+            const revenueElement = document.getElementById('purchase-revenue');
+            if (revenueElement) {
+                const formattedRevenue = (stats.revenue || 0).toLocaleString('en-US', {
+                    style: 'currency',
+                    currency: 'USD',
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 0
+                });
+                revenueElement.textContent = formattedRevenue;
+            }
+            
+            // 显示数据来源
+            const sourceElement = document.getElementById('data-source');
+            if (sourceElement) {
+                sourceElement.textContent = `数据来源: ${stats.source}`;
+            }
+            
+            console.log('统计数据已更新:', stats);
+        }
+        
+        // 加载并显示统计数据
+        function loadPurchaseStats() {
+            const stats = loadStatsFromLocalStorage();
+            updateStatsDisplay(stats);
+            return stats;
+        }
+        
+        // 页面加载时自动加载统计数据
+        document.addEventListener('DOMContentLoaded', function() {
+            loadPurchaseStats();
+            
+            // 每 10 秒自动刷新一次
+            setInterval(loadPurchaseStats, 10000);
+        });
+    </script>
     </div>
 </body>
 </html>
