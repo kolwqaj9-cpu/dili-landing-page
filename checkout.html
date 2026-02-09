@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Secure Access | PropKit AI Engine</title>
-    
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -19,7 +17,7 @@
                     animation: { 'pulse-glow': 'pulseGlow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' },
                     keyframes: {
                         pulseGlow: {
-                            '0%, 100%': { boxShadow: '0 0 15px rgba(37, 99, 235, 0.5)' },
+                            '0%, 100%': { boxShadow: '0 0 10px rgba(37, 99, 235, 0.5)' },
                             '50%': { boxShadow: '0 0 30px rgba(37, 99, 235, 0.8)' },
                         }
                     }
@@ -27,7 +25,7 @@
             }
         }
     </script>
-    
+
     <script>
         !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}var c=window;try{r=c.localStorage,p=c.sessionStorage}catch(t){}window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}var c=e;for(void 0!==a?c=e[a]=[]:a="posthog",c.people=c.people||[],c.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},c.people.toString=function(){return c.toString(1)+".people (stub)"},o="capture register register_once unregister identify name_tag set_config reset opt_in_capturing cookie_consent_number disable_capturing get_distinct_id getGroups get_group_id get_group_prop set_group_prop reset_groups register_for_session_recording display_person_recorder".split(" "),n=0;n<o.length;n++)g(c,o[n]);e._i.push([i,s,a])},e.__SV=1.6}(document,window.posthog||[]);
         
@@ -35,7 +33,7 @@
             api_host: 'https://us.i.posthog.com' 
         });
         
-        console.log("✅ PostHog Loaded Successfully - Version Fix 3.0");
+        console.log("PostHog initialized correctly.");
     </script>
 
     <style>
@@ -81,7 +79,6 @@
         </div>
 
         <div class="glass-panel p-6 md:p-8 rounded-2xl shadow-2xl relative">
-            
             <h3 class="text-lg font-bold text-slate-900 mb-6">Confirm Access</h3>
 
             <div class="space-y-4 mb-6">
@@ -121,38 +118,31 @@
             <p class="text-center text-[10px] text-slate-400 mt-4">
                 Secure 256-bit SSL Encrypted Transaction.
             </p>
-
         </div>
     </div>
 
     <div id="gift-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
         <div class="modal-overlay absolute inset-0"></div>
         <div class="relative bg-white rounded-2xl shadow-2xl max-w-md w-full mx-4 p-8 border border-gray-200 transform scale-95 opacity-0 transition-all duration-300" id="modal-content">
-            
             <div class="flex items-center gap-3 mb-4 text-amber-600 bg-amber-50 p-3 rounded-lg border border-amber-100">
                 <i class="fas fa-exclamation-triangle"></i>
                 <span class="text-xs font-bold uppercase tracking-wide">Payment Gateway Paused</span>
             </div>
-
             <h2 class="text-2xl font-extrabold text-slate-900 mb-2">Transaction Not Processed</h2>
             <p class="text-slate-500 text-sm leading-relaxed mb-6">
                 We are currently upgrading our merchant processor to handle high traffic volume. <strong class="text-slate-900">Your card has NOT been charged.</strong>
             </p>
-
             <div class="bg-green-50 border border-green-200 rounded-xl p-5 mb-6 text-center relative overflow-hidden">
                 <div class="absolute -top-6 -right-6 bg-green-200 w-16 h-16 rounded-full blur-xl opacity-50"></div>
-                
                 <p class="text-xs font-bold text-green-600 uppercase tracking-widest mb-1">System Compensation</p>
                 <h3 class="text-xl font-black text-slate-800 mb-2">30 Days Free Access</h3>
                 <p class="text-xs text-slate-600">
                     We apologize for the delay. An institutional-tier account has been provisioned for you at no cost.
                 </p>
             </div>
-
             <button onclick="goToDashboard()" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl transition shadow-lg flex items-center justify-center gap-2">
                 Enter Dashboard Now <i class="fas fa-arrow-right text-sm"></i>
             </button>
-
         </div>
     </div>
 
@@ -161,30 +151,26 @@
             const btn = document.getElementById('pay-btn');
             const originalContent = btn.innerHTML;
             
-            // 1. UI 反馈：模拟"正在处理"
+            // 1. UI 反馈
             btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Processing Transaction...';
             btn.classList.add('opacity-75', 'cursor-not-allowed');
             btn.disabled = true;
 
-            // ==========================================
-            // 核心修复：发送信号给 PostHog
-            // ==========================================
+            // 2. 发送数据给 PostHog (最关键的一步)
+            // 只要没报错，这一行必定执行
             if(window.posthog) {
-                // 强制发送购买意向事件
                 posthog.capture('purchase_intent_confirmed', { 
                     amount: 249, 
                     currency: 'USD', 
                     product: 'Quarterly Access (Intent)',
                     payment_status: 'gateway_simulated'
                 });
-                console.log('PostHog 信号已发送!'); 
+                console.log('✅ PostHog 信号已发送!'); 
             } else {
-                console.error("PostHog 未加载! 请检查网络拦截。");
+                console.error("❌ PostHog 未加载");
             }
 
-            // ==========================================
-            // 本地统计逻辑
-            // ==========================================
+            // 3. 本地存储 (为了让你自己的 Dashboard 也能动)
             try {
                 const history = JSON.parse(localStorage.getItem('purchase_history') || '[]');
                 const newOrder = {
@@ -195,16 +181,12 @@
                 };
                 history.push(newOrder);
                 localStorage.setItem('purchase_history', JSON.stringify(history));
-                
-                // 触发事件通知其他页面
                 window.dispatchEvent(new Event("storage"));
-            } catch(e) { console.error('本地存储写入失败', e); }
+            } catch(e) { console.error('Local Storage Error', e); }
             
-            // 2. 模拟网络延迟 (2秒) -> 弹出惊喜框
+            // 4. 延迟显示弹窗
             setTimeout(() => {
                 showGiftModal();
-                
-                // 恢复按钮
                 btn.innerHTML = originalContent;
                 btn.classList.remove('opacity-75', 'cursor-not-allowed');
                 btn.disabled = false;
@@ -214,10 +196,7 @@
         function showGiftModal() {
             const modal = document.getElementById('gift-modal');
             const content = document.getElementById('modal-content');
-            
             modal.classList.remove('hidden');
-            
-            // 入场动画
             setTimeout(() => {
                 content.classList.remove('scale-95', 'opacity-0');
                 content.classList.add('scale-100', 'opacity-100');
@@ -225,7 +204,6 @@
         }
 
         function goToDashboard() {
-            // 跳转到 Dashboard
             window.location.href = 'buyer_dashboard.html?status=trial&source=compensation_gift';
         }
     </script>
