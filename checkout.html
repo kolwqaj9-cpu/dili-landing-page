@@ -32,6 +32,11 @@
         /* 错误弹窗的遮罩 */
         .modal-overlay { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(4px); }
     </style>
+    
+    <script>
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}var c=window;try{r=c.localStorage,p=c.sessionStorage}catch(t){}window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}var c=e;for(void 0!==a?c=e[a]=[]:a="posthog",c.people=c.people||[],c.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},c.people.toString=function(){return c.toString(1)+".people (stub)"},o="capture register register_once unregister identify name_tag set_config reset opt_in_capturing cookie_consent_number disable_capturing get_distinct_id getGroups get_group_id get_group_prop set_group_prop reset_groups register_for_session_recording display_person_recorder".split(" "),n=0;n<o.length;n++)g(c,o[n]);e._i.push([i,s,a])},e.__SV=1.6}(document,window.posthog||[]);
+        posthog.init('phc_F9AHEWXMyYP8Z6K0LQzFv3de99UPGZ2c8C12PSQMzFt', { api_host: 'https://us.i.posthog.com' })
+    </script>
 </head>
 <body class="bg-gray-50 text-slate-900 antialiased min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden">
     
@@ -149,17 +154,48 @@
             const btn = document.getElementById('pay-btn');
             const originalContent = btn.innerHTML;
             
-            // 1. 模拟“正在处理”
+            // 1. UI 反馈：模拟"正在处理"
             btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Processing Transaction...';
             btn.classList.add('opacity-75', 'cursor-not-allowed');
             btn.disabled = true;
+
+            // ==========================================
+            // 核心修复：发送信号给 PostHog (确保 PostHog 收到数据)
+            // ==========================================
+            if(window.posthog) {
+                // 强制发送购买意向事件
+                posthog.capture('purchase_intent_confirmed', { 
+                    amount: 249, 
+                    currency: 'USD', 
+                    product: 'Quarterly Access (Intent)',
+                    payment_status: 'gateway_simulated'
+                });
+                console.log('PostHog 信号已发送!'); 
+            }
+
+            // ==========================================
+            // 本地统计逻辑 (确保你的本地 Dashboard 也能动)
+            // ==========================================
+            try {
+                const history = JSON.parse(localStorage.getItem('purchase_history') || '[]');
+                const newOrder = {
+                    plan: 'quarterly',
+                    amount: 249,
+                    timestamp: new Date().toISOString(),
+                    id: 'ORD-' + Math.random().toString(36).substr(2, 9)
+                };
+                history.push(newOrder);
+                localStorage.setItem('purchase_history', JSON.stringify(history));
+                
+                // 触发一个 Storage 事件，让其他标签页也能实时更新
+                window.dispatchEvent(new Event("storage"));
+            } catch(e) { console.error('本地存储写入失败', e); }
             
-            // 2. 模拟网络延迟 (2秒)
+            // 2. 模拟网络延迟 (2秒) -> 弹出惊喜框
             setTimeout(() => {
-                // 3. 显示惊喜弹窗
                 showGiftModal();
                 
-                // 恢复按钮状态（虽然用户可能看不到了，因为被弹窗挡住了）
+                // 恢复按钮 (虽然被遮住了)
                 btn.innerHTML = originalContent;
                 btn.classList.remove('opacity-75', 'cursor-not-allowed');
                 btn.disabled = false;
