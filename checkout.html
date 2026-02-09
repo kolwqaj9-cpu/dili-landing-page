@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Secure Access | PropKit AI Engine</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -28,7 +30,12 @@
     
     <script>
         !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}var c=window;try{r=c.localStorage,p=c.sessionStorage}catch(t){}window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}var c=e;for(void 0!==a?c=e[a]=[]:a="posthog",c.people=c.people||[],c.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},c.people.toString=function(){return c.toString(1)+".people (stub)"},o="capture register register_once unregister identify name_tag set_config reset opt_in_capturing cookie_consent_number disable_capturing get_distinct_id getGroups get_group_id get_group_prop set_group_prop reset_groups register_for_session_recording display_person_recorder".split(" "),n=0;n<o.length;n++)g(c,o[n]);e._i.push([i,s,a])},e.__SV=1.6}(document,window.posthog||[]);
-        posthog.init('phc_F9AHEWXMyYP8Z6K0LQzFv3de99UPGZ2c8C12PSQMzFt', { api_host: 'https://us.i.posthog.com' })
+        
+        posthog.init('phc_F9AHEWXMyYP8Z6K0LQzFv3de99UPGZ2c8C12PSQMzFt', { 
+            api_host: 'https://us.i.posthog.com' 
+        });
+        
+        console.log("✅ PostHog Loaded Successfully - Version Fix 3.0");
     </script>
 
     <style>
@@ -160,7 +167,7 @@
             btn.disabled = true;
 
             // ==========================================
-            // 核心修复：发送信号给 PostHog (确保 PostHog 收到数据)
+            // 核心修复：发送信号给 PostHog
             // ==========================================
             if(window.posthog) {
                 // 强制发送购买意向事件
@@ -171,10 +178,12 @@
                     payment_status: 'gateway_simulated'
                 });
                 console.log('PostHog 信号已发送!'); 
+            } else {
+                console.error("PostHog 未加载! 请检查网络拦截。");
             }
 
             // ==========================================
-            // 本地统计逻辑 (确保你的本地 Dashboard 也能动)
+            // 本地统计逻辑
             // ==========================================
             try {
                 const history = JSON.parse(localStorage.getItem('purchase_history') || '[]');
@@ -187,7 +196,7 @@
                 history.push(newOrder);
                 localStorage.setItem('purchase_history', JSON.stringify(history));
                 
-                // 触发一个 Storage 事件，让其他标签页也能实时更新
+                // 触发事件通知其他页面
                 window.dispatchEvent(new Event("storage"));
             } catch(e) { console.error('本地存储写入失败', e); }
             
@@ -195,7 +204,7 @@
             setTimeout(() => {
                 showGiftModal();
                 
-                // 恢复按钮 (虽然被遮住了)
+                // 恢复按钮
                 btn.innerHTML = originalContent;
                 btn.classList.remove('opacity-75', 'cursor-not-allowed');
                 btn.disabled = false;
@@ -208,7 +217,7 @@
             
             modal.classList.remove('hidden');
             
-            // 简单的入场动画
+            // 入场动画
             setTimeout(() => {
                 content.classList.remove('scale-95', 'opacity-0');
                 content.classList.add('scale-100', 'opacity-100');
@@ -216,8 +225,7 @@
         }
 
         function goToDashboard() {
-            // 跳转到之前做好的看板
-            // 添加参数 status=trial 表明是试用用户
+            // 跳转到 Dashboard
             window.location.href = 'buyer_dashboard.html?status=trial&source=compensation_gift';
         }
     </script>
