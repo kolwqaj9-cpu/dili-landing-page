@@ -36,12 +36,19 @@
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     </style>
     
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
     <script>
         !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}var c=window;try{r=c.localStorage,p=c.sessionStorage}catch(t){}window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}var c=e;for(void 0!==a?c=e[a]=[]:a="posthog",c.people=c.people||[],c.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},c.people.toString=function(){return c.toString(1)+".people (stub)"},o="capture register register_once unregister identify name_tag set_config reset opt_in_capturing cookie_consent_number disable_capturing get_distinct_id getGroups get_group_id get_group_prop set_group_prop reset_groups register_for_session_recording display_person_recorder".split(" "),n=0;n<o.length;n++)g(c,o[n]);e._i.push([i,s,a])},e.__SV=1.6}(document,window.posthog||[]);
         posthog.init('phc_F9AHEWXMyYP8Z6K0LQzFv3de99UPGZ2c8C12PSQMzFt', { api_host: 'https://us.i.posthog.com' });
     </script>
 </head>
 <body class="bg-gray-50 text-slate-900 antialiased overflow-x-hidden">
+
+    <div style="display:none">
+        <span id="busuanzi_container_site_pv"></span>
+        <span id="busuanzi_container_site_uv"></span>
+    </div>
 
     <div class="block md:hidden min-h-screen flex flex-col relative">
         <div class="absolute inset-0 z-0 opacity-30 pointer-events-none" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 20px 20px;"></div>
@@ -110,13 +117,8 @@
         </div>
     </div>
 
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <div style="display:none">
-        <span id="busuanzi_container_site_pv"></span>
-        <span id="busuanzi_container_site_uv"></span>
-    </div>
-
     <script>
+        // 倒计时逻辑
         let spots = 7;
         function decreaseSpots() {
             if (spots > 2 && Math.random() > 0.5) {
@@ -132,6 +134,7 @@
             if(window.posthog) {
                 posthog.capture('clicked_cta_home');
             }
+            // 200ms 延迟，确保统计脚本有时间握手
             setTimeout(() => {
                 window.location.href = 'checkout.html';
             }, 200);
