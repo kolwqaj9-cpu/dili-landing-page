@@ -38,8 +38,10 @@
                 <p class="text-3xl font-bold text-green-400 font-mono">+12.4%</p>
             </div>
             <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-5">
-                <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Signals</p>
-                <p class="text-3xl font-bold text-white font-mono">3</p>
+                <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">总访问人数</p>
+                <p class="text-3xl font-bold text-green-400 font-mono">
+                    <span id="busuanzi_container_site_uv"><span id="busuanzi_value_site_uv"></span></span>
+                </p>
             </div>
         </div>
 
@@ -87,5 +89,6 @@
             console.error("PostHog 初始化错误:", e);
         }
     </script>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
 </html>
