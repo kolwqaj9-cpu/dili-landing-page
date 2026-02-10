@@ -15,7 +15,6 @@
                 extend: {
                     fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] },
                     animation: {
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                         'spin-slow': 'spin 3s linear infinite',
                     }
                 }
@@ -25,16 +24,11 @@
 </head>
 <body class="bg-slate-900 text-slate-100 min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
 
-    <div class="absolute inset-0 z-0 opacity-20 pointer-events-none" 
-         style="background-image: radial-gradient(#3b82f6 1px, transparent 1px); background-size: 30px 30px;">
-    </div>
-    
+    <div class="absolute inset-0 z-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(#3b82f6 1px, transparent 1px); background-size: 30px 30px;"></div>
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-blue-600/20 blur-[100px] rounded-full"></div>
 
     <div class="max-w-md w-full relative z-10">
-        
         <div class="bg-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8 shadow-2xl text-center space-y-6">
-            
             <div class="relative w-20 h-20 mx-auto flex items-center justify-center">
                 <div class="absolute inset-0 border-4 border-blue-500/30 rounded-full animate-ping opacity-20"></div>
                 <div class="absolute inset-0 border-t-4 border-blue-500 rounded-full animate-spin-slow"></div>
@@ -61,40 +55,15 @@
                 </div>
             </div>
 
-            <div class="space-y-2">
-                <div class="flex justify-between text-[10px] text-slate-500 font-mono uppercase">
-                    <span>Provisioning Resources</span>
-                    <span class="text-blue-400 animate-pulse">Processing...</span>
-                </div>
-                <div class="h-1.5 w-full bg-slate-700 rounded-full overflow-hidden">
-                    <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-400 w-2/3 animate-pulse"></div>
-                </div>
-            </div>
-
             <button class="w-full py-3 rounded-lg border border-slate-600 text-slate-400 text-xs font-mono hover:bg-slate-700/50 transition cursor-default">
                 ESTIMATED ONBOARDING: <span class="text-white">SOON</span>
             </button>
-
         </div>
-
-        <p class="text-center text-slate-600 text-xs mt-6 font-medium">
-            PropKit AI &copy; 2026. Secure Connection Established.
-        </p>
-
     </div>
-
+    
     <script src="https://www.unpkg.com/posthog-js/dist/posthog.js"></script>
     <script>
-        try {
-            if (window.posthog) {
-                posthog.init('phc_F9AHEWXMyYP8Z6K0LQzFv3de99UPGZ2c8C12PSQMzFt', { 
-                    api_host: 'https://us.i.posthog.com',
-                    loaded: function(posthog) {
-                        console.log("🚀 Dashboard Loaded - User Retained");
-                    }
-                });
-            }
-        } catch (e) {}
+        try { if (window.posthog) { posthog.init('phc_F9AHEWXMyYP8Z6K0LQzFv3de99UPGZ2c8C12PSQMzFt', { api_host: 'https://us.i.posthog.com' }); } } catch (e) {}
     </script>
 </body>
 </html>
