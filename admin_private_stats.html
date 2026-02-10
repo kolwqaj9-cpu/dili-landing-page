@@ -16,15 +16,16 @@
 
         <div class="grid grid-cols-2 gap-4">
             <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
-                <p class="text-slate-400 text-xs uppercase tracking-wider">Total Visitors (UV)</p>
+                <p class="text-slate-400 text-xs uppercase tracking-wider">Total Unique Visitors (Site UV)</p>
                 <div class="text-4xl font-bold text-white mt-2">
                     <span id="busuanzi_container_site_uv">
                         <span id="busuanzi_value_site_uv">...</span>
                     </span>
                 </div>
+                <p class="text-xs text-slate-500 mt-2">*Includes Index, Checkout & Dashboard</p>
             </div>
             <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
-                <p class="text-slate-400 text-xs uppercase tracking-wider">Total Page Views (PV)</p>
+                <p class="text-slate-400 text-xs uppercase tracking-wider">Total Page Views (Site PV)</p>
                 <div class="text-4xl font-bold text-blue-400 mt-2">
                     <span id="busuanzi_container_site_pv">
                         <span id="busuanzi_value_site_pv">...</span>
@@ -34,30 +35,33 @@
         </div>
 
         <div class="bg-slate-900 border border-slate-800 p-6 rounded-lg">
-            <h3 class="text-xl font-bold mb-4 text-slate-300">Conversion Funnel Status</h3>
+            <h3 class="text-xl font-bold mb-4 text-slate-300">Conversion Funnel</h3>
             
             <div class="space-y-4">
-                <div class="flex items-center justify-between p-3 bg-slate-800/50 rounded">
-                    <span>1. Homepage Visits</span>
-                    <span class="text-green-500 font-bold">Auto-tracked</span>
+                <div class="flex items-center justify-between p-3 bg-slate-800/50 rounded border-l-4 border-blue-500">
+                    <div>
+                        <span class="block text-sm font-bold">1. Total Traffic (UV)</span>
+                        <span class="text-xs text-slate-400">Visitor Count</span>
+                    </div>
+                    <span class="text-white font-mono">See Box Above &#8593;</span>
                 </div>
-                <div class="flex items-center justify-between p-3 bg-slate-800/50 rounded">
-                    <span>2. Checkout Clicks</span>
-                    <span class="text-green-500 font-bold">Event: 'clicked_cta_home'</span>
-                </div>
-                <div class="flex items-center justify-between p-3 bg-slate-800/50 rounded">
-                    <span>3. Purchase Attempts (Email Collected)</span>
-                    <span class="text-green-500 font-bold">Event: 'purchase_attempt_safe'</span>
+                <div class="flex items-center justify-between p-3 bg-slate-800/50 rounded border-l-4 border-green-500">
+                    <div>
+                        <span class="block text-sm font-bold">2. Qualified Leads (Emails)</span>
+                        <span class="text-xs text-slate-400">Users who clicked "Pay"</span>
+                    </div>
+                    <span class="text-green-400 font-mono">Check PostHog &#8595;</span>
                 </div>
             </div>
 
             <div class="mt-6 bg-yellow-900/20 border border-yellow-700/50 p-4 rounded text-sm text-yellow-200">
                 <i class="fas fa-info-circle"></i> 
-                <strong>Note:</strong> Detailed conversion rates and user emails are stored in PostHog since this is a static page.
+                <strong>Conversion Rate Tip:</strong> 
+                Divide your <em>PostHog Purchase Attempts</em> by the <em>Site UV</em> above to get your conversion %.
             </div>
             
             <a href="https://us.posthog.com/" target="_blank" class="mt-4 block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded font-bold transition">
-                View Real-time Conversion Data (PostHog) &rarr;
+                View Detailed Lead Data (PostHog) &rarr;
             </a>
         </div>
     </div>

@@ -34,38 +34,22 @@
     <div class="absolute inset-0 z-0 opacity-40 pointer-events-none" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 24px 24px;"></div>
 
     <div class="max-w-5xl w-full z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-        
         <div class="pt-6 px-4">
             <div class="bg-amber-50 border border-amber-200 text-amber-800 px-4 py-3 rounded-lg flex items-center gap-3 mb-6 shadow-sm">
                 <i class="fas fa-clock text-amber-600"></i>
-                <div class="text-xs font-semibold">
-                    Spot reserved for <span id="timer" class="font-mono font-bold">10:00</span>
-                </div>
+                <div class="text-xs font-semibold">Spot reserved for <span id="timer" class="font-mono font-bold">10:00</span></div>
             </div>
-            
-            <h1 class="text-4xl font-extrabold text-slate-900 leading-tight mb-4">
-                Finalize Your <br><span class="text-blue-600">Access</span>.
-            </h1>
-            <p class="text-slate-500 mb-8 leading-relaxed">
-                Complete your profile to unlock the PropKit Signal Engine.
-            </p>
-
+            <h1 class="text-4xl font-extrabold text-slate-900 leading-tight mb-4">Finalize Your <br><span class="text-blue-600">Access</span>.</h1>
+            <p class="text-slate-500 mb-8 leading-relaxed">Complete your profile to unlock the PropKit Signal Engine.</p>
             <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm mb-6">
-                <div class="flex justify-between items-center mb-2">
-                    <span class="font-bold text-slate-700">PropKit Engine (Quarterly)</span>
-                    <span class="font-bold text-slate-900">$249.00</span>
-                </div>
+                <div class="flex justify-between items-center mb-2"><span class="font-bold text-slate-700">PropKit Engine (Quarterly)</span><span class="font-bold text-slate-900">$249.00</span></div>
                 <div class="h-px bg-gray-100 my-2"></div>
-                <div class="flex justify-between items-center text-sm">
-                    <span class="text-slate-500">Total Due Today</span>
-                    <span class="font-black text-blue-600">$249.00</span>
-                </div>
+                <div class="flex justify-between items-center text-sm"><span class="text-slate-500">Total Due Today</span><span class="font-black text-blue-600">$249.00</span></div>
             </div>
         </div>
 
         <div class="bg-white/90 backdrop-blur-xl border border-white/50 p-6 md:p-8 rounded-2xl shadow-2xl relative">
             <h3 class="text-lg font-bold text-slate-900 mb-6">Account Details</h3>
-
             <div class="space-y-5 mb-8">
                 <div>
                     <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Email Address (Required)</label>
@@ -73,9 +57,7 @@
                         <input type="email" id="user-email" placeholder="you@example.com" class="w-full bg-gray-50 border border-gray-200 rounded-lg py-3 px-4 pl-10 text-slate-900 font-mono text-sm focus:outline-none focus:border-blue-500 focus:bg-white transition-colors">
                         <i class="fas fa-envelope absolute left-4 top-3.5 text-slate-400"></i>
                     </div>
-                    <p class="text-[10px] text-slate-400 mt-1">Your login credentials will be sent here.</p>
                 </div>
-
                 <div>
                     <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Payment Method</label>
                     <div class="flex items-center justify-between p-3 border border-blue-500 bg-blue-50/50 rounded-lg">
@@ -83,50 +65,35 @@
                             <div class="w-4 h-4 rounded-full border-[5px] border-blue-600 bg-white"></div>
                             <span class="text-sm font-bold text-slate-700">Credit Card</span>
                         </div>
-                        <div class="flex gap-2 text-slate-500 text-xl">
-                            <i class="fab fa-cc-visa"></i>
-                            <i class="fab fa-cc-mastercard"></i>
-                            <i class="fab fa-cc-amex"></i>
-                        </div>
+                        <div class="flex gap-2 text-slate-500 text-xl"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i></div>
                     </div>
                 </div>
             </div>
 
             <button type="button" onclick="processPayment()" id="pay-btn" class="w-full relative group bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-600 hover:to-blue-500 text-white font-bold py-4 rounded-xl transition transform active:scale-[0.98] text-lg shadow-xl animate-pulse-glow">
-                <span class="flex items-center justify-center gap-2">
-                    Pay & Activate Account <i class="fas fa-lock text-sm opacity-50"></i>
-                </span>
+                <span class="flex items-center justify-center gap-2">Pay & Activate Account <i class="fas fa-lock text-sm opacity-50"></i></span>
             </button>
-            
-            <p class="text-center text-[10px] text-slate-400 mt-4">
-                <i class="fas fa-shield-alt text-green-500"></i> Secure SSL Connection.
-            </p>
+            <p class="text-center text-[10px] text-slate-400 mt-4"><i class="fas fa-shield-alt text-green-500"></i> Secure SSL Connection.</p>
         </div>
     </div>
 
     <div id="gift-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
         <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm transition-opacity"></div>
         <div class="relative bg-white rounded-2xl shadow-2xl max-w-md w-full mx-4 p-8 border border-gray-200 transform scale-95 opacity-0 transition-all duration-300" id="modal-content">
-            <div class="mx-auto w-12 h-12 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mb-4 text-xl">
-                <i class="fas fa-exclamation"></i>
-            </div>
+            <div class="mx-auto w-12 h-12 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mb-4 text-xl"><i class="fas fa-exclamation"></i></div>
             <h2 class="text-2xl font-extrabold text-slate-900 mb-2 text-center">Gateway Busy</h2>
-            <p class="text-slate-500 text-sm leading-relaxed mb-6 text-center">
-                We are experiencing high volume. <strong class="text-slate-900">Your card was NOT charged.</strong>
-            </p>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6 text-center">We are experiencing high volume. <strong class="text-slate-900">Your card was NOT charged.</strong></p>
             <div class="bg-slate-900 text-white rounded-xl p-5 mb-6 text-center border border-slate-700 shadow-lg">
                 <p class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-2">System Override</p>
                 <h3 class="text-xl font-black mb-1">Access Granted</h3>
                 <p class="text-xs text-slate-400">Compensation: Free Priority Access</p>
             </div>
-            <button onclick="window.location.href='dashboard_final.html'" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition shadow-lg flex items-center justify-center gap-2">
-                Enter Dashboard <i class="fas fa-arrow-right"></i>
-            </button>
+            <button onclick="window.location.href='dashboard_final.html'" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition shadow-lg flex items-center justify-center gap-2">Enter Dashboard <i class="fas fa-arrow-right"></i></button>
         </div>
     </div>
 
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span id="busuanzi_container_page_pv" style="display:none;"><span id="busuanzi_value_page_pv"></span></span>
+    <div style="display:none"><span id="busuanzi_container_site_pv"></span></div>
 
     <script>
         let timeLeft = 600;
@@ -141,33 +108,17 @@
 
         function processPayment() {
             const email = document.getElementById('user-email').value;
-            if(!email || !email.includes('@')) {
-                alert('Please enter a valid email to reserve your spot.');
-                return;
-            }
-
+            if(!email || !email.includes('@')) { alert('Please enter a valid email.'); return; }
             const btn = document.getElementById('pay-btn');
             btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Processing...';
             btn.classList.add('opacity-75', 'cursor-not-allowed');
             btn.disabled = true;
-
-            // 核心：记录"尝试购买"事件
-            if(window.posthog) {
-                posthog.identify(email); // 记录是谁点的
-                posthog.capture('purchase_attempt_safe', { 
-                    value: 249,
-                    email: email
-                });
-            }
-
+            if(window.posthog) { posthog.identify(email); posthog.capture('purchase_attempt_safe', { value: 249, email: email }); }
             setTimeout(() => {
                 const modal = document.getElementById('gift-modal');
                 const content = document.getElementById('modal-content');
                 modal.classList.remove('hidden');
-                requestAnimationFrame(() => {
-                    content.classList.remove('scale-95', 'opacity-0');
-                    content.classList.add('scale-100', 'opacity-100');
-                });
+                requestAnimationFrame(() => { content.classList.remove('scale-95', 'opacity-0'); content.classList.add('scale-100', 'opacity-100'); });
             }, 2000);
         }
     </script>
