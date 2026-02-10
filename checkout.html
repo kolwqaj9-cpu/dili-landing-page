@@ -39,127 +39,98 @@
             <div class="bg-amber-50 border border-amber-200 text-amber-800 px-4 py-3 rounded-lg flex items-center gap-3 mb-6 shadow-sm">
                 <i class="fas fa-clock text-amber-600"></i>
                 <div class="text-xs font-semibold">
-                    High Demand. Spot reserved for <span id="timer" class="font-mono font-bold">10:00</span>
+                    Spot reserved for <span id="timer" class="font-mono font-bold">10:00</span>
                 </div>
             </div>
             
             <h1 class="text-4xl font-extrabold text-slate-900 leading-tight mb-4">
-                Secure Your <br><span class="text-blue-600">Computational Edge</span>.
+                Finalize Your <br><span class="text-blue-600">Access</span>.
             </h1>
             <p class="text-slate-500 mb-8 leading-relaxed">
-                You are purchasing direct access to the PropKit Signal Engine. Capacity is strictly limited to maintain line value integrity.
+                Complete your profile to unlock the PropKit Signal Engine.
             </p>
 
-            <ul class="space-y-4 mb-8">
-                <li class="flex items-start gap-3">
-                    <div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs"><i class="fas fa-check"></i></div>
-                    <span class="text-sm font-medium text-slate-700"><strong>Real-time Signal Feed</strong> (Latency < 50ms)</span>
-                </li>
-                <li class="flex items-start gap-3">
-                    <div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs"><i class="fas fa-check"></i></div>
-                    <span class="text-sm font-medium text-slate-700"><strong>EV+ Variance Detection</strong> (Verified Logic)</span>
-                </li>
-                 <li class="flex items-start gap-3">
-                    <div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs"><i class="fas fa-check"></i></div>
-                    <span class="text-sm font-medium text-slate-700"><strong>Founding Member Status</strong> (Locked-in Rate)</span>
-                </li>
-            </ul>
-
-            <div class="flex items-center gap-4 text-slate-400 text-xs grayscale opacity-70">
-                <i class="fab fa-stripe text-3xl"></i>
-                <i class="fab fa-cc-visa text-3xl"></i>
-                <i class="fab fa-cc-mastercard text-3xl"></i>
-                <div class="border-l border-gray-300 h-6 mx-2"></div>
-                <div class="flex items-center gap-1"><i class="fas fa-lock"></i> 256-bit SSL</div>
+            <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm mb-6">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="font-bold text-slate-700">PropKit Engine (Quarterly)</span>
+                    <span class="font-bold text-slate-900">$249.00</span>
+                </div>
+                <div class="h-px bg-gray-100 my-2"></div>
+                <div class="flex justify-between items-center text-sm">
+                    <span class="text-slate-500">Total Due Today</span>
+                    <span class="font-black text-blue-600">$249.00</span>
+                </div>
             </div>
         </div>
 
         <div class="bg-white/90 backdrop-blur-xl border border-white/50 p-6 md:p-8 rounded-2xl shadow-2xl relative">
-            <h3 class="text-lg font-bold text-slate-900 mb-6 flex justify-between items-center">
-                Payment Details
-                <i class="fas fa-lock text-slate-300 text-sm"></i>
-            </h3>
+            <h3 class="text-lg font-bold text-slate-900 mb-6">Account Details</h3>
 
-            <div class="space-y-4 mb-6">
+            <div class="space-y-5 mb-8">
                 <div>
-                    <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Card Number</label>
+                    <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Email Address (Required)</label>
                     <div class="relative">
-                        <input type="text" placeholder="0000 0000 0000 0000" class="w-full bg-gray-50 border border-gray-200 rounded-lg py-3 px-4 text-slate-900 font-mono text-sm focus:outline-none focus:border-blue-500 focus:bg-white transition-colors">
-                        <i class="fab fa-cc-visa absolute right-4 top-3 text-slate-400 text-xl"></i>
+                        <input type="email" id="user-email" placeholder="you@example.com" class="w-full bg-gray-50 border border-gray-200 rounded-lg py-3 px-4 pl-10 text-slate-900 font-mono text-sm focus:outline-none focus:border-blue-500 focus:bg-white transition-colors">
+                        <i class="fas fa-envelope absolute left-4 top-3.5 text-slate-400"></i>
                     </div>
+                    <p class="text-[10px] text-slate-400 mt-1">Your login credentials will be sent here.</p>
                 </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Expiry</label>
-                        <input type="text" placeholder="MM / YY" class="w-full bg-gray-50 border border-gray-200 rounded-lg py-3 px-4 text-slate-900 font-mono text-sm focus:outline-none focus:border-blue-500 focus:bg-white transition-colors">
-                    </div>
-                    <div>
-                        <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">CVC</label>
-                        <input type="text" placeholder="123" class="w-full bg-gray-50 border border-gray-200 rounded-lg py-3 px-4 text-slate-900 font-mono text-sm focus:outline-none focus:border-blue-500 focus:bg-white transition-colors">
-                    </div>
-                </div>
-            </div>
 
-            <div class="bg-blue-50 border border-blue-100 rounded-xl p-4 mb-6 flex justify-between items-center relative overflow-hidden">
-                <div class="absolute -right-4 -top-4 bg-yellow-400 w-16 h-16 rotate-45 transform translate-x-1/2 -translate-y-1/2"></div>
                 <div>
-                    <p class="font-bold text-slate-800 text-sm">Quarterly Access</p>
-                    <p class="text-xs text-slate-500">Billed every 3 months</p>
-                </div>
-                <div class="text-right z-10">
-                    <p class="text-xs text-slate-400 line-through font-medium decoration-red-500">$499.00</p>
-                    <p class="font-black text-slate-900 text-2xl leading-none">$249</p>
+                    <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Payment Method</label>
+                    <div class="flex items-center justify-between p-3 border border-blue-500 bg-blue-50/50 rounded-lg">
+                        <div class="flex items-center gap-3">
+                            <div class="w-4 h-4 rounded-full border-[5px] border-blue-600 bg-white"></div>
+                            <span class="text-sm font-bold text-slate-700">Credit Card</span>
+                        </div>
+                        <div class="flex gap-2 text-slate-500 text-xl">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <button type="button" onclick="processPayment()" id="pay-btn" class="w-full relative group bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-600 hover:to-blue-500 text-white font-bold py-4 rounded-xl transition transform active:scale-[0.98] text-lg shadow-xl animate-pulse-glow">
                 <span class="flex items-center justify-center gap-2">
-                    Activate Membership <i class="fas fa-arrow-right text-sm opacity-50"></i>
+                    Pay & Activate Account <i class="fas fa-lock text-sm opacity-50"></i>
                 </span>
             </button>
             
-            <div class="mt-4 text-center">
-                <p class="text-[10px] text-slate-400 flex justify-center items-center gap-1">
-                    <i class="fas fa-shield-alt text-green-500"></i> 30-Day Money-Back Guarantee. Cancel anytime.
-                </p>
-            </div>
+            <p class="text-center text-[10px] text-slate-400 mt-4">
+                <i class="fas fa-shield-alt text-green-500"></i> Secure SSL Connection.
+            </p>
         </div>
     </div>
 
     <div id="gift-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
         <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm transition-opacity"></div>
         <div class="relative bg-white rounded-2xl shadow-2xl max-w-md w-full mx-4 p-8 border border-gray-200 transform scale-95 opacity-0 transition-all duration-300" id="modal-content">
-            
             <div class="mx-auto w-12 h-12 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mb-4 text-xl">
                 <i class="fas fa-exclamation"></i>
             </div>
-
             <h2 class="text-2xl font-extrabold text-slate-900 mb-2 text-center">Gateway Busy</h2>
             <p class="text-slate-500 text-sm leading-relaxed mb-6 text-center">
-                Our payment processor is experiencing high volume due to the new launch. <strong class="text-slate-900">No charge was made to your card.</strong>
+                We are experiencing high volume. <strong class="text-slate-900">Your card was NOT charged.</strong>
             </p>
-
-            <div class="bg-slate-900 text-white rounded-xl p-5 mb-6 text-center relative overflow-hidden border border-slate-700 shadow-lg">
-                <div class="absolute top-0 right-0 w-20 h-20 bg-blue-500/30 blur-2xl rounded-full -mr-10 -mt-10"></div>
-                
+            <div class="bg-slate-900 text-white rounded-xl p-5 mb-6 text-center border border-slate-700 shadow-lg">
                 <p class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-2">System Override</p>
                 <h3 class="text-xl font-black mb-1">Access Granted</h3>
-                <p class="text-xs text-slate-400">
-                    Compensation: 30-Day Institutional Trial (Free)
-                </p>
+                <p class="text-xs text-slate-400">Compensation: Free Priority Access</p>
             </div>
-
             <button onclick="window.location.href='dashboard_final.html'" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition shadow-lg flex items-center justify-center gap-2">
-                Enter Dashboard Immediately <i class="fas fa-sign-in-alt"></i>
+                Enter Dashboard <i class="fas fa-arrow-right"></i>
             </button>
         </div>
     </div>
 
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_page_pv" style="display:none;"><span id="busuanzi_value_page_pv"></span></span>
+
     <script>
-        // 倒计时逻辑
-        let timeLeft = 600; // 10分钟
+        let timeLeft = 600;
         const timerElem = document.getElementById('timer');
-        
         setInterval(() => {
             if(timeLeft <= 0) return;
             timeLeft--;
@@ -169,29 +140,35 @@
         }, 1000);
 
         function processPayment() {
+            const email = document.getElementById('user-email').value;
+            if(!email || !email.includes('@')) {
+                alert('Please enter a valid email to reserve your spot.');
+                return;
+            }
+
             const btn = document.getElementById('pay-btn');
-            
-            // 1. 模拟处理状态
-            btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Authorizing...';
+            btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Processing...';
             btn.classList.add('opacity-75', 'cursor-not-allowed');
             btn.disabled = true;
 
-            // 2. 发送埋点
+            // 核心：记录"尝试购买"事件
             if(window.posthog) {
-                posthog.capture('purchase_attempt', { value: 249 });
+                posthog.identify(email); // 记录是谁点的
+                posthog.capture('purchase_attempt_safe', { 
+                    value: 249,
+                    email: email
+                });
             }
 
-            // 3. 延迟后显示"惊喜"
             setTimeout(() => {
                 const modal = document.getElementById('gift-modal');
                 const content = document.getElementById('modal-content');
                 modal.classList.remove('hidden');
-                // 简单的动画入场
                 requestAnimationFrame(() => {
                     content.classList.remove('scale-95', 'opacity-0');
                     content.classList.add('scale-100', 'opacity-100');
                 });
-            }, 2500); // 2.5秒等待，足够真实
+            }, 2000);
         }
     </script>
 </body>

@@ -34,8 +34,12 @@
     <style>
         .fade-in-up { animation: fadeInUp 0.8s ease-out; }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        .glass-panel { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.5); }
     </style>
+    
+    <script>
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}var c=window;try{r=c.localStorage,p=c.sessionStorage}catch(t){}window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}var c=e;for(void 0!==a?c=e[a]=[]:a="posthog",c.people=c.people||[],c.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},c.people.toString=function(){return c.toString(1)+".people (stub)"},o="capture register register_once unregister identify name_tag set_config reset opt_in_capturing cookie_consent_number disable_capturing get_distinct_id getGroups get_group_id get_group_prop set_group_prop reset_groups register_for_session_recording display_person_recorder".split(" "),n=0;n<o.length;n++)g(c,o[n]);e._i.push([i,s,a])},e.__SV=1.6}(document,window.posthog||[]);
+        posthog.init('phc_F9AHEWXMyYP8Z6K0LQzFv3de99UPGZ2c8C12PSQMzFt', { api_host: 'https://us.i.posthog.com' });
+    </script>
 </head>
 <body class="bg-gray-50 text-slate-900 antialiased overflow-x-hidden">
 
@@ -53,7 +57,7 @@
             </h1>
             
             <p class="text-slate-500 text-sm font-medium mb-6 fade-in-up max-w-xs mx-auto leading-relaxed">
-                Identifying <span class="text-blue-600 font-bold bg-blue-50 px-1 rounded">12.4% ROI inefficiencies</span> in Vegas lines. Stop guessing.
+                Identifying <span class="text-blue-600 font-bold bg-blue-50 px-1 rounded">12.4% ROI inefficiencies</span> in Vegas lines.
             </p>
 
             <div class="w-full max-w-[340px] fade-in-up relative animate-float">
@@ -63,22 +67,19 @@
         </div>
 
         <div class="fixed bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-white via-white/95 to-transparent z-50 backdrop-blur-[2px]">
-            <button onclick="window.location.href='checkout.html'" class="w-full relative group bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-bold py-4 rounded-xl transform transition active:scale-95 text-lg animate-pulse-glow shadow-xl">
+            <button onclick="trackAndGo()" class="w-full relative group bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-bold py-4 rounded-xl transform transition active:scale-95 text-lg animate-pulse-glow shadow-xl">
                 <div class="flex items-center justify-center gap-2">
                     <span>Secure Access Now</span>
                     <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
                 </div>
             </button>
-            <p class="text-center text-[10px] text-slate-400 mt-2 font-medium">Reserved for serious investors only.</p>
         </div>
     </div>
 
     <div class="hidden md:grid md:grid-cols-2 h-screen items-center max-w-7xl mx-auto px-8 lg:px-16 gap-16">
         <div class="flex flex-col justify-center items-start space-y-7 fade-in-up">
             <div class="flex items-center gap-3">
-                <span class="bg-blue-50 text-blue-700 border border-blue-100 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-                    v2.0 Signal Logic Live
-                </span>
+                <span class="bg-blue-50 text-blue-700 border border-blue-100 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">v2.0 Live</span>
                 <span class="text-xs font-semibold text-red-600 bg-red-50 border border-red-100 px-3 py-1 rounded-full flex items-center gap-1">
                     <span class="relative flex h-2 w-2">
                       <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
@@ -92,25 +93,15 @@
                 Computational<br>Engine for Baseball.
             </h1>
             <p class="text-xl text-slate-500 max-w-lg leading-relaxed">
-                We process 10TB+ of datasets to identify <strong class="text-slate-900">12.4% ROI inefficiencies</strong>. Execute based on pure mathematical variance.
+                We process 10TB+ of datasets to identify <strong class="text-slate-900">12.4% ROI inefficiencies</strong>.
             </p>
             
             <div class="flex flex-col sm:flex-row gap-5 pt-4 w-full">
-                <button onclick="window.location.href='checkout.html'" class="group relative px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white text-lg font-bold rounded-xl shadow-xl transition transform hover:-translate-y-1 w-full sm:w-auto overflow-hidden animate-pulse-glow">
+                <button onclick="trackAndGo()" class="group relative px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white text-lg font-bold rounded-xl shadow-xl transition transform hover:-translate-y-1 w-full sm:w-auto overflow-hidden animate-pulse-glow">
                     <span class="flex items-center gap-2">
-                        Get Instant Access
-                        <i class="fas fa-arrow-right"></i>
+                        Get Instant Access <i class="fas fa-arrow-right"></i>
                     </span>
                 </button>
-            </div>
-            
-            <div class="pt-6 flex items-center gap-4 text-sm text-gray-500 border-t border-gray-100 w-full">
-                <div class="flex -space-x-3">
-                    <img src="https://ui-avatars.com/api/?name=A&background=0D8ABC&color=fff" class="w-9 h-9 rounded-full border-2 border-white">
-                    <img src="https://ui-avatars.com/api/?name=J&background=random" class="w-9 h-9 rounded-full border-2 border-white">
-                    <img src="https://ui-avatars.com/api/?name=K&background=random" class="w-9 h-9 rounded-full border-2 border-white">
-                </div>
-                <p><strong>412</strong> Sharp bettors active today.</p>
             </div>
         </div>
 
@@ -119,22 +110,29 @@
         </div>
     </div>
 
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv" style="display:none"></span>
+
     <script>
-        // 假装席位在减少的脚本，制造紧迫感
         let spots = 7;
         function decreaseSpots() {
-            if (spots > 2) {
-                // 随机减少，不规律
-                if(Math.random() > 0.5) {
-                    spots--;
-                    document.getElementById('mobile-spots').innerText = spots;
-                    document.getElementById('desktop-spots').innerText = spots;
-                }
+            if (spots > 2 && Math.random() > 0.5) {
+                spots--;
+                document.getElementById('mobile-spots').innerText = spots;
+                document.getElementById('desktop-spots').innerText = spots;
             }
-            // 随机时间间隔下次检查
             setTimeout(decreaseSpots, Math.random() * 5000 + 2000);
         }
         setTimeout(decreaseSpots, 3000);
+
+        function trackAndGo() {
+            if(window.posthog) {
+                posthog.capture('clicked_cta_home');
+            }
+            setTimeout(() => {
+                window.location.href = 'checkout.html';
+            }, 200);
+        }
     </script>
 </body>
 </html>
