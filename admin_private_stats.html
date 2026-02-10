@@ -2,120 +2,140 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PropKit | Admin Console</title>
+    <title>PropKit Admin v3.0</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <style>body { background: #0f172a; color: #fff; font-family: 'Courier New', monospace; }</style>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { background: #0b1120; color: #fff; font-family: 'JetBrains Mono', monospace; }
+        .glass-panel { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+    </style>
 </head>
-<body class="flex flex-col items-center justify-center min-h-screen p-6">
+<body class="flex flex-col items-center justify-center min-h-screen p-4">
 
-    <div class="max-w-2xl w-full space-y-8">
-        <h1 class="text-3xl font-bold text-green-400 border-b border-green-900 pb-4">
-            <i class="fas fa-terminal"></i> SYSTEM ADMIN
-        </h1>
+    <div class="w-full max-w-2xl flex justify-between items-center mb-8 text-xs text-slate-500 uppercase tracking-widest">
+        <span><i class="fas fa-shield-alt text-blue-500"></i> Secure Environment</span>
+        <span class="flex items-center gap-2">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+            </span>
+            Data Stream: Active
+        </span>
+    </div>
+
+    <div class="max-w-2xl w-full space-y-6">
+        
+        <div class="text-center mb-10">
+            <h1 class="text-4xl font-bold text-white mb-2">Command Center</h1>
+            <p class="text-slate-400 text-sm">Real-time Traffic & Manual Conversion Tracking</p>
+        </div>
 
         <div class="grid grid-cols-2 gap-4">
-            <div class="bg-slate-800 p-6 rounded-lg border border-slate-700 relative">
-                <div class="absolute top-2 right-3 text-green-500 text-[10px] border border-green-900 bg-green-900/20 px-1 rounded animate-pulse">● LIVE</div>
-                <p class="text-slate-400 text-xs uppercase tracking-wider">Total Visitors (Site UV)</p>
-                <div class="text-4xl font-bold text-white mt-2">
+            <div class="glass-panel p-6 rounded-xl relative overflow-hidden group">
+                <div class="absolute -right-6 -top-6 bg-blue-500/10 w-24 h-24 rounded-full group-hover:bg-blue-500/20 transition"></div>
+                <p class="text-slate-400 text-[10px] uppercase font-bold tracking-wider">Total Unique Visitors (UV)</p>
+                <div class="text-5xl font-bold text-white mt-3">
                     <span id="busuanzi_container_site_uv">
-                        <span id="busuanzi_value_site_uv">...</span>
+                        <span id="busuanzi_value_site_uv">--</span>
                     </span>
                 </div>
-                <p class="text-[10px] text-slate-500 mt-2">*Denominator (All Traffic)</p>
+                <div class="mt-4 text-[10px] text-blue-400 bg-blue-900/30 inline-block px-2 py-1 rounded">
+                    Traffic Pool (Denominator)
+                </div>
             </div>
-            
-            <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
-                <p class="text-slate-400 text-xs uppercase tracking-wider">Total Hits (Site PV)</p>
-                <div class="text-4xl font-bold text-blue-400 mt-2">
+
+            <div class="glass-panel p-6 rounded-xl">
+                <p class="text-slate-400 text-[10px] uppercase font-bold tracking-wider">Total Page Hits (PV)</p>
+                <div class="text-5xl font-bold text-slate-300 mt-3">
                     <span id="busuanzi_container_site_pv">
-                        <span id="busuanzi_value_site_pv">...</span>
+                        <span id="busuanzi_value_site_pv">--</span>
                     </span>
                 </div>
-                <p class="text-[10px] text-slate-500 mt-2">*Activity Level</p>
+                <div class="mt-4 text-[10px] text-slate-500">
+                    Activity Intensity
+                </div>
             </div>
         </div>
 
-        <div class="bg-slate-900 border border-slate-800 p-6 rounded-lg shadow-xl relative overflow-hidden">
-            <div class="absolute top-0 right-0 p-4 opacity-10 text-6xl text-white"><i class="fas fa-calculator"></i></div>
-            
-            <h3 class="text-xl font-bold mb-6 text-slate-300 flex items-center gap-2">
-                Conversion Calculator
-            </h3>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div class="space-y-2">
-                    <label class="block text-xs font-bold text-blue-400 uppercase tracking-wider">
-                        Step 1: Input PostHog Data
-                    </label>
+        <div class="glass-panel p-8 rounded-xl border-t-4 border-blue-600 shadow-2xl">
+            <div class="flex items-center gap-2 mb-6 text-blue-400">
+                <i class="fas fa-calculator"></i>
+                <span class="text-xs font-bold uppercase tracking-wider">Conversion Calculator</span>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                
+                <div class="w-full md:w-1/2">
+                    <label class="block text-xs text-slate-400 mb-2">INPUT: Valid Leads (Check PostHog)</label>
                     <div class="relative">
-                        <input type="number" id="posthog-input" placeholder="0" class="w-full bg-slate-800 border border-slate-600 text-white rounded-lg p-3 pl-4 focus:outline-none focus:border-blue-500 font-mono text-xl transition-colors" oninput="calculateCVR()">
-                        <div class="absolute right-3 top-3.5 text-slate-500 text-sm">Leads</div>
+                        <input type="number" id="leads-input" placeholder="0" 
+                               class="w-full bg-slate-900 border border-slate-700 text-white text-2xl p-4 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition font-mono"
+                               oninput="calcRate()">
+                        <div class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-600 text-sm">Leads</div>
                     </div>
-                    <a href="https://us.posthog.com/events" target="_blank" class="text-[10px] text-slate-500 hover:text-white transition flex items-center gap-1">
-                        <i class="fas fa-external-link-alt"></i> Check PostHog "purchase_attempt"
+                    <a href="https://us.posthog.com/events" target="_blank" class="inline-block mt-3 text-[10px] text-blue-500 hover:text-blue-400 hover:underline">
+                        Open PostHog Dashboard &rarr;
                     </a>
                 </div>
-                
-                <div class="text-center bg-slate-800/50 rounded-xl p-4 border border-slate-700">
-                    <p class="text-xs text-slate-400 uppercase font-bold mb-1">Conversion Rate</p>
-                    <p class="text-4xl font-black text-slate-600 font-mono" id="cvr-result">0.0%</p>
+
+                <div class="hidden md:block text-slate-600 text-2xl">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+
+                <div class="w-full md:w-1/2 text-center bg-slate-900/50 rounded-lg p-4 border border-slate-700/50">
+                    <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Conversion Rate</p>
+                    <div id="result-rate" class="text-4xl font-black text-slate-600 transition-all duration-300">
+                        0.0%
+                    </div>
                 </div>
             </div>
         </div>
-        
-        <div class="text-center text-xs text-slate-600 mt-8">
-            Admin Console v2.0 | Manual Sync Mode
+
+        <div class="text-center text-[10px] text-slate-600 mt-8 font-mono">
+            System Time: <span id="clock">Loading...</span> | Admin v3.0
         </div>
+
     </div>
 
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
     <script>
-        function calculateCVR() {
-            // 1. 获取输入 (分子)
-            const inputVal = document.getElementById('posthog-input').value;
+        // 1. Clock
+        setInterval(() => {
+            const now = new Date();
+            document.getElementById('clock').innerText = now.toLocaleTimeString();
+        }, 1000);
+
+        // 2. Calculator Logic
+        function calcRate() {
+            const inputVal = document.getElementById('leads-input').value;
             const leads = parseFloat(inputVal);
             
-            // 2. 获取 UV (分母)
-            const uvElement = document.getElementById('busuanzi_value_site_uv');
-            // 防止不蒜子还没加载出来
-            const uvText = uvElement ? uvElement.innerText : "0";
-            const visitors = parseFloat(uvText) || 0; 
-            
-            const resEl = document.getElementById('cvr-result');
+            // Get UV from Busuanzi (Text)
+            const uvText = document.getElementById('busuanzi_value_site_uv').innerText;
+            const visitors = parseFloat(uvText);
 
-            // 3. 计算
+            const resEl = document.getElementById('result-rate');
+
             if (!isNaN(leads) && visitors > 0) {
                 const rate = (leads / visitors) * 100;
                 resEl.innerText = rate.toFixed(1) + "%";
-                
-                // 动态变色
-                if(rate >= 2.0) {
-                    resEl.className = "text-4xl font-black text-green-400 font-mono transition-colors duration-300";
-                } else if (rate > 0) {
-                    resEl.className = "text-4xl font-black text-yellow-400 font-mono transition-colors duration-300";
-                } else {
-                    resEl.className = "text-4xl font-black text-slate-600 font-mono transition-colors duration-300";
-                }
+
+                // Color Logic
+                if (rate >= 2) resEl.className = "text-4xl font-black text-green-400 transition-all duration-300";
+                else if (rate > 0) resEl.className = "text-4xl font-black text-yellow-400 transition-all duration-300";
+                else resEl.className = "text-4xl font-black text-slate-600 transition-all duration-300";
             } else {
                 resEl.innerText = "0.0%";
-                resEl.className = "text-4xl font-black text-slate-600 font-mono";
+                resEl.className = "text-4xl font-black text-slate-600 transition-all duration-300";
             }
         }
 
-        // 监听不蒜子加载，一旦 UV 出现，如果有输入值，自动重算一次
-        const observer = new MutationObserver((mutations) => {
-            calculateCVR();
-        });
-        
-        // 延时监听，确保元素存在
+        // 3. Observer for Busuanzi loading
+        const observer = new MutationObserver(calcRate);
         setTimeout(() => {
             const target = document.getElementById('busuanzi_value_site_uv');
-            if (target) {
-                observer.observe(target, { childList: true, characterData: true, subtree: true });
-            }
+            if(target) observer.observe(target, { childList: true });
         }, 1000);
     </script>
 </body>
