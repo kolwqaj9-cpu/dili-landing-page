@@ -92,10 +92,19 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <div style="display:none"><span id="busuanzi_container_site_pv"></span></div>
 
     <script>
+        // Supabase 配置：请填入你的 Supabase URL 和 Anon Key（从 Supabase Dashboard -> Settings -> API 获取）
+        const SUPABASE_URL = 'https://bmwfnuekfgolwutnffmf.supabase.co';
+        const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY'; // 必须替换为你的 anon key
+        let supabase = null;
+        if (typeof window.supabase !== 'undefined' && SUPABASE_ANON_KEY && SUPABASE_ANON_KEY !== 'YOUR_SUPABASE_ANON_KEY') {
+            supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        }
+
         let timeLeft = 600;
         const timerElem = document.getElementById('timer');
         setInterval(() => {
@@ -106,20 +115,64 @@
             timerElem.textContent = `${m}:${s}`;
         }, 1000);
 
-        function processPayment() {
-            const email = document.getElementById('user-email').value;
-            if(!email || !email.includes('@')) { alert('Please enter a valid email.'); return; }
+        function showModal() {
+            const modal = document.getElementById('gift-modal');
+            const content = document.getElementById('modal-content');
+            modal.classList.remove('hidden');
+            requestAnimationFrame(() => {
+                content.classList.remove('scale-95', 'opacity-0');
+                content.classList.add('scale-100', 'opacity-100');
+            });
+        }
+
+        function resetButton(btn, originalContent) {
+            btn.innerHTML = originalContent;
+            btn.classList.remove('opacity-75', 'cursor-not-allowed');
+            btn.disabled = false;
+        }
+
+        async function processPayment() {
+            const email = document.getElementById('user-email').value.trim();
+            if(!email || !email.includes('@')) {
+                alert('Please enter a valid email.');
+                return;
+            }
+
             const btn = document.getElementById('pay-btn');
+            const originalContent = btn.innerHTML;
             btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Processing...';
             btn.classList.add('opacity-75', 'cursor-not-allowed');
             btn.disabled = true;
-            if(window.posthog) { posthog.identify(email); posthog.capture('purchase_attempt_safe', { value: 249, email: email }); }
-            setTimeout(() => {
-                const modal = document.getElementById('gift-modal');
-                const content = document.getElementById('modal-content');
-                modal.classList.remove('hidden');
-                requestAnimationFrame(() => { content.classList.remove('scale-95', 'opacity-0'); content.classList.add('scale-100', 'opacity-100'); });
-            }, 2000);
+
+            // PostHog 埋点（非阻塞）
+            if(window.posthog) {
+                posthog.identify(email);
+                posthog.capture('purchase_attempt_safe', { value: 249, email: email });
+            }
+
+            try {
+                // 1. 先写入 Supabase，并等待完成
+                if (supabase) {
+                    const { data, error } = await supabase.from('purchases').insert({
+                        user_email: email,
+                        amount: 249,
+                        status: 'intent_captured',
+                        source: 'checkout'
+                    });
+
+                    if (error) {
+                        console.error('Supabase insert error:', error);
+                        throw error;
+                    }
+                }
+
+                // 2. 确认写入完成后再显示弹窗
+                showModal();
+            } catch (err) {
+                console.error('Payment flow error:', err);
+                alert('Something went wrong. Please try again.');
+                resetButton(btn, originalContent);
+            }
         }
     </script>
 </body>
