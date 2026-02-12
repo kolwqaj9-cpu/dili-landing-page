@@ -2,141 +2,123 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PropKit Admin v3.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PropKit Admin Command Center</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <style>
-        body { background: #0b1120; color: #fff; font-family: 'JetBrains Mono', monospace; }
-        .glass-panel { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+        body { background-color: #000; color: #fff; font-family: 'Courier New', monospace; }
+        .stat-card { border: 1px solid #333; padding: 24px; border-radius: 12px; }
+        .highlight { color: #facc15; }
     </style>
 </head>
-<body class="flex flex-col items-center justify-center min-h-screen p-4">
+<body class="p-8">
 
-    <div class="w-full max-w-2xl flex justify-between items-center mb-8 text-xs text-slate-500 uppercase tracking-widest">
-        <span><i class="fas fa-shield-alt text-blue-500"></i> Secure Environment</span>
-        <span class="flex items-center gap-2">
-            <span class="relative flex h-2 w-2">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-            </span>
-            Data Stream: Active
-        </span>
-    </div>
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-2 text-center">Command Center</h1>
+        <p class="text-gray-400 text-center mb-8">Real-time Traffic & Sales Tracking</p>
 
-    <div class="max-w-2xl w-full space-y-6">
-        
-        <div class="text-center mb-10">
-            <h1 class="text-4xl font-bold text-white mb-2">Command Center</h1>
-            <p class="text-slate-400 text-sm">Real-time Traffic & Manual Conversion Tracking</p>
-        </div>
-
-        <div class="grid grid-cols-2 gap-4">
-            <div class="glass-panel p-6 rounded-xl relative overflow-hidden group">
-                <div class="absolute -right-6 -top-6 bg-blue-500/10 w-24 h-24 rounded-full group-hover:bg-blue-500/20 transition"></div>
-                <p class="text-slate-400 text-[10px] uppercase font-bold tracking-wider">Total Unique Visitors (UV)</p>
-                <div class="text-5xl font-bold text-white mt-3">
-                    <span id="busuanzi_container_site_uv">
-                        <span id="busuanzi_value_site_uv">--</span>
-                    </span>
-                </div>
-                <div class="mt-4 text-[10px] text-blue-400 bg-blue-900/30 inline-block px-2 py-1 rounded">
-                    Traffic Pool (Denominator)
-                </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div class="stat-card">
+                <p class="text-xs text-gray-400 uppercase tracking-widest mb-2">TOTAL PAGE HITS (PV)</p>
+                <h2 class="text-6xl font-bold" id="pv-count">--</h2>
+                <p class="text-gray-500 text-sm mt-2">Traffic Intensity</p>
             </div>
-
-            <div class="glass-panel p-6 rounded-xl">
-                <p class="text-slate-400 text-[10px] uppercase font-bold tracking-wider">Total Page Hits (PV)</p>
-                <div class="text-5xl font-bold text-slate-300 mt-3">
-                    <span id="busuanzi_container_site_pv">
-                        <span id="busuanzi_value_site_pv">--</span>
-                    </span>
-                </div>
-                <div class="mt-4 text-[10px] text-slate-500">
-                    Activity Intensity
-                </div>
-            </div>
-        </div>
-
-        <div class="glass-panel p-8 rounded-xl border-t-4 border-blue-600 shadow-2xl">
-            <div class="flex items-center gap-2 mb-6 text-blue-400">
-                <i class="fas fa-calculator"></i>
-                <span class="text-xs font-bold uppercase tracking-wider">Conversion Calculator</span>
-            </div>
-
-            <div class="flex flex-col md:flex-row gap-8 items-center">
-                
-                <div class="w-full md:w-1/2">
-                    <label class="block text-xs text-slate-400 mb-2">INPUT: Valid Leads (Check PostHog)</label>
-                    <div class="relative">
-                        <input type="number" id="leads-input" placeholder="0" 
-                               class="w-full bg-slate-900 border border-slate-700 text-white text-2xl p-4 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition font-mono"
-                               oninput="calcRate()">
-                        <div class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-600 text-sm">Leads</div>
-                    </div>
-                    <a href="https://us.posthog.com/events" target="_blank" class="inline-block mt-3 text-[10px] text-blue-500 hover:text-blue-400 hover:underline">
-                        Open PostHog Dashboard &rarr;
-                    </a>
-                </div>
-
-                <div class="hidden md:block text-slate-600 text-2xl">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-
-                <div class="w-full md:w-1/2 text-center bg-slate-900/50 rounded-lg p-4 border border-slate-700/50">
-                    <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Conversion Rate</p>
-                    <div id="result-rate" class="text-4xl font-black text-slate-600 transition-all duration-300">
-                        0.0%
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="text-center text-[10px] text-slate-600 mt-8 font-mono">
-            System Time: <span id="clock">Loading...</span> | Admin v3.0
-        </div>
-
-    </div>
-
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <script>
-        // 1. Clock
-        setInterval(() => {
-            const now = new Date();
-            document.getElementById('clock').innerText = now.toLocaleTimeString();
-        }, 1000);
-
-        // 2. Calculator Logic
-        function calcRate() {
-            const inputVal = document.getElementById('leads-input').value;
-            const leads = parseFloat(inputVal);
             
-            // Get UV from Busuanzi (Text)
-            const uvText = document.getElementById('busuanzi_value_site_uv').innerText;
-            const visitors = parseFloat(uvText);
+            <div class="stat-card border-yellow-900 bg-yellow-900/10">
+                <p class="text-xs text-yellow-500 uppercase tracking-widest mb-2">TOTAL SALES (LEADS)</p>
+                <h2 class="text-6xl font-bold highlight" id="sales-count">Loading...</h2>
+                <p class="text-yellow-600/70 text-sm mt-2">Real-time from Supabase</p>
+            </div>
+        </div>
 
-            const resEl = document.getElementById('result-rate');
+        <div class="stat-card">
+            <h3 class="font-bold mb-4 flex items-center">
+                <span class="mr-2">🧮</span> CONVERSION RATE
+            </h3>
+            
+            <div class="flex items-center justify-between text-2xl">
+                <div>
+                    <span id="calc-sales" class="text-white font-bold">0</span> 
+                    <span class="text-gray-500 text-base">Sales</span>
+                </div>
+                <div class="text-gray-600">/</div>
+                <div>
+                    <span id="calc-pv" class="text-white font-bold">--</span>
+                    <span class="text-gray-500 text-base">PV</span>
+                </div>
+                <div class="text-gray-600">=</div>
+                <div class="text-4xl font-bold text-green-500" id="conversion-rate">0.0%</div>
+            </div>
+        </div>
+    </div>
 
-            if (!isNaN(leads) && visitors > 0) {
-                const rate = (leads / visitors) * 100;
-                resEl.innerText = rate.toFixed(1) + "%";
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <div style="display:none"><span id="busuanzi_container_site_pv"></span><span id="busuanzi_value_site_pv"></span></div>
 
-                // Color Logic
-                if (rate >= 2) resEl.className = "text-4xl font-black text-green-400 transition-all duration-300";
-                else if (rate > 0) resEl.className = "text-4xl font-black text-yellow-400 transition-all duration-300";
-                else resEl.className = "text-4xl font-black text-slate-600 transition-all duration-300";
-            } else {
-                resEl.innerText = "0.0%";
-                resEl.className = "text-4xl font-black text-slate-600 transition-all duration-300";
+    <script>
+        // 1. 配置 Supabase
+        const SUPABASE_URL = 'https://bmwfnuekfgolwutnffmf.supabase.co';
+        const SUPABASE_KEY = 'sb_publishable_vk9QyXdw-wB1YR41PKVBXA_YyfEyW_N';
+        const supabaseClient = (typeof window.supabase !== 'undefined' && window.supabase.createClient)
+            ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY)
+            : null;
+
+        // 2. 核心函数：获取销量并更新页面
+        async function fetchStats() {
+            try {
+                if (!supabaseClient) {
+                    document.getElementById('sales-count').innerText = 'Supabase Err';
+                    return;
+                }
+
+                const { data: count, error } = await supabaseClient.rpc('get_sales_count');
+                
+                if (error) throw error;
+
+                const salesNum = count !== null && count !== undefined ? count : 0;
+                document.getElementById('sales-count').innerText = salesNum;
+                document.getElementById('calc-sales').innerText = salesNum;
+
+                checkBusuanzi(salesNum);
+
+            } catch (err) {
+                console.error('获取销量失败:', err);
+                document.getElementById('sales-count').innerText = 'Err';
             }
         }
 
-        // 3. Observer for Busuanzi loading
-        const observer = new MutationObserver(calcRate);
-        setTimeout(() => {
-            const target = document.getElementById('busuanzi_value_site_uv');
-            if(target) observer.observe(target, { childList: true });
-        }, 1000);
+        // 3. 辅助函数：从 Busuanzi 获取 PV，计算转化率
+        function checkBusuanzi(sales) {
+            let attempts = 0;
+            const interval = setInterval(function() {
+                const pvEl = document.getElementById('busuanzi_value_site_pv');
+                let pv = 0;
+                if (pvEl && pvEl.innerText && pvEl.innerText !== '--' && pvEl.innerText !== '...') {
+                    pv = parseInt(pvEl.innerText, 10) || 0;
+                }
+                
+                document.getElementById('pv-count').innerText = pv > 0 ? pv : '--';
+                document.getElementById('calc-pv').innerText = pv > 0 ? pv : '--';
+
+                if (pv > 0) {
+                    const rate = (sales / pv * 100).toFixed(2);
+                    document.getElementById('conversion-rate').innerText = rate + '%';
+                    clearInterval(interval);
+                }
+                
+                attempts++;
+                if (attempts > 20) {
+                    if (pv === 0) {
+                        document.getElementById('pv-count').innerText = '--';
+                        document.getElementById('conversion-rate').innerText = '--';
+                    }
+                    clearInterval(interval);
+                }
+            }, 500);
+        }
+
+        fetchStats();
     </script>
 </body>
 </html>
