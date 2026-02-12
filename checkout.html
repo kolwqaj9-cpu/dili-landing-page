@@ -97,11 +97,11 @@
     <div style="display:none"><span id="busuanzi_container_site_pv"></span></div>
 
     <script>
-        // Supabase 配置：请填入你的 Supabase URL 和 Anon Key（从 Supabase Dashboard -> Settings -> API 获取）
+        // Supabase 配置
         const SUPABASE_URL = 'https://bmwfnuekfgolwutnffmf.supabase.co';
-        const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY'; // 必须替换为你的 anon key
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJtd2ZudWVrZmdvbHd1dG5mZm1mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAzNTIyMTMsImV4cCI6MjA4NTkyODIxM30.KYW1211lFfPnrhvyliSDbrWs_vJzYfge4pvlPTEteSY';
         let supabase = null;
-        if (typeof window.supabase !== 'undefined' && SUPABASE_ANON_KEY && SUPABASE_ANON_KEY !== 'YOUR_SUPABASE_ANON_KEY') {
+        if (typeof window.supabase !== 'undefined' && SUPABASE_ANON_KEY) {
             supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
         }
 
@@ -151,7 +151,7 @@
             }
 
             try {
-                // 1. 先写入 Supabase，并等待完成
+                // 1. 必须先 await 写入 Supabase，成功后才可跳转
                 if (supabase) {
                     const { data, error } = await supabase.from('purchases').insert({
                         user_email: email,
@@ -166,11 +166,11 @@
                     }
                 }
 
-                // 2. 确认写入完成后再显示弹窗
-                showModal();
+                // 2. 确认写入完成后再跳转
+                window.location.href = 'dashboard_final.html';
             } catch (err) {
                 console.error('Payment flow error:', err);
-                alert('Something went wrong. Please try again.');
+                alert('写入失败，请重试。Error: ' + (err.message || 'Unknown error'));
                 resetButton(btn, originalContent);
             }
         }
