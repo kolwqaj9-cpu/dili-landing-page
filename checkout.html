@@ -92,23 +92,21 @@
         </div>
     </div>
 
-    <script src="https://unpkg.com/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <div style="display:none"><span id="busuanzi_container_site_pv"></span></div>
 
     <script>
-        // Supabase 配置
+        // 1. 初始化配置 (已填入你的真实信息)
         const SUPABASE_URL = 'https://bmwfnuekfgolwutnffmf.supabase.co';
         const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJtd2ZudWVrZmdvbHd1dG5mZm1mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAzNTIyMTMsImV4cCI6MjA4NTkyODIxM30.KYW1211lFfPnrhvyliSDbrWs_vJzYfge4pvlPTEteSY';
-        let supabase = null;
-        try {
-            if (typeof window.supabase !== 'undefined' && window.supabase.createClient && SUPABASE_ANON_KEY) {
-                supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-            }
-        } catch (e) {
-            console.warn('Supabase init skipped:', e);
-        }
+        
+        // 创建客户端 (使用全局 supabase 的 createClient)
+        const supabase = (typeof window.supabase !== 'undefined' && window.supabase.createClient)
+            ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+            : null;
 
+        // 倒计时
         let timeLeft = 600;
         const timerElem = document.getElementById('timer');
         setInterval(() => {
@@ -119,65 +117,54 @@
             timerElem.textContent = `${m}:${s}`;
         }, 1000);
 
-        function showModal() {
-            const modal = document.getElementById('gift-modal');
-            const content = document.getElementById('modal-content');
-            modal.classList.remove('hidden');
-            requestAnimationFrame(() => {
-                content.classList.remove('scale-95', 'opacity-0');
-                content.classList.add('scale-100', 'opacity-100');
-            });
-        }
+        // 2. 定义核心支付函数 (挂载到 window 确保 onclick 能找到)
+        window.processPayment = async function() {
+            const emailInput = document.getElementById('user-email');
+            const email = emailInput ? emailInput.value.trim() : '';
+            const payButton = document.getElementById('pay-btn');
 
-        function resetButton(btn, originalContent) {
-            btn.innerHTML = originalContent;
-            btn.classList.remove('opacity-75', 'cursor-not-allowed');
-            btn.disabled = false;
-        }
-
-        window.processPayment = async function processPayment() {
-            const email = document.getElementById('user-email').value.trim();
-            if(!email || !email.includes('@')) {
-                alert('Please enter a valid email.');
+            if (!email || !email.includes('@')) {
+                alert('Please enter a valid email address.');
                 return;
             }
 
-            const btn = document.getElementById('pay-btn');
-            const originalContent = btn.innerHTML;
-            btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"><\/i> Processing...';
-            btn.classList.add('opacity-75', 'cursor-not-allowed');
-            btn.disabled = true;
-
-            // PostHog 埋点（非阻塞）
-            if(window.posthog) {
-                posthog.identify(email);
-                posthog.capture('purchase_attempt_safe', { value: 249, email: email });
-            }
-
             try {
-                // 1. 必须先 await 写入 Supabase，成功后才可跳转
-                if (supabase) {
-                    const { data, error } = await supabase.from('purchases').insert({
-                        user_email: email,
-                        amount: 249,
-                        status: 'intent_captured',
-                        source: 'checkout'
-                    });
+                // A. 按钮防重复点击
+                const originalText = payButton.innerHTML;
+                payButton.innerHTML = '<i class="fas fa-circle-notch fa-spin"><\/i> Processing...';
+                payButton.disabled = true;
 
-                    if (error) {
-                        console.error('Supabase insert error:', error);
-                        throw error;
-                    }
+                if (!supabase) {
+                    throw new Error('Supabase not loaded');
                 }
 
-                // 2. 确认写入完成后再跳转
+                // B. 写入 Supabase (等待结果)
+                const { data, error } = await supabase
+                    .from('purchases')
+                    .insert([
+                        { 
+                            user_email: email,
+                            amount: 249,
+                            status: 'paid',
+                            source: 'checkout_page'
+                        }
+                    ]);
+
+                // C. 判断结果
+                if (error) {
+                    throw error;
+                }
+
+                // D. 成功 -> 跳转
                 window.location.href = 'dashboard_final.html';
+
             } catch (err) {
-                console.error('Payment flow error:', err);
-                alert('写入失败，请重试。Error: ' + (err.message || 'Unknown error'));
-                resetButton(btn, originalContent);
+                console.error('Supabase Error:', err);
+                alert('Payment Error: ' + (err.message || 'Unknown error'));
+                payButton.innerHTML = 'Pay & Activate Account <i class="fas fa-lock text-sm opacity-50"><\/i>';
+                payButton.disabled = false;
             }
-        }
+        };
     </script>
 </body>
 </html>
