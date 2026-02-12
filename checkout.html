@@ -94,51 +94,49 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
-        // --- 终极修复版脚本 ---
-        console.log('脚本开始加载...');
+        console.log('正在初始化支付脚本...');
 
-        // A. 初始化 Supabase (带防冲突检测)
+        // -----------------------------------------------------------
+        // 1. 配置正确的 Supabase (已填入你的新 Key)
+        // -----------------------------------------------------------
         const SUPABASE_URL = 'https://bmwfnuekfgolwutnffmf.supabase.co';
-        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJtd2ZudWVrZmdvbHd1dG5mZm1mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAzNTIyMTMsImV4cCI6MjA4NTkyODIxM30.KYW1211lFfPnrhvyliSDbrWs_vJzYfge4pvlPTEteSY';
+        const SUPABASE_KEY = 'sb_publishable_vk9QyXdw-wB1YR41PKVBXA_YyfEyW_N';
 
-        var supabaseClient = null;
+        // 防冲突初始化 (CDN 加载后 window.supabase 为模块，用其 createClient 创建客户端)
         if (typeof window.supabase !== 'undefined' && window.supabase.createClient) {
-            supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-            console.log('Supabase 初始化完成');
+            window.supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+            console.log('Supabase 初始化成功 (新版 Key)');
         }
 
-        // B. 定义支付函数 (挂载到 window，确保 onclick 能找到)
+        // -----------------------------------------------------------
+        // 2. 核心支付逻辑
+        // -----------------------------------------------------------
         window.processPayment = async function() {
-            console.log('>>> 用户点击了支付按钮');
+            console.log('>>> 支付按钮被点击');
 
-            var emailInput = document.querySelector('input[type="email"]') || document.getElementById('user-email');
-            var payButton = document.getElementById('pay-btn') || document.querySelector('button[type="button"]');
+            const emailInput = document.querySelector('input[type="email"]') || document.querySelector('input[name="email"]') || document.getElementById('user-email');
+            const payButton = document.getElementById('pay-btn') || document.querySelector('button');
 
             if (!emailInput) {
-                alert('Error: 代码未找到邮箱输入框，请检查 HTML input 标签。');
+                alert('Error: 找不到邮箱输入框');
                 return;
             }
 
-            var email = emailInput.value.trim();
-            console.log('获取到邮箱:', email);
+            const email = emailInput.value.trim();
 
             if (!email || !email.includes('@')) {
                 alert('Please enter a valid email address.');
                 return;
             }
 
-            var originalText = payButton ? payButton.innerHTML : '';
+            const originalText = payButton ? payButton.innerHTML : '';
             if (payButton) {
                 payButton.innerHTML = 'Processing...';
                 payButton.disabled = true;
             }
 
             try {
-                if (!supabaseClient) {
-                    throw new Error('Supabase not loaded');
-                }
-
-                var result = await supabaseClient
+                const { data, error } = await window.supabase
                     .from('purchases')
                     .insert([
                         {
@@ -149,16 +147,16 @@
                         }
                     ]);
 
-                if (result.error) {
-                    throw new Error(result.error.message);
+                if (error) {
+                    throw error;
                 }
 
                 console.log('写入成功！准备跳转...');
                 window.location.href = 'dashboard_final.html';
 
             } catch (err) {
-                console.error('捕获到错误:', err);
-                alert('Payment Error: ' + (err.message || 'Unknown error'));
+                console.error('支付错误:', err);
+                alert('Payment Error: ' + err.message);
                 if (payButton) {
                     payButton.innerHTML = originalText || 'Pay & Activate Account';
                     payButton.disabled = false;
@@ -166,7 +164,19 @@
             }
         };
 
-        // C. 倒计时
+        // -----------------------------------------------------------
+        // 3. 自动绑定事件 (兜底策略)
+        // -----------------------------------------------------------
+        document.addEventListener('DOMContentLoaded', function() {
+            const allBtns = document.querySelectorAll('button');
+            allBtns.forEach(function(btn) {
+                if (btn.innerText && (btn.innerText.indexOf('Pay') >= 0 || btn.innerText.indexOf('Activate') >= 0)) {
+                    btn.onclick = window.processPayment;
+                }
+            });
+        });
+
+        // 4. 倒计时
         (function() {
             var timeLeft = 600;
             var timerElem = document.getElementById('timer');
@@ -180,17 +190,6 @@
                 }, 1000);
             }
         })();
-
-        // D. 自动绑定按钮事件 (防止 onclick 失效)
-        document.addEventListener('DOMContentLoaded', function() {
-            var allBtns = document.querySelectorAll('button');
-            allBtns.forEach(function(btn) {
-                if (btn.innerText && (btn.innerText.indexOf('Pay') >= 0 || btn.innerText.indexOf('Activate') >= 0)) {
-                    btn.onclick = window.processPayment;
-                    console.log('已自动绑定支付按钮');
-                }
-            });
-        });
     </script>
 </body>
 </html>
