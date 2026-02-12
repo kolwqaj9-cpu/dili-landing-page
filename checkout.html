@@ -92,8 +92,8 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <script src="https://unpkg.com/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <div style="display:none"><span id="busuanzi_container_site_pv"></span></div>
 
     <script>
@@ -101,8 +101,12 @@
         const SUPABASE_URL = 'https://bmwfnuekfgolwutnffmf.supabase.co';
         const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJtd2ZudWVrZmdvbHd1dG5mZm1mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAzNTIyMTMsImV4cCI6MjA4NTkyODIxM30.KYW1211lFfPnrhvyliSDbrWs_vJzYfge4pvlPTEteSY';
         let supabase = null;
-        if (typeof window.supabase !== 'undefined' && SUPABASE_ANON_KEY) {
-            supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        try {
+            if (typeof window.supabase !== 'undefined' && window.supabase.createClient && SUPABASE_ANON_KEY) {
+                supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+            }
+        } catch (e) {
+            console.warn('Supabase init skipped:', e);
         }
 
         let timeLeft = 600;
@@ -131,7 +135,7 @@
             btn.disabled = false;
         }
 
-        async function processPayment() {
+        window.processPayment = async function processPayment() {
             const email = document.getElementById('user-email').value.trim();
             if(!email || !email.includes('@')) {
                 alert('Please enter a valid email.');
@@ -140,7 +144,7 @@
 
             const btn = document.getElementById('pay-btn');
             const originalContent = btn.innerHTML;
-            btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Processing...';
+            btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"><\/i> Processing...';
             btn.classList.add('opacity-75', 'cursor-not-allowed');
             btn.disabled = true;
 
