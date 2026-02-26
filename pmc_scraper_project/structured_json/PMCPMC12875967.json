@@ -1,0 +1,18 @@
+{
+    "status": "accepted",
+    "chain_of_thought": "[Article Type: Case Report] In this article, I found the following liver injury-related lab values and clinical outcomes: The patient is a 53-year-old male with a history of drug-induced liver injury from previous anti-tuberculosis therapy. On admission, liver function tests showed: Albumin 34.7 g/L, total bilirubin 17.1 μmol/L, AST 50 U/L, ALT 22 U/L. The text mentions 'liver function remained stable' throughout hospitalization, indicating no significant liver injury progression. The suspected drug causing liver injury is not explicitly stated in this case, but the patient had previous liver injury from HRZE regimen. The clinical outcome was improvement as the patient stabilized and was transferred to a general ward.",
+    "patient_age": "53",
+    "patient_gender": "Male",
+    "suspected_drug": "HRZE regimen (isoniazid, rifampin, pyrazinamide, ethambutol)",
+    "lab_results": {
+        "ALT": "22 U/L",
+        "AST": "50 U/L",
+        "ALP": null,
+        "GGT": null,
+        "Bilirubin": "17.1 μmol/L (total bilirubin)",
+        "INR": null,
+        "Albumin": "34.7 g/L"
+    },
+    "clinical_outcome": "Improved/Discharged",
+    "AI_confidence_score": 0.85
+}

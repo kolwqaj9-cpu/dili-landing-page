@@ -1,0 +1,18 @@
+{
+    "status": "accepted",
+    "chain_of_thought": "[Article Type: Case Report] In this article, I found the following liver injury-related lab values and clinical outcomes: The patient is a 17-year-old male with HIV who developed jaundice and elevated liver enzymes after one year on efavirenz-based therapy. Peak lab values include ALT at 1,550.88 U/L, AST at 1,304.42 U/L, ALP at 297.9 U/L, total bilirubin at 213.6 umol/L, and later bilirubin increased to 432.2 umol/L. INR and albumin are not mentioned. The suspected drug is efavirenz. After discontinuation of efavirenz and treatment with corticosteroids and mycophenolate mofetil, liver enzymes normalized over a year, indicating improvement. The clinical outcome is improved/discharged.",
+    "patient_age": "17",
+    "patient_gender": "Male",
+    "suspected_drug": "efavirenz",
+    "lab_results": {
+        "ALT": "1550.88 U/L",
+        "AST": "1304.42 U/L",
+        "ALP": "297.9 U/L",
+        "GGT": null,
+        "Bilirubin": "432.2 umol/L (total bilirubin)",
+        "INR": null,
+        "Albumin": null
+    },
+    "clinical_outcome": "Improved/Discharged",
+    "AI_confidence_score": 0.9
+}

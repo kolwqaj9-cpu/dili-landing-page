@@ -1,0 +1,18 @@
+{
+    "status": "accepted",
+    "chain_of_thought": "[Article Type: Case Report] In this article, I found the following liver injury-related lab values and clinical outcomes: The patient is a 42-year-old male with HIV/HBV coinfection who developed a severe hepatic flare after ART reinitiation. The case presentation and Table 1 provide detailed longitudinal lab results. Peak AST was 987 U/L at 7 weeks after ART resumption, peak ALT was 968 U/L at the same time, ALP peaked at 270 U/L at 11 weeks, total bilirubin peaked at 1.8 mg/dL at 7 weeks, and transaminases normalized by week 11. The clinical outcome is improved/discharged as the patient achieved HBsAg loss and seroconversion. The suspected drug is bictegravir/emtricitabine/tenofovir alafenamide (ART) as it triggered IRIS-HF.",
+    "patient_age": "42",
+    "patient_gender": "Male",
+    "suspected_drug": "bictegravir/emtricitabine/tenofovir alafenamide",
+    "lab_results": {
+        "ALT": "968 U/L",
+        "AST": "987 U/L",
+        "ALP": "270 U/L",
+        "GGT": null,
+        "Bilirubin": "1.8 mg/dL (total bilirubin)",
+        "INR": null,
+        "Albumin": null
+    },
+    "clinical_outcome": "Improved/Discharged",
+    "AI_confidence_score": 0.9
+}

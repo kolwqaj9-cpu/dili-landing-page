@@ -1,0 +1,18 @@
+{
+    "status": "accepted",
+    "chain_of_thought": "[Article Type: Case Report] In this article, I found the following liver injury-related lab values and clinical outcomes: The text describes a real-world study of 11 patients with Duchenne muscular dystrophy treated with delandistrogene moxeparvovec, focusing on two patients (Patient 7 and Patient 10) who experienced acute liver injury. For Patient 7, peak lab values are provided: ALT 51-fold ULN (upper limit of normal ≤30 U/L, so peak ALT = 1530 U/L), AST 28-fold ULN (≤50 U/L, so peak AST = 1400 U/L), GGT 15-fold ULN (≤16 U/L, so peak GGT = 240 U/L), and total bilirubin 3-fold ULN (≤1.4 mg/dL, so peak bilirubin = 4.2 mg/dL). Patient 10 had a peak GGT of 3.4-fold ULN (≤16 U/L, so peak GGT = 54.4 U/L), but no major changes in AST/ALT or bilirubin. The article mentions that toxicities were treated with corticosteroids and improved, indicating a positive outcome. However, specific ages and genders for the two patients with liver injury are not provided in the text; the cohort includes males only (as DMD affects males), but individual patient details are not specified. The suspected drug is delandistrogene moxeparvovec. Clinical outcomes for the liver injury cases are described as responsive to corticosteroids and improved, so I classify this as 'Improved/Discharged'. Lab results for INR and Albumin are not mentioned, so they are set to null. AI confidence score is 0.7 due to incomplete patient-specific details.",
+    "patient_age": null,
+    "patient_gender": "Male",
+    "suspected_drug": "delandistrogene moxeparvovec",
+    "lab_results": {
+        "ALT": "1530 U/L",
+        "AST": "1400 U/L",
+        "ALP": null,
+        "GGT": "240 U/L",
+        "Bilirubin": "4.2 mg/dL",
+        "INR": null,
+        "Albumin": null
+    },
+    "clinical_outcome": "Improved/Discharged",
+    "AI_confidence_score": 0.7
+}

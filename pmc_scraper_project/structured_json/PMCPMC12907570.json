@@ -1,0 +1,18 @@
+{
+    "status": "accepted",
+    "chain_of_thought": "[Article Type: Case Report] In this article, I found the following liver injury-related lab values and clinical outcomes: The patient is a 79-year-old male with immune-related hepatitis during avelumab therapy. Lab results include AST, ALT, and ALP elevations graded over time, with peak values inferred from grade descriptions: AST reached grade 3 (likely >5 times upper limit of normal, ULN), ALT reached grade 2 (likely >3 times ULN), and ALP reached grade 3 (likely >5 times ULN). Bilirubin, INR, GGT, and Albumin are not explicitly mentioned in the text. The clinical outcome is death due to liver failure.",
+    "patient_age": "79",
+    "patient_gender": "Male",
+    "suspected_drug": "avelumab",
+    "lab_results": {
+        "ALT": "Grade 2 elevation (likely >3 times ULN, specific peak value not provided)",
+        "AST": "Grade 3 elevation (likely >5 times ULN, specific peak value not provided)",
+        "ALP": "Grade 3 elevation (likely >5 times ULN, specific peak value not provided)",
+        "GGT": null,
+        "Bilirubin": null,
+        "INR": null,
+        "Albumin": null
+    },
+    "clinical_outcome": "Death",
+    "AI_confidence_score": 0.7
+}

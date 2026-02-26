@@ -1,0 +1,18 @@
+{
+    "status": "accepted",
+    "chain_of_thought": "[Article Type: Case Report] In this article, I found the following liver injury-related lab values and clinical outcomes: The patient is a 31-year-old male with vanishing bile duct syndrome (VBDS) associated with classic Hodgkin's lymphoma (cHL). The text describes liver test elevations including bilirubin and alkaline phosphatase. Table 1 provides admission lab results: ALT 234 U/L, AST 68 U/L, ALP 398 U/L, total bilirubin 6.4 mg/dL, direct bilirubin 4.2 mg/dL, GGT 90 U/L, and INR not explicitly given but coagulopathy is mentioned. The text states 'peak in liver function tests around cycle 2' but does not provide specific peak values beyond admission. The patient received chemotherapy and showed improvement in liver function, with the article stating 'liver function improved' and 'liver tests are improving' after treatment. The patient was not considered for liver transplant due to active lymphoma and lack of support, but treatment led to clinical improvement. The outcome is described as improved liver function with chemotherapy, though not fully recovered.",
+    "patient_age": "31",
+    "patient_gender": "Male",
+    "suspected_drug": null,
+    "lab_results": {
+        "ALT": "234 U/L",
+        "AST": "68 U/L",
+        "ALP": "398 U/L",
+        "GGT": "90 U/L",
+        "Bilirubin": "Total bilirubin 6.4 mg/dL, Direct bilirubin 4.2 mg/dL",
+        "INR": null,
+        "Albumin": null
+    },
+    "clinical_outcome": "Improved/Discharged",
+    "AI_confidence_score": 0.75
+}

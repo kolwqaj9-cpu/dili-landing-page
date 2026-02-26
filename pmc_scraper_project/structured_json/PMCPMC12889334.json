@@ -1,0 +1,18 @@
+{
+    "status": "accepted",
+    "chain_of_thought": "[Article Type: Case Report] In this article, I found the following liver injury-related lab values and clinical outcomes: The patient is a 24-year-old female with typhoid fever and hepatic involvement. Peak liver enzyme values are clearly stated in the text and Table 1: ALT peaked at 712 U/L, AST at 532 U/L, ALP at 206 U/L, total bilirubin at 1.54 mg/dL with direct bilirubin at 0.61 mg/dL. INR and GGT are not mentioned in the text. Albumin is mentioned with a lowest value of 3.5 g/dL. The clinical outcome is described as full recovery with normalization of liver function tests by 30-day follow-up, so it is 'Improved/Discharged'. The extraction is based on explicit data from the case presentation and tables, providing high confidence.",
+    "patient_age": "24",
+    "patient_gender": "Female",
+    "suspected_drug": "Salmonella Typhi infection (not a drug, but the causative agent of liver injury)",
+    "lab_results": {
+        "ALT": "712 U/L",
+        "AST": "532 U/L",
+        "ALP": "206 U/L",
+        "GGT": null,
+        "Bilirubin": "Total bilirubin: 1.54 mg/dL, Direct bilirubin: 0.61 mg/dL",
+        "INR": null,
+        "Albumin": "3.5 g/dL"
+    },
+    "clinical_outcome": "Improved/Discharged",
+    "AI_confidence_score": 0.95
+}

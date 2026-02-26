@@ -1,0 +1,18 @@
+{
+    "status": "accepted",
+    "chain_of_thought": "[Article Type: Case Report] In this article, I found the following liver injury-related lab values and clinical outcomes: The patient is a 72-year-old male who developed liver injury after taking pyridostigmine. Lab results show peak AST of 1258 IU/L, peak ALT of 1235 IU/L, peak ALP of 741 IU/L, normal total bilirubin, peak INR of 2.19, and albumin not mentioned. The clinical outcome improved after discontinuing pyridostigmine, with liver function tests returning to normal within two weeks.",
+    "patient_age": "72",
+    "patient_gender": "Male",
+    "suspected_drug": "pyridostigmine",
+    "lab_results": {
+        "ALT": "1235 IU/L",
+        "AST": "1258 IU/L",
+        "ALP": "741 IU/L",
+        "GGT": null,
+        "Bilirubin": "Normal (total bilirubin normal, no specific value or unit provided)",
+        "INR": "2.19 (unit not specified, assumed as ratio)",
+        "Albumin": null
+    },
+    "clinical_outcome": "Improved/Discharged",
+    "AI_confidence_score": 0.9
+}

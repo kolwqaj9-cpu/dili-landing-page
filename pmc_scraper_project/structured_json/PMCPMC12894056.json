@@ -1,0 +1,18 @@
+{
+    "status": "accepted",
+    "chain_of_thought": "[Article Type: Case Report] In this article, I found the following liver injury-related lab values and clinical outcomes: The patient is an 11-year-old female with sickle cell disease presenting with jaundice and abdominal pain. Lab results from Table 1 show peak values: AST 631 U/L at admission, ALT 239 U/L at admission, GGT 51 U/L at 50 days after discharge, total bilirubin 16.1 mg/dL at admission, direct bilirubin 10.3 mg/dL at admission, ALP 371 U/L at 50 days after discharge, albumin 2.8 g/dL at admission, and INR 1.4 at admission. The clinical outcome is improved/discharged as the patient was discharged after treatment, with follow-up showing resolution of the pancreatic mass and remission for over 20 months.",
+    "patient_age": "11",
+    "patient_gender": "Female",
+    "suspected_drug": null,
+    "lab_results": {
+        "ALT": "239 U/L",
+        "AST": "631 U/L",
+        "ALP": "371 U/L",
+        "GGT": "51 U/L",
+        "Bilirubin": "Total bilirubin 16.1 mg/dL, Direct bilirubin 10.3 mg/dL",
+        "INR": "1.4",
+        "Albumin": "2.8 g/dL"
+    },
+    "clinical_outcome": "Improved/Discharged",
+    "AI_confidence_score": 0.95
+}

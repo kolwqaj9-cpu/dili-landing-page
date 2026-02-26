@@ -1,0 +1,18 @@
+{
+    "status": "accepted",
+    "chain_of_ought": "[Article Type: Case Report] In this article, I found the following liver injury-related lab values and clinical outcomes: The patient is an 18-year-old male with NK/T-cell lymphoma treated with gemcitabine, dexamethasone, and cisplatin (GDP). Table 1 provides blood test results showing peak values for liver function indicators after cycle 3: ALT 217 U/L, AST 187 U/L, ALP 579 U/L, total bilirubin 134 µmol/L, and INR 2.4. The patient developed drug-induced hepatorenal failure and died a week later, indicating the clinical outcome is death.",
+    "patient_age": "18",
+    "patient_gender": "Male",
+    "suspected_drug": "gemcitabine, dexamethasone, and cisplatin (GDP)",
+    "lab_results": {
+        "ALT": "217 U/L",
+        "AST": "187 U/L",
+        "ALP": "579 U/L",
+        "GGT": null,
+        "Bilirubin": "134 µmol/L (total bilirubin)",
+        "INR": "2.4",
+        "Albumin": null
+    },
+    "clinical_outcome": "Death",
+    "AI_confidence_score": 0.9
+}

@@ -1,0 +1,18 @@
+{
+    "status": "accepted",
+    "chain_of_thought": "[Article Type: Case Report] In this article, I found the following liver injury-related lab values and clinical outcomes: The patient is a 33-year-old female with pre-XDR-TB. During treatment, she developed TB-Sepsis with acute hepatic injury. The peak ALT was 213 U/L and peak AST was 130 U/L as mentioned in Phase 2. Other liver function tests like ALP, GGT, Bilirubin, INR, and Albumin were not specifically reported in the text. The clinical outcome was improved/discharged as both mother and infant recovered well with the mother achieving full neuro-recovery.",
+    "patient_age": "33",
+    "patient_gender": "Female",
+    "suspected_drug": "Bedaquiline (Bdq) and Delamanid (Dlm) based regimen",
+    "lab_results": {
+        "ALT": "213 U/L",
+        "AST": "130 U/L",
+        "ALP": null,
+        "GGT": null,
+        "Bilirubin": null,
+        "INR": null,
+        "Albumin": null
+    },
+    "clinical_outcome": "Improved/Discharged",
+    "AI_confidence_score": 0.8
+}

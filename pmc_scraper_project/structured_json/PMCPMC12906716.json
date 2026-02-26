@@ -1,0 +1,18 @@
+{
+    "status": "accepted",
+    "chain_of_thought": "[Article Type: Case Report] In this article, I found the following liver injury-related lab values and clinical outcomes: The patient is a 38-year-old male who presented with elevated liver enzymes. Initial lab results showed AST 176 U/L, ALT 163 U/L, ALP 600 U/L, total bilirubin 2.8 mg/dL, and albumin 2.8 g/dL. The text mentions that liver enzymes initially worsened but stabilized after treatment with IV N-acetylcysteine. The patient showed clinical and laboratory improvement by discharge, with stabilization of liver enzymes and hemoglobin levels. The suspected drug causing liver injury is Asowosi (bitter melon) herbal supplement. The clinical outcome is improved/discharged.",
+    "patient_age": "38",
+    "patient_gender": "Male",
+    "suspected_drug": "Asowosi (bitter melon) herbal supplement",
+    "lab_results": {
+        "ALT": "163 U/L",
+        "AST": "176 U/L",
+        "ALP": "600 U/L",
+        "GGT": null,
+        "Bilirubin": "2.8 mg/dL (total bilirubin)",
+        "INR": null,
+        "Albumin": "2.8 g/dL"
+    },
+    "clinical_outcome": "Improved/Discharged",
+    "AI_confidence_score": 0.85
+}

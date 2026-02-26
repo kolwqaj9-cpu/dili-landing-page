@@ -1,0 +1,18 @@
+{
+    "status": "accepted",
+    "chain_of_thought": "[Article Type: Case Report] In this article, I found the following liver injury-related lab values and clinical outcomes: The patient is a 47-year-old woman with metastatic colon cancer who developed severe hepatocellular liver injury after increasing self-administered fenbendazole. Laboratory examinations showed peak ALT of 2407 U/L, AST of 2435 U/L, ALP of 215 U/L, total bilirubin of 3.1 mg/dL, direct bilirubin of 1.75 mg/dL, and INR of 1.52. The patient improved after stopping fenbendazole, with normalization of liver function tests and safe reintroduction of immunotherapy, indicating recovery.",
+    "patient_age": "47",
+    "patient_gender": "Female",
+    "suspected_drug": "fenbendazole",
+    "lab_results": {
+        "ALT": "2407 U/L",
+        "AST": "2435 U/L",
+        "ALP": "215 U/L",
+        "GGT": null,
+        "Bilirubin": "Total bilirubin 3.1 mg/dL, Direct bilirubin 1.75 mg/dL",
+        "INR": "1.52",
+        "Albumin": null
+    },
+    "clinical_outcome": "Improved/Discharged",
+    "AI_confidence_score": 0.95
+}

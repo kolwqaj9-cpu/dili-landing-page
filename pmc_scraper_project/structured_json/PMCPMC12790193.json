@@ -1,0 +1,18 @@
+{
+    "status": "accepted",
+    "chain_of_thought": "[Article Type: Case Report] In this article, I found the following liver injury-related lab values and clinical outcomes: The patient is a 48-year-old man with infective endocarditis and septic arthritis. On day 46, routine laboratory testing revealed elevated hepatic transaminase levels, suggesting drug-induced liver injury, but no specific peak values for ALT, AST, ALP, GGT, Bilirubin, INR, or Albumin are mentioned in the text. The patient's liver enzyme levels improved by day 48, and the clinical outcome was discharge in stable condition on day 56.",
+    "patient_age": "48",
+    "patient_gender": "Male",
+    "suspected_drug": "cephalexin",
+    "lab_results": {
+        "ALT": null,
+        "AST": null,
+        "ALP": null,
+        "GGT": null,
+        "Bilirubin": null,
+        "INR": null,
+        "Albumin": null
+    },
+    "clinical_outcome": "Improved/Discharged",
+    "AI_confidence_score": 0.6
+}
