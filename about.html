@@ -21,6 +21,12 @@
         .nav-links a:hover { color: #2563eb; text-decoration: underline; }
         
         blockquote { border-left: 4px solid #3b82f6; margin: 30px 0; padding-left: 20px; font-style: italic; color: #475569; font-size: 1.1em; }
+        
+        .authority-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 25px; margin-bottom: 25px; }
+        @media (min-width: 600px) { .authority-grid { grid-template-columns: 1fr 1fr; } }
+        .auth-item { background: #f8fafc; padding: 25px; border-radius: 8px; border: 1px solid #e2e8f0; }
+        .auth-item h3 { margin-top: 0; margin-bottom: 15px; color: #3b82f6; font-size: 1.1em; }
+        .auth-item p { margin-bottom: 0; font-size: 0.95em; }
     </style>
 </head>
 <body>
@@ -40,11 +46,22 @@
 
     <div class="content-box">
         <section class="about-us">
-            <h2>Bridging CS Excellence with Pharma Safety</h2>
-            <p>Dilisights was founded by a senior computer scientist with over 19 years of development experience. Holding a degree from Beijing Normal University, the founding team combines deep algorithmic expertise with a passion for improving drug safety through AI.</p>
+            <h2>Empowering Pharmacovigilance with 19 Years of Computational Excellence</h2>
+            <p>Dilisights was founded on a mission to bridge the gap between advanced NLP technology and the stringent requirements of drug safety. Our lead architect brings over <strong>19 years of experience</strong> in high-concurrency system design and data intelligence.</p>
             
+            <div class="authority-grid">
+                <div class="auth-item">
+                    <h3>Enterprise-Grade Reliability</h3>
+                    <p>Leveraging decades of experience in server-side architecture to ensure 99.9% uptime for critical safety monitoring tasks.</p>
+                </div>
+                <div class="auth-item">
+                    <h3>Precision-First NLP</h3>
+                    <p>Moving beyond simple keywords to deep semantic understanding of DILI signals, tailored for regulatory-grade reporting.</p>
+                </div>
+            </div>
+
             <blockquote>
-                "Our mission is to ensure no safety signal goes unnoticed in the sea of data."
+                "At Dilisights, we don't just process data; we engineer trust for the next generation of drug safety."
             </blockquote>
         </section>
     </div>
