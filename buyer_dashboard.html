@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}var c=window;try{r=c.localStorage,p=c.sessionStorage}catch(t){}window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}var c=e;for(void 0!==a?c=e[a]=[]:a="posthog",c.people=c.people||[],c.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},c.people.toString=function(){return c.toString(1)+".people (stub)"},o="capture register register_once unregister identify name_tag set_config reset opt_in_capturing cookie_consent_number disable_capturing get_distinct_id getGroups get_group_id get_group_prop set_group_prop reset_groups register_for_session_recording display_person_recorder".split(" "),n=0;n<o.length;n++)g(c,o[n]);e._i.push([i,s,a])},e.__SV=1.6}(document,window.posthog||[]);
+        
+        // 初始化 (注意这里没有冒号错误)
+        posthog.init('phc_F9AHEWXMyYP8Z6K0LQzFv3de99UPGZ2c8C12PSQMzFt', { 
+            api_host: 'https://us.i.posthog.com',
+            loaded: function(posthog) {
+                console.log("✅ Dashboard 统计已连接，成功入账！");
+            }
+        });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PropKit Command | Live Signals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] },
+                    colors: { darkBg: '#0F172A', cardBg: '#1E293B', neonGreen: '#10B981', neonBlue: '#3B82F6' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0F172A; }
+        .fade-in { animation: fadeIn 0.5s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .signal-row:hover { background-color: rgba(59, 130, 246, 0.1); }
+    </style>
+</head>
+<body class="text-slate-200 font-sans min-h-screen">
+    
+    <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-2 h-8 bg-blue-600 rounded-sm"></div>
+                <span class="font-extrabold text-xl tracking-tight text-white">PropKit <span class="text-blue-500">Signal</span></span>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="hidden md:flex items-center gap-2 px-3 py-1 bg-slate-800 rounded-full border border-slate-700">
+                    <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                    <span class="text-xs font-mono text-green-400">SYSTEM ONLINE</span>
+                </div>
+                <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-blue-500 to-indigo-600 border-2 border-slate-700"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8 fade-in">
+            <div class="bg-cardBg p-5 rounded-xl border border-slate-700 shadow-lg">
+                <p class="text-xs text-slate-400 font-mono mb-1 uppercase">Daily ROI (Proj)</p>
+                <p class="text-2xl font-bold text-green-400">+12.4%</p>
+            </div>
+            <div class="bg-cardBg p-5 rounded-xl border border-slate-700 shadow-lg">
+                <p class="text-xs text-slate-400 font-mono mb-1 uppercase">Active Signals</p>
+                <p class="text-2xl font-bold text-white">3</p>
+            </div>
+            <div class="bg-cardBg p-5 rounded-xl border border-slate-700 shadow-lg md:col-span-2 relative overflow-hidden group cursor-pointer">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="flex justify-between items-center relative z-10">
+                    <div>
+                        <p class="text-xs text-blue-400 font-bold uppercase mb-1">Account Status</p>
+                        <p class="text-lg font-bold text-white">Founding Member</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-xs text-slate-400">Next Renewal</p>
+                        <p class="text-sm font-mono text-slate-200">May 15, 2026</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 fade-in">
+            
+            <div class="lg:col-span-2 space-y-4">
+                <div class="flex items-center justify-between mb-2">
+                    <h2 class="text-sm font-bold text-slate-400 uppercase tracking-wider">Live Variance Feed</h2>
+                    <span class="text-xs text-slate-500 font-mono">Last updated: <span id="time-update">Now</span></span>
+                </div>
+
+                <div class="bg-cardBg border-l-4 border-green-500 rounded-r-xl p-6 shadow-lg relative overflow-hidden group hover:translate-x-1 transition-transform cursor-pointer">
+                    <div class="absolute top-0 right-0 bg-green-500/10 text-green-400 text-[10px] font-bold px-2 py-1 rounded-bl">CONFIRMED EDGE</div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <span class="text-sm text-slate-400 font-bold block mb-1">MLB • 7:10 PM EST</span>
+                            <h3 class="text-xl font-bold text-white">NY Yankees vs BOS Red Sox</h3>
+                        </div>
+                        <div class="text-right">
+                            <span class="block text-2xl font-black text-green-400">OVER 9.5</span>
+                            <span class="text-xs text-slate-400 font-mono">Odds: -110 (Implied 52.4%)</span>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800/50 p-3 rounded-lg flex justify-between items-center">
+                        <div>
+                            <p class="text-xs text-slate-500 mb-1">Model Output</p>
+                            <p class="font-mono text-sm text-blue-300">Exp. Runs: 10.8 <span class="text-green-500">(+1.3 Var)</span></p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-xs text-slate-500 mb-1">Rec. Unit Size</p>
+                            <p class="font-mono text-sm text-white font-bold">2.5 Units</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-cardBg border-l-4 border-green-500 rounded-r-xl p-6 shadow-lg relative overflow-hidden group hover:translate-x-1 transition-transform cursor-pointer">
+                    <div class="absolute top-0 right-0 bg-green-500/10 text-green-400 text-[10px] font-bold px-2 py-1 rounded-bl">CONFIRMED EDGE</div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <span class="text-sm text-slate-400 font-bold block mb-1">MLB • 8:05 PM EST</span>
+                            <h3 class="text-xl font-bold text-white">Texas Rangers Moneyline</h3>
+                        </div>
+                        <div class="text-right">
+                            <span class="block text-2xl font-black text-green-400">TEX ML</span>
+                            <span class="text-xs text-slate-400 font-mono">Odds: +105</span>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800/50 p-3 rounded-lg flex justify-between items-center">
+                        <div>
+                            <p class="text-xs text-slate-500 mb-1">Model Output</p>
+                            <p class="font-mono text-sm text-blue-300">Win Prob: 54.2% <span class="text-green-500">(+3.8% EV)</span></p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-xs text-slate-500 mb-1">Rec. Unit Size</p>
+                            <p class="font-mono text-sm text-white font-bold">1.5 Units</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-cardBg border-l-4 border-slate-600 rounded-r-xl p-6 shadow-lg opacity-60 grayscale hover:grayscale-0 transition-all">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-sm text-slate-500 font-bold block mb-1">MLB • 9:40 PM EST</span>
+                            <h3 class="text-lg font-bold text-slate-300">LAD vs SF Giants</h3>
+                        </div>
+                        <div class="text-right">
+                            <span class="block text-xl font-bold text-slate-400">PASS / NO PLAY</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2 font-mono">Reason: Variance below 2.0% threshold. Market efficient.</p>
+                </div>
+
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-cardBg p-6 rounded-xl border border-slate-700">
+                    <h3 class="text-sm font-bold text-white mb-4">Market Variance Meter</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="text-slate-400">Public Money (Fade)</span>
+                                <span class="text-red-400">Heavy on BOS (78%)</span>
+                            </div>
+                            <div class="w-full bg-slate-700 h-1.5 rounded-full">
+                                <div class="bg-red-500 h-1.5 rounded-full" style="width: 78%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="text-slate-400">Sharp Money (Follow)</span>
+                                <span class="text-green-400">Flowing to NYY (Over)</span>
+                            </div>
+                            <div class="w-full bg-slate-700 h-1.5 rounded-full">
+                                <div class="bg-green-500 h-1.5 rounded-full" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-b from-blue-900/40 to-cardBg p-6 rounded-xl border border-blue-500/30 text-center">
+                    <i class="fas fa-lock text-blue-400 text-2xl mb-3"></i>
+                    <h3 class="text-white font-bold mb-1">Pro Strategy Locked</h3>
+                    <p class="text-xs text-slate-400 mb-4">Upgrade to view Sharp Report JSON data.</p>
+                    <button class="w-full py-2 bg-slate-800 hover:bg-slate-700 text-xs font-bold text-white rounded border border-slate-600 transition">Already Included in Quarterly</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Simple Time Update
+        setInterval(() => {
+            const now = new Date();
+            document.getElementById('time-update').innerText = now.toLocaleTimeString();
+        }, 1000);
+    </script>
+</body>
+</html>

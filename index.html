@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DILI Data Analytics | Automated Pharmacovigilance</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 50px 20px; background-color: #f8fafc; }
+        header { text-align: center; margin-bottom: 40px; }
+        h1 { color: #0f172a; font-size: 2.2em; margin-bottom: 10px; font-weight: 700; }
+        h2 { color: #3b82f6; font-size: 1.2em; font-weight: 500; margin-top: 0; }
+        .content-box { background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); border: 1px solid #e2e8f0; }
+        p { margin-bottom: 20px; font-size: 1.05em; color: #475569; }
+        .highlight { font-weight: 600; color: #0f172a; }
+        ul { margin-bottom: 25px; padding-left: 20px; }
+        li { margin-bottom: 10px; color: #475569; }
+        .footer { text-align: center; margin-top: 50px; font-size: 0.85em; color: #94a3b8; }
+        .code-snippet { background: #0f172a; padding: 20px; border-radius: 8px; font-family: "Courier New", Courier, monospace; font-size: 0.9em; color: #e2e8f0; overflow-x: auto; margin-top: 20px; }
+        .code-key { color: #38bdf8; }
+        .code-string { color: #a3e635; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DILI Data Analytics</h1>
+        <h2>Accelerating Drug Safety Signaling through NLP</h2>
+    </header>
+    
+    <div class="content-box">
+        <p>We provide specialized automated extraction of <span class="highlight">Drug-Induced Liver Injury (DILI)</span> case reports from unstructured global scientific literature and clinical databases.</p>
+        
+        <p>Our proprietary NLP pipeline converts complex medical texts into structured, machine-readable formats (JSON/XML) designed specifically for Pharmacovigilance and Drug Safety teams. We eliminate manual data processing, allowing your team to focus on toxicity signaling and risk assessment.</p>
+        
+        <p><span class="highlight">Key Data Points Extracted:</span></p>
+        <ul>
+            <li>Patient Demographics (Age, Gender, Baseline Conditions)</li>
+            <li>Suspected Drugs and Concomitant Medications</li>
+            <li>Longitudinal Liver Biochemistry (ALT, AST, ALP, Total Bilirubin, etc.)</li>
+            <li>Clinical Outcomes and Causality Indicators</li>
+        </ul>
+
+        <div class="code-snippet">
+            {<br>
+            &nbsp;&nbsp;<span class="code-key">"suspected_drug"</span>: <span class="code-string">"bictegravir"</span>,<br>
+            &nbsp;&nbsp;<span class="code-key">"clinical_outcome"</span>: <span class="code-string">"Improved/Discharged"</span>,<br>
+            &nbsp;&nbsp;<span class="code-key">"lab_results"</span>: {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-key">"ALT"</span>: <span class="code-string">"968 U/L"</span>,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-key">"AST"</span>: <span class="code-string">"987 U/L"</span>,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-key">"Bilirubin"</span>: <span class="code-string">"1.8 mg/dL"</span><br>
+            &nbsp;&nbsp;}<br>
+            }
+        </div>
+        
+        <p style="margin-top: 30px; text-align: center; font-size: 0.95em; color: #64748b;">
+            <em>For API access or sample datasets, please reply directly to our outreach email.</em>
+        </p>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px;"><a href="privacy.html" style="color: #3b82f6; text-decoration: none; margin: 0 10px;">Privacy Policy</a> | <a href="terms.html" style="color: #3b82f6; text-decoration: none; margin: 0 10px;">Terms of Service</a></div>
+    <div class="footer">
+        &copy; 2026 DILI Data Analytics. All rights reserved.
+    </div>
+</body>
+</html>

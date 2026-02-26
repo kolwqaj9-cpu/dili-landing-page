@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Access | PropKit AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900 flex items-center justify-center min-h-screen p-4">
+
+    <div class="max-w-md w-full bg-white p-8 rounded-2xl shadow-2xl border border-slate-200">
+        
+        <div class="text-center mb-8">
+            <div class="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full mb-3">
+                ALLOCATION OPEN
+            </div>
+            <h1 class="text-3xl font-extrabold text-slate-900 mb-2">Secure Access</h1>
+            <p class="text-slate-500 text-sm">PropKit Signal Engine • Quarterly Plan</p>
+        </div>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-6 flex justify-between items-center">
+            <div>
+                <p class="font-bold text-slate-800">Quarterly Access</p>
+                <p class="text-xs text-slate-500">Billed every 3 months</p>
+            </div>
+            <span class="font-bold text-slate-900 text-xl">$249.00</span>
+        </div>
+
+        <button type="button" id="pay-btn" onclick="handlePayment()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl text-lg shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2">
+            <i class="fas fa-lock"></i> Pay & Activate
+        </button>
+
+        <p class="text-center text-[10px] text-slate-400 mt-4">
+            Secure 256-bit SSL Encrypted Transaction.
+        </p>
+    </div>
+
+    <script>
+        function handlePayment() {
+            const btn = document.getElementById('pay-btn');
+            
+            // 1. 按钮变转圈圈 (给用户反馈)
+            btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Processing...';
+            btn.classList.add('opacity-75', 'cursor-not-allowed');
+            btn.disabled = true;
+
+            // 2. 模拟网络延迟 1.5秒，然后直接跳转
+            setTimeout(() => {
+                // 核心：跳转时带上参数 payment=success
+                // PostHog 在 dashboard 页面会自动记录这个 URL
+                window.location.href = 'buyer_dashboard.html?payment=success&source=checkout_flow';
+            }, 1500);
+        }
+    </script>
+</body>
+</html>

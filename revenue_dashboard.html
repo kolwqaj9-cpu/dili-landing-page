@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PropKit | Admin Revenue</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 p-8 min-h-screen">
+    
+    <div class="max-w-4xl mx-auto space-y-6">
+        
+        <div class="flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-slate-900">Revenue Command</h1>
+            <button onclick="resetData()" class="text-xs text-red-400 hover:text-red-600 underline">Reset Data</button>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+            <div class="flex justify-between text-sm font-bold text-slate-500 mb-2">
+                <span>Monthly Goal ($5,000)</span>
+                <span id="goal-percentage">0%</span>
+            </div>
+            <div class="w-full bg-gray-100 h-4 rounded-full overflow-hidden">
+                <div id="progress-bar" class="bg-gradient-to-r from-blue-600 to-indigo-600 h-full w-0 transition-all duration-1000"></div>
+            </div>
+            <p class="text-xs text-slate-400 mt-2 text-right" id="needed-msg">Need $5,000 more</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Total Cash Collected</p>
+                <h2 class="text-4xl font-black text-slate-900 mt-2" id="total-rev">$0.00</h2>
+            </div>
+
+            <div class="bg-blue-50 p-6 rounded-xl shadow-sm border border-blue-100">
+                <p class="text-xs text-blue-500 font-bold uppercase tracking-wider">Quarterly ($249)</p>
+                <div class="flex items-baseline gap-2 mt-2">
+                    <h2 class="text-4xl font-black text-blue-700" id="count-qtr">0</h2>
+                    <span class="text-sm text-blue-600 font-medium">Founding Members</span>
+                </div>
+            </div>
+
+             <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Monthly ($99)</p>
+                <div class="flex items-baseline gap-2 mt-2">
+                    <h2 class="text-4xl font-black text-slate-900" id="count-mo">0</h2>
+                    <span class="text-sm text-slate-500 font-medium">Standard</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="px-6 py-4 border-b border-gray-100 bg-gray-50/50">
+                <h3 class="text-sm font-bold text-slate-700">Recent Transactions (Local Simulation)</h3>
+            </div>
+            <table class="w-full text-sm text-left">
+                <thead class="bg-gray-50 text-slate-500">
+                    <tr>
+                        <th class="px-6 py-3 font-medium">Time</th>
+                        <th class="px-6 py-3 font-medium">Plan</th>
+                        <th class="px-6 py-3 font-medium text-right">Amount</th>
+                    </tr>
+                </thead>
+                <tbody id="ledger-body" class="divide-y divide-gray-100">
+                    </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script>
+        function loadRevenue() {
+            // Retrieve history
+            const history = JSON.parse(localStorage.getItem('purchase_history') || '[]');
+            
+            let total = 0;
+            let qtrCount = 0;
+            let moCount = 0;
+            const ledger = document.getElementById('ledger-body');
+            ledger.innerHTML = ''; // Clear
+
+            // Process Data
+            history.reverse().forEach(tx => {
+                total += tx.amount;
+                if(tx.amount === 249) qtrCount++;
+                else moCount++;
+
+                // Add Row
+                const row = `
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="px-6 py-4 text-slate-500 font-mono text-xs">${new Date(tx.timestamp).toLocaleTimeString()}</td>
+                        <td class="px-6 py-4">
+                            <span class="px-2 py-1 rounded-full text-xs font-bold ${tx.amount === 249 ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-700'}">
+                                ${tx.plan.toUpperCase()}
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 text-right font-bold text-slate-900">$${tx.amount}</td>
+                    </tr>
+                `;
+                ledger.insertAdjacentHTML('beforeend', row);
+            });
+
+            // Update DOM
+            document.getElementById('total-rev').innerText = '$' + total.toLocaleString();
+            document.getElementById('count-qtr').innerText = qtrCount;
+            document.getElementById('count-mo').innerText = moCount;
+
+            // Goal Math
+            const goal = 5000;
+            const pct = Math.min((total / goal) * 100, 100).toFixed(1);
+            document.getElementById('progress-bar').style.width = pct + '%';
+            document.getElementById('goal-percentage').innerText = pct + '%';
+            
+            const needed = goal - total;
+            document.getElementById('needed-msg').innerText = needed > 0 ? `Need $${needed.toLocaleString()} more` : "GOAL CRUSHED 🚀";
+            if(needed <= 0) {
+                document.getElementById('progress-bar').classList.add('bg-green-500');
+            }
+        }
+
+        function resetData() {
+            if(confirm('Clear all sales data?')) {
+                localStorage.removeItem('purchase_history');
+                location.reload();
+            }
+        }
+
+        loadRevenue();
+    </script>
+</body>
+</html>
