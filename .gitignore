@@ -2,3 +2,9 @@
 !*.html
 !CNAME
 !.gitignore
+
+# Explicitly ignore python and env files
+*.py
+*.pyc
+.env
+__pycache__/

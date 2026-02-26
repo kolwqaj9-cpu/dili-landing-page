@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Access | PropKit AI</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/posthog-js@latest/dist/posthog.js"></script>
+
+    <script>
+        // 页面加载完成后立即初始化
+        window.onload = function() {
+            if (window.posthog) {
+                posthog.init('phc_F9AHEWXMyYP8Z6K0LQzFv3de99UPGZ2c8C12PSQMzFt', { 
+                    api_host: 'https://us.i.posthog.com',
+                    // 开启调试模式，这样你在控制台能看到更详细的信息
+                    debug: true, 
+                    loaded: function(posthog) {
+                        console.log("✅ PostHog 系统已就绪 (CDN模式)");
+                    }
+                });
+            } else {
+                console.error("❌ PostHog 加载被拦截！请检查广告屏蔽插件 (AdBlock)");
+            }
+        };
+
+        // Tailwind 配置
+        tailwind.config = {
+            theme: {
+                extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900 flex items-center justify-center min-h-screen p-4">
+
+    <div class="max-w-md w-full bg-white p-8 rounded-2xl shadow-2xl border border-slate-200">
+        
+        <div class="text-center mb-8">
+            <div class="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full mb-3">
+                ALLOCATION OPEN
+            </div>
+            <h1 class="text-3xl font-extrabold text-slate-900 mb-2">Secure Access</h1>
+            <p class="text-slate-500 text-sm">PropKit Signal Engine • Quarterly Plan</p>
+        </div>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-6 flex justify-between items-center">
+            <div>
+                <p class="font-bold text-slate-800">Quarterly Access</p>
+                <p class="text-xs text-slate-500">Billed every 3 months</p>
+            </div>
+            <span class="font-bold text-slate-900 text-xl">$249.00</span>
+        </div>
+
+        <button type="button" id="pay-btn" onclick="handlePayment()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl text-lg shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2">
+            <i class="fas fa-lock"></i> Pay & Activate
+        </button>
+
+        <p class="text-center text-[10px] text-slate-400 mt-4">
+            Secure 256-bit SSL Encrypted Transaction.
+        </p>
+    </div>
+
+    <div id="gift-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden bg-slate-900/80 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl p-8 max-w-sm w-full mx-4 shadow-2xl transform scale-95 opacity-0 transition-all duration-300" id="modal-content">
+            <div class="text-center">
+                <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Payment System Upgrade</h3>
+                <p class="text-slate-500 text-sm mb-6">Your card was <strong>NOT charged</strong>. As compensation, we've activated a free trial for you.</p>
+                <button onclick="window.location.href='buyer_dashboard.html?source=pay_fix'" class="w-full bg-slate-900 text-white font-bold py-3 rounded-xl hover:bg-slate-800 transition">
+                    Enter Dashboard Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handlePayment() {
+            const btn = document.getElementById('pay-btn');
+            
+            // 1. UI 立即反馈 (防止重复点击)
+            btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Processing...';
+            btn.classList.add('opacity-75', 'cursor-not-allowed');
+            btn.disabled = true;
+
+            // 2. 发送数据给 PostHog (核心)
+            if (window.posthog) {
+                // 发送事件
+                posthog.capture('click_pay_button', { 
+                    amount: 249, 
+                    currency: 'USD', 
+                    plan: 'Quarterly',
+                    status: 'clicked'
+                });
+                console.log("🚀 [PostHog] 支付点击事件已发送！");
+            } else {
+                console.warn("⚠️ [PostHog] 未加载，统计可能丢失。");
+            }
+
+            // 3. 为了让你在本地也能看到数据，我们双重写入 LocalStorage
+            try {
+                const history = JSON.parse(localStorage.getItem('purchase_history') || '[]');
+                history.push({ 
+                    amount: 249, 
+                    time: new Date().toISOString(), 
+                    id: 'ORD-' + Math.floor(Math.random()*10000) 
+                });
+                localStorage.setItem('purchase_history', JSON.stringify(history));
+            } catch(e) {}
+
+            // 4. 模拟延迟后显示弹窗
+            setTimeout(() => {
+                const modal = document.getElementById('gift-modal');
+                const content = document.getElementById('modal-content');
+                
+                modal.classList.remove('hidden');
+                // 简单的淡入动画
+                setTimeout(() => {
+                    content.classList.remove('scale-95', 'opacity-0');
+                    content.classList.add('scale-100', 'opacity-100');
+                }, 50);
+                
+                btn.innerHTML = '<i class="fas fa-check"></i> Done';
+            }, 1500);
+        }
+    </script>
+</body>
+</html>
