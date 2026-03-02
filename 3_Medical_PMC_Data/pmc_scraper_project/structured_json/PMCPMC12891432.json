@@ -1,0 +1,18 @@
+{
+    "status": "accepted",
+    "chain_of_thought": "[Article Type: Case Report] In this article, I found the following liver injury-related lab values and clinical outcomes: The patient is a 53-year-old female with suspected drug-induced liver injury initially attributed to cephalexin, but later diagnosed with vanishing bile duct syndrome (VBDS) associated with Hodgkin's lymphoma. Lab results include peak values: ALT 271 U/L, AST 287 U/L, ALP >1000 U/L (specifically mentioned as >1000, with a later value of 1943 U/L during treatment), total bilirubin >12 mg/dL (with a later value of 9.6 mg/dL during treatment). GGT, INR, and Albumin are not mentioned in the text. Clinical outcome shows improvement after chemotherapy and autologous stem cell transplantation, with liver function tests normalizing at follow-up.",
+    "patient_age": "53",
+    "patient_gender": "Female",
+    "suspected_drug": "cephalexin",
+    "lab_results": {
+        "ALT": "271 U/L",
+        "AST": "287 U/L",
+        "ALP": ">1000 U/L",
+        "GGT": null,
+        "Bilirubin": ">12 mg/dL (total bilirubin)",
+        "INR": null,
+        "Albumin": null
+    },
+    "clinical_outcome": "Improved/Discharged",
+    "AI_confidence_score": 0.85
+}

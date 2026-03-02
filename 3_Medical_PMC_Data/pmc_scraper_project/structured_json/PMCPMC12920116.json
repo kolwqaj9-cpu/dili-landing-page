@@ -1,0 +1,18 @@
+{
+    "status": "accepted",
+    "chain_of_ought": "[Article Type: Case Report] In this article, I found the following liver injury-related lab values and clinical outcomes: The patient is a 7-year-old female with spinal muscular atrophy type 1 who received onasemnogene abeparvovec and developed symptomatic hepatitis. Serum hepatic markers peaked 7 weeks after infusion, as indicated in Extended Data Table 1, but specific peak values for ALT, AST, ALP, GGT, Bilirubin, INR, and Albumin are not provided in the text. The patient was managed with steroids and tacrolimus, with tacrolimus withdrawn after 7 months and steroids continued for 19 months. The clinical outcome is described as improved with management, but no explicit mention of discharge or death is made; however, the patient's condition was managed and improved, so I infer 'Improved/Discharged'.",
+    "patient_age": "7",
+    "patient_gender": "Female",
+    "suspected_drug": "onasemnogene abeparvovec",
+    "lab_results": {
+        "ALT": null,
+        "AST": null,
+        "ALP": null,
+        "GGT": null,
+        "Bilirubin": null,
+        "INR": null,
+        "Albumin": null
+    },
+    "clinical_outcome": "Improved/Discharged",
+    "AI_confidence_score": 0.6
+}

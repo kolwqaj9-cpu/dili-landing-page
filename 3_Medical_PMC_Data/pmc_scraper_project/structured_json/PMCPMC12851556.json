@@ -1,0 +1,18 @@
+{
+    "status": "accepted",
+    "chain_of_thought": "[Article Type: Case Report] In this article, I found the following liver injury-related lab values and clinical outcomes: The patient is a 57-year-old male with granulomatosis with polyangiitis (GPA) and hepatic involvement. The suspected drug is not explicitly mentioned; the liver injury is attributed to GPA itself, not a medication. Lab results from Table 2 show peak values: ALT (Alanine Transferase) at 493 IU/L on Day 4, AST is not mentioned in the text or tables, ALP (Alkaline Phosphatase) at 470 IU/L on Day 4, GGT (Gamma Glutamyl Transferase) at 342 IU/L on Day 6, Bilirubin is not mentioned, INR is not mentioned, Albumin is not mentioned. The clinical outcome is improved/discharged as the patient showed significant improvement in symptoms and lab results after treatment and was discharged with follow-up appointments.",
+    "patient_age": "57",
+    "patient_gender": "Male",
+    "suspected_drug": null,
+    "lab_results": {
+        "ALT": "493 IU/L",
+        "AST": null,
+        "ALP": "470 IU/L",
+        "GGT": "342 IU/L",
+        "Bilirubin": null,
+        "INR": null,
+        "Albumin": null
+    },
+    "clinical_outcome": "Improved/Discharged",
+    "AI_confidence_score": 0.8
+}

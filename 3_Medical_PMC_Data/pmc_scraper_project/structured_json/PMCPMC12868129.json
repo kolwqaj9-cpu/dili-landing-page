@@ -1,0 +1,18 @@
+{
+    "status": "accepted",
+    "chain_of_thought": "[Article Type: Case Report] In this article, I found the following liver injury-related lab values and clinical outcomes: The patient is a 25-year-old female with systemic lupus erythematosus. On 20 June 2025, during pregnancy, laboratory tests revealed elevated levels of aspartate aminotransferase (AST) and alanine aminotransferase (ALT), leading to a diagnosis of intrahepatic cholestasis of pregnancy (ICP). The text mentions 'elevated levels of total bile acids, aspartate aminotransferase, and alanine aminotransferase' but does not provide specific peak values or units for these liver function indicators. No other liver function tests such as ALP, GGT, Bilirubin, INR, or Albumin are mentioned. The clinical outcome is that the patient underwent a cesarean section and delivered a male infant without physical defects, and the patient's condition improved post-delivery, indicating 'Improved/Discharged'.",
+    "patient_age": "25",
+    "patient_gender": "Female",
+    "suspected_drug": "telitacicept",
+    "lab_results": {
+        "ALT": "null",
+        "AST": "null",
+        "ALP": "null",
+        "GGT": "null",
+        "Bilirubin": "null",
+        "INR": "null",
+        "Albumin": "null"
+    },
+    "clinical_outcome": "Improved/Discharged",
+    "AI_confidence_score": 0.7
+}

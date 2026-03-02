@@ -1,0 +1,18 @@
+{
+    "status": "accepted",
+    "chain_of_thought": "[Article Type: Case Report] In this article, I found the following liver injury-related lab values and clinical outcomes: The patient is a 20-year-old male with hidradenitis suppurativa who developed elevated liver enzymes after starting adalimumab. The ALT peaked at 139 U/L, with baseline of 40 U/L and intermediate rise to 67 U/L. Other liver function tests (AST, ALP, GGT, Bilirubin, INR, Albumin) are mentioned as remaining within normal limits or not specified. The clinical outcome involved discontinuation of adalimumab and initiation of lifestyle modifications, with planned follow-up testing, indicating improvement without severe complications like death or transplant.",
+    "patient_age": "20",
+    "patient_gender": "Male",
+    "suspected_drug": "adalimumab",
+    "lab_results": {
+        "ALT": "139 U/L",
+        "AST": "null",
+        "ALP": "null",
+        "GGT": "null",
+        "Bilirubin": "null",
+        "INR": "null",
+        "Albumin": "null"
+    },
+    "clinical_outcome": "Improved/Discharged",
+    "AI_confidence_score": 0.85
+}

@@ -1,0 +1,1649 @@
+<article article-type="case-study" dtd-version="1.4" id="crpu5505327" xml:lang="en"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Case Rep Pulmonol</journal-id><journal-id journal-id-type="iso-abbrev">Case Rep Pulmonol</journal-id><journal-id journal-id-type="pmc-domain-id">1881</journal-id><journal-id journal-id-type="pmc-domain">crimpulmonology</journal-id><journal-id journal-id-type="publisher-id">CRPU</journal-id><journal-title-group><journal-title>Case Reports in Pulmonology</journal-title></journal-title-group><issn pub-type="ppub">2090-6846</issn><issn pub-type="epub">2090-6854</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC12800898</article-id><article-id pub-id-type="pmcid-ver">PMC12800898.1</article-id><article-id pub-id-type="pmcaid">12800898</article-id><article-id pub-id-type="pmcaiid">12800898</article-id><article-id pub-id-type="pmid">41541042</article-id><article-id pub-id-type="doi">10.1155/crpu/5505327</article-id><article-id pub-id-type="publisher-id">CRPU5505327</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Case Report</subject></subj-group><subj-group subj-group-type="heading"><subject>Article</subject></subj-group></article-categories><title-group><article-title>Severe Necrotizing Community‐Acquired Pneumonia and Bilateral Empyema in an Immunocompetent Patient due to <italic toggle="yes">Fusobacterium necrophorum</italic>
+</article-title></title-group><contrib-group><contrib contrib-type="author" id="cr-0001"><name name-style="western"><surname>Shefa</surname><given-names initials="D">Deborah</given-names></name><xref ref-type="aff" rid="aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author" id="cr-0002"><name name-style="western"><surname>Shiari</surname><given-names initials="A">Aryan</given-names></name><contrib-id authenticated="false" contrib-id-type="orcid">https://orcid.org/0000-0002-6707-5029</contrib-id><xref ref-type="aff" rid="aff-0002">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author" id="cr-0003"><name name-style="western"><surname>Antic</surname><given-names initials="M">Marina</given-names></name><contrib-id authenticated="false" contrib-id-type="orcid">https://orcid.org/0000-0001-5108-9541</contrib-id><xref ref-type="aff" rid="aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author" id="cr-0004"><name name-style="western"><surname>Hatharaliyadda</surname><given-names initials="BP">Buddhi P.</given-names></name><contrib-id authenticated="false" contrib-id-type="orcid">https://orcid.org/0009-0000-8014-6816</contrib-id><xref ref-type="aff" rid="aff-0003">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author" id="cr-0005"><name name-style="western"><surname>Gomez</surname><given-names initials="JV">Juan Vera</given-names></name><contrib-id authenticated="false" contrib-id-type="orcid">https://orcid.org/0009-0002-4824-148X</contrib-id><xref ref-type="aff" rid="aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author" id="cr-0006"><name name-style="western"><surname>Ladin</surname><given-names initials="D">David</given-names></name><xref ref-type="aff" rid="aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author" corresp="yes" id="cr-0007"><name name-style="western"><surname>Dumic</surname><given-names initials="I">Igor</given-names></name><contrib-id authenticated="false" contrib-id-type="orcid">https://orcid.org/0000-0002-5312-8812</contrib-id><xref ref-type="aff" rid="aff-0001">
+<sup>1</sup>
+</xref><address><email>dumic.igor@mayo.edu</email></address></contrib></contrib-group><contrib-group><contrib contrib-type="editor" id="cr-0008"><name name-style="western"><surname>Chen</surname><given-names initials="TC">Tun-Chieh</given-names></name><address><email>idchen.tunchieh@gmail.com</email></address></contrib></contrib-group><aff id="aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">Department of Hospital Medicine</named-content>, <named-content content-type="organisation-division">Mayo Clinic Health System</named-content>, <city>Eau Claire</city>, <named-content content-type="country-part">Wisconsin</named-content>, <country>USA</country>, <ext-link ext-link-type="uri" xlink:href="http://mayoclinichealthsystem.org" xmlns:xlink="http://www.w3.org/1999/xlink">mayoclinichealthsystem.org</ext-link>
+</aff><aff id="aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<named-content content-type="organisation-division">Department of Pulmonary Medicine and Critical Care</named-content>, <named-content content-type="organisation-division">Mayo Clinic Health System</named-content>, <city>Eau Claire</city>, <named-content content-type="country-part">Wisconsin</named-content>, <country>USA</country>, <ext-link ext-link-type="uri" xlink:href="http://mayoclinichealthsystem.org" xmlns:xlink="http://www.w3.org/1999/xlink">mayoclinichealthsystem.org</ext-link>
+</aff><aff id="aff-0003">
+<label>
+<sup>3</sup>
+</label>
+<named-content content-type="organisation-division">Department of Infectious Disease</named-content>, <named-content content-type="organisation-division">Mayo Clinic Health System</named-content>, <city>Eau Claire</city>, <named-content content-type="country-part">Wisconsin</named-content>, <country>USA</country>, <ext-link ext-link-type="uri" xlink:href="http://mayoclinichealthsystem.org" xmlns:xlink="http://www.w3.org/1999/xlink">mayoclinichealthsystem.org</ext-link>
+</aff><pub-date pub-type="epub"><day>14</day><month>1</month><year>2026</year></pub-date><pub-date pub-type="collection"><year>2026</year></pub-date><volume>2026</volume><issue-id pub-id-type="pmc-issue-id">504402</issue-id><elocation-id>5505327</elocation-id><history><date date-type="rev-recd"><day>26</day><month>11</month><year>2025</year></date><date date-type="received"><day>19</day><month>8</month><year>2025</year></date><date date-type="accepted"><day>28</day><month>11</month><year>2025</year></date></history><pub-history><event event-type="pmc-release"><date><day>14</day><month>01</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>15</day><month>01</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-01-16 09:25:14.620"><day>16</day><month>01</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">Copyright © 2026 Deborah Shefa et al. Case Reports in Pulmonology published by John Wiley &amp; Sons Ltd.</copyright-statement><copyright-year>2026</copyright-year><license><ali:license_ref content-type="ccbylicense" specific-use="textmining" xmlns:ali="http://www.niso.org/schemas/ali/1.0/">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/" xmlns:xlink="http://www.w3.org/1999/xlink">https://creativecommons.org/licenses/by/4.0/</ext-link>, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri content-type="pmc-pdf" xlink:href="CRPU-2026-5505327.pdf" xmlns:xlink="http://www.w3.org/1999/xlink"/><self-uri content-type="pdf" xlink:href="file:CRPU-2026-5505327.pdf" xmlns:xlink="http://www.w3.org/1999/xlink"/><abstract><p>Necrotizing pneumonia and empyema caused by <italic toggle="yes">Fusobacterium necrophorum</italic> are uncommon. The classical presentation of Lemierre′s syndrome, characterized by pharyngotonsillitis and internal jugular vein thrombosis, is not always observed, and incomplete and atypical variants can cause diagnostic uncertainty and delay in treatment. We describe the case of a previously healthy 22‐year‐old male athlete who developed severe necrotizing community‐acquired pneumonia, bilateral empyema, and acute hypoxemic respiratory failure due to <italic toggle="yes">F. necrophorum</italic> infection, without the typical vascular thrombosis associated with Lemierre′s syndrome. Blood cultures and broad‐range PCR analysis of the empyema fluid confirmed the presence of <italic toggle="yes">F. necrophorum</italic>. The patient was initially treated with piperacillin–tazobactam, intravenous corticosteroids, and bilateral chest tube placement for empyema management. Treatment with piperacillin–tazobactam was complicated by drug‐induced liver injury requiring antimicrobial change to ampicillin–sulbactam. The patient was discharged on oral amoxicillin–clavulanic acid and completed a total of 5 weeks of antimicrobial therapy with complete recovery. This case highlights the importance of considering <italic toggle="yes">F. necrophorum</italic> as a potential pathogen in necrotizing community‐acquired pneumonia, even in immunocompetent adults, and in the absence of classic Lemierre′s syndrome features. Furthermore, its novelty and contribution to the medical literature stem from the patient′s presentation with bilateral empyema requiring bilateral drains, the combined blood culture and pleural fluid 16S confirmation of <italic toggle="yes">F. necrophorum</italic> infection, and the preceding steroid exposure that contributed to clinical deterioration.</p></abstract><kwd-group><title>Keywords</title><kwd id="kwd-0001">empyema</kwd><kwd id="kwd-0002"><italic toggle="yes">Fusobacterium necrophorum</italic></kwd><kwd id="kwd-0003">incomplete Lemierre′s syndrome</kwd><kwd id="kwd-0004">necrotizing pneumonia</kwd></kwd-group><counts><fig-count count="7"/><table-count count="3"/><ref-count count="47"/><page-count count="11"/><word-count count="5241"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.6.8 mode:remove_FC converted:14.01.2026</meta-value></custom-meta></custom-meta-group></article-meta><notes><p content-type="self-citation">
+<mixed-citation id="crpu5505327-cit-2001" publication-type="journal">
+<string-name name-style="western">
+<surname>Shefa</surname>, <given-names>Deborah</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Shiari</surname>, <given-names>Aryan</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Antic</surname>, <given-names>Marina</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Hatharaliyadda</surname>, <given-names>Buddhi P.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Gomez</surname>, <given-names>Juan Vera</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Ladin</surname>, <given-names>David</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Dumic</surname>, <given-names>Igor</given-names>
+</string-name>, 
+<article-title>Severe Necrotizing Community‐Acquired Pneumonia and Bilateral Empyema in an Immunocompetent Patient due to <italic toggle="yes">Fusobacterium necrophorum</italic>
+</article-title>, 
+<source>Case Reports in Pulmonology</source>, <volume>2026</volume>, <elocation-id>5505327</elocation-id>, 11 pages, <year>2026</year>. 
+<pub-id pub-id-type="doi">10.1155/crpu/5505327</pub-id>
+</mixed-citation>
+</p><fn-group><fn id="note-0001"><p>
+<bold>Academic Editor:</bold> Tun‐Chieh Chen</p></fn></fn-group></notes></front><body><sec id="sec-0001"><title>1. Introduction</title><p>
+<italic toggle="yes">Fusobacterium necrophorum</italic> is a Gram‐negative, obligate anaerobic bacterium that is considered part of the normal human microbiota within the mucosal surfaces of the oropharynx, gastrointestinal, and female genital tract [<xref ref-type="bibr" rid="bib-0001">1</xref>]. Despite its role as a commensal organism, <italic toggle="yes">F. necrophorum</italic> possesses pathogenic potential, particularly in adolescents and young adults, where it can act as a primary pathogen and cause invasive infections [<xref ref-type="bibr" rid="bib-0002">2</xref>]. In individuals aged 13–40 years, <italic toggle="yes">F. necrophorum</italic> may represent the second most common bacterial cause of pharyngotonsillitis after <italic toggle="yes">Streptococcus pyogenes</italic> [<xref ref-type="bibr" rid="bib-0001">1</xref>–<xref ref-type="bibr" rid="bib-0003">3</xref>]. Recognized risk factors for the development of invasive infection include recent or concurrent pharyngotonsillitis and age between 13 and 30 years. Infectious mononucleosis and possible inherited thrombophilia may predispose individuals to invasive disease by facilitating progression to Lemierre′s syndrome (LS)—a potentially life‐threatening condition characterized by septic thrombophlebitis of the internal jugular vein following or during an oropharyngeal infection [<xref ref-type="bibr" rid="bib-0001">1</xref>–<xref ref-type="bibr" rid="bib-0003">3</xref>]. LS is often complicated by septicemia and the development of metastatic abscesses, particularly in the lungs and other organs [<xref ref-type="bibr" rid="bib-0001">1</xref>–<xref ref-type="bibr" rid="bib-0003">3</xref>]. The clinical presentation of <italic toggle="yes">F. necrophorum</italic> pharyngitis closely resembles that of streptococcal pharyngitis; however, it is associated with a higher risk of complications, including peritonsillar abscess formation and progression to LS [<xref ref-type="bibr" rid="bib-0004">4</xref>, <xref ref-type="bibr" rid="bib-0005">5</xref>].</p><p>Necrotizing pneumonia is a severe form of pneumonia, characterized by liquefaction and necrosis of the lung parenchyma, leading to cavitation within areas of consolidation. This condition arises from tissue destruction caused by infection, most commonly due to highly virulent or toxin‐producing bacteria such as <italic toggle="yes">Streptococcus pneumoniae</italic> or <italic toggle="yes">Staphylococcus aureus</italic>, including strains that produce Panton–Valentine leukocidin (PVL) [<xref ref-type="bibr" rid="bib-0006">6</xref>–<xref ref-type="bibr" rid="bib-0008">8</xref>]. Radiologically, necrotizing pneumonia is identified on chest computed tomography (CT) by the presence of multiple thin‐walled cavities within consolidated lung regions [<xref ref-type="bibr" rid="bib-0006">6</xref>–<xref ref-type="bibr" rid="bib-0008">8</xref>]. In pediatric populations, necrotizing pneumonia more frequently affects previously healthy children. A recent history of influenza‐like illness is a strong risk factor for PVL‐positive <italic toggle="yes">S. aureus</italic> necrotizing pneumonia, particularly in young and otherwise healthy individuals [<xref ref-type="bibr" rid="bib-0009">9</xref>–<xref ref-type="bibr" rid="bib-0011">11</xref>]. Other common pathogens associated with community‐acquired necrotizing pneumonia include Gram‐negative bacilli such as <italic toggle="yes">Klebsiella pneumoniae</italic> and <italic toggle="yes">Pseudomonas aeruginosa</italic> [<xref ref-type="bibr" rid="bib-0012">12</xref>, <xref ref-type="bibr" rid="bib-0013">13</xref>]. The mortality rate of necrotizing pneumonia in adults approaches 25%, with significantly higher mortality observed in patients requiring mechanical ventilation [<xref ref-type="bibr" rid="bib-0007">7</xref>]. In this subgroup, the odds ratio for death is 27.6 [<xref ref-type="bibr" rid="bib-0007">7</xref>]. Although <italic toggle="yes">F. necrophorum</italic> has been reported as a causative agent of necrotizing pneumonia and lung abscess, it remains an exceedingly rare cause of severe necrotizing pneumonia and sepsis in the absence of LS [<xref ref-type="bibr" rid="bib-0014">14</xref>, <xref ref-type="bibr" rid="bib-0015">15</xref>].</p></sec><sec id="sec-0002"><title>2. Case Presentation</title><p>We report on a 22‐year‐old healthy athletic man without comorbidities who presented to urgent care complaining of 2 days of sore throat, chills, and vomiting. His physical exam was significant for oropharyngeal erythema and cervical lymphadenopathy. Vital signs were otherwise within normal limits. Rapid antigen testing for Group A <italic toggle="yes">Streptococcus</italic> and Monospot testing for infectious mononucleosis were both negative. A presumable diagnosis of viral pharyngitis was established, and the patient was prescribed a 3‐day course of prednisone (20 mg twice daily). The patient′s symptoms progressed as he failed to improve with symptomatic treatment and steroids, so 3 days later, he presented to the emergency department (ED) with progressive pleuritic left chest pain, palpitations, dyspnea, myalgias, and generalized weakness. The patient denied any aspiration events during episodes of vomiting. Social history was remarkable for stable housing; he was a college student and was not taking any illicit drugs, tobacco, or alcohol. The patient denied any recent travel outside Wisconsin, exposure to sick contacts, or any tick bites. He did not have any pets and was not sexually active. In the ED, he was afebrile (36.5), with sinus tachycardia (130–140 beats per minute), tachypnea (25–30 breaths per minute) with blood pressure of 137/95 mmHg. The physical exam was notable for an ill‐appearing man in mild distress with rapid and shallow breathing, using accessory muscles. Lungs were clear to auscultation, and oxygen saturation on room air was 88%. The oropharyngeal exam was unchanged compared to the exam from 3 days prior, with oropharyngeal erythema and cervical lymphadenopathy.</p><p>Initial CT angiogram of the chest demonstrated patchy and ground‐glass opacities in both lung bases and development of cavitary lesions, suggestive of left‐sided necrotizing pneumonia (Figure <xref ref-type="fig" rid="fig-0001">1</xref>). Transthoracic echocardiogram showed an ejection fraction of 60% and no wall motion abnormalities. Electrocardiogram (EKG) demonstrated sinus tachycardia, with normal intervals and without any ischemic changes. Initial and subsequent laboratory tests are shown in Table <xref ref-type="table" rid="tbl-0001">1</xref> and Figure <xref ref-type="fig" rid="fig-0002">2</xref>.</p><fig-group content-type="Figure" id="fig-0001" orientation="portrait" position="float"><label>Figure 1</label><caption><p>Contrast‐enhanced computed tomography (CT) pulmonary angiogram of the chest in the (a) sagittal, (b) axial, and (c) coronal planes. Imaging demonstrates bilateral basal patchy and ground‐glass opacities with early cavitary transformation (arrows), more prominent in the left lower lobe. These findings are consistent with necrotizing pneumonia.</p></caption><fig fig-type="Figure" id="figpt-0001" orientation="portrait" position="anchor"><caption><p>(a)</p></caption><graphic id="jats-graphic-1" orientation="portrait" position="anchor" xlink:href="CRPU-2026-5505327-g007.jpg" xmlns:xlink="http://www.w3.org/1999/xlink"/></fig><fig fig-type="Figure" id="figpt-0002" orientation="portrait" position="anchor"><caption><p>(b)</p></caption><graphic id="jats-graphic-3" orientation="portrait" position="anchor" xlink:href="CRPU-2026-5505327-g006.jpg" xmlns:xlink="http://www.w3.org/1999/xlink"/></fig><fig fig-type="Figure" id="figpt-0003" orientation="portrait" position="anchor"><caption><p>(c)</p></caption><graphic id="jats-graphic-5" orientation="portrait" position="anchor" xlink:href="CRPU-2026-5505327-g005.jpg" xmlns:xlink="http://www.w3.org/1999/xlink"/></fig></fig-group><table-wrap content-type="Table" id="tbl-0001" orientation="portrait" position="float"><label>Table 1</label><caption><p>This table illustrates a comprehensive work‐up for determining the etiology of necrotizing community‐acquired pneumonia in our case.</p></caption><table frame="hsides" rules="groups"><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><thead><tr><th align="left" colspan="1" rowspan="1">
+<bold>Test</bold>
+</th><th align="center" colspan="1" rowspan="1">
+<bold>Blood specimen</bold>
+</th><th align="center" colspan="1" rowspan="1">
+<bold>Plural specimen</bold>
+</th><th align="center" colspan="1" rowspan="1">
+<bold>Urine specimen</bold>
+</th><th align="center" colspan="1" rowspan="1">
+<bold>Sputum specimen</bold>
+</th><th align="center" colspan="1" rowspan="1">
+<bold>Respiratory swab</bold>
+</th></tr></thead><tbody><tr><td align="left" colspan="1" rowspan="1">Cultures</td><td align="center" colspan="1" rowspan="1">Positive for <italic toggle="yes">F. necrophorum</italic>
+</td><td align="center" colspan="1" rowspan="1">Negative</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Histoplasma</italic> and <italic toggle="yes">Blastomyces</italic> antigen (Ag) enzyme immunoassay</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">Negative</td><td colspan="1" rowspan="1"/><td colspan="1" rowspan="1"/></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Legionella</italic> Ag</td><td align="center" colspan="1" rowspan="1">—</td><td colspan="1" rowspan="1"/><td align="center" colspan="1" rowspan="1">Negative</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Streptococcus pneumoniae</italic> Ag</td><td align="center" colspan="1" rowspan="1">—</td><td colspan="1" rowspan="1"/><td align="center" colspan="1" rowspan="1">Negative</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">Negative</td></tr><tr><td align="left" colspan="1" rowspan="1">Drug screen</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">Negative</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">Antinuclear antibody (Ab) HEp‐2 substrate</td><td align="center" colspan="1" rowspan="1">IgG negative</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">Anti‐neutrophil cytoplasmic Ab</td><td align="center" colspan="1" rowspan="1">Negative</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">Lyme Ab modified 2‐tier w/reflex</td><td align="center" colspan="1" rowspan="1">Negative</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">Infectious mononucleosis, rapid test</td><td align="center" colspan="1" rowspan="1">Negative</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Cytomegalovirus</italic> DNA detect/quant</td><td align="center" colspan="1" rowspan="1">Negative</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Staphylococcus aureus</italic> nasal polymerase chain reaction (PCR)</td><td align="center" colspan="1" rowspan="1">Positive</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">Methicillin‐resistant <italic toggle="yes">Staphylococcus aureus</italic>
+</td><td align="center" colspan="1" rowspan="1">Negative</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Mycoplasma pneumoniae</italic> Ab</td><td align="center" colspan="1" rowspan="1">
+<list list-type="simple"><list-item><p>IgM negative</p></list-item><list-item><p>IgG positive</p></list-item></list>
+</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Chlamydia pneumoniae</italic> Ab</td><td align="center" colspan="1" rowspan="1">IgM negative</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Chlamydia trachomatis</italic> Ab</td><td align="center" colspan="1" rowspan="1">IgM and IgG negative</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">Chlamydia IgM and IgG panel</td><td align="center" colspan="1" rowspan="1">IgM and IgG negative</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Group A Streptococcus</italic> PCR</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td colspan="1" rowspan="1"/><td colspan="1" rowspan="1"/><td align="center" colspan="1" rowspan="1">Negative</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Adenovirus</italic>
+</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">Negative</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Coronavirus</italic> 229E</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">Negative</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Coronavirus</italic> HKU1</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">Negative</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Coronavirus</italic> NL63</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">Negative</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Coronavirus</italic> OC43</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">Negative</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">SARS Coronavirus</italic> 2</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">Negative</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Human metapneumovirus</italic>
+</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">Negative</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Human rhinovirus/enterovirus</italic>
+</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">Negative</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Influenza A virus</italic>
+</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">Negative</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Influenza B virus</italic>
+</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">Negative</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Parainfluenza Virus</italic> 1</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">Negative</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Parainfluenza Virus</italic> 2</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">Negative</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Parainfluenza Virus</italic> 3</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">Negative</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Parainfluenza Virus</italic> 4</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">Negative</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Respiratory syncytial virus</italic>
+</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">Negative</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Bordetella parapertussis</italic>
+</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">Negative</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Bordetella pertussis</italic>
+</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">Negative</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Chlamydia pneumoniae</italic>
+</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">Negative</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Mycoplasma pneumoniae</italic>
+</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">Negative</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Coccidioides Ab screen</italic>
+</td><td align="center" colspan="1" rowspan="1">Negative</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Blastomyces Ab</italic>
+</td><td align="center" colspan="1" rowspan="1">Negative</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Borrelia miyamotoi</italic>, PCR</td><td align="center" colspan="1" rowspan="1">Negative</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Ehrlichia/Anaplasma</italic> PCR</td><td align="center" colspan="1" rowspan="1">Negative</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Babesia</italic>, PCR</td><td align="center" colspan="1" rowspan="1">Negative</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">
+<italic toggle="yes">Aspergillus</italic> Ab</td><td align="center" colspan="1" rowspan="1">Negative</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">Hepatitis Bs Ag screen</td><td align="center" colspan="1" rowspan="1">Nonreactive</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">Hepatitis B core IgM Ab</td><td align="center" colspan="1" rowspan="1">Nonreactive</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">Hepatitis A IgM Ab</td><td align="center" colspan="1" rowspan="1">Negative</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">HCV Ab w/reflex to HCV PCR</td><td align="center" colspan="1" rowspan="1">Negative</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">Human Immunodeficiency Virus 1/‐2 Ag and Ab screen</td><td align="center" colspan="1" rowspan="1">Negative</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">Broad range bacteria PCR + sequencing</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">Positive for <italic toggle="yes">F. necrophorum</italic>
+</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr></tbody></table></table-wrap><fig fig-type="Figure" id="fig-0002" orientation="portrait" position="float"><label>Figure 2</label><caption><p>This line graph trends inflammatory markers including white blood cell count, C‐reactive protein, and procalcitonin.</p></caption><graphic id="jats-graphic-7" orientation="portrait" position="anchor" xlink:href="CRPU-2026-5505327-g004.jpg" xmlns:xlink="http://www.w3.org/1999/xlink"/></fig><p>After the blood cultures were obtained, the patient was initiated on broad‐spectrum intravenous (IV) antibiotics with vancomycin (1250 mg IV every 8 h), piperacillin–tazobactam (3.375 g IV every 6 h), and doxycycline (100 mg IV every 12 h) to cover for the most common bacterial causes of community‐acquired pneumonia (CAP) and for anaerobes given the necrotizing component. Despite this treatment, he continued to have persistent fever, tachycardia, and tachypnea, and he developed acute hypoxemic respiratory failure (PaO<sub>2</sub>/FiO<sub>2</sub> = 250 mmHg) requiring supplemental oxygen at 5 L/min to keep oxygen saturation above 90%. Pneumonia severity index (PSI) was 97 (Risk Class IV—high). Once influenza was ruled out, methylprednisolone 40 mg IV daily for 5 days was added for severe CAP. Given this clinical worsening, repeat CT of the chest, abdomen, and pelvis was done, and it showed the development of new bilateral pleural effusions, concerning for empyema (Figure <xref ref-type="fig" rid="fig-0003">3</xref>). After 48 h, blood culture in the anaerobic bottle grew <italic toggle="yes">F. necrophorum.</italic> Antimicrobial susceptibility showed sensitivity to clindamycin, metronidazole, and penicillin G (MIC ≤ 0.5 for PCN G, determined by CLSI M11 agar dilution), and at that point, vancomycin and doxycycline were discontinued. CT neck venogram was negative for septic thrombophlebitis of internal jugular veins and did not show any evidence of neck abscess or lymphadenopathy. Thoracentesis was performed and was suggestive of empyema (Table <xref ref-type="table" rid="tbl-0002">2</xref>) with cloudy fluid and a total of 350 cc of pleural fluid drained. Anaerobic culture of pleural fluid remained without growth. Repeat CT chest, obtained 24 h post thoracentesis, demonstrated residual fluid collection in the left pleural space. A percutaneous pigtail catheter was placed in the left pleura with 6 doses of tPA (dornase). Repeat blood culture and pleural fluid cultures remained without growth.</p><fig-group content-type="Figure" id="fig-0003" orientation="portrait" position="float"><label>Figure 3</label><caption><p>Contrast‐enhanced computed tomography (CT) of the chest in the (a) sagittal, (b) axial, and (c) coronal planes, demonstrating marked progression of pleural effusions, larger on the left (L &gt; R), with left‐sided loculation and associated lung base atelectasis.</p></caption><fig fig-type="Figure" id="figpt-0004" orientation="portrait" position="anchor"><caption><p>(a)</p></caption><graphic id="jats-graphic-9" orientation="portrait" position="anchor" xlink:href="CRPU-2026-5505327-g003.jpg" xmlns:xlink="http://www.w3.org/1999/xlink"/></fig><fig fig-type="Figure" id="figpt-0005" orientation="portrait" position="anchor"><caption><p>(b)</p></caption><graphic id="jats-graphic-11" orientation="portrait" position="anchor" xlink:href="CRPU-2026-5505327-g002.jpg" xmlns:xlink="http://www.w3.org/1999/xlink"/></fig><fig fig-type="Figure" id="figpt-0006" orientation="portrait" position="anchor"><caption><p>(c)</p></caption><graphic id="jats-graphic-13" orientation="portrait" position="anchor" xlink:href="CRPU-2026-5505327-g001.jpg" xmlns:xlink="http://www.w3.org/1999/xlink"/></fig></fig-group><table-wrap content-type="Table" id="tbl-0002" orientation="portrait" position="float"><label>Table 2</label><caption><p>This table represents pleural fluid analysis consistent with empyema.</p></caption><table frame="hsides" rules="groups"><col span="1"/><col span="1"/><col span="1"/><thead><tr><th colspan="1" rowspan="1"/><th align="center" colspan="1" rowspan="1">
+<bold>Reference range</bold>
+</th><th align="center" colspan="1" rowspan="1">
+<bold>Admission</bold>
+</th></tr></thead><tbody><tr><td align="left" colspan="1" rowspan="1">PH (left pleural)</td><td align="center" colspan="1" rowspan="1">&lt; 7.2</td><td align="center" colspan="1" rowspan="1">7.00 (left) 7.28 (R)</td></tr><tr><td align="left" colspan="1" rowspan="1">LD/serum LD (left pleural)</td><td align="center" colspan="1" rowspan="1">&lt; 0.6</td><td align="center" colspan="1" rowspan="1">&gt; 12.25 (L) 4.75 (R)</td></tr><tr><td align="left" colspan="1" rowspan="1">Pleural total protein/serum total protein (left pleural)</td><td align="center" colspan="1" rowspan="1">&lt; 0.5</td><td align="center" colspan="1" rowspan="1">0.69 (L) 0.64 (R)</td></tr><tr><td align="left" colspan="1" rowspan="1">Pleural total nucleated cells (left pleural)</td><td align="center" colspan="1" rowspan="1">&lt; 500</td><td align="center" colspan="1" rowspan="1">11,275 (L) 3568 (R)</td></tr><tr><td align="left" colspan="1" rowspan="1">Pleural gram stain (left pleural)</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">White blood cells</td></tr><tr><td align="left" colspan="1" rowspan="1">Cytology (right pleural)</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">Negative for malignancy</td></tr></tbody></table></table-wrap><p>However, the patient developed up trending transaminitis with peak values on hospital day 5 (AST 151 [reference range 8–48 U/L], ALT 170 [reference range 7–55 U/L], ALP 217 [reference range 40–129], direct bilirubin 0.7 [reference range 0.0–0.3], indirect bilirubin 2.0 [reference range 0.0–1.2]) (Table <xref ref-type="table" rid="tbl-0003">3</xref>). Work‐up for viral hepatitis; vascular, metabolic, and inherited liver diseases; and liver abscess was negative, and the patient was diagnosed with drug‐induced liver injury (DILI) due to piperacillin–tazobactam. At that point, piperacillin–tazobactam was discontinued and ampicillin–sulbactam monotherapy at the dose of 3 g IV every 6 h was started based on susceptibility results. Left‐sided pleural effusion continued to decrease, and the pigtail catheter was removed after 4 days. Unfortunately, the right‐sided pleural effusion continued to worsen. Repeated right thoracentesis was performed with 55 mL of pleural fluid drained, with results consistent with empyema, while pleural cytology was obtained and was negative for malignancy. Ultimately, the patient required an additional pigtail catheter in the right pleural space given thoracentesis findings and up trending inflammatory markers (Table <xref ref-type="table" rid="tbl-0003">3</xref>). Surgical decortication for source control was considered but not performed, as the patient had improved, sepsis had resolved, the collections were decreasing with lung re‐expansion, and there was no evidence of a trapped lung. Both right and left pleural fluid polymerase chain reaction (PCR) sequencing also detected <italic toggle="yes">F. necrophorum.</italic> The patient was discharged with 4 weeks of amoxicillin–clavulanic acid therapy at the dose of 875–125 mg two times daily. Following 6 weeks of antibacterial therapy, his symptoms resolved, and follow‐up CT chest showed a complete resolution of the pleural effusions, although with residual pleural thickening.</p><table-wrap content-type="Table" id="tbl-0003" orientation="portrait" position="float"><label>Table 3</label><caption><p>This table illustrates the trend of selected laboratory values, including complete blood cell count, liver enzymes, and inflammatory markers.</p></caption><table frame="hsides" rules="groups"><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><thead><tr><th colspan="1" rowspan="1"/><th align="center" colspan="1" rowspan="1">
+<bold>Reference range</bold>
+</th><th align="center" colspan="1" rowspan="1">
+<bold>Admission</bold>
+</th><th align="center" colspan="1" rowspan="1">
+<bold>Day 1</bold>
+</th><th align="center" colspan="1" rowspan="1">
+<bold>Day 3</bold>
+</th><th align="center" colspan="1" rowspan="1">
+<bold>Day 5</bold>
+</th><th align="center" colspan="1" rowspan="1">
+<bold>Day 7</bold>
+</th><th align="center" colspan="1" rowspan="1">
+<bold>Day 10</bold>
+</th><th align="center" colspan="1" rowspan="1">
+<bold>Day 15 discharge</bold>
+</th><th align="center" colspan="1" rowspan="1">
+<bold>Day 23 follow up</bold>
+</th></tr></thead><tbody><tr><td align="left" colspan="1" rowspan="1">Hemoglobin</td><td align="center" colspan="1" rowspan="1">13.2–16.6 g/dL</td><td align="center" colspan="1" rowspan="1">14.5</td><td align="center" colspan="1" rowspan="1">12.6</td><td align="center" colspan="1" rowspan="1">11.5</td><td align="center" colspan="1" rowspan="1">12.3</td><td align="center" colspan="1" rowspan="1">12.0</td><td align="center" colspan="1" rowspan="1">11.5</td><td align="center" colspan="1" rowspan="1">10.0</td><td align="center" colspan="1" rowspan="1">12.2</td></tr><tr><td align="left" colspan="1" rowspan="1">Platelet count</td><td align="center" colspan="1" rowspan="1">135–137 × 10(9)/L</td><td align="center" colspan="1" rowspan="1">91</td><td align="center" colspan="1" rowspan="1">79</td><td align="center" colspan="1" rowspan="1">115</td><td align="center" colspan="1" rowspan="1">289</td><td align="center" colspan="1" rowspan="1">436</td><td align="center" colspan="1" rowspan="1">634</td><td align="center" colspan="1" rowspan="1">950</td><td align="center" colspan="1" rowspan="1">462</td></tr><tr><td align="left" colspan="1" rowspan="1">White blood cell count</td><td align="center" colspan="1" rowspan="1">3.4–9.6 × 10(9)/L</td><td align="center" colspan="1" rowspan="1">19.2</td><td align="center" colspan="1" rowspan="1">14.1</td><td align="center" colspan="1" rowspan="1">23.6</td><td align="center" colspan="1" rowspan="1">18.4</td><td align="center" colspan="1" rowspan="1">14.8</td><td align="center" colspan="1" rowspan="1">17.2</td><td align="center" colspan="1" rowspan="1">12.0</td><td align="center" colspan="1" rowspan="1">8.2</td></tr><tr><td align="left" colspan="1" rowspan="1">Bilirubin, total</td><td align="center" colspan="1" rowspan="1">0.0–1.2 mg/dL</td><td align="center" colspan="1" rowspan="1">2.0</td><td align="center" colspan="1" rowspan="1">1.8</td><td align="center" colspan="1" rowspan="1">1.5</td><td align="center" colspan="1" rowspan="1">1.3</td><td align="center" colspan="1" rowspan="1">1.1</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">0.2</td></tr><tr><td align="left" colspan="1" rowspan="1">Alkaline phosphatase</td><td align="center" colspan="1" rowspan="1">40–129 U/L</td><td align="center" colspan="1" rowspan="1">199</td><td align="center" colspan="1" rowspan="1">150</td><td align="center" colspan="1" rowspan="1">197</td><td align="center" colspan="1" rowspan="1">153</td><td align="center" colspan="1" rowspan="1">127</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">217</td></tr><tr><td align="left" colspan="1" rowspan="1">Alanine aminotransferase (ALT)</td><td align="center" colspan="1" rowspan="1">7–55 U/L</td><td align="center" colspan="1" rowspan="1">48</td><td align="center" colspan="1" rowspan="1">40</td><td align="center" colspan="1" rowspan="1">52</td><td align="center" colspan="1" rowspan="1">170</td><td align="center" colspan="1" rowspan="1">127</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">104</td></tr><tr><td align="left" colspan="1" rowspan="1">Aspartate aminotransferase (AST)</td><td align="center" colspan="1" rowspan="1">8–48 U/L</td><td align="center" colspan="1" rowspan="1">36</td><td align="center" colspan="1" rowspan="1">33</td><td align="center" colspan="1" rowspan="1">105</td><td align="center" colspan="1" rowspan="1">108</td><td align="center" colspan="1" rowspan="1">50</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">48</td></tr><tr><td align="left" colspan="1" rowspan="1">C‐reactive protein</td><td align="center" colspan="1" rowspan="1">&lt; 5.0 mg/L</td><td align="center" colspan="1" rowspan="1">195</td><td align="center" colspan="1" rowspan="1">170</td><td align="center" colspan="1" rowspan="1">154.0</td><td align="center" colspan="1" rowspan="1">63.8</td><td align="center" colspan="1" rowspan="1">79.2</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">Procalcitonin</td><td align="center" colspan="1" rowspan="1">0.0–0.24 ng/mL</td><td align="center" colspan="1" rowspan="1">14.9</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">3.90</td><td align="center" colspan="1" rowspan="1">1.17</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">D‐Dimer</td><td align="center" colspan="1" rowspan="1">≤ 500 ng/mL FEU</td><td align="center" colspan="1" rowspan="1">6020</td><td align="center" colspan="1" rowspan="1">4981</td><td align="center" colspan="1" rowspan="1">1894</td><td align="center" colspan="1" rowspan="1">5118</td><td align="center" colspan="1" rowspan="1">4569</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr><tr><td align="left" colspan="1" rowspan="1">Ferratin</td><td align="center" colspan="1" rowspan="1">31–409 mcg/L</td><td align="center" colspan="1" rowspan="1">741</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">685</td><td align="center" colspan="1" rowspan="1">715</td><td align="center" colspan="1" rowspan="1">1003</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td><td align="center" colspan="1" rowspan="1">—</td></tr></tbody></table></table-wrap></sec><sec id="sec-0003"><title>3. Discussion</title><p>First described by Andree Lemierre, a French bacteriologist, LS represents a form of postanginal septicemia manifesting as a triad of bacteremia, clinical and/or radiological evidence of internal jugular vein thrombophlebitis, and septic emboli developing during or after acute pharyngeal infection. Internal jugular vein septic thrombophlebitis typically manifests as tenderness and swelling of the sternocleidomastoid muscle and is a hallmark of LS in its typical form [<xref ref-type="bibr" rid="bib-0016">16</xref>, <xref ref-type="bibr" rid="bib-0017">17</xref>]. While the primary causative agents of LS are anaerobic bacteria, most often <italic toggle="yes">F. necrophorum and Fusobacterium nucleatum,</italic> streptococci, staphylococci, and <italic toggle="yes">Klebsiella pneumoniae</italic> have been described as well [<xref ref-type="bibr" rid="bib-0016">16</xref>, <xref ref-type="bibr" rid="bib-0018">18</xref>].</p><p>Variants of LS include cases of oropharyngeal infection with sepsis and evidence of embolic complications, but without internal jugular thrombosis. These are termed “incomplete LS” [<xref ref-type="bibr" rid="bib-0019">19</xref>]. LS variants also include genitourinary and gastrointestinal variants, such as <italic toggle="yes">F. necrophorum</italic> pylephlebitis associated with liver abscess [<xref ref-type="bibr" rid="bib-0020">20</xref>, <xref ref-type="bibr" rid="bib-0021">21</xref>] or mesenteric vein thrombosis associated with diverticulitis or appendicitis [<xref ref-type="bibr" rid="bib-0022">22</xref>]. Given the rarity of LS variants, there is a delay in diagnosis and timely treatment, which might negatively impact the outcome and increase mortality. Although the term “incomplete LS” is used in the literature to describe <italic toggle="yes">F. necrophorum</italic> infections that do not meet all criteria for classic LS, our case could also be reported as <italic toggle="yes">F. necrophorum</italic> sepsis without jugular thrombophlebitis. We elected to retain the term incomplete LS to emphasize that <italic toggle="yes">Fusobacterium</italic> infections can present in atypical forms. Recognition of these variants is essential, as limited awareness may contribute to diagnostic delay.</p><p>
+<italic toggle="yes">F. necrophorum</italic> is a virulent pathogen capable of causing necrotizing infection and abscess formation, including necrotizing pneumonia, even in the absence of LS [<xref ref-type="bibr" rid="bib-0015">15</xref>, <xref ref-type="bibr" rid="bib-0023">23</xref>]. In young, otherwise healthy adults, such as our patient, <italic toggle="yes">F. necrophorum</italic> induces severe pulmonary necrosis through the action of virulence factors like leukotoxin, which disrupts neutrophil function and promotes tissue destruction, leading to abscess formation and cavitation. In addition to leukotoxin, <italic toggle="yes">F. necrophorum</italic> expresses hemagglutinins, hemolysins, and outer membrane proteins that facilitate adhesion, tissue invasion, and immune evasion. The bacterium′s lipopolysaccharide (LPS) has potent endotoxic activity, contributing to local inflammation, vascular injury, and further tissue necrosis. The synergistic effects of these factors enable <italic toggle="yes">F. necrophorum</italic> to establish deep‐seated infection within the lung parenchyma, resulting in liquefactive necrosis and abscess formation [<xref ref-type="bibr" rid="bib-0003">3</xref>, <xref ref-type="bibr" rid="bib-0024">24</xref>].</p><p>Our case is similar to few reported in the literature that introduced the term “incomplete LS” where patients had a rapidly progressive infection, complicated with pneumonia and empyema but lacked the hallmark sign of internal jugular vein thrombosis [<xref ref-type="bibr" rid="bib-0018">18</xref>, <xref ref-type="bibr" rid="bib-0025">25</xref>]. These patients developed severe infections complicated with sepsis and septic shock. This is to highlight that <italic toggle="yes">F. necrophorum</italic> should not be ruled out based on the lack of demonstrated thrombosis, which was originally described as part of the syndrome. <italic toggle="yes">F. necrophorum</italic> can sometimes develop in the background of viral coinfection with <italic toggle="yes">Epstein-Barr virus</italic> (EBV) or <italic toggle="yes">Cytomegalovirus</italic> (CMV) [<xref ref-type="bibr" rid="bib-0026">26</xref>]. Fatal cases of coinfection in young and healthy adults have been reported with <italic toggle="yes">Legionella pneumophila</italic> pneumonia and <italic toggle="yes">F. necrophorum.</italic> In this case, the cultures remained negative, but coinfection was diagnosed by using metagenomic next‐generation sequencing from bronchoalveolar lavage (BAL) and blood samples [<xref ref-type="bibr" rid="bib-0027">27</xref>]. Coinfection with other pathogens such as <italic toggle="yes">Streptococcus</italic>, <italic toggle="yes">Peptostreptococci</italic>, <italic toggle="yes">Bacteroides</italic>, <italic toggle="yes">Arcanobacterium</italic>, and <italic toggle="yes">Streptococcus</italic> spp. has been reported as well [<xref ref-type="bibr" rid="bib-0026">26</xref>].</p><p>Prior to hospitalization, our patient was seen in urgent care and received oral 40‐mg prednisone for 3 days. The impact of steroids alone (without antibiotics) on bacterial pneumonia progression is not well established. Observational data suggest that immunosuppression from corticosteroids, even for short periods, may increase the risk of more severe infection if appropriate antimicrobial therapy is delayed. Therefore, while a brief course of prednisone is unlikely to have a major effect in most immunocompetent hosts such as our case, the absence of antibiotics during active bacterial infection could have contributed to clinical worsening. In our patient, due to progression to severe CAP associated with hypoxemic respiratory failure, adjunctive corticosteroid therapy was initiated. Severe CAP criteria are defined by the need for intensive care unit (ICU) admission, requirement for invasive or noninvasive mechanical ventilation, high oxygen requirements (PaO<sub>2</sub>/FiO<sub>2</sub> &lt; 300), or high severity scores such as PSI Class IV/V or CURB‐65 ≥ 3. Corticosteroids are not recommended for nonsevere CAP or in the absence of these severe features. In the setting of septic shock, the Surviving Sepsis Campaign and the Society of Critical Care Medicine also recommend corticosteroids only if shock is refractory to adequate fluid resuscitation and vasopressor support [<xref ref-type="bibr" rid="bib-0012">12</xref>, <xref ref-type="bibr" rid="bib-0028">28</xref>, <xref ref-type="bibr" rid="bib-0029">29</xref>] The efficacy and safety of corticosteroids in severe CAP have been established in recent randomized controlled trials and meta‐analyses, which demonstrate that corticosteroids reduce mortality, time to clinical stability, and length of hospital stay in severe CAP but not in nonsevere cases. Typical regimens include hydrocortisone 200 mg per day (either as a continuous infusion or divided doses) or methylprednisolone 40–80 mg per day, administered for 5–7 days. The most common adverse effect is hyperglycemia; importantly, no consistent increase in secondary infections or mortality has been observed in bacterial CAP [<xref ref-type="bibr" rid="bib-0028">28</xref>, <xref ref-type="bibr" rid="bib-0030">30</xref>]. There are no randomized controlled trials or direct data regarding the use of corticosteroids specifically in <italic toggle="yes">F. necrophorum</italic> infections. All recommendations for corticosteroid use in this context are extrapolated from studies of severe CAP of mixed bacterial etiologies. The clinical criteria for corticosteroid initiation remain the same regardless of the underlying pathogen, including <italic toggle="yes">F. necrophorum</italic>.</p><p>In young and otherwise healthy patients such as the one we report, the leading differential diagnosis for community‐acquired cavitating pneumonia should include PVL‐positive <italic toggle="yes">S. aureus</italic>; aspiration pneumonia, which is typically polymicrobial and/or involves anaerobic pathogens; <italic toggle="yes">Klebsiella</italic>; septic pulmonary emboli from distant primary foci of infection; tuberculosis; and endemic fungal infections. In Wisconsin, these include blastomycosis, histoplasmosis, and coccidioidomycosis.</p><p>Necrotizing pneumonia diagnosis requires a high clinical suspicion due to the possibility of rapid decompensation even in younger and healthy individuals like our patient. Timely and accurate diagnosis is the key to initiating appropriate management measures including antibiotics and source control measures such as chest tube placement and thoracotomy. Due to the need for prolonged antibiotic treatment, maximum effort should be made to identify the causative pathogen [<xref ref-type="bibr" rid="bib-0006">6</xref>]. If cultures are not obtained prior to the initiation of antibiotics, isolation of organisms could be further difficult as the growth of most common CAP pathogens is easily inhibited by a few doses of first‐line antibiotic therapy. The gold standard imaging modality for necrotizing pneumonia is CT chest with IV contrast as radiograph has a lower sensitivity [<xref ref-type="bibr" rid="bib-0031">31</xref>, <xref ref-type="bibr" rid="bib-0032">32</xref>].</p><p>Sputum culture remains the gold standard of microbiological diagnosis. IDSA guidelines recommend sputum culture collection in all patients with severe pneumonia as well as patients with concern for methicillin‐resistant <italic toggle="yes">Staphylococcus aureus</italic> (MRSA) and <italic toggle="yes">Pseudomonas aeruginosa</italic> pneumonia. However, collection and yield can be unreliable, especially given that some common respiratory pathogens such as <italic toggle="yes">Legionella pneumophilia</italic> require specialized media [<xref ref-type="bibr" rid="bib-0033">33</xref>]. Therefore, molecular diagnostic methods are being widely used with the advantages of shorter turnaround time and less impact due to antibiotic exposure. These include multiplex real‐time PCR assays, antigens (<italic toggle="yes">Legionella</italic> urinary antigen, <italic toggle="yes">Streptococcus pneumoniae</italic> urinary antigen, galactomannan), and serology. Studies have shown that the use of multibacterial and multiviral PCR panels has doubled pathogen detection in CAP from 39.3% to 86.7% [<xref ref-type="bibr" rid="bib-0034">34</xref>]. Fibrotic bronchoscopy with BAL and mini‐BAL should be performed when spontaneous and induced sputum sample collection remains a challenge. Procalcitonin may be helpful in differentiating bacterial versus viral etiologies, but there is no verified cutoff value, and it can be affected by other variables such as renal function. Therefore, it should not be used as a sole marker for diagnosis or assessing clinical improvement. While IDSA guidelines do not recommend obtaining blood cultures in patients with nonsevere CAP, especially in the outpatient setting, blood cultures are recommended in in patients with severe CAP. In our case, blood cultures were the first to reveal <italic toggle="yes">F. necrophorum</italic> on hospital day 2, which was later confirmed by pleural fluid 16s PCR. The first step of necrotizing pneumonia management is risk factor‐based broad‐spectrum IV antibiotic therapy until pathogen detection. In patients with prior cultures positive for MRSA or <italic toggle="yes">Pseudomonas aeruginosa</italic> or patients with significant epidemiological risk factors for these organisms, broad‐spectrum antibiotics such as vancomycin and cefepime should be used. While anaerobes are common pathogens in lung abscesses due to odontogenic sources, their involvement in necrotizing pneumonia and pulmonary gangrene is not well established. Thus, anaerobic coverage may be considered if there is concern for an odontogenic source [<xref ref-type="bibr" rid="bib-0035">35</xref>].</p><p>Up to 40% of patients with CAP admitted to the ICU will experience clinical deterioration after initial stabilization. Therefore, early identification of the pathogen and its antibiotic sensitivities is important to ensure appropriate antibiotic coverage [<xref ref-type="bibr" rid="bib-0036">36</xref>]. There may be a role for adding antibiotics with antitoxin effects such as linezolid, clindamycin, and rifamycin when suspecting or treating toxin‐producing Gram‐positive organisms such as <italic toggle="yes">S. aureus</italic>, Group A <italic toggle="yes">Streptococcus</italic>, and invasive pneumococcal pneumonia [<xref ref-type="bibr" rid="bib-0037">37</xref>]. Furthermore, the use of IVIG in severe necrotizing pneumonia was explored in the CIGMA study where a polyclonal antibody preparation (trimodulin) showed no significant differences in ventilator‐free days compared to placebo but showed improved mortality outcomes in post hoc analysis [<xref ref-type="bibr" rid="bib-0038">38</xref>].</p><p>
+<italic toggle="yes">F. necrophorum</italic> is susceptible to penicillin, <italic toggle="yes">β</italic>‐lactam/<italic toggle="yes">β</italic>‐lactamase inhibitor combinations, carbapenems, and metronidazole. However, emerging resistance has been reported: 2%–5% of isolates show resistance to penicillin G [<xref ref-type="bibr" rid="bib-0039">39</xref>]. Clindamycin and tetracycline resistance can occur, often associated with the presence of resistance genes such as tet (M), tet (32), erm (A), and erm (B), which correlate with elevated MICs [<xref ref-type="bibr" rid="bib-0040">40</xref>]. Erythromycin resistance is notable, with up to 15% of isolates affected [<xref ref-type="bibr" rid="bib-0041">41</xref>]. All isolates remain sensitive to <italic toggle="yes">β</italic>‐lactam/<italic toggle="yes">β</italic>‐lactamase inhibitors (e.g., amoxicillin/clavulanate), carbapenems, and metronidazole. Local susceptibility patterns should be considered due to emerging resistance, particularly to penicillin, clindamycin, and macrolides [<xref ref-type="bibr" rid="bib-0038">38</xref>–<xref ref-type="bibr" rid="bib-0040">40</xref>]. Our patient was initially treated with piperacillin–tazobactam; however, due to the development of DILI, antimicrobials were switched to ampicillin/sulbactam, given susceptibilities indicating penicillin minimum inhibitory concentration (MIC) 0.5. Ampicillin/sulbactam was continued until the patient was discharged on Day 15. At that time, amoxicillin/clavulanate 875–125 twice daily was started for an additional 3 weeks. He completed a total of 5 weeks of treatment.</p><p>Evaluating clinical progression and exploring source control options are the next steps, as often antibiotics alone are not sufficient given aggressive pathogens and the extent of disease. This helps avoid complications such as pleural involvement and progressive parenchymal destruction [<xref ref-type="bibr" rid="bib-0008">8</xref>]. While daily chest x‐rays may be useful, a short interval CT scan might yield more valuable information, as outlined above. Fukushima et al. described a case of <italic toggle="yes">Fusobacterium nucleatum</italic> necrotizing pneumonia complicating <italic toggle="yes">Influenza A</italic>, who was successfully treated with ceftriaxone and azithromycin without the need for source control, while all five patients with necrotizing pneumonia described in Chatha et al.′s case series required chest tubes for source control, and three of them ultimately needed thoracic surgery [<xref ref-type="bibr" rid="bib-0008">8</xref>]. Empyema should be drained with chest tube placement; our patient required bilateral chest tubes despite susceptibility‐based antibiotic treatment given clinical worsening with progressive pleural fluid accumulation [<xref ref-type="bibr" rid="bib-0006">6</xref>].</p><p>Given highly variable clinical presentation and progression of necrotizing pneumonia, risk factors for developing complications requiring procedural intervention are not well understood [<xref ref-type="bibr" rid="bib-0042">42</xref>]. In fact, Hoffer et al. noted a 100% failure rate and a 70% rate of bronchopleural fistula when percutaneous drainage was used to treat liquefying necrotizing pneumonia as opposed to a discrete, well‐defined abscess [<xref ref-type="bibr" rid="bib-0043">43</xref>]. Pulmonary gangrene, differentiated from necrotizing pneumonia due to central vascular and bronchial obstruction as well as significant cavitation, on the other hand, requires surgical debridement of dead parenchyma through wedge resection, lobectomy or bilobectomy, and pneumonectomy [<xref ref-type="bibr" rid="bib-0008">8</xref>, <xref ref-type="bibr" rid="bib-0042">42</xref>, <xref ref-type="bibr" rid="bib-0044">44</xref>]. Therefore, some of the indications for surgical resection of lung parenchyma in the setting of acute necrotizing lung infections include massive hemoptysis, pulmonary gangrene, or inadequate response to therapy. Our patient improved with chest tube drainage alone and did not develop gangrenous changes requiring surgical resection.</p><p>Point‐of‐care ultrasound (POCUS) is an emerging diagnostic tool that has the potential to help guide clinical decision‐making, especially in cases where timely diagnosis is crucial. Bedside ultrasound provides powerful insight into the presence of a pleural effusion with characteristics such as volume, echogenicity that help delineate transudative from exudative effusions, and the presence of septations that keys clinicians into the presence of a possible empyema [<xref ref-type="bibr" rid="bib-0043">43</xref>–<xref ref-type="bibr" rid="bib-0046">46</xref>]. Although CT imaging is often definitive for the assessment of pleural effusions, initial evaluation and subsequent resolution/follow‐up can be estimated by POCUS. As with any tool, there are limiting factors. For POCUS, this includes operator dependence with subjective interpretations and technical challenges including body habitus and the presence of artifacts such as bowel gas. Additionally, it has been shown to provide more sensitivity (94.54% vs. 67.68%) and specificity (97.88% vs. 85.30%) than chest radiographs [<xref ref-type="bibr" rid="bib-0047">47</xref>]. Nevertheless, POCUS is not to replace clinical judgment or be used as a substitute for other diagnostic tools. It is instead a convenient supplemental window that can aid timely diagnosis and follow‐up of insidious presentations as with necrotizing pneumonia.</p></sec><sec id="sec-0004"><title>4. Clinical Pearls</title><p>
+<list list-type="simple"><list-item><label>•</label><p>Consider <italic toggle="yes">F. necrophorum</italic> in adolescents and young adults who present with severe pharyngitis followed by sepsis or necrotizing pneumonia, even in the absence of internal jugular vein thrombosis.</p></list-item><list-item><label>•</label><p>Preferred antimicrobial therapy for <italic toggle="yes">F. necrophorum</italic> includes a <italic toggle="yes">β</italic>‐lactam/<italic toggle="yes">β</italic>‐lactamase inhibitor or a carbapenem. Metronidazole may be added if the selected regimen does not provide adequate anaerobic coverage.</p></list-item><list-item><label>•</label><p>Avoid clindamycin and macrolides due to the potential for antimicrobial resistance.</p></list-item><list-item><label>•</label><p>Source control is essential in the management of empyema. Recommended measures include early drainage, consideration of tPA plus DNase for loculated collections, and reserving surgical intervention for cases of treatment failure or the presence of a trapped lung.</p></list-item></list>
+</p></sec><sec id="sec-0007"><title>Ethics Statement</title><p>The patient provided informed consent to participate in this case study. Ethical approval was not required for this type of study in accordance with institutional guidelines.</p></sec><sec id="sec-0008"><title>Consent</title><p>Informed consent was obtained from the patient for publication of this case study and any accompanying images or data.</p></sec><sec id="sec-0009" sec-type="COI-statement"><title>Conflicts of Interest</title><p>The authors declare no conflicts of interest.</p></sec><sec id="sec-0010"><title>Funding</title><p>No funding was received for this manuscript.</p></sec></body><back><sec id="sec-0006" sec-type="data-availability"><title>Data Availability Statement</title><p>The data that support the findings of this study are available from the corresponding author upon reasonable request.</p></sec><ref-list><ref id="bib-0001"><label>1</label><mixed-citation id="cit-0001" publication-type="journal">
+<string-name name-style="western">
+<surname>Nygren</surname>
+<given-names>D.</given-names>
+</string-name> and 
+<string-name name-style="western">
+<surname>Holm</surname>
+<given-names>K.</given-names>
+</string-name>, <article-title>Invasive Infections With <italic toggle="yes">Fusobacterium necrophorum</italic> Including Lemierre′s Syndrome: An 8-Year Swedish Nationwide Retrospective Study</article-title>, <source>Clinical Microbiology and Infection</source>. (<year>2020</year>) <volume>26</volume>, no. 8, <fpage>1089.e7</fpage>–<lpage>1089.e12</lpage>, <pub-id pub-id-type="doi">10.1016/j.cmi.2019.12.002</pub-id>, 31843654.<pub-id pub-id-type="pmid">31843654</pub-id></mixed-citation></ref><ref id="bib-0002"><label>2</label><mixed-citation id="cit-0002" publication-type="journal">
+<string-name name-style="western">
+<surname>Holm</surname>
+<given-names>K.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Bank</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Nielsen</surname>
+<given-names>H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Kristensen</surname>
+<given-names>L. H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Prag</surname>
+<given-names>J.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Jensen</surname>
+<given-names>A.</given-names>
+</string-name>, <article-title>The Role of <italic toggle="yes">Fusobacterium necrophorum</italic> in Pharyngotonsillitis - a Review</article-title>, <source>Anaerobe</source>. (<year>2016</year>) <volume>42</volume>, <fpage>89</fpage>–<lpage>97</lpage>, <pub-id pub-id-type="doi">10.1016/j.anaerobe.2016.09.006</pub-id>, 2-s2.0-84988910367, 27693542.<pub-id pub-id-type="pmid">27693542</pub-id>
+</mixed-citation></ref><ref id="bib-0003"><label>3</label><mixed-citation id="cit-0003" publication-type="journal">
+<string-name name-style="western">
+<surname>Riordan</surname>
+<given-names>T.</given-names>
+</string-name>, <article-title>Human Infection With <italic toggle="yes">Fusobacterium necrophorum</italic> (Necrobacillosis), With a Focus on Lemierre′s Syndrome</article-title>, <source>Clinical Microbiology Reviews</source>. (<year>2007</year>) <volume>20</volume>, no. 4, <fpage>622</fpage>–<lpage>659</lpage>, <pub-id pub-id-type="doi">10.1128/CMR.00011-07</pub-id>, 2-s2.0-35448988592, 17934077.<pub-id pub-id-type="pmid">17934077</pub-id>
+<pub-id pub-id-type="pmcid">PMC2176048</pub-id></mixed-citation></ref><ref id="bib-0004"><label>4</label><mixed-citation id="cit-0004" publication-type="journal">
+<string-name name-style="western">
+<surname>Nygren</surname>
+<given-names>D.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Wasserstrom</surname>
+<given-names>L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Holm</surname>
+<given-names>K.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Torisson</surname>
+<given-names>G.</given-names>
+</string-name>, <article-title>Associations Between Findings of <italic toggle="yes">Fusobacterium necrophorum</italic> or <italic toggle="yes">β</italic>-Hemolytic Streptococci and Complications in Pharyngotonsillitis-a Registry-Based Study in Southern Sweden</article-title>, <source>Clinical Infectious Diseases</source>. (<year>2023</year>) <volume>76</volume>, no. 3, <fpage>e1428</fpage>–<lpage>e1435</lpage>, <pub-id pub-id-type="doi">10.1093/cid/ciac736</pub-id>, 36069108.<pub-id pub-id-type="pmid">36069108</pub-id>
+<pub-id pub-id-type="pmcid">PMC9907503</pub-id></mixed-citation></ref><ref id="bib-0005"><label>5</label><mixed-citation id="cit-0005" publication-type="journal">
+<string-name name-style="western">
+<surname>Jensen</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Hansen</surname>
+<given-names>T. M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Bank</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Kristensen</surname>
+<given-names>L. H.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Prag</surname>
+<given-names>J.</given-names>
+</string-name>, <article-title>
+<italic toggle="yes">Fusobacterium necrophorum</italic> Tonsillitis: An Important Cause of Tonsillitis in Adolescents and Young Adults</article-title>, <source>Clinical Microbiology and Infection</source>. (<year>2015</year>) <volume>21</volume>, no. 3, <fpage>266.e1</fpage>–<lpage>266.e3</lpage>, <pub-id pub-id-type="doi">10.1016/j.cmi.2014.09.020</pub-id>, 2-s2.0-84932111651, 25658551.<pub-id pub-id-type="pmid">25658551</pub-id></mixed-citation></ref><ref id="bib-0006"><label>6</label><mixed-citation id="cit-0006" publication-type="journal">
+<string-name name-style="western">
+<surname>Krutikov</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Rahman</surname>
+<given-names>A.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Tiberi</surname>
+<given-names>S.</given-names>
+</string-name>, <article-title>Necrotizing Pneumonia (Aetiology, Clinical Features and Management)</article-title>, <source>Current Opinion in Pulmonary Medicine</source>. (<year>2019</year>) <volume>25</volume>, no. 3, <fpage>225</fpage>–<lpage>232</lpage>, <pub-id pub-id-type="doi">10.1097/MCP.0000000000000571</pub-id>, 2-s2.0-85063954896, 30844921.<pub-id pub-id-type="pmid">30844921</pub-id>
+</mixed-citation></ref><ref id="bib-0007"><label>7</label><mixed-citation id="cit-0007" publication-type="journal">
+<string-name name-style="western">
+<surname>Boppana</surname>
+<given-names>L. K. T.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Isern</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Romero</surname>
+<given-names>K. N.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Ferreira</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Garvan</surname>
+<given-names>G.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Ashby</surname>
+<given-names>T.</given-names>
+</string-name>, <article-title>Necrotizing Pneumonia as a Complication of Community-Acquired Pneumonia in Adults at a Tertiary Institution</article-title>, <source>Journal of Clinical Medicine</source>. (<year>2025</year>) <volume>14</volume>, no. 12, <pub-id pub-id-type="doi">10.3390/jcm14124086</pub-id>.<pub-id pub-id-type="pmcid">PMC12193808</pub-id><pub-id pub-id-type="pmid">40565832</pub-id></mixed-citation></ref><ref id="bib-0008"><label>8</label><mixed-citation id="cit-0008" publication-type="journal">
+<string-name name-style="western">
+<surname>Chatha</surname>
+<given-names>N.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Fortin</surname>
+<given-names>D.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Bosma</surname>
+<given-names>K. J.</given-names>
+</string-name>, <article-title>Management of Necrotizing Pneumonia and Pulmonary Gangrene: A Case Series and Review of the Literature</article-title>, <source>Canadian Respiratory Journal</source>. (<year>2014</year>) <volume>21</volume>, no. 4, <fpage>239</fpage>–<lpage>245</lpage>, <pub-id pub-id-type="doi">10.1155/2014/864159</pub-id>, 2-s2.0-84906653668, 24791253.<pub-id pub-id-type="pmid">24791253</pub-id>
+<pub-id pub-id-type="pmcid">PMC4173892</pub-id></mixed-citation></ref><ref id="bib-0009"><label>9</label><mixed-citation id="cit-0009" publication-type="journal">
+<string-name name-style="western">
+<surname>Löffler</surname>
+<given-names>B.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Niemann</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Ehrhardt</surname>
+<given-names>C.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Horn</surname>
+<given-names>D.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Lanckohr</surname>
+<given-names>C.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Lina</surname>
+<given-names>G.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Ludwig</surname>
+<given-names>S.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Peters</surname>
+<given-names>G.</given-names>
+</string-name>, <article-title>Pathogenesis of <italic toggle="yes">Staphylococcus aureus</italic> Necrotizing Pneumonia: The Role of PVL and an Influenza Coinfection</article-title>, <source>Expert Review of Anti-Infective Therapy</source>. (<year>2013</year>) <volume>11</volume>, no. 10, <fpage>1041</fpage>–<lpage>1051</lpage>, <pub-id pub-id-type="doi">10.1586/14787210.2013.827891</pub-id>, 2-s2.0-84886924035, 24073746.<pub-id pub-id-type="pmid">24073746</pub-id>
+</mixed-citation></ref><ref id="bib-0010"><label>10</label><mixed-citation id="cit-0010" publication-type="journal">
+<string-name name-style="western">
+<surname>Gillet</surname>
+<given-names>Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Issartel</surname>
+<given-names>B.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Vanhems</surname>
+<given-names>P.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Fournet</surname>
+<given-names>J. C.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Lina</surname>
+<given-names>G.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Bes</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Vandenesch</surname>
+<given-names>F.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Piémont</surname>
+<given-names>Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Brousse</surname>
+<given-names>N.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Floret</surname>
+<given-names>D.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Etienne</surname>
+<given-names>J.</given-names>
+</string-name>, <article-title>Association Between Staphylococcus aureus Strains Carrying Gene for Panton-Valentine Leukocidin and Highly Lethal Necrotising Pneumonia in Young Immunocompetent Patients</article-title>, <source>Lancet</source>. (<year>2002</year>) <volume>359</volume>, no. 9308, <fpage>753</fpage>–<lpage>759</lpage>, <pub-id pub-id-type="doi">10.1016/S0140-6736(02)07877-7</pub-id>, 2-s2.0-0037006653.<pub-id pub-id-type="pmid">11888586</pub-id>
+</mixed-citation></ref><ref id="bib-0011"><label>11</label><mixed-citation id="cit-0011" publication-type="journal">
+<string-name name-style="western">
+<surname>Kapania</surname>
+<given-names>E. M.</given-names>
+</string-name> and 
+<string-name name-style="western">
+<surname>Cavallazzi</surname>
+<given-names>R.</given-names>
+</string-name>, <article-title>Necrotizing Pneumonia: A Practical Guide for the Clinician</article-title>, <source>Pathogens</source>. (<year>2024</year>) <volume>13</volume>, no. 11, <pub-id pub-id-type="doi">10.3390/pathogens13110984</pub-id>.<pub-id pub-id-type="pmcid">PMC11597800</pub-id><pub-id pub-id-type="pmid">39599537</pub-id></mixed-citation></ref><ref id="bib-0012"><label>12</label><mixed-citation id="cit-0012" publication-type="journal">
+<string-name name-style="western">
+<surname>Metlay</surname>
+<given-names>J. P.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Waterer</surname>
+<given-names>G. W.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Long</surname>
+<given-names>A. C.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Anzueto</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Brozek</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Crothers</surname>
+<given-names>K.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Cooley</surname>
+<given-names>L. A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Dean</surname>
+<given-names>N. C.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Fine</surname>
+<given-names>M. J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Flanders</surname>
+<given-names>S. A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Griffin</surname>
+<given-names>M. R.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Metersky</surname>
+<given-names>M. L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Musher</surname>
+<given-names>D. M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Restrepo</surname>
+<given-names>M. I.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Whitney</surname>
+<given-names>C. G.</given-names>
+</string-name>, <article-title>Diagnosis and Treatment of Adults With Community-Acquired Pneumonia. An Official Clinical Practice Guideline of the American Thoracic Society and Infectious Diseases Society of America</article-title>, <source>American Journal of Respiratory and Critical Care Medicine</source>. (<year>2019</year>) <volume>200</volume>, no. 7, <fpage>e45</fpage>–<lpage>e67</lpage>, <pub-id pub-id-type="doi">10.1164/rccm.201908-1581ST</pub-id>, 2-s2.0-85072774669, 31573350.<pub-id pub-id-type="pmid">31573350</pub-id>
+<pub-id pub-id-type="pmcid">PMC6812437</pub-id></mixed-citation></ref><ref id="bib-0013"><label>13</label><mixed-citation id="cit-0013" publication-type="journal">
+<string-name name-style="western">
+<surname>File</surname>
+<given-names>T. M.</given-names>Jr.</string-name> and <string-name name-style="western">
+<surname>Ramirez</surname>
+<given-names>J. A.</given-names>
+</string-name>, <article-title>Community-Acquired Pneumonia</article-title>, <source>New England Journal of Medicine</source>. (<year>2023</year>) <volume>389</volume>, no. 7, <fpage>632</fpage>–<lpage>641</lpage>, <pub-id pub-id-type="doi">10.1056/NEJMcp2303286</pub-id>.<pub-id pub-id-type="pmid">37585629</pub-id>
+</mixed-citation></ref><ref id="bib-0014"><label>14</label><mixed-citation id="cit-0014" publication-type="journal">
+<string-name name-style="western">
+<surname>Bhattacharya</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Livsey</surname>
+<given-names>S. A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Wiselka</surname>
+<given-names>M.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Bukhari</surname>
+<given-names>S. S.</given-names>
+</string-name>, <article-title>Fusobacteriosis Presenting as Community Acquired Pneumonia</article-title>, <source>The Journal of Infection</source>. (<year>2005</year>) <volume>50</volume>, no. 3, <fpage>236</fpage>–<lpage>239</lpage>, <pub-id pub-id-type="doi">10.1016/j.jinf.2003.11.007</pub-id>, 2-s2.0-14944366568, 15780418.<pub-id pub-id-type="pmid">15780418</pub-id>
+</mixed-citation></ref><ref id="bib-0015"><label>15</label><mixed-citation id="cit-0015" publication-type="journal">
+<string-name name-style="western">
+<surname>Liu</surname>
+<given-names>Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Li</surname>
+<given-names>Z.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Fu</surname>
+<given-names>H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Ruan</surname>
+<given-names>W.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Wang</surname>
+<given-names>H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Ding</surname>
+<given-names>Y.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Zhang</surname>
+<given-names>M.</given-names>
+</string-name>, <article-title>The First Case Report: Diagnosis and Management of Necrotizing Fusobacterium Lung Abscess via BALF Next-Generation Sequencing</article-title>, <source>BMC Infectious Diseases</source>. (<year>2024</year>) <volume>24</volume>, no. 1, <pub-id pub-id-type="doi">10.1186/s12879-024-09087-5</pub-id>, 38373919.<pub-id pub-id-type="pmcid">PMC10875748</pub-id><pub-id pub-id-type="pmid">38373919</pub-id></mixed-citation></ref><ref id="bib-0016"><label>16</label><mixed-citation id="cit-0016" publication-type="journal">
+<string-name name-style="western">
+<surname>Lee</surname>
+<given-names>W. S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Jean</surname>
+<given-names>S. S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Chen</surname>
+<given-names>F. L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Hsieh</surname>
+<given-names>S. M.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Hsueh</surname>
+<given-names>P. R.</given-names>
+</string-name>, <article-title>Lemierre′s Syndrome: A Forgotten and Re-Emerging Infection</article-title>, <source>Journal of Microbiology, Immunology, and Infection</source>. (<year>2020</year>) <volume>53</volume>, no. 4, <fpage>513</fpage>–<lpage>517</lpage>, <pub-id pub-id-type="doi">10.1016/j.jmii.2020.03.027</pub-id>, 32303484.<pub-id pub-id-type="pmid">32303484</pub-id></mixed-citation></ref><ref id="bib-0017"><label>17</label><mixed-citation id="cit-0017" publication-type="journal">
+<string-name name-style="western">
+<surname>Hagelskjaer Kristensen</surname>
+<given-names>L.</given-names>
+</string-name> and 
+<string-name name-style="western">
+<surname>Prag</surname>
+<given-names>J.</given-names>
+</string-name>, <article-title>Lemierre′s Syndrome and Other Disseminated <italic toggle="yes">Fusobacterium necrophorum</italic> Infections in Denmark: A Prospective Epidemiological and Clinical Survey</article-title>, <source>European Journal of Clinical Microbiology &amp; Infectious Diseases</source>. (<year>2008</year>) <volume>27</volume>, no. 9, <fpage>779</fpage>–<lpage>789</lpage>, <pub-id pub-id-type="doi">10.1007/s10096-008-0496-4</pub-id>, 2-s2.0-49649089769.<pub-id pub-id-type="pmid">18330604</pub-id>
+<pub-id pub-id-type="pmcid">PMC7102232</pub-id></mixed-citation></ref><ref id="bib-0018"><label>18</label><mixed-citation id="cit-0018" publication-type="journal">
+<string-name name-style="western">
+<surname>Au</surname>
+<given-names>P. H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Nwabara</surname>
+<given-names>K.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Gvazava</surname>
+<given-names>N.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Ejiofor</surname>
+<given-names>S.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Ghous</surname>
+<given-names>G.</given-names>
+</string-name>, <article-title>Lemierre Syndrome: A Diagnosis Behind the Veil</article-title>, <source>Case Reports in Infectious Diseases</source>. (<year>2023</year>) <volume>2023</volume>, <elocation-id>2273954</elocation-id>, <pub-id pub-id-type="doi">10.1155/2023/2273954</pub-id>.<pub-id pub-id-type="pmid">37113164</pub-id>
+<pub-id pub-id-type="pmcid">PMC10129419</pub-id></mixed-citation></ref><ref id="bib-0019"><label>19</label><mixed-citation id="cit-0019" publication-type="journal">
+<string-name name-style="western">
+<surname>Shiber</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Fontane</surname>
+<given-names>E.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Rabinowitz</surname>
+<given-names>R.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Gens</surname>
+<given-names>D.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Habashi</surname>
+<given-names>N.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Scalea</surname>
+<given-names>T.</given-names>
+</string-name>, <article-title>Incomplete Lemierre Syndrome</article-title>, <source>Pediatric Emergency Care</source>. (<year>2015</year>) <volume>31</volume>, no. 1, <fpage>39</fpage>–<lpage>41</lpage>, <pub-id pub-id-type="doi">10.1097/PEC.0000000000000327</pub-id>, 2-s2.0-84921369624.<pub-id pub-id-type="pmid">25560619</pub-id>
+</mixed-citation></ref><ref id="bib-0020"><label>20</label><mixed-citation id="cit-0020" publication-type="journal">
+<string-name name-style="western">
+<surname>Jaber</surname>
+<given-names>F.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Alsakarneh</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Alsharaeh</surname>
+<given-names>T.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Salahat</surname>
+<given-names>A. J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Elfert</surname>
+<given-names>K.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Beran</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Gangwani</surname>
+<given-names>M. K.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Abboud</surname>
+<given-names>Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Al-Sayyed</surname>
+<given-names>L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Madi</surname>
+<given-names>M. Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Jaber</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Dahiya</surname>
+<given-names>D. S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Numan</surname>
+<given-names>L.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Duong</surname>
+<given-names>N.</given-names>
+</string-name>, <article-title>Gastrointestinal Variant of Lemierre′s Syndrome: A Systematic Review and Comprehensive Analysis of 36 Case Reports</article-title>, <source>Journal of Clinical and Experimental Hepatology</source>. (<year>2024</year>) <volume>14</volume>, no. 2, <elocation-id>101319</elocation-id>, <pub-id pub-id-type="doi">10.1016/j.jceh.2023.101319</pub-id>, 38250215.<pub-id pub-id-type="pmid">38250215</pub-id>
+<pub-id pub-id-type="pmcid">PMC10794926</pub-id></mixed-citation></ref><ref id="bib-0021"><label>21</label><mixed-citation id="cit-0021" publication-type="journal">
+<string-name name-style="western">
+<surname>Radovanovic</surname>
+<given-names>N.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Dumic</surname>
+<given-names>I.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Veselinovic</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Burger</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Milovanovic</surname>
+<given-names>T.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Nordstrom</surname>
+<given-names>C. W.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Niendorf</surname>
+<given-names>E.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Ramanan</surname>
+<given-names>P.</given-names>
+</string-name>, <article-title>
+<italic toggle="yes">Fusobacterium necrophorum</italic> subsp. <italic toggle="yes">necrophorum</italic> Liver Abscess With Pylephlebitis: An Abdominal Variant of Lemierre′s Syndrome</article-title>, <source>Case Report in Infectious Diseases</source>. (<year>2020</year>) <volume>2020</volume>, <elocation-id>9237267</elocation-id>, <pub-id pub-id-type="doi">10.1155/2020/9237267</pub-id>, 31993242.<pub-id pub-id-type="pmcid">PMC6982357</pub-id><pub-id pub-id-type="pmid">31993242</pub-id></mixed-citation></ref><ref id="bib-0022"><label>22</label><mixed-citation id="cit-0022" publication-type="journal">
+<string-name name-style="western">
+<surname>Mohammadian</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Rath</surname>
+<given-names>P.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Dikhtyar</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Jesani</surname>
+<given-names>S.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Alyacoub</surname>
+<given-names>R.</given-names>
+</string-name>, <article-title>Portal Vein Thrombosis Associated With Fusobacterium nucleatum Bacteremia: A Rare Abdominal Variant of Lemierre′s Syndrome</article-title>, <source>Cureus</source>. (<year>2022</year>) <volume>14</volume>, no. 8, <elocation-id>e27918</elocation-id>, <pub-id pub-id-type="doi">10.7759/cureus.27918</pub-id>, 36120206.<pub-id pub-id-type="pmid">36120206</pub-id>
+<pub-id pub-id-type="pmcid">PMC9467494</pub-id></mixed-citation></ref><ref id="bib-0023"><label>23</label><mixed-citation id="cit-0023" publication-type="journal">
+<string-name name-style="western">
+<surname>Cao</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Huang</surname>
+<given-names>L.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Zhang</surname>
+<given-names>R.</given-names>
+</string-name>, <article-title>Community-Acquired Pneumonia Associated With Influenza Co-Infection Caused by <italic toggle="yes">Fusobacterium necrophorum</italic>: A Case Report and Literature Review</article-title>, <source>BMC Infectious Diseases</source>. (<year>2025</year>) <volume>25</volume>, no. 1, <pub-id pub-id-type="doi">10.1186/s12879-025-11079-y</pub-id>, 40346456.<pub-id pub-id-type="pmcid">PMC12065352</pub-id><pub-id pub-id-type="pmid">40346456</pub-id></mixed-citation></ref><ref id="bib-0024"><label>24</label><mixed-citation id="cit-0024" publication-type="journal">
+<string-name name-style="western">
+<surname>Brazier</surname>
+<given-names>J. S.</given-names>
+</string-name>, <article-title>Human Infections With Fusobacterium necrophorum</article-title>, <source>Anaerobe</source>. (<year>2006</year>) <volume>12</volume>, no. 4, <fpage>165</fpage>–<lpage>172</lpage>, <pub-id pub-id-type="doi">10.1016/j.anaerobe.2005.11.003</pub-id>, 2-s2.0-33748304340.<pub-id pub-id-type="pmid">16962962</pub-id>
+</mixed-citation></ref><ref id="bib-0025"><label>25</label><mixed-citation id="cit-0025" publication-type="journal">
+<string-name name-style="western">
+<surname>Marques</surname>
+<given-names>T. M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Almeida</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Cruz</surname>
+<given-names>L.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Ferreira</surname>
+<given-names>T.</given-names>
+</string-name>, <article-title>Rapidly Progressing Incomplete Lemierre Syndrome</article-title>, <source>Journal of Postgraduate Medicine</source>. (<year>2021</year>) <volume>67</volume>, no. 4, <fpage>249</fpage>–<lpage>250</lpage>, <pub-id pub-id-type="doi">10.4103/jpgm.JPGM_45_21</pub-id>, 34528513.<pub-id pub-id-type="pmid">34528513</pub-id>
+<pub-id pub-id-type="pmcid">PMC8706543</pub-id></mixed-citation></ref><ref id="bib-0026"><label>26</label><mixed-citation id="cit-0026" publication-type="journal">
+<string-name name-style="western">
+<surname>Younus</surname>
+<given-names>F.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Chua</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Tortora</surname>
+<given-names>G.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Jimenez</surname>
+<given-names>V. E.</given-names>
+</string-name>, <article-title>Lemierre’s Disease Caused by Co-Infection of <italic toggle="yes">Arcanobacterium haemolyticum</italic> and <italic toggle="yes">Fusobacterium necrophoru</italic>m: A Case Report</article-title>, <source>Journal of Infection</source>. (<year>2002</year>) <volume>45</volume>, no. 2, <fpage>114</fpage>–<lpage>117</lpage>, <pub-id pub-id-type="doi">10.1053/jinf.2002.1024</pub-id>, 2-s2.0-0036705964, 12217717.<pub-id pub-id-type="pmid">12217717</pub-id>
+</mixed-citation></ref><ref id="bib-0027"><label>27</label><mixed-citation id="cit-0027" publication-type="journal">
+<string-name name-style="western">
+<surname>Pan</surname>
+<given-names>Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Xing</surname>
+<given-names>Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Lai</surname>
+<given-names>Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Dong</surname>
+<given-names>H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Sheng</surname>
+<given-names>H.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Xu</surname>
+<given-names>W.</given-names>
+</string-name>, <article-title>Metagenomic Next-Generation Sequencing Reveals Co-Infection With Legionella pneumophila and Fusobacterium necrophorum in a Patient With Severe Pneumonia: A Case Report</article-title>, <source>BMC Pulmonary Medicine</source>. (<year>2024</year>) <volume>24</volume>, no. 1, <pub-id pub-id-type="doi">10.1186/s12890-024-03097-4</pub-id>, 38867173.<pub-id pub-id-type="pmcid">PMC11170816</pub-id><pub-id pub-id-type="pmid">38867173</pub-id></mixed-citation></ref><ref id="bib-0028"><label>28</label><mixed-citation id="cit-0028" publication-type="journal">
+<string-name name-style="western">
+<surname>Dequin</surname>
+<given-names>P. F.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Meziani</surname>
+<given-names>F.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Quenot</surname>
+<given-names>J. P.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Kamel</surname>
+<given-names>T.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Ricard</surname>
+<given-names>J. D.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Badie</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Reignier</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Heming</surname>
+<given-names>N.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Plantefève</surname>
+<given-names>G.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Souweine</surname>
+<given-names>B.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Voiriot</surname>
+<given-names>G.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Colin</surname>
+<given-names>G.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Frat</surname>
+<given-names>J. P.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Mira</surname>
+<given-names>J. P.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Barbarot</surname>
+<given-names>N.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>François</surname>
+<given-names>B.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Louis</surname>
+<given-names>G.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Gibot</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Guitton</surname>
+<given-names>C.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Giacardi</surname>
+<given-names>C.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Hraiech</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Vimeux</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>L′Her</surname>
+<given-names>E.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Faure</surname>
+<given-names>H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Herbrecht</surname>
+<given-names>J. E.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Bouisse</surname>
+<given-names>C.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Joret</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Terzi</surname>
+<given-names>N.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Gacouin</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Quentin</surname>
+<given-names>C.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Jourdain</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Leclerc</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Coffre</surname>
+<given-names>C.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Bourgoin</surname>
+<given-names>H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Lengellé</surname>
+<given-names>C.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Caille-Fénérol</surname>
+<given-names>C.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Giraudeau</surname>
+<given-names>B.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Le Gouge</surname>
+<given-names>A.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>for the CRICS-TriGGERSep Network</surname>
+</string-name>, <article-title>Hydrocortisone in Severe Community-Acquired Pneumonia</article-title>, <source>New England Journal of Medicine</source>. (<year>2023</year>) <volume>388</volume>, no. 21, <fpage>1931</fpage>–<lpage>1941</lpage>, <pub-id pub-id-type="doi">10.1056/NEJMoa2215145</pub-id>.<pub-id pub-id-type="pmid">36942789</pub-id>
+</mixed-citation></ref><ref id="bib-0029"><label>29</label><mixed-citation id="cit-0029" publication-type="journal">
+<string-name name-style="western">
+<surname>Chaudhuri</surname>
+<given-names>D.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Nei</surname>
+<given-names>A. M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Rochwerg</surname>
+<given-names>B.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Balk</surname>
+<given-names>R. A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Asehnoune</surname>
+<given-names>K.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Cadena</surname>
+<given-names>R.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Carcillo</surname>
+<given-names>J. A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Correa</surname>
+<given-names>R.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Drover</surname>
+<given-names>K.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Esper</surname>
+<given-names>A. M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Gershengorn</surname>
+<given-names>H. B.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Hammond</surname>
+<given-names>N. E.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Jayaprakash</surname>
+<given-names>N.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Menon</surname>
+<given-names>K.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Nazer</surname>
+<given-names>L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Pitre</surname>
+<given-names>T.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Qasim</surname>
+<given-names>Z. A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Russell</surname>
+<given-names>J. A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Santos</surname>
+<given-names>A. P.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Sarwal</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Spencer-Segal</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Tilouche</surname>
+<given-names>N.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Annane</surname>
+<given-names>D.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Pastores</surname>
+<given-names>S. M.</given-names>
+</string-name>, <article-title>2024 Focused Update: Guidelines on Use of Corticosteroids in Sepsis, Acute Respiratory Distress Syndrome, and Community-Acquired Pneumonia</article-title>, <source>Critical Care Medicine</source>. (<year>2024</year>) <volume>52</volume>, no. 5, <fpage>e219</fpage>–<lpage>e233</lpage>, <pub-id pub-id-type="doi">10.1097/CCM.0000000000006172</pub-id>, 38240492.<pub-id pub-id-type="pmid">38240492</pub-id>
+</mixed-citation></ref><ref id="bib-0030"><label>30</label><mixed-citation id="cit-0030" publication-type="journal">
+<string-name name-style="western">
+<surname>Stern</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Skalsky</surname>
+<given-names>K.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Avni</surname>
+<given-names>T.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Carrara</surname>
+<given-names>E.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Leibovici</surname>
+<given-names>L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Paul</surname>
+<given-names>M.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Cochrane Acute Respiratory Infections Group</surname>
+</string-name>, <article-title>Corticosteroids for Pneumonia</article-title>, <source>Cochrane Database of Systematic Reviews</source>. (<year>2017</year>) <volume>2017</volume>, no. 12, <elocation-id>CD007720</elocation-id>, <pub-id pub-id-type="doi">10.1002/14651858.CD007720.pub3</pub-id>, 2-s2.0-85038077167.<pub-id pub-id-type="pmcid">PMC6486210</pub-id><pub-id pub-id-type="pmid">29236286</pub-id></mixed-citation></ref><ref id="bib-0031"><label>31</label><mixed-citation id="cit-0031" publication-type="journal">
+<string-name name-style="western">
+<surname>Pande</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Nasir</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Rueda</surname>
+<given-names>A. M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Matejowsky</surname>
+<given-names>R.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Ramos</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Doshi</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Kulkarni</surname>
+<given-names>P.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Musher</surname>
+<given-names>D. M.</given-names>
+</string-name>, <article-title>The Incidence of Necrotizing Changes in Adults With Pneumococcal Pneumonia</article-title>, <source>Clinical Infectious Diseases</source>. (<year>2012</year>) <volume>54</volume>, no. 1, <fpage>10</fpage>–<lpage>16</lpage>, <pub-id pub-id-type="doi">10.1093/cid/cir749</pub-id>, 2-s2.0-84555170777, 22042878.<pub-id pub-id-type="pmid">22042878</pub-id>
+</mixed-citation></ref><ref id="bib-0032"><label>32</label><mixed-citation id="cit-0032" publication-type="journal">
+<string-name name-style="western">
+<surname>Jung</surname>
+<given-names>J. I.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Kim</surname>
+<given-names>H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Park</surname>
+<given-names>S. H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Kim</surname>
+<given-names>H. H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Ahn</surname>
+<given-names>M. I.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Kim</surname>
+<given-names>H. S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Kim</surname>
+<given-names>K. J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Chung</surname>
+<given-names>M. H.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Choi</surname>
+<given-names>B. G.</given-names>
+</string-name>, <article-title>CT Differentiation of Pneumonic-Type Bronchioloalveolar Cell Carcinoma and Infectious Pneumonia</article-title>, <source>British Journal of Radiology</source>. (<year>2001</year>) <volume>74</volume>, no. 882, <fpage>490</fpage>–<lpage>494</lpage>, <pub-id pub-id-type="doi">10.1259/bjr.74.882.740490</pub-id>, 2-s2.0-0034917350.<pub-id pub-id-type="pmid">11459727</pub-id>
+</mixed-citation></ref><ref id="bib-0033"><label>33</label><mixed-citation id="cit-0033" publication-type="journal">
+<string-name name-style="western">
+<surname>Bai</surname>
+<given-names>L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Yang</surname>
+<given-names>W.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Li</surname>
+<given-names>Y.</given-names>
+</string-name>, <article-title>Clinical and Laboratory Diagnosis of Legionella Pneumonia</article-title>, <source>Diagnostics</source>. (<year>2023</year>) <volume>13</volume>, no. 2, <pub-id pub-id-type="doi">10.3390/diagnostics13020280</pub-id>.<pub-id pub-id-type="pmcid">PMC9858276</pub-id><pub-id pub-id-type="pmid">36673091</pub-id></mixed-citation></ref><ref id="bib-0034"><label>34</label><mixed-citation id="cit-0034" publication-type="journal">
+<string-name name-style="western">
+<surname>Gadsby</surname>
+<given-names>N. J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Russell</surname>
+<given-names>C. D.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>McHugh</surname>
+<given-names>M. P.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Mark</surname>
+<given-names>H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Conway Morris</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Laurenson</surname>
+<given-names>I. F.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Hill</surname>
+<given-names>A. T.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Templeton</surname>
+<given-names>K. E.</given-names>
+</string-name>, <article-title>Comprehensive Molecular Testing for Respiratory Pathogens in Community-Acquired Pneumonia</article-title>, <source>Clinical Infectious Diseases</source>. (<year>2016</year>) <volume>62</volume>, no. 7, <fpage>817</fpage>–<lpage>823</lpage>, <pub-id pub-id-type="doi">10.1093/cid/civ1214</pub-id>, 2-s2.0-84963957270, 26747825.<pub-id pub-id-type="pmid">26747825</pub-id>
+<pub-id pub-id-type="pmcid">PMC4787606</pub-id></mixed-citation></ref><ref id="bib-0035"><label>35</label><mixed-citation id="cit-0035" publication-type="journal">
+<string-name name-style="western">
+<surname>Chougule</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Muthu</surname>
+<given-names>V.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Bal</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Rudramurthy</surname>
+<given-names>S. M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Dhooria</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Das</surname>
+<given-names>A.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Singh</surname>
+<given-names>H.</given-names>
+</string-name>, <article-title>Pulmonary Gangrene Due to Rhizopus spp., Staphylococcus aureus, Klebsiella pneumoniae and Probable Sarcina Organisms</article-title>, <source>Mycopathologia</source>. (<year>2015</year>) <volume>180</volume>, no. 1-2, <fpage>131</fpage>–<lpage>136</lpage>, <pub-id pub-id-type="doi">10.1007/s11046-015-9904-3</pub-id>, 2-s2.0-84937523120.<pub-id pub-id-type="pmid">26022794</pub-id>
+</mixed-citation></ref><ref id="bib-0036"><label>36</label><mixed-citation id="cit-0036" publication-type="journal">
+<string-name name-style="western">
+<surname>Mandell</surname>
+<given-names>L. A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Marrie</surname>
+<given-names>T. J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Grossman</surname>
+<given-names>R. F.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Chow</surname>
+<given-names>A. W.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Hyland</surname>
+<given-names>R. H.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>and the Canadian Community-Acquired Pneumonia Working Group</surname>
+</string-name>, <article-title>Canadian Guidelines for the Initial Management of Community-Acquired Pneumonia: An Evidence-Based Update by the Canadian Infectious Diseases Society and the Canadian Thoracic Society. The Canadian Community-Acquired Pneumonia Working Group</article-title>, <source>Clinical Infectious Diseases</source>. (<year>2000</year>) <volume>31</volume>, no. 2, <fpage>383</fpage>–<lpage>421</lpage>, <pub-id pub-id-type="doi">10.1086/313959</pub-id>, 2-s2.0-0034456999, 10987698.<pub-id pub-id-type="pmid">10987698</pub-id>
+</mixed-citation></ref><ref id="bib-0037"><label>37</label><mixed-citation id="cit-0037" publication-type="journal">
+<string-name name-style="western">
+<surname>Brown</surname>
+<given-names>L. A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Mitchell</surname>
+<given-names>A. M.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Mitchell</surname>
+<given-names>T. J.</given-names>
+</string-name>, <article-title>Streptococcus pneumoniae and Lytic Antibiotic Therapy: Are We Adding Insult to Injury During Invasive Pneumococcal Disease and Sepsis?</article-title>, <source>Journal of Medical Microbiology</source>. (<year>2017</year>) <volume>66</volume>, no. 8, <fpage>1253</fpage>–<lpage>1256</lpage>, <pub-id pub-id-type="doi">10.1099/jmm.0.000545</pub-id>, 2-s2.0-85029538468, 28792379.<pub-id pub-id-type="pmid">28792379</pub-id>
+</mixed-citation></ref><ref id="bib-0038"><label>38</label><mixed-citation id="cit-0038" publication-type="journal">
+<string-name name-style="western">
+<surname>Welte</surname>
+<given-names>T.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Dellinger</surname>
+<given-names>R. P.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Ebelt</surname>
+<given-names>H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Ferrer</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Opal</surname>
+<given-names>S. M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Singer</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Vincent</surname>
+<given-names>J. L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Werdan</surname>
+<given-names>K.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Martin-Loeches</surname>
+<given-names>I.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Almirall</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Artigas</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Ignacio Ayestarán</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Nuding</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Ferrer</surname>
+<given-names>R.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Sirgo Rodríguez</surname>
+<given-names>G.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Shankar-Hari</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Álvarez-Lerma</surname>
+<given-names>F.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Riessen</surname>
+<given-names>R.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Sirvent</surname>
+<given-names>J. M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Kluge</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Zacharowski</surname>
+<given-names>K.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Bonastre Mora</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Lapp</surname>
+<given-names>H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Wöbker</surname>
+<given-names>G.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Achtzehn</surname>
+<given-names>U.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Brealey</surname>
+<given-names>D.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Kempa</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Sánchez García</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Brederlau</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Kochanek</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Reschreiter</surname>
+<given-names>H. P.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Wise</surname>
+<given-names>M. P.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Belohradsky</surname>
+<given-names>B. H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Bobenhausen</surname>
+<given-names>I.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Dälken</surname>
+<given-names>B.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Dubovy</surname>
+<given-names>P.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Langohr</surname>
+<given-names>P.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Mayer</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Schüttrumpf</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Wartenberg-Demand</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Wippermann</surname>
+<given-names>U.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Wolf</surname>
+<given-names>D.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Torres</surname>
+<given-names>A.</given-names>
+</string-name>, <article-title>Efficacy and Safety of Trimodulin, a Novel Polyclonal Antibody Preparation, in Patients With Severe Community-Acquired Pneumonia: A Randomized, Placebo-Controlled, Double-Blind, Multicenter, Phase II Trial (CIGMA study)</article-title>, <source>Intensive Care Medicine</source>. (<year>2018</year>) <volume>44</volume>, no. 4, <fpage>438</fpage>–<lpage>448</lpage>, <pub-id pub-id-type="doi">10.1007/s00134-018-5143-7</pub-id>, 2-s2.0-85045110708, 29632995.<pub-id pub-id-type="pmid">29632995</pub-id>
+<pub-id pub-id-type="pmcid">PMC5924663</pub-id></mixed-citation></ref><ref id="bib-0039"><label>39</label><mixed-citation id="cit-0039" publication-type="journal">
+<string-name name-style="western">
+<surname>Mori</surname>
+<given-names>N.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Nakamura</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Hirai</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Asai</surname>
+<given-names>N.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Shibata</surname>
+<given-names>Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Takayama</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Kawamoto</surname>
+<given-names>Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Miyazaki</surname>
+<given-names>N.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Sakanashi</surname>
+<given-names>D.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Ohno</surname>
+<given-names>T.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Yamada</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Suematsu</surname>
+<given-names>H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Koita</surname>
+<given-names>I.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Chida</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Ohta</surname>
+<given-names>T.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Mikamo</surname>
+<given-names>H.</given-names>
+</string-name>, <article-title>Clinical Characteristics and Antimicrobial Susceptibility of <italic toggle="yes">Fusobacterium</italic> Species Isolated Over 10 Years at a Japanese University Hospital</article-title>, <source>European Journal of Clinical Microbiology &amp; Infectious Diseases</source>. (<year>2024</year>) <volume>43</volume>, no. 3, <fpage>423</fpage>–<lpage>433</lpage>, <pub-id pub-id-type="doi">10.1007/s10096-023-04734-2</pub-id>, 38112966.<pub-id pub-id-type="pmid">38112966</pub-id>
+</mixed-citation></ref><ref id="bib-0040"><label>40</label><mixed-citation id="cit-0040" publication-type="journal">
+<string-name name-style="western">
+<surname>Perry</surname>
+<given-names>M. D.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Vranckx</surname>
+<given-names>K.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Copsey-Mawer</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Scotford</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Anderson</surname>
+<given-names>B.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Day</surname>
+<given-names>P.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Watkins</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Corden</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Hughes</surname>
+<given-names>H.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Morris</surname>
+<given-names>T. E.</given-names>
+</string-name>, <article-title>First Large-Scale Study of Antimicrobial Susceptibility Data, and Genetic Resistance Determinants, in <italic toggle="yes">Fusobacterium necrophorum</italic> Highlighting the Importance of Continuing Focused Susceptibility Trend Surveillance</article-title>, <source>Anaerobe</source>. (<year>2023</year>) <volume>80</volume>, <elocation-id>102717</elocation-id>, <pub-id pub-id-type="doi">10.1016/j.anaerobe.2023.102717</pub-id>, 36871786.<pub-id pub-id-type="pmid">36871786</pub-id>
+</mixed-citation></ref><ref id="bib-0041"><label>41</label><mixed-citation id="cit-0041" publication-type="journal">
+<string-name name-style="western">
+<surname>Brazier</surname>
+<given-names>J. S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Hall</surname>
+<given-names>V.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Yusuf</surname>
+<given-names>E.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Duerden</surname>
+<given-names>B. I.</given-names>
+</string-name>, <article-title>Fusobacterium necrophorum Infections in England and Wales 1990-2000</article-title>, <source>Journal of Medical Microbiology</source>. (<year>2002</year>) <volume>51</volume>, no. 3, <fpage>269</fpage>–<lpage>272</lpage>, <pub-id pub-id-type="doi">10.1099/0022-1317-51-3-269</pub-id>, 2-s2.0-0036181918, 11871622.<pub-id pub-id-type="pmid">11871622</pub-id>
+</mixed-citation></ref><ref id="bib-0042"><label>42</label><mixed-citation id="cit-0042" publication-type="journal">
+<string-name name-style="western">
+<surname>Krishnadasan</surname>
+<given-names>B.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Sherbin</surname>
+<given-names>V. L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Vallières</surname>
+<given-names>E.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Karmy-Jones</surname>
+<given-names>R.</given-names>
+</string-name>, <article-title>Surgical Management of Lung Gangrene</article-title>, <source>Canadian Respiratory Journal</source>. (<year>2000</year>) <volume>7</volume>, no. 5, <fpage>401</fpage>–<lpage>404</lpage>, <pub-id pub-id-type="doi">10.1155/2000/174703</pub-id>, 2-s2.0-0033694772.<pub-id pub-id-type="pmid">11058208</pub-id>
+</mixed-citation></ref><ref id="bib-0043"><label>43</label><mixed-citation id="cit-0043" publication-type="journal">
+<string-name name-style="western">
+<surname>Shen</surname>
+<given-names>K. R.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Bribriesco</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Crabtree</surname>
+<given-names>T.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Denlinger</surname>
+<given-names>C.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Eby</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Eiken</surname>
+<given-names>P.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Jones</surname>
+<given-names>D. R.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Keshavjee</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Maldonado</surname>
+<given-names>F.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Paul</surname>
+<given-names>S.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Kozower</surname>
+<given-names>B.</given-names>
+</string-name>, <article-title>The American Association for Thoracic Surgery Consensus Guidelines for the Management of Empyema</article-title>, <source>Journal of Thoracic and Cardiovascular Surgery</source>. (<year>2017</year>) <volume>153</volume>, no. 6, <fpage>e129</fpage>–<lpage>e146</lpage>, <pub-id pub-id-type="doi">10.1016/j.jtcvs.2017.01.030</pub-id>, 2-s2.0-85014388108, 28274565.<pub-id pub-id-type="pmid">28274565</pub-id>
+</mixed-citation></ref><ref id="bib-0044"><label>44</label><mixed-citation id="cit-0044" publication-type="journal">
+<string-name name-style="western">
+<surname>Reimel</surname>
+<given-names>B. A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Krishnadasen</surname>
+<given-names>B.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Cuschieri</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Klein</surname>
+<given-names>M. B.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Gross</surname>
+<given-names>J.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Karmy-Jones</surname>
+<given-names>R.</given-names>
+</string-name>, <article-title>Surgical Management of Acute Necrotizing Lung Infections</article-title>, <source>Canadian Respiratory Journal</source>. (<year>2006</year>) <volume>13</volume>, no. 7, <fpage>369</fpage>–<lpage>373</lpage>, <pub-id pub-id-type="doi">10.1155/2006/760390</pub-id>, 2-s2.0-33751209175.<pub-id pub-id-type="pmid">17036090</pub-id>
+<pub-id pub-id-type="pmcid">PMC2683290</pub-id></mixed-citation></ref><ref id="bib-0045"><label>45</label><mixed-citation id="cit-0045" publication-type="journal">
+<string-name name-style="western">
+<surname>Zaki</surname>
+<given-names>H. A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Albaroudi</surname>
+<given-names>B.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Shaban</surname>
+<given-names>E. E.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Shaban</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Elgassim</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Almarri</surname>
+<given-names>N. D.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Basharat</surname>
+<given-names>K.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Azad</surname>
+<given-names>A. M.</given-names>
+</string-name>, <article-title>Advancement in Pleura Effusion Diagnosis: A Systematic Review and Meta-Analysis of Point-of-Care Ultrasound Versus Radiographic Thoracic Imaging</article-title>, <source>Ultrasound Journal</source>. (<year>2024</year>) <volume>16</volume>, no. 1, <pub-id pub-id-type="doi">10.1186/s13089-023-00356-z</pub-id>, 38261109.<pub-id pub-id-type="pmcid">PMC10805747</pub-id><pub-id pub-id-type="pmid">38261109</pub-id></mixed-citation></ref><ref id="bib-0046"><label>46</label><mixed-citation id="cit-0046" publication-type="journal">
+<string-name name-style="western">
+<surname>Pearce</surname>
+<given-names>C.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Crapnell</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Bedawi</surname>
+<given-names>E. O.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Rahman</surname>
+<given-names>N. M.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Corcoran</surname>
+<given-names>J. P.</given-names>
+</string-name>, <article-title>Pleural Infection: Diagnosis, Management, and Future Directions</article-title>, <source>Journal of Clinical Medicine</source>. (<year>2025</year>) <volume>14</volume>, no. 5, <pub-id pub-id-type="doi">10.3390/jcm14051685</pub-id>, 40095674.<pub-id pub-id-type="pmcid">PMC11899816</pub-id><pub-id pub-id-type="pmid">40095674</pub-id></mixed-citation></ref><ref id="bib-0047"><label>47</label><mixed-citation id="cit-0047" publication-type="journal">
+<string-name name-style="western">
+<surname>Hoffer</surname>
+<given-names>F. A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Bloom</surname>
+<given-names>D. A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Colin</surname>
+<given-names>A. A.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Fishman</surname>
+<given-names>S. J.</given-names>
+</string-name>, <article-title>Lung Abscess Versus Necrotizing Pneumonia: Implications for Interventional Therapy</article-title>, <source>Pediatric Radiology</source>. (<year>1999</year>) <volume>29</volume>, no. 2, <fpage>87</fpage>–<lpage>91</lpage>, <pub-id pub-id-type="doi">10.1007/s002470050547</pub-id>, 2-s2.0-0033047973, 9933325.<pub-id pub-id-type="pmid">9933325</pub-id>
+</mixed-citation></ref></ref-list></back></article>

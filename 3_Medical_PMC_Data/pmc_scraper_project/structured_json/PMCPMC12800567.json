@@ -1,0 +1,18 @@
+{
+    "status": "accepted",
+    "chain_of_ought": "[Article Type: Case Report] In this article, I found the following liver injury-related lab values and clinical outcomes: The patient is a 67-year-old male with severe acute liver injury due to Cytomegalovirus infection. Laboratory tests on admission showed hyperbilirubinemia, hypertransaminasemia, and coagulopathy with INR 2.0. The text mentions a MELD score of 32 based on bilirubin, INR, and creatinine, indicating severe liver dysfunction. Peak values for specific liver function tests are not explicitly stated in the text, but hypertransaminasemia and hyperbilirubinemia are noted, with a decrease of more than 50% in total bilirubin after treatment. The patient received treatment including valganciclovir and DPMAS, leading to clinical and biochemical improvement, discharge, and normalization of liver function tests. Clinical outcome is improved/discharged.",
+    "patient_age": "67",
+    "patient_gender": "Male",
+    "suspected_drug": "Cytomegalovirus infection (not a drug, but the cause of liver injury)",
+    "lab_results": {
+        "ALT": "null",
+        "AST": "null",
+        "ALP": "null",
+        "GGT": "null",
+        "Bilirubin": "Hyperbilirubinemia noted, with >50% decrease after treatment, but no specific peak value and unit provided",
+        "INR": "2.0 (unit not specified, assumed as ratio)",
+        "Albumin": "null"
+    },
+    "clinical_outcome": "Improved/Discharged",
+    "AI_confidence_score": 0.6
+}

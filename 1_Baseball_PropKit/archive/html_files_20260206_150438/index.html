@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PropKit AI | Market Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background-color: #ffffff; color: #1a202c; font-family: 'Inter', sans-serif; }
+        .btn-primary { background-color: #2563eb; color: white; transition: all 0.2s; }
+        .btn-primary:hover { background-color: #1d4ed8; transform: translateY(-1px); box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2); }
+        .grid-pattern { background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 24px 24px; }
+        .hero-shot { background: #0b1215; border: 1px solid #e5e7eb; height: 320px; position: relative; overflow: hidden; }
+        .hero-iframe { width: 1200px; height: 700px; transform: scale(0.45); transform-origin: top left; border: 0; pointer-events: none; }
+        .hero-glow { position: absolute; inset: -20% 10% auto auto; width: 280px; height: 280px; background: rgba(37, 99, 235, 0.2); filter: blur(50px); border-radius: 999px; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col grid-pattern relative">
+    <nav class="w-full py-6 px-8 flex justify-between items-center z-10">
+        <div class="font-bold text-xl tracking-tight text-gray-900">PropKit <span class="text-blue-600">AI</span></div>
+    </nav>
+    <div class="flex-1 flex flex-col items-center justify-center p-6 text-center z-10">
+        <div class="bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-xs font-semibold mb-6 border border-blue-100">Now Tracking 2026 Season Metrics</div>
+        <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 tracking-tight max-w-3xl leading-tight">Data-Driven <br><span class="text-blue-600">Decision Intelligence.</span></h1>
+        <p class="text-lg text-gray-500 mb-10 max-w-xl leading-relaxed">Stop relying on intuition. Access institutional-grade statistical models.</p>
+        <div class="w-full max-w-3xl mb-10 text-left">
+            <div class="hero-shot rounded-2xl shadow-2xl">
+                <div class="hero-glow"></div>
+                <img src="previewbigone.png?v=2026020502" alt="Signals Dashboard Preview" class="w-full h-full object-cover">
+            </div>
+        </div>
+        <div class="w-full max-w-md bg-white p-2 rounded-xl shadow-xl border border-gray-200 flex flex-col md:flex-row gap-2">
+            <input type="email" id="email" placeholder="work@email.com" class="flex-1 bg-gray-50 text-gray-900 px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-blue-500 text-sm">
+            <button onclick="goToCheckout()" id="activate-btn" class="btn-primary px-8 py-3 rounded-lg font-semibold text-sm whitespace-nowrap">Access Live Terminal <span class="text-yellow-300">(3 Spots Left)</span></button>
+        </div>
+        <p id="status-msg" class="mt-4 text-sm text-gray-500 min-h-[20px]"></p>
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 text-gray-400 text-xs font-medium">
+            <span class="flex items-center justify-center sm:justify-start whitespace-nowrap"><i class="fas fa-check-circle text-blue-500 mr-2"></i> 94/100 Signal Strength</span>
+            <span class="flex items-center justify-center sm:justify-start whitespace-nowrap"><i class="fas fa-shield-check text-green-500 mr-2"></i> Verified by Historical Statcast Backtesting</span>
+            <span class="flex items-center justify-center sm:justify-start whitespace-nowrap"><i class="fas fa-chart-line text-purple-500 mr-2"></i> Season Performance: +12.4 Units</span>
+        </div>
+    </div>
+    <footer class="py-6 text-center text-[10px] text-gray-400">
+        <div class="mb-4 text-[10px] text-gray-500 max-w-2xl mx-auto border-t border-gray-200 pt-4 mt-4">
+            <p>DISCLAIMER: PropKit AI is a data analytics platform for informational purposes only. We do not accept wagers. Past performance is not indicative of future results. Not financial advice.</p>
+        </div>
+        <div class="space-x-4 mb-2">
+            <a href="privacy.html" class="hover:text-gray-600 underline">Privacy Policy</a>
+            <a href="terms.html" class="hover:text-gray-600 underline">Terms of Service</a>
+        </div>
+        <p>© 2026 PropKit Analytics LLC. <span class="text-gray-300">v5.0</span></p>
+    </footer>
+    <script>
+        function goToCheckout() {
+            const email = document.getElementById('email').value;
+            
+            if(!email.includes('@')) {
+                document.getElementById('status-msg').innerText = "Please enter a valid email address.";
+                document.getElementById('status-msg').style.color = "red";
+                return;
+            }
+            
+            window.location.href = `checkout.html?email=${encodeURIComponent(email)}`;
+        }
+    </script>
+</body>
+</html>

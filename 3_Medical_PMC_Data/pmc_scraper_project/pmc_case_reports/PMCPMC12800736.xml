@@ -1,0 +1,237 @@
+<article article-type="case-study" dtd-version="1.4" id="crhe9927354" xml:lang="en"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Case Reports Hepatol</journal-id><journal-id journal-id-type="iso-abbrev">Case Reports Hepatol</journal-id><journal-id journal-id-type="pmc-domain-id">2587</journal-id><journal-id journal-id-type="pmc-domain">crimhep</journal-id><journal-id journal-id-type="publisher-id">CRHE</journal-id><journal-title-group><journal-title>Case Reports in Hepatology</journal-title></journal-title-group><issn pub-type="ppub">2090-6587</issn><issn pub-type="epub">2090-6595</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC12800736</article-id><article-id pub-id-type="pmcid-ver">PMC12800736.1</article-id><article-id pub-id-type="pmcaid">12800736</article-id><article-id pub-id-type="pmcaiid">12800736</article-id><article-id pub-id-type="pmid">41542139</article-id><article-id pub-id-type="doi">10.1155/crhe/9927354</article-id><article-id pub-id-type="publisher-id">CRHE9927354</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Case Report</subject></subj-group><subj-group subj-group-type="heading"><subject>Article</subject></subj-group></article-categories><title-group><article-title>An Unforeseen Diagnosis After Liver Transplantation for Acute Liver Failure: Extranodal NK/T‐Cell Lymphoma</article-title></title-group><contrib-group><contrib contrib-type="author" corresp="yes" id="cr-0001"><name name-style="western"><surname>Soares</surname><given-names initials="GL">Giulia L.</given-names></name><contrib-id authenticated="false" contrib-id-type="orcid">https://orcid.org/0000-0001-9409-8050</contrib-id><xref ref-type="aff" rid="aff-0001">
+<sup>1</sup>
+</xref><address><email>giulia.soares@einstein.br</email></address></contrib><contrib contrib-type="author" id="cr-0002"><name name-style="western"><surname>Weffort</surname><given-names initials="BBV">Beatriz B. V.</given-names></name><contrib-id authenticated="false" contrib-id-type="orcid">https://orcid.org/0000-0003-4325-9760</contrib-id><xref ref-type="aff" rid="aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author" id="cr-0003"><name name-style="western"><surname>Makarausky</surname><given-names initials="LVS">Lucas V. S.</given-names></name><contrib-id authenticated="false" contrib-id-type="orcid">https://orcid.org/0009-0000-4006-9836</contrib-id><xref ref-type="aff" rid="aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author" id="cr-0004"><name name-style="western"><surname>Juste</surname><given-names initials="MF">Mariana F.</given-names></name><xref ref-type="aff" rid="aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author" id="cr-0005"><name name-style="western"><surname>Silva</surname><given-names initials="RZ">Renata Z.</given-names></name><contrib-id authenticated="false" contrib-id-type="orcid">https://orcid.org/0009-0001-8415-8299</contrib-id><xref ref-type="aff" rid="aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author" id="cr-0006"><name name-style="western"><surname>Leila</surname><given-names initials="SAC">Samira A. C.</given-names></name><contrib-id authenticated="false" contrib-id-type="orcid">https://orcid.org/0009-0004-3041-0083</contrib-id><xref ref-type="aff" rid="aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author" id="cr-0007"><name name-style="western"><surname>Barros</surname><given-names initials="WKP">Wysterlanyo K. P.</given-names></name><contrib-id authenticated="false" contrib-id-type="orcid">https://orcid.org/0009-0008-1778-6085</contrib-id><xref ref-type="aff" rid="aff-0002">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author" id="cr-0008"><name name-style="western"><surname>Saraiva</surname><given-names initials="AC">Amanda C.</given-names></name><xref ref-type="aff" rid="aff-0003">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author" id="cr-0009"><name name-style="western"><surname>Felga</surname><given-names initials="GE">Guilherme E.</given-names></name><contrib-id authenticated="false" contrib-id-type="orcid">https://orcid.org/0000-0002-0676-4867</contrib-id><xref ref-type="aff" rid="aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author" id="cr-0010"><name name-style="western"><surname>Barbosa</surname><given-names initials="JA">Jackson A.</given-names></name><xref ref-type="aff" rid="aff-0003">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author" id="cr-0011"><name name-style="western"><surname>Hamerschlak</surname><given-names initials="N">Nelson</given-names></name><contrib-id authenticated="false" contrib-id-type="orcid">https://orcid.org/0000-0002-5140-5310</contrib-id><xref ref-type="aff" rid="aff-0002">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author" id="cr-0012"><name name-style="western"><surname>de Rezende</surname><given-names initials="MB">Marcelo B.</given-names></name><contrib-id authenticated="false" contrib-id-type="orcid">https://orcid.org/0000-0001-5594-033X</contrib-id><xref ref-type="aff" rid="aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author" id="cr-0013"><name name-style="western"><surname>Segatelli</surname><given-names initials="V">Vanderlei</given-names></name><contrib-id authenticated="false" contrib-id-type="orcid">https://orcid.org/0000-0002-5588-8508</contrib-id><xref ref-type="aff" rid="aff-0003">
+<sup>3</sup>
+</xref></contrib></contrib-group><contrib-group><contrib contrib-type="editor" id="cr-0014"><name name-style="western"><surname>Komatsu</surname><given-names initials="H">Haruki</given-names></name><address><email>haruki-komatsu@chive.ocn.ne.jp</email></address></contrib></contrib-group><aff id="aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">Liver Unit</named-content>, <institution>Hospital Israelita Albert Einstein</institution>, <city>São Paulo</city>, State of São Paulo, <country>Brazil</country>, <ext-link ext-link-type="uri" xlink:href="http://einstein.br" xmlns:xlink="http://www.w3.org/1999/xlink">einstein.br</ext-link>
+</aff><aff id="aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<named-content content-type="organisation-division">Hematology Department</named-content>, <institution>Hospital Israelita Albert Einstein</institution>, <city>São Paulo</city>, State of São Paulo, <country>Brazil</country>, <ext-link ext-link-type="uri" xlink:href="http://einstein.br" xmlns:xlink="http://www.w3.org/1999/xlink">einstein.br</ext-link>
+</aff><aff id="aff-0003">
+<label>
+<sup>3</sup>
+</label>
+<named-content content-type="organisation-division">Pathology Department</named-content>, <institution>Hospital Israelita Albert Einstein</institution>, <city>São Paulo</city>, State of São Paulo, <country>Brazil</country>, <ext-link ext-link-type="uri" xlink:href="http://einstein.br" xmlns:xlink="http://www.w3.org/1999/xlink">einstein.br</ext-link>
+</aff><pub-date pub-type="epub"><day>14</day><month>1</month><year>2026</year></pub-date><pub-date pub-type="collection"><year>2026</year></pub-date><volume>2026</volume><issue-id pub-id-type="pmc-issue-id">505142</issue-id><elocation-id>9927354</elocation-id><history><date date-type="rev-recd"><day>06</day><month>12</month><year>2025</year></date><date date-type="received"><day>30</day><month>7</month><year>2025</year></date><date date-type="accepted"><day>22</day><month>12</month><year>2025</year></date></history><pub-history><event event-type="pmc-release"><date><day>14</day><month>01</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>15</day><month>01</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-01-16 09:25:14.620"><day>16</day><month>01</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">Copyright © 2026 Giulia L. Soares et al. Case Reports in Hepatology published by John Wiley &amp; Sons Ltd.</copyright-statement><copyright-year>2026</copyright-year><license><ali:license_ref content-type="ccbylicense" specific-use="textmining" xmlns:ali="http://www.niso.org/schemas/ali/1.0/">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/" xmlns:xlink="http://www.w3.org/1999/xlink">https://creativecommons.org/licenses/by/4.0/</ext-link>, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri content-type="pmc-pdf" xlink:href="CRHE-2026-9927354.pdf" xmlns:xlink="http://www.w3.org/1999/xlink"/><self-uri content-type="pdf" xlink:href="file:CRHE-2026-9927354.pdf" xmlns:xlink="http://www.w3.org/1999/xlink"/><abstract><p>Acute liver failure (ALF) is a medical emergency characterized by hepatic encephalopathy in patients with recent‐onset jaundice and coagulopathy. We present a case of a patient who developed ALF secondary to NK/T‐cell lymphoma, with the diagnosis confirmed via histopathological analysis of the explanted after liver transplantation. A 50‐year‐old woman with no significant medical history was transferred to our institution with severe acute liver injury. On admission, she exhibited drowsiness, jaundice, and hepatosplenomegaly. The patient denied alcohol use but reported consuming horsetail tea (<italic toggle="yes">Equisetum</italic> spp). We hypothesized drug‐induced liver injury as the main diagnosis, attributing to the use of horsetail tea. Despite intensive supportive care, her condition continued to deteriorate, prompting urgent deceased‐donor liver transplantation. Histopathological analysis of the explant revealed hepatic parenchyma infiltration by atypical lymphoid cells positive for CD2, CD3, CD8, CD56, and CD38, with Ki‐67 &gt; 95% and positive EBV in situ hybridization. The graft biopsy and appendix showed identical findings, confirming a high‐grade Stage IV extranodal NK/T‐cell lymphoma (ENKTL). Given her critical condition, a modified chemotherapy regimen was initiated. Subsequent complications included severe chemotherapy‐induced pancytopenia, febrile neutropenia, invasive aspergillosis, and multiorgan failure, culminating in death 33 days post‐transplant. This case highlights the diagnostic challenges of rare non‐Hodgkin lymphoma with extranodal presentations. Although horsetail tea is associated with liver injury, its contribution to ALF remains insufficiently defined, reinforcing the importance of excluding alternative causes. ENKTL and other malignancies should be considered in indeterminate ALF, even without imaging findings, atypical lymphocytes in peripheral blood/ascites, or overt clinical suspicion of malignancy.</p></abstract><counts><fig-count count="3"/><table-count count="1"/><ref-count count="10"/><page-count count="4"/><word-count count="1579"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.6.8 mode:remove_FC converted:14.01.2026</meta-value></custom-meta></custom-meta-group></article-meta><notes><p content-type="self-citation">
+<mixed-citation id="crhe9927354-cit-2001" publication-type="journal">
+<string-name name-style="western">
+<surname>Soares</surname>, <given-names>Giulia L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Weffort</surname>, <given-names>Beatriz B. V.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Makarausky</surname>, <given-names>Lucas V. S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Juste</surname>, <given-names>Mariana F.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Silva</surname>, <given-names>Renata Z.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Leila</surname>, <given-names>Samira A. C.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Barros</surname>, <given-names>Wysterlanyo K. P.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Saraiva</surname>, <given-names>Amanda C.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Felga</surname>, <given-names>Guilherme E.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Barbosa</surname>, <given-names>Jackson A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Hamerschlak</surname>, <given-names>Nelson</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>de Rezende</surname>, <given-names>Marcelo B.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Segatelli</surname>, <given-names>Vanderlei</given-names>
+</string-name>, 
+<article-title>An Unforeseen Diagnosis After Liver Transplantation for Acute Liver Failure: Extranodal NK/T‐Cell Lymphoma</article-title>, 
+<source>Case Reports in Hepatology</source>, <volume>2026</volume>, <elocation-id>9927354</elocation-id>, 4 pages, <year>2026</year>. 
+<pub-id pub-id-type="doi">10.1155/crhe/9927354</pub-id>
+</mixed-citation>
+</p><fn-group><fn id="note-0001"><p>
+<bold>Academic Editor:</bold> Haruki Komatsu</p></fn></fn-group></notes></front><body><sec id="sec-0001"><title>1. Introduction</title><p>Severe acute liver injury (ALI) is a syndrome characterized by liver damage with impaired function, in a patient without chronic liver disease. Acute liver failure (ALF) may develop as a progression of ALI and is a medical emergency defined by hepatic encephalopathy in patients with recent‐onset jaundice and coagulopathy. It typically requires specialized intensive care and often urgent liver transplantation. Identifying the underlying etiology of ALF is critical, as it may guide bridge therapies to transplantation or, in some cases, eliminate the need for transplantation through targeted treatments. Diagnosing ALF secondary to neoplastic infiltration of the hepatic parenchyma is particularly challenging. We present a case of a patient who developed ALF initially attributed to herb‐induced liver injury (HILI) due to horsetail tea but was ultimately determined to be secondary to natural killer (NK)/T‐cell lymphoma, with the diagnosis confirmed via histopathological analysis of the explant after liver transplantation.</p></sec><sec id="sec-0002"><title>2. Case Report</title><p>A 50‐year‐old woman with no significant medical history presented a 2‐week history of fatigue, nausea, and vomiting. She was transferred to our institution with severe ALI. On hospital admission, she manifested drowsiness, jaundice, and hepatosplenomegaly. Notable laboratory findings are described in Table <xref ref-type="table" rid="tbl-0001">1</xref>, corresponding to a MELD‐Na score of 27. Imaging studies revealed heterogeneous hepatomegaly, medius splenomegaly, moderate amount of free fluid in the peritoneal cavity, and Doppler study of the portal system within normal limits. There were no signs of neurological compromise at clinical presentation. Serologies for hepatotropic and nonhepatotropic viruses, autoantibodies panels, Alpha‐1‐antitrypsin, ceruloplasmin, and infectious screening were negative. The patient denied alcohol use but reported consuming horsetail tea (<italic toggle="yes">Equisetum spp.</italic>) some days before the initial symptoms. Liver enzymes continued to rise, and plasmapheresis was indicated, due to progressive laboratory deterioration and increase in MELD‐Na to 30. After plasmapheresis, a diagnostic paracentesis was performed, revealing a serum‐ascites albumin gradient consistent with portal hypertension but no other significant findings. Vasoactive agents were not required up until this moment.</p><table-wrap content-type="Table" id="tbl-0001" orientation="portrait" position="float"><label>Table 1</label><caption><p>Laboratory findings at hospital admission.</p></caption><table frame="hsides" rules="groups"><col span="1"/><col span="1"/><col span="1"/><thead><tr><th align="left" colspan="1" rowspan="1">Laboratory findings at hospital admission</th><th align="center" colspan="1" rowspan="1">Result</th><th align="center" colspan="1" rowspan="1">Reference range</th></tr></thead><tbody><tr><td align="left" colspan="1" rowspan="1">Hemoglobin (mg/dL)</td><td align="center" colspan="1" rowspan="1">10.1</td><td align="center" colspan="1" rowspan="1">12–15.5</td></tr><tr><td align="left" colspan="1" rowspan="1">Hematocrit (%)</td><td align="center" colspan="1" rowspan="1">28.2</td><td align="center" colspan="1" rowspan="1">35–45</td></tr><tr><td align="left" colspan="1" rowspan="1">Mean corpuscular volume (fL)</td><td align="center" colspan="1" rowspan="1">83.4</td><td align="center" colspan="1" rowspan="1">82–98</td></tr><tr><td align="left" colspan="1" rowspan="1">Mean corpuscular hemoglobin (pg)</td><td align="center" colspan="1" rowspan="1">35.8</td><td align="center" colspan="1" rowspan="1">26–34</td></tr><tr><td align="left" colspan="1" rowspan="1">Red cell distribution width (%)</td><td align="center" colspan="1" rowspan="1">17.2</td><td align="center" colspan="1" rowspan="1">11.5–16.5</td></tr><tr><td align="left" colspan="1" rowspan="1">Leukocytes (mm<sup>3</sup>)</td><td align="center" colspan="1" rowspan="1">6410</td><td align="center" colspan="1" rowspan="1">3500–10,500</td></tr><tr><td align="left" colspan="1" rowspan="1">Segmented neutrophils (mm<sup>3</sup>)</td><td align="center" colspan="1" rowspan="1">3397</td><td align="center" colspan="1" rowspan="1">1700–8000</td></tr><tr><td align="left" colspan="1" rowspan="1">Lymphocytes (mm<sup>3</sup>)</td><td align="center" colspan="1" rowspan="1">1154</td><td align="center" colspan="1" rowspan="1">900–2900</td></tr><tr><td align="left" colspan="1" rowspan="1">Platelets (μL)</td><td align="center" colspan="1" rowspan="1">110,000</td><td align="center" colspan="1" rowspan="1">150,000–450,000</td></tr><tr><td align="left" colspan="1" rowspan="1">INR</td><td align="center" colspan="1" rowspan="1">2.03</td><td align="center" colspan="1" rowspan="1">0.96–1.30</td></tr><tr><td align="left" colspan="1" rowspan="1">AST (U/L)</td><td align="center" colspan="1" rowspan="1">2084</td><td align="center" colspan="1" rowspan="1">&lt; 32</td></tr><tr><td align="left" colspan="1" rowspan="1">ALT (U/L)</td><td align="center" colspan="1" rowspan="1">1336</td><td align="center" colspan="1" rowspan="1">10–35</td></tr><tr><td align="left" colspan="1" rowspan="1">ALP (U/L)</td><td align="center" colspan="1" rowspan="1">744</td><td align="center" colspan="1" rowspan="1">35–104</td></tr><tr><td align="left" colspan="1" rowspan="1">GGT (U/L)</td><td align="center" colspan="1" rowspan="1">753</td><td align="center" colspan="1" rowspan="1">5–36</td></tr><tr><td align="left" colspan="1" rowspan="1">Total bilirubin (mg/dL)</td><td align="center" colspan="1" rowspan="1">21.4</td><td align="center" colspan="1" rowspan="1">&lt; 1.2</td></tr><tr><td align="left" colspan="1" rowspan="1">Direct bilirubin (mg/dL)</td><td align="center" colspan="1" rowspan="1">19.8</td><td align="center" colspan="1" rowspan="1">&lt; 0.3</td></tr></tbody></table><table-wrap-foot><fn id="note-0002"><p>
+<italic toggle="yes">Note:</italic> AST: aspartate aminotransferase; ALT: alanine aminotransferase; ALP: alkaline phosphatase; GGT: gamma‐glutamyltransferase.</p></fn><fn id="note-0003"><p>Abbreviation: INR, international normalized ratio.</p></fn></table-wrap-foot></table-wrap><p>A transjugular liver biopsy was performed to further refine differential diagnosis, which revealed histologic features consistent with acute lobular hepatitis. The biopsy specimen included areas with sparse lymphoid cells; however, it did not contain a sufficiently dense lymphoid infiltrate to warrant additional immunohistochemical staining or further characterization of the lymphocytes. Based on this information, HILI secondary to horsetail tea was the main diagnostic hypothesis. Despite intensive supportive care, there was no clinical or laboratory improvement. Her condition continued to deteriorate by progressing to ALF and prompting urgent deceased‐donor liver transplantation. The liver transplantation occurred twelve days after hospital admission, with no intraoperative complications.</p><p>The postoperative course was marked by persistent cholestasis, suggestive of biliary stenosis, leading to an endoscopic retrograde cholangiopancreatography. On Postoperative Day 11, she developed a perforated acute abdomen requiring exploratory laparotomy to perform repairs. A tactical appendectomy and liver graft biopsy were also conducted. Histopathological analysis of the explant revealed hepatic parenchyma infiltration by atypical lymphoid cells positive for CD2, CD3, CD8, CD56, and CD38, with Ki‐67 &gt; 95% and positive Epstein–Barr virus (EBV) in situ hybridization. The graft biopsy and appendix showed identical findings, supporting the diagnosis of a high‐grade Stage IV extranodal NK/T‐cell lymphoma (ENKTL) (Figures <xref ref-type="fig" rid="figpt-0001">1(a)</xref>, <xref ref-type="fig" rid="figpt-0002">1(b)</xref>, and <xref ref-type="fig" rid="figpt-0003">1(c)</xref>). Due to clinical impairment, a modified chemotherapy regimen with cyclophosphamide, doxorubicin, and prednisone was initiated. Vincristine was omitted due to metabolic ileus, doxorubicin reduced by 75%, and cyclophosphamide by 25%, due to hepatic impairment. The patient showed no clinical improvement despite treatment, and subsequent complications included severe chemotherapy‐induced pancytopenia, febrile neutropenia, invasive aspergillosis, septic shock, culminating in multiorgan failure, and death 33 days post‐transplant. No written consent has been obtained from the patients as there are no patient identifiable data included in this case report.</p><fig-group content-type="Figure" id="fig-0001" orientation="portrait" position="float"><label>Figure 1</label><caption><p>Explant liver biopsy. (a) Neoplastic cells show focal and diffuse involvement of the liver parenchyma (hematoxylin and eosin, 20x and 200x). (b) <italic toggle="yes">In situ</italic> hybridization reveals EBV‐positive neoplastic cells (Epstein–Barr virus–encoded small RNAs, 20x). (c) Immunohistochemistry shows neoplastic cells positive for CD3 (left) and CD56 (right) (200x).</p></caption><fig fig-type="Figure" id="figpt-0001" orientation="portrait" position="anchor"><caption><p>(a)</p></caption><graphic id="jats-graphic-1" orientation="portrait" position="anchor" xlink:href="CRHE-2026-9927354-g001.jpg" xmlns:xlink="http://www.w3.org/1999/xlink"/></fig><fig fig-type="Figure" id="figpt-0002" orientation="portrait" position="anchor"><caption><p>(b)</p></caption><graphic id="jats-graphic-3" orientation="portrait" position="anchor" xlink:href="CRHE-2026-9927354-g002.jpg" xmlns:xlink="http://www.w3.org/1999/xlink"/></fig><fig fig-type="Figure" id="figpt-0003" orientation="portrait" position="anchor"><caption><p>(c)</p></caption><graphic id="jats-graphic-5" orientation="portrait" position="anchor" xlink:href="CRHE-2026-9927354-g003.jpg" xmlns:xlink="http://www.w3.org/1999/xlink"/></fig></fig-group></sec><sec id="sec-0003"><title>3. Discussion</title><p>This case of a 50‐year‐old woman with ALF initially attributed to horsetail tea underscores the diagnostic complexity of rare ALF etiologies. Extensive investigation must rule out viral, autoimmune, vascular, metabolic, and ischemic causes, but malignancy is sometimes overlooked.</p><p>T‐ and NK‐cell are non‐Hodgkin lymphomas (NHLs), derived from immature T‐cells or, more commonly from mature T‐ and NK‐cells. More than 30 neoplastic entities are recognized by the International Consensus Classification and by the World Health Organization [<xref ref-type="bibr" rid="bib-0001">1</xref>]. ENKTL is an aggressive type of NK/T‐cell lymphoma associated with EBV infection, having an intermediate to a poor prognosis according to staging [<xref ref-type="bibr" rid="bib-0002">2</xref>]. Although it most frequently involves the nasal cavity, it can also present at extranasal sites, such as the gastrointestinal tract, lung, and liver. ALF secondary to NK/T‐cell lymphoma is very uncommon, with only two prior cases reported [<xref ref-type="bibr" rid="bib-0003">3</xref>, <xref ref-type="bibr" rid="bib-0004">4</xref>]. Both patients presented with jaundice, encephalopathy, and ascites, with lymphomatous infiltration confirmed only via liver biopsy or explant. As noted by Rajvanshi et al., hepatic involvement in lymphomas is typically asymptomatic, manifesting as isolated ALP elevation. Additionally, ALF due to neoplastic infiltration is rare, and imaging modalities such as computed tomography may lack diagnostic utility in infiltrative patterns mimicking viral or drug‐induced hepatitis [<xref ref-type="bibr" rid="bib-0005">5</xref>].</p><p>The American College of Gastroenterology recommends liver biopsy for ALF with suspected infiltrative or autoimmune disease. However, evidence supporting its diagnostic superiority over clinical assessment alone remains limited [<xref ref-type="bibr" rid="bib-0006">6</xref>]. Histologic findings in NK/T‐cell lymphomas may be nonspecific without clinical correlation [<xref ref-type="bibr" rid="bib-0007">7</xref>]. Differently from the previous case reports, our patient did not present initially with encephalopathy or ascites. The initial biopsy showed no evidence of malignancy, which made horsetail tea the most plausible explanation for the injury. A systematic review and meta‐analysis of 446 case reports found that HILI is normally associated with a good prognosis, once the toxic product is withdrawn. Horsetail tea use was described only in 4.4% of reported cases, and the most common clinical presentation was jaundice (46.3%). Only 6.6% of all HILI’s cases deteriorated into ALF and required liver transplantation. Concerning liver injury tests, ALP was overall elevated two times its respective upper limit of normality [<xref ref-type="bibr" rid="bib-0008">8</xref>]. Moreover, even though our patient ceased exposure to potentially hepatotoxic herbal products weeks before, there was no clinical or biochemical improvement.</p><p>On the other hand, hepatic infiltration in lymphomas is found in 16%–27% of NHL patients via percutaneous biopsy and 52%–56% via laparotomy or autopsy [<xref ref-type="bibr" rid="bib-0009">9</xref>]. Thompson et al. described four cases of lymphoma‐induced ALF referred for liver transplantation. All patients had ALF symptoms without initial lymphadenopathy, though hepatomegaly was universal. One patient achieved remission with chemotherapy. B‐cell NHL was more frequent (3/4 cases) than Hodgkin lymphoma. In one case, transjugular biopsy initially showed only inflammatory cells without immunohistochemistry; post‐transplant explant analysis revealed malignancy, similarly to our patient [<xref ref-type="bibr" rid="bib-0010">10</xref>]. The diagnosis was confirmed only post‐transplant, with a diffuse lymphomatous infiltration identified in the explanted native liver, graft, and appendix, supporting the causality of the aggressive neoplastic disease and the liver failure. As this was such a rapid progression of a high‐grade NHL, a new diagnostic interpretation was made that the initial presentation of ALF occurred due to neoplastic infiltration.</p><p>This highlights the diagnostic challenges of rare NHL with extranodal presentations. Although horsetail tea is associated with liver injury, its contribution to ALF remains insufficiently defined, reinforcing the importance of excluding alternative causes. ENKTL and other malignancies should be considered in indeterminate ALF, even without imaging findings, atypical lymphocytes in peripheral blood/ascites, or overt clinical suspicion of malignancy.</p></sec><sec id="sec-0004"><title>Consent</title><p>Written informed consent was not obtained due to the patient’s death prior to manuscript preparation. The case is presented in an anonymized manner, with no identifiable personal data.</p></sec><sec id="sec-0005" sec-type="COI-statement"><title>Conflicts of Interest</title><p>The authors declare no conflicts of interest.</p></sec><sec id="sec-0006"><title>Funding</title><p>No funding was received for this manuscript.</p></sec></body><back><ref-list><ref id="bib-0001"><label>1</label><mixed-citation id="cit-0001" publication-type="journal">
+<string-name name-style="western">
+<surname>de Leval</surname>
+<given-names>L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Gaulard</surname>
+<given-names>P.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Dogan</surname>
+<given-names>A.</given-names>
+</string-name>, <article-title>A Practical Approach to the Modern Diagnosis and Classification of T- and NK-Cell Lymphomas</article-title>, <source>Blood</source>. (<year>2024</year>) <volume>144</volume>, no. 18, <fpage>1855</fpage>–<lpage>1872</lpage>, <pub-id pub-id-type="doi">10.1182/blood.2023021786</pub-id>.<pub-id pub-id-type="pmid">38728419</pub-id>
+<pub-id pub-id-type="pmcid">PMC11830980</pub-id></mixed-citation></ref><ref id="bib-0002"><label>2</label><mixed-citation id="cit-0002" publication-type="journal">
+<string-name name-style="western">
+<surname>Chan</surname>
+<given-names>W. L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Hue</surname>
+<given-names>S. S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Deng</surname>
+<given-names>L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Leong</surname>
+<given-names>S. M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Chng</surname>
+<given-names>W. J.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Ng</surname>
+<given-names>S. B.</given-names>
+</string-name>, <article-title>Extranodal NK/T-Cell Lymphoma: An Update of the Molecular Characterization of the Tumor and Microenvironment, and Its Clinical Implications</article-title>, <source>Lancet Regional Health, Western Pacific</source>. (<year>2025</year>) <volume>62</volume>, <pub-id pub-id-type="doi">10.1016/j.lanwpc.2025.101646</pub-id>.<pub-id pub-id-type="pmcid">PMC12541150</pub-id><pub-id pub-id-type="pmid">41132165</pub-id></mixed-citation></ref><ref id="bib-0003"><label>3</label><mixed-citation id="cit-0003" publication-type="journal">
+<string-name name-style="western">
+<surname>Dellon</surname>
+<given-names>E. S.</given-names>
+</string-name>, <article-title>Acute Liver Failure Due to Natural Killer-like T-Cell Leukemia/Lymphoma: A Case Report and Review of the Literature</article-title>, <source>World Journal of Gastroenterology</source>. (<year>2006</year>) <volume>12</volume>, no. 25, <fpage>4089</fpage>–<lpage>4092</lpage>, <pub-id pub-id-type="doi">10.3748/wjg.v12.i25.4089</pub-id>, 2-s2.0-33746238289.<pub-id pub-id-type="pmid">16810767</pub-id>
+<pub-id pub-id-type="pmcid">PMC4087729</pub-id></mixed-citation></ref><ref id="bib-0004"><label>4</label><mixed-citation id="cit-0004" publication-type="journal">
+<string-name name-style="western">
+<surname>Lee</surname>
+<given-names>J. H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Kim</surname>
+<given-names>S. H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Kim</surname>
+<given-names>S. H.</given-names>
+</string-name> et al., <article-title>An Aggressive Natural Killer Cell Lymphoma Presenting as Acute Liver Failure With Ascites</article-title>, <source>Korean Journal of Internal Medicine</source>. (<year>2016</year>) <volume>90</volume>, no. 1, <fpage>32</fpage>–<lpage>36</lpage>, <pub-id pub-id-type="doi">10.3904/kjm.2016.90.1.32</pub-id>.</mixed-citation></ref><ref id="bib-0005"><label>5</label><mixed-citation id="cit-0005" publication-type="journal">
+<string-name name-style="western">
+<surname>Rajvanshi</surname>
+<given-names>P.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Kowdley</surname>
+<given-names>K. V.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Hirota</surname>
+<given-names>W. K.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Meyers</surname>
+<given-names>J. B.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Keeffe</surname>
+<given-names>E. B.</given-names>
+</string-name>, <article-title>Fulminant Hepatic Failure Secondary to Neoplastic Infiltration of the Liver</article-title>, <source>Journal of Clinical Gastroenterology</source>. (<year>2005</year>) <volume>39</volume>, no. 4, <fpage>339</fpage>–<lpage>343</lpage>, <pub-id pub-id-type="doi">10.1097/01.mcg.0000155123.97418.06</pub-id>, 2-s2.0-15344351265.<pub-id pub-id-type="pmid">15758630</pub-id>
+</mixed-citation></ref><ref id="bib-0006"><label>6</label><mixed-citation id="cit-0006" publication-type="journal">
+<string-name name-style="western">
+<surname>Bunchorntavakul</surname>
+<given-names>C.</given-names>
+</string-name> and 
+<string-name name-style="western">
+<surname>Reddy</surname>
+<given-names>K. R.</given-names>
+</string-name>, <article-title>Hepatic Manifestations of Lymphoproliferative Disorders</article-title>, <source>Clinics in Liver Disease</source>. (<year>2019</year>) <volume>23</volume>, no. 2, <fpage>293</fpage>–<lpage>308</lpage>, <pub-id pub-id-type="doi">10.1016/j.cld.2018.12.010</pub-id>, 2-s2.0-85062213982.<pub-id pub-id-type="pmid">30947878</pub-id>
+</mixed-citation></ref><ref id="bib-0007"><label>7</label><mixed-citation id="cit-0007" publication-type="journal">
+<string-name name-style="western">
+<surname>Shi</surname>
+<given-names>Y.</given-names>
+</string-name> and 
+<string-name name-style="western">
+<surname>Wang</surname>
+<given-names>E.</given-names>
+</string-name>, <article-title>Hepatosplenic T-Cell Lymphoma: A Clinicopathologic Review With an Emphasis on Diagnostic Differentiation From Other T-Cell/Natural Killer–Cell Neoplasms</article-title>, <source>Archives of Pathology and Laboratory Medicine</source>. (<year>2015</year>) <volume>139</volume>, no. 9, <fpage>1173</fpage>–<lpage>1180</lpage>, <pub-id pub-id-type="doi">10.5858/arpa.2014-0079-rs</pub-id>, 2-s2.0-84941702430.<pub-id pub-id-type="pmid">26317456</pub-id>
+</mixed-citation></ref><ref id="bib-0008"><label>8</label><mixed-citation id="cit-0008" publication-type="journal">
+<string-name name-style="western">
+<surname>Ballotin</surname>
+<given-names>V. R.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Bigarella</surname>
+<given-names>L. G.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Brandão</surname>
+<given-names>A. B. M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Balbinot</surname>
+<given-names>R. A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Balbinot</surname>
+<given-names>S. S.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Soldera</surname>
+<given-names>J.</given-names>
+</string-name>, <article-title>Herb-Induced Liver Injury: Systematic Review and Meta-Analysis</article-title>, <source>World Journal of Clinical Cases</source>. (<year>2021</year>) <volume>9</volume>, no. 20, <fpage>5490</fpage>–<lpage>5513</lpage>, <pub-id pub-id-type="doi">10.12998/wjcc.v9.i20.5490</pub-id>.<pub-id pub-id-type="pmid">34307603</pub-id>
+<pub-id pub-id-type="pmcid">PMC8281430</pub-id></mixed-citation></ref><ref id="bib-0009"><label>9</label><mixed-citation id="cit-0009" publication-type="journal">
+<string-name name-style="western">
+<surname>Thompson</surname>
+<given-names>D. R.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Faust</surname>
+<given-names>T. W.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Stone</surname>
+<given-names>M. J.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Polter</surname>
+<given-names>D. E.</given-names>
+</string-name>, <article-title>Hepatic Failure as the Presenting Manifestation of Malignant Lymphoma</article-title>, <source>Clinical Lymphoma</source>. (<year>2001</year>) <volume>2</volume>, no. 2, <fpage>123</fpage>–<lpage>128</lpage>, <pub-id pub-id-type="doi">10.3816/clm.2001.n.018</pub-id>, 2-s2.0-0034780113.<pub-id pub-id-type="pmid">11707855</pub-id>
+</mixed-citation></ref><ref id="bib-0010"><label>10</label><mixed-citation id="cit-0010" publication-type="journal">
+<string-name name-style="western">
+<surname>Shingina</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Mukhtar</surname>
+<given-names>N. A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Wakim-Fleming</surname>
+<given-names>J.</given-names>
+</string-name> et al., <article-title>Acute Liver Failure Guidelines</article-title>, <source>American Journal of Gastroenterology</source>. (<year>2023</year>) <volume>118</volume>, no. 7, <fpage>1128</fpage>–<lpage>1153</lpage>, <pub-id pub-id-type="doi">10.14309/ajg.0000000000002340</pub-id>.<pub-id pub-id-type="pmid">37377263</pub-id>
+</mixed-citation></ref></ref-list></back></article>

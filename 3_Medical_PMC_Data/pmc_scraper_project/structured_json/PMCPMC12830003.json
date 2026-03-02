@@ -1,0 +1,18 @@
+{
+    "status": "accepted",
+    "chain_of_thought": "[Article Type: Case Report] In this article, I found the following liver injury-related lab values and clinical outcomes: The patient is a 64-year-old Filipino woman with hepatic angiosarcoma and chronic schistosomiasis, presenting with acute decompensated cirrhosis. The text includes a table with key laboratory results showing peak values for liver function tests: ALT 67 U/L, AST 145 U/L, total bilirubin 52.3 mg/dL, INR 2.7, and serum albumin 1.4 g/dL. ALP and GGT are not mentioned in the provided text. The clinical outcome is death, as the patient died despite aggressive supportive care. No suspected drug is mentioned, as the liver injury is attributed to the underlying conditions rather than medication.",
+    "patient_age": "64",
+    "patient_gender": "Female",
+    "suspected_drug": null,
+    "lab_results": {
+        "ALT": "67 U/L",
+        "AST": "145 U/L",
+        "ALP": null,
+        "GGT": null,
+        "Bilirubin": "52.3 mg/dL (total bilirubin)",
+        "INR": "2.7",
+        "Albumin": "1.4 g/dL"
+    },
+    "clinical_outcome": "Death",
+    "AI_confidence_score": 0.9
+}
