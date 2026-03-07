@@ -1,7 +1,0 @@
-tunnel: 86148ff9-84e3-44ad-ab47-e48805edf1fc
-credentials-file: C:\Users\Administrator\.cloudflared\86148ff9-84e3-44ad-ab47-e48805edf1fc.json
-
-ingress:
-  - hostname: api.propkitai.tech
-    service: http://localhost:8000
-  - service: http_status:404
