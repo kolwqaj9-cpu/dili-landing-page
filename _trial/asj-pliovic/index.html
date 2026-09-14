@@ -12,37 +12,106 @@ html{color-scheme:light;background:#f7f4ea}
 body{font:16px/1.5 Georgia,serif;max-width:720px;margin:28px auto;padding:0 18px;background:#f7f4ea;color:#1a1a1a}
 .banner{background:#5a1a1a;color:#fff;padding:10px 12px;font:13px/1.4 sans-serif}
 .brand{background:#143d1a;color:#fff;padding:10px 12px;font:13px/1.4 sans-serif;margin-top:8px}
-qbox{display:block;background:#111;color:#e8ffe8;padding:12px;font:15px/1.45 Consolas,monospace;margin:16px 0}
-h1,h2,p,li{color:#1a1a1a}
-ol{margin:8px 0 8px 22px}
+input#q{width:100%;box-sizing:border-box;font:16px/1.4 Consolas,monospace;padding:10px;margin:12px 0;background:#111;color:#e8ffe8;border:1px solid #4a6}
+#hits li{margin:0 0 10px}
 .cite{color:#0645ad;font:13px sans-serif}
+.miss{color:#666;font:14px sans-serif}
 .foot{font:12px/1.4 sans-serif;color:#555;border-top:1px solid #ddd;margin-top:28px;padding-top:12px}
 a{color:#0645ad}
 img.clip{display:block;width:100%;max-width:720px;height:auto;background:#111;margin:16px 0}
+.note{font:13px/1.4 sans-serif;color:#444}
 </style>
 </head>
 <body>
-<p class="banner">PRIVATE TRIAL. Not ASJ, Continental. Not a bid. Not for search ranking. Confirm on the public PDF before anyone works on a machine. This URL is noindex.</p>
+<p class="banner">PRIVATE TRIAL. Not ASJ, Continental. Not a bid. Not for search ranking. Search runs on this page only. Confirm on the public PDF before anyone works on a machine. This URL is noindex.</p>
 <p class="brand">Source in this trial: ASJ product page: Continental Pliovic Multipurpose Hose<br>Public URL: <a href="https://www.asjhose.com/product/continental-pliovic-multipurpose-hose/">https://www.asjhose.com/product/continental-pliovic-multipurpose-hose/</a></p>
 <p><img class="clip" width="720" height="340" alt="lookup clip" src="hook.gif"></p>
-<h1>One question</h1>
-<p>The box is already filled. Press lookup.</p>
-<p class="qbox" id="q">Continental Pliovic PLUS 3/8 in — what will it carry, and at what pressure and temperature?</p>
-<button type="button" id="go">Lookup</button>
-<div id="ans">
-<h2>From the public source</h2>
-<ol>
-<li><strong>Lightweight general purpose hose for air, water and many spray solutions. Industrial, construction, agricultural hand sprayers.</strong><br><span class="cite">Cite: Description / Application, page 1</span></li>
-<li><strong>Non-conductive, minimum electrical resistance greater than one megohm per inch at 1000 Volts DC.</strong><br><span class="cite">Cite: Description, page 1</span></li>
-<li><strong>Temperature Range -10 F to 158 F. Branding Continental Pliovic PLUS 3/8 in ID 250 PSI WP. Lengths listed 50, 75, 100 ft.</strong><br><span class="cite">Cite: Temperature / Branding, page 1</span></li>
-</ol>
-<p>This page does not replace lockout/tagout or the factory book. If a cite is wrong, say so — that is the test.</p>
-</div>
-<p class="foot">Shop: <a href="https://dilisights.com/">https://dilisights.com/</a>. Private path on dilisights.com. Confirm cites on the public PDF. Fifteen US dollars per finished page, paid on delivery.</p>
+<h1>Lookup on this page</h1>
+<p class="note">Type in the box. Matches run here on the phone, from lines already taken from the public source. Hidden tags are not shown. This is not a live model.</p>
+<p><input id="q" type="search" spellcheck="false" placeholder="Type a question from the book" value="Continental Pliovic PLUS 3/8 in — what will it carry, and at what pressure and temperature?" aria-label="Lookup"></p>
+<div id="hits"></div>
+<p class="foot">Shop: <a href="https://dilisights.com/">https://dilisights.com/</a>. Fifteen US dollars per finished page, paid on delivery. Confirm cites on the public PDF.</p>
 <script>
-document.getElementById('go').onclick=function(){
-  document.getElementById('ans').hidden=false;
-};
-window.addEventListener('DOMContentLoaded', function(){ document.getElementById('go').click(); });
+
+function pocketNorm(s){
+  return String(s||'').toLowerCase().replace(/[^a-z0-9+\./]+/g,' ').replace(/\s+/g,' ').trim();
+}
+function pocketLev(a,b){
+  a=String(a); b=String(b);
+  if(a===b) return 0;
+  var m=a.length,n=b.length;
+  if(!m) return n; if(!n) return m;
+  var p=new Array(n+1), c=new Array(n+1), i,j;
+  for(j=0;j<=n;j++) p[j]=j;
+  for(i=1;i<=m;i++){
+    c[0]=i;
+    for(j=1;j<=n;j++){
+      var cost=a.charAt(i-1)===b.charAt(j-1)?0:1;
+      c[j]=Math.min(c[j-1]+1,p[j]+1,p[j-1]+cost);
+    }
+    for(j=0;j<=n;j++) p[j]=c[j];
+  }
+  return p[n];
+}
+function pocketHay(row){
+  return pocketNorm([row.text,row.where,row.page].concat(row.search_tags||[]).join(' '));
+}
+function pocketTokHit(tok, hay){
+  if(!tok) return false;
+  if(hay.indexOf(tok)>=0) return true;
+  if(tok.length<4) return false;
+  var words=hay.split(' ');
+  for(var i=0;i<words.length;i++){
+    var w=words[i];
+    if(!w) continue;
+    if(w.indexOf(tok)===0 || tok.indexOf(w)===0 && w.length>=4) return true;
+    if(Math.abs(w.length-tok.length)<=1 && pocketLev(w,tok)<=1) return true;
+  }
+  return false;
+}
+function pocketSearch(rows, q){
+  var toks=pocketNorm(q).split(' ').filter(function(t){
+    if(t.length<2) return false;
+    var stop=' what will which that this from with the and for are was how who ';
+    return stop.indexOf(' '+t+' ')<0;
+  });
+  if(!toks.length) return [];
+  var out=[];
+  for(var r=0;r<rows.length;r++){
+    var hay=pocketHay(rows[r]);
+    var hit=0;
+    for(var i=0;i<toks.length;i++) if(pocketTokHit(toks[i], hay)) hit++;
+    var score=hit/toks.length;
+    if(score>=0.5) out.push({row:rows[r], score:score});
+  }
+  out.sort(function(a,b){return b.score-a.score;});
+  return out;
+}
+
+var ROWS = [{"id": "r1", "text": "Lightweight general purpose hose for air, water and many spray solutions. Industrial, construction, agricultural hand sprayers.", "where": "Description / Application", "page": 1, "search_tags": ["lightweight", "general", "purpose", "carry", "hose", "line", "tubing", "for", "air", "compressed air", "water", "potable water", "and", "many", "spray", "sprayers", "spray solutions", "solutions.", "industrial", "construction", "agricultural", "hand", "sprayers.", "description", "application", "what it carries", "media", "continental", "pliovic", "pliovic plus", "continental pliovic", "plus", "3/8", "in", "what", "will", "it", "at", "pressure", "psi", "wp", "working pressure", "temperature", "temp", "temps", "heat range"]}, {"id": "r2", "text": "Non-conductive, minimum electrical resistance greater than one megohm per inch at 1000 Volts DC.", "where": "Description", "page": 1, "search_tags": ["non", "conductive", "minimum", "electrical", "resistance", "greater", "than", "one", "megohm", "per", "inch", "at", "1000", "volts", "dc.", "description"]}, {"id": "r3", "text": "Temperature Range -10 F to 158 F. Branding Continental Pliovic PLUS 3/8 in ID 250 PSI WP. Lengths listed 50, 75, 100 ft.", "where": "Temperature / Branding", "page": 1, "search_tags": ["temperature", "temp", "temps", "heat range", "range", "10", "to", "158", "f.", "branding", "continental", "pliovic", "pliovic plus", "continental pliovic", "plus", "3/8", "in", "id", "250", "psi", "wp.", "lengths", "listed", "50", "75", "100", "ft.", "10 f", "158 f", "250 psi"]}];
+var DEFAULT_Q = "Continental Pliovic PLUS 3/8 in \u2014 what will it carry, and at what pressure and temperature?";
+function draw(q){
+  var box = document.getElementById('hits');
+  var hits = pocketSearch(ROWS, q);
+  if(!hits.length){
+    box.innerHTML = '<p class="miss">No line on this page matched. Try a word from the public source. Confirm on the factory PDF.</p>';
+    return;
+  }
+  var html = '<ol>';
+  for(var i=0;i<hits.length;i++){
+    var row = hits[i].row;
+    var cite = 'Cite: ' + (row.where||'');
+    if(row.page) cite += ', page ' + row.page;
+    html += '<li><strong>' + row.text.replace(/</g,'&lt;') + '</strong><br><span class="cite">' + cite.replace(/</g,'&lt;') + '</span></li>';
+  }
+  html += '</ol><p class="note">This page does not replace lockout/tagout or the factory book.</p>';
+  box.innerHTML = html;
+}
+var inp = document.getElementById('q');
+inp.addEventListener('input', function(){ draw(inp.value); });
+window.addEventListener('DOMContentLoaded', function(){
+  if(!inp.value) inp.value = DEFAULT_Q;
+  draw(inp.value);
+});
 </script>
 </body></html>
