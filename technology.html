@@ -3,7 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>How it works — Dilisights</title>
+<title>How it works &mdash; Dilisights</title>
+<meta name="description" content="One public book, one question, page cites. How a Dilisights lookup page is built and how you check it against the maker's own PDF.">
+<link rel="canonical" href="https://dilisights.com/technology.html">
 <link rel="stylesheet" href="site.css">
 </head>
 <body>
@@ -11,8 +13,9 @@
   <a class="brand" href="index.html">Dilisights</a>
   <nav>
     <a href="solutions.html">What we make</a>
-    <a href="pay.html">How to pay</a>
+    <a href="data.html">Data &amp; reports</a>
     <a href="technology.html">How it works</a>
+    <a href="pay.html">How to pay</a>
     <a href="compliance.html">If you got a note</a>
     <a href="about.html">Company</a>
     <a href="contact.html">Contact</a>
@@ -21,16 +24,26 @@
 <main>
   <h1>One public book. One question. Page cites.</h1>
   <ol>
-    <li>You already posted a user manual or catalog on your own site.</li>
-    <li>We pick one question that is actually in that book.</li>
+    <li>You already published a manual or a parts catalog on your own support site.</li>
+    <li>We pick one question that is actually answered in that book.</li>
     <li>We build a private lookup that shows the steps and the page numbers.</li>
-    <li>You open the factory PDF and check. If a cite is wrong, we stop and fix it.</li>
+    <li>You open your own PDF and check. If a cite is wrong, we stop and fix it.</li>
     <li>If a shop would use it, we can do more pages from the same book the same way.</li>
   </ol>
-  <p>The private trial is not on this homepage. It is a noindex link so it does not mix with your live site or with this company page.</p>
+
+  <h2>How the lookup answers</h2>
+  <p>The page ships with the phrases and the cross-references written at build time, from that one book. A query is matched in your browser against those written phrases. Nothing is sent to a language model, nothing is generated on the fly, and a code that is not in the book comes back empty rather than guessed at.</p>
+  <p>That is deliberate. A lookup that invents a fault code is worse than no lookup at all.</p>
+
+  <h2>Why the trial link is private</h2>
+  <p>The trial page is served on a <code>noindex</code> path, so it does not mix with your live site and does not compete with it in search. It is a working sample, not a page we publish under your name.</p>
+
+  <h2>What you need on your side</h2>
+  <p>Nothing. You keep the PDF where it already is. We only ever read what you have already published.</p>
 </main>
 <footer>
-  <p>Dilisights · <a href="mailto:tony@dilisights.com">tony@dilisights.com</a></p>
+  <p>Dilisights &middot; operated by Strata Data LLC &middot; <a href="mailto:tony@dilisights.com">tony@dilisights.com</a> &middot; +1 505 201 4040 &middot; not the equipment maker</p>
+  <p><a href="about.html">Company</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a></p>
 </footer>
 </body>
 </html>
