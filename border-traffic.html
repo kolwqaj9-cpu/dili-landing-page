@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Border truck crossing lookup: monthly truck traffic at every US land port of entry &mdash; Dilisights</title>
+<meta name="description" content="Free lookup for cross-border truck traffic. Monthly truck crossings at all 115 US land ports of entry, January 1996 to August 2026, from the Bureau of Transportation Statistics border crossing data. Compare ports, borders, year-on-year change and share of national freight.">
+<link rel="canonical" href="https://dilisights.com/border-traffic.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Border truck crossing lookup",
+  "alternateName": "North American land border truck crossings, monthly, 1996-2026",
+  "description": "Monthly truck crossings at all 115 US land ports of entry on the US-Mexico and US-Canada borders, January 1996 to August 2026, from the U.S. Bureau of Transportation Statistics Border Crossing/Entry Data. Public domain.",
+  "url": "https://dilisights.com/border-traffic.html",
+  "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "isAccessibleForFree": true,
+  "creator": {
+    "@type": "Organization",
+    "name": "Dilisights, operated by Strata Data LLC",
+    "url": "https://dilisights.com/"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Zenodo",
+    "url": "https://zenodo.org/records/23331342"
+  },
+  "identifier": [
+    "https://doi.org/10.5281/zenodo.23331342"
+  ],
+  "temporalCoverage": "1996-01/2026-08",
+  "spatialCoverage": [
+    { "@type": "Place", "name": "United States-Mexico border" },
+    { "@type": "Place", "name": "United States-Canada border" }
+  ],
+  "variableMeasured": "Truck crossings per month at a US land port of entry",
+  "isBasedOn": {
+    "@type": "Dataset",
+    "name": "Border Crossing/Entry Data",
+    "url": "https://data.bts.gov/Explore/Transportation/Border-Crossing-Entry-Data/keg4-3bc2",
+    "publisher": { "@type": "Organization", "name": "U.S. Bureau of Transportation Statistics" }
+  }
+}
+</script>
+<style>
+.bt{font-family:Arial,Helvetica,sans-serif;margin:26px 0 0}
+.bt-controls{display:flex;flex-wrap:wrap;gap:12px 16px;align-items:flex-end;background:#fff;border:1px solid #d7cbb8;padding:16px 18px}
+.bt-field{display:flex;flex-direction:column;gap:6px;min-width:150px}
+.bt-field.grow{flex:1 1 260px}
+.bt label{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#5a3b1a}
+.bt select{font:15px/1.3 Arial,Helvetica,sans-serif;padding:8px 10px;border:1px solid #c9bda6;background:#fff;color:#1a1a1a;max-width:100%}
+.bt button{font:14px/1.2 Arial,Helvetica,sans-serif;padding:9px 13px;border:1px solid #1a1a1a;background:#1a1a1a;color:#f4efe4;cursor:pointer}
+.bt button.ghost{background:transparent;color:#1a1a1a}
+.bt-quicks{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
+.bt-quicks button{font-size:13px;padding:7px 11px;background:#fff;color:#0b3d2e;border:1px solid #c9bda6}
+.bt-quicks button:hover{background:#f4efe4}
+.bt-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:24px 0 6px}
+.bt-card{background:#fff;border:1px solid #d7cbb8;padding:13px 15px}
+.bt-card .bt-k{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:#7a6a4f;display:block;margin-bottom:6px}
+.bt-card .bt-v{font:700 22px/1.1 Georgia,serif;color:#1a1a1a;display:block}
+.bt-card .bt-sub{font-size:12px;color:#6b6b6b;display:block;margin-top:5px}
+.bt-up{color:#8c1c1c !important}
+.bt-down{color:#0b5d33 !important}
+.bt-chartwrap{position:relative;background:#fff;border:1px solid #d7cbb8;margin:20px 0 0;padding:10px 6px 4px}
+.bt-svg{display:block;width:100%;height:auto}
+.bt-cap{font-size:13px;color:#5a5a5a;margin:10px 2px 0;line-height:1.5}
+.bt-legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:#333;padding:2px 8px 4px}
+.bt-legend i{display:inline-block;width:11px;height:11px;margin-right:6px;vertical-align:-1px}
+.bt-tip{position:absolute;top:10px;left:0;pointer-events:none;opacity:0;transition:opacity .12s;background:#1a1a1a;color:#f4efe4;font-size:12px;line-height:1.45;padding:8px 10px;white-space:nowrap;z-index:4}
+.bt-tip strong{display:block;margin-bottom:4px}
+.bt-tip span{display:block}
+.bt-tip i{display:inline-block;width:9px;height:9px;margin-right:5px;vertical-align:-1px}
+.bt-err{background:#fff;border:1px solid #d7cbb8;padding:16px}
+.bt table{width:100%;border-collapse:collapse;font-size:14px;background:#fff;border:1px solid #d7cbb8}
+.bt table th{text-align:left;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#5a3b1a;border-bottom:1px solid #c9bda6;padding:10px 8px;font-weight:700}
+.bt table td{padding:8px;border-bottom:1px solid #ece3d4;vertical-align:top}
+.bt .bt-nm{text-align:right;font-variant-numeric:tabular-nums}
+.bt .bt-rk{color:#8a7a60;width:34px}
+.bt .bt-sd{font-size:12px;color:#6b6b6b;white-space:nowrap}
+.bt-row{cursor:pointer}
+.bt-row:hover td{background:#faf6ec}
+.bt-scroll{overflow-x:auto;margin:16px 0 0}
+.bt .bt-dl{font-size:13px;color:#5a5a5a;margin-top:14px}
+@media(max-width:560px){
+  .bt table{font-size:13px}
+  .bt .bt-sd{font-size:11px}
+  .bt-card .bt-v{font-size:19px}
+}
+</style>
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="index.html">Dilisights</a>
+  <nav>
+    <a href="solutions.html">What we do</a>
+    <a href="data.html">Where the leads come from</a>
+    <a href="border-traffic.html">Border freight lookup</a>
+    <a href="technology.html">How it works</a>
+    <a href="publications.html">Research</a>
+    <a href="pay.html">Pricing</a>
+    <a href="compliance.html">If you got a note</a>
+    <a href="about.html">Company</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<main>
+  <p class="kicker">Free lookup &middot; U.S. federal data &middot; no account needed</p>
+  <h1>How many trucks crossed at each US land port of entry?</h1>
+  <p class="lead">Pick a crossing and see its monthly truck count from January 1996 to August 2026, how it moved against the same month a year earlier, and what share of national border freight it carries. Every figure here comes from the federal government's own border crossing counts.</p>
+
+  <div id="bt-app" class="bt">
+    <div class="bt-controls" id="bt-top">
+      <div class="bt-field grow">
+        <label for="bt-scope">Crossing</label>
+        <select id="bt-scope"></select>
+      </div>
+      <div class="bt-field">
+        <label for="bt-range">Period</label>
+        <select id="bt-range">
+          <option value="12">Last 12 months</option>
+          <option value="60">Last 5 years</option>
+          <option value="120">Last 10 years</option>
+          <option value="all">Full record, 1996&ndash;2026</option>
+        </select>
+      </div>
+      <div class="bt-field">
+        <label for="bt-metric">Show</label>
+        <select id="bt-metric">
+          <option value="monthly">Trucks per month</option>
+          <option value="rolling">Rolling 12-month total</option>
+          <option value="yoy">Change vs a year earlier</option>
+        </select>
+      </div>
+      <div class="bt-field">
+        <button type="button" class="ghost" id="bt-reset">Reset</button>
+      </div>
+    </div>
+
+    <div class="bt-quicks">
+      <button type="button" class="bt-quick" data-c="ALL">Whole border</button>
+      <button type="button" class="bt-quick" data-c="MX">US&ndash;Mexico</button>
+      <button type="button" class="bt-quick" data-c="CA">US&ndash;Canada</button>
+      <button type="button" class="bt-quick" data-c="2304">Laredo</button>
+      <button type="button" class="bt-quick" data-c="3801">Detroit</button>
+      <button type="button" class="bt-quick" data-c="2506">Otay Mesa</button>
+      <button type="button" class="bt-quick" data-c="3802">Port Huron</button>
+      <button type="button" class="bt-quick" data-c="0901">Buffalo&ndash;Niagara Falls</button>
+    </div>
+
+    <div class="bt-stats">
+      <div class="bt-card"><span class="bt-k">Latest month</span><span class="bt-v" id="bt-s1v">&mdash;</span><span class="bt-sub" id="bt-s1k">&mdash;</span></div>
+      <div class="bt-card"><span class="bt-k">vs same month last year</span><span class="bt-v" id="bt-s2v">&mdash;</span><span class="bt-sub">truck crossings</span></div>
+      <div class="bt-card"><span class="bt-k">Last 12 months</span><span class="bt-v" id="bt-s3v">&mdash;</span><span class="bt-sub">total truck crossings</span></div>
+      <div class="bt-card"><span class="bt-k" id="bt-s4k">Share of the border</span><span class="bt-v" id="bt-s4v">&mdash;</span><span class="bt-sub" id="bt-s4s">of all US land truck crossings</span></div>
+    </div>
+    <p class="bt-cap" id="bt-rank"></p>
+    <p class="bt-cap" id="bt-portnote" style="display:none"></p>
+
+    <div class="bt-chartwrap">
+      <div id="bt-chart"></div>
+    </div>
+    <p class="bt-cap" id="bt-cap"></p>
+
+    <h2>Which border is busier?</h2>
+    <p>The Mexican and Canadian borders are counted separately in the same federal file. Switch the transport mode to see how the two sides compare across trucks, trains, personal vehicles, buses and pedestrians.</p>
+    <div class="bt-field" style="max-width:290px">
+      <label for="bt-mode">Transport mode</label>
+      <select id="bt-mode">
+        <option value="Trucks">Trucks</option>
+        <option value="Trains">Trains</option>
+        <option value="Personal Vehicles">Personal vehicles</option>
+        <option value="Buses">Buses</option>
+        <option value="Pedestrians">Pedestrians</option>
+      </select>
+    </div>
+    <div class="bt-chartwrap">
+      <div id="bt-bchart"></div>
+    </div>
+    <p class="bt-cap" id="bt-bcap"></p>
+
+    <h2>The fifteen busiest truck crossings</h2>
+    <p>Ranked by total truck crossings over the last 12 months. Click any row to load that crossing into the charts above.</p>
+    <div class="bt-scroll">
+      <table>
+        <thead>
+          <tr><th>#</th><th>Crossing</th><th>Border</th><th style="text-align:right">Last 12 months</th><th style="text-align:right">Share</th><th style="text-align:right">vs year earlier</th></tr>
+        </thead>
+        <tbody id="bt-rows"></tbody>
+      </table>
+    </div>
+
+    <h2>Where the numbers come from</h2>
+    <p>Nothing on this page is estimated, modelled or bought. The figures are the counts the United States takes at its own border stations and publishes every month through the <a href="https://data.bts.gov/Explore/Transportation/Border-Crossing-Entry-Data/keg4-3bc2">Bureau of Transportation Statistics Border Crossing/Entry Data</a> programme. This page reads the same public file and adds up nothing but what is in it.</p>
+    <dl class="facts">
+      <dt>Records used</dt><dd>276,749 monthly port records, covering <strong>115 land ports of entry</strong> on the US&ndash;Mexico and US&ndash;Canada borders.</dd>
+      <dt>Period covered</dt><dd>January 1996 to August 2026, <strong>368 consecutive months</strong>.</dd>
+      <dt>What a number means</dt><dd>The count of trucks that entered the United States through that crossing in that calendar month. It is an arrival count, not a count of distinct vehicles or of cargo value.</dd>
+      <dt>Missing months</dt><dd>Some crossings show no trucks in a given month, either because none crossed or because the port did not report. Those months are left blank in the charts rather than filled with zero.</dd>
+      <dt>Licence</dt><dd>U.S. federal government work &mdash; public domain. Reuse it freely, including commercially. We ask only that you credit the Bureau of Transportation Statistics.</dd>
+      <dt>Archived copy</dt><dd>Our cleaned, aggregated version is deposited with a permanent identifier: <a href="https://doi.org/10.5281/zenodo.23331342">10.5281/zenodo.23331342</a>, alongside the <a href="publications.html">written analysis</a>.</dd>
+    </dl>
+    <p class="bt-dl">
+      <a class="btn" href="border-data.json">Download the data (JSON)</a>
+      <a class="btn ghost" href="https://doi.org/10.5281/zenodo.23331342">Open the archived dataset</a>
+    </p>
+    <p class="bt-cap" id="bt-stamp"></p>
+
+    <h2>What the file says, in one paragraph</h2>
+    <p>Land freight did not stay where it started. The Mexican border overtook the Canadian border in 2017 and has not given the lead back; by 2025 it carried 59.0% of US land truck crossings. Traffic is also highly concentrated: Laredo alone handles 23.2% of all US land truck crossings, and the five busiest crossings together account for 54%. A dispatcher pricing a lane, or a forwarder deciding where to put capacity, is really asking about a handful of crossings, not about "the border" in general.</p>
+
+    <div class="note">
+      <h2>How to cite this page</h2>
+      <p>Dilisights (2026). <em>Border truck crossing lookup</em> [web tool]. Strata Data LLC. https://dilisights.com/border-traffic.html &mdash; data from the U.S. Bureau of Transportation Statistics. Underlying dataset: https://doi.org/10.5281/zenodo.23331342</p>
+      <p>We are an independent publisher and not affiliated with the Bureau of Transportation Statistics, U.S. Customs and Border Protection or any border authority. Corrections to <a href="mailto:tony@dilisights.com">tony@dilisights.com</a>.</p>
+    </div>
+  </div>
+</main>
+<footer>
+  <p>Dilisights &middot; operated by Strata Data LLC &middot; <a href="mailto:tony@dilisights.com">tony@dilisights.com</a> &middot; +1 505 201 4040 &middot; not a broker, a carrier or a licensed contractor</p>
+  <p><a href="about.html">Company</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a></p>
+</footer>
+<script src="border-data.js"></script>
+<script src="border-tool.js"></script>
+</body>
+</html>
