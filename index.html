@@ -7,6 +7,39 @@
 <meta name="description" content="Dilisights, operated by Strata Data LLC, is a B2B digital marketing company. We run industrial reference properties and deliver qualified client inquiries to third-party logistics (3PL) providers, freight forwarders and commercial electricians.">
 <link rel="canonical" href="https://dilisights.com/">
 <link rel="stylesheet" href="site.css">
+<style>
+/* 落地页首屏（cold-email landing）——样式全部限定在 .lm 命名空间 */
+.lm .kicker{font-family:Arial,Helvetica,sans-serif;font-size:13px;letter-spacing:.14em;
+  text-transform:uppercase;color:#0b5cad;font-weight:700;margin-bottom:14px}
+.lm h1{font-size:clamp(30px,5vw,44px);line-height:1.15;letter-spacing:-.01em;margin-top:8px}
+.lm .sub{font-size:18px;color:#5b6675;margin-top:14px;max-width:640px}
+.lm .demo{background:#ffffff;border:1px solid #e2e8ef;border-radius:12px;
+  margin:32px 0 8px;box-shadow:0 1px 3px rgba(16,24,40,.06);overflow:hidden}
+.lm .demo-head{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#5b6675;
+  padding:10px 18px;border-bottom:1px solid #e2e8ef;background:#fbfcfe}
+.lm .searchbar{display:flex;gap:10px;padding:18px}
+.lm .searchbar input{flex:1;font-size:18px;padding:12px 16px;border:1.5px solid #e2e8ef;
+  border-radius:8px;font-family:Consolas,Menlo,monospace;outline:none}
+.lm .searchbar input:focus{border-color:#0b5cad}
+.lm .searchbar .go{font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:15px;
+  background:#0b5cad;color:#fff;border:none;border-radius:8px;padding:12px 22px;cursor:pointer}
+.lm .searchbar .go:hover{background:#094a89}
+.lm table{width:100%;border-collapse:collapse;font-size:14px}
+.lm th{font-family:Arial,Helvetica,sans-serif;text-align:left;font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;color:#5b6675;padding:8px 18px;border-top:1px solid #e2e8ef;
+  background:#fbfcfe}
+.lm td{padding:10px 18px;border-top:1px solid #e2e8ef}
+.lm td.num{font-family:Consolas,Menlo,monospace;font-weight:600;white-space:nowrap}
+.lm tr.hit td{background:#fff7e0}
+.lm .nomatch{padding:22px 18px;color:#5b6675;font-style:italic;border-top:1px solid #e2e8ef;display:none}
+.lm .hint{font-family:Arial,Helvetica,sans-serif;font-size:12.5px;color:#5b6675;padding:0 18px 14px}
+.lm .reply{margin:34px 0 10px}
+.lm .reply a.btn2{display:inline-block;font-family:Arial,Helvetica,sans-serif;font-weight:700;
+  font-size:16px;background:#0b5cad;color:#fff;text-decoration:none;
+  padding:14px 26px;border-radius:8px}
+.lm .reply a.btn2:hover{background:#094a89}
+.lm .reply .also{font-size:14px;color:#5b6675;margin-top:10px}
+</style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","@id":"https://dilisights.com/#organization",
 "name":"Strata Data LLC","legalName":"Strata Data LLC","alternateName":"Dilisights",
@@ -37,9 +70,35 @@
 </header>
 
 <main>
-  <p class="kicker">Dilisights is the operating name of Strata Data LLC, a New Mexico company.</p>
-  <h1>We bring the customer. You do the work.</h1>
-  <p class="lead">Strata Data LLC is a B2B digital marketing company. We run reference properties that industrial buyers already use, and we deliver the client inquiries that come out of them to third-party logistics providers, freight forwarders and commercial electricians. We are paid by those providers for the inquiries we deliver.</p>
+  <div class="lm">
+    <p class="kicker">Dilisights &middot; Parts lookup, built from your own catalogs</p>
+    <h1>Type the number.<br>Get the answer.</h1>
+    <p class="sub">One box that searches your public catalogs and line cards &mdash; and shows
+    the page every answer came from. Try it right now with the sample data below.</p>
+
+    <div class="demo">
+      <div class="demo-head">LIVE DEMO &mdash; 6 sample rows from a real distributor line card</div>
+      <div class="searchbar">
+        <input id="q" type="text" placeholder="Try: C33, GGPD, or 14-115" autocomplete="off">
+        <button class="go" onclick="doSearch()">Look it up</button>
+      </div>
+      <table id="resultTable">
+        <thead><tr><th>Part number</th><th>What it is</th><th>Answer source</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+      <div class="nomatch" id="nomatch"></div>
+      <div class="hint" id="hint">Type a part number (or a fragment) and press Enter &mdash; no match shows you exactly what a miss looks like, too.</div>
+    </div>
+
+    <div class="reply">
+      <a class="btn2" href="mailto:tony@dilisights.com?subject=Yes%20%E2%80%94%20build%20one%20from%20our%20catalog&amp;body=Yes%2C%20please%20build%20one%20from%20our%20catalog.%20%28One-word%20reply%20works%20too%3A%20just%20send%20%22yes%22.%29">
+        Reply &ldquo;yes&rdquo; &mdash; I&rsquo;ll build one from your catalog</a>
+      <p class="also">Prefer to just reply to the email? A one-word answer &mdash; yes or no &mdash; is enough.
+      Not relevant? Reply &ldquo;no&rdquo; and I won&rsquo;t follow up.</p>
+    </div>
+  </div>
+
+  <p class="lead">Dilisights is the operating name of Strata Data LLC, a New Mexico company. Strata Data LLC is a B2B digital marketing company. We run reference properties that industrial buyers already use, and we deliver the client inquiries that come out of them to third-party logistics providers, freight forwarders and commercial electricians. We are paid by those providers for the inquiries we deliver.</p>
   <p>
     <a class="btn" href="solutions.html">What we do</a>
     <a class="btn ghost" href="contact.html">Talk to us</a>
@@ -86,5 +145,43 @@
   <p>Dilisights &middot; operated by Strata Data LLC &middot; <a href="mailto:tony@dilisights.com">tony@dilisights.com</a> &middot; +1 505 201 4040 &middot; not a broker, a carrier or a licensed contractor</p>
   <p><a href="about.html">Company</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a></p>
 </footer>
+
+<script>
+var SAMPLE = [
+  {num:"C33-48-1/2",  what:"Copper elbow, 90\u00b0, 1-1/2 in sweat",       src:"Line card p.4 (Refrigeration)"},
+  {num:"C33-48-1/4",  what:"Copper elbow, 90\u00b0, 1-1/4 in sweat",       src:"Line card p.4 (Refrigeration)"},
+  {num:"GGPD-05HK",   what:"Gas furnace, 95% AFUE, 44,000 BTU",       src:"GGPD spec sheet p.2"},
+  {num:"GGPD-07HK",   what:"Gas furnace, 95% AFUE, 66,000 BTU",       src:"GGPD spec sheet p.2"},
+  {num:"14-115",      what:"Evaporative condenser fan blade, 14 in",  src:"Parts catalog p.31"},
+  {num:"R-448A-25",   what:"Refrigerant cylinder, 25 lb, R-448A",     src:"Refrigerants price sheet"}
+];
+var rowsEl = document.getElementById("rows");
+var tableEl = document.getElementById("resultTable");
+var nomatchEl = document.getElementById("nomatch");
+var qEl = document.getElementById("q");
+function esc(s){return s.replace(/\u0026/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}
+function render(list){
+  rowsEl.innerHTML = "";
+  nomatchEl.style.display = "none";
+  tableEl.style.display = list.length ? "" : "none";
+  list.forEach(function(r){
+    var tr = document.createElement("tr");
+    tr.className = "hit";
+    tr.innerHTML = '<td class="num">' + esc(r.num) + '</td><td>' + esc(r.what) + '</td><td>' + esc(r.src) + '</td>';
+    rowsEl.appendChild(tr);
+  });
+  if(!list.length){
+    nomatchEl.textContent = 'No match for "' + qEl.value.trim() + '" \u2014 in the real version, this is the moment you email the vendor a screenshot.';
+    nomatchEl.style.display = "block";
+  }
+}
+function doSearch(){
+  var q = qEl.value.trim().toLowerCase();
+  if(!q){ render(SAMPLE); return; }
+  render(SAMPLE.filter(function(r){ return r.num.toLowerCase().indexOf(q) !== -1 || r.what.toLowerCase().indexOf(q) !== -1; }));
+}
+qEl.addEventListener("keydown", function(e){ if(e.key === "Enter") doSearch(); });
+render(SAMPLE);
+</script>
 </body>
 </html>
